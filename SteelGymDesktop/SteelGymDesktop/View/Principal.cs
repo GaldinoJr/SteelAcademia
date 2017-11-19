@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SteelGymDesktop.Applications.Interfaces;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,8 +13,12 @@ namespace SteelGymDesktop.View
 {
     public partial class Principal : Form
     {
-        public Principal()
+        private readonly IUserAppService _userApp;
+
+        public Principal(IUserAppService userApp)
         {
+            _userApp = userApp;
+
             InitializeComponent();
         }
 
@@ -31,7 +36,7 @@ namespace SteelGymDesktop.View
 
         private void pesquisarToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            PesquisarAluno p = new PesquisarAluno();
+            PesquisarAluno p = new PesquisarAluno(_userApp);
             abrirModulo(p, Models.Modulos.DF_NOME_MODULO_ALUNO);
         }
 
@@ -47,13 +52,13 @@ namespace SteelGymDesktop.View
 
         private void incluirToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            CadastroUsuario p = new CadastroUsuario();
+            CadastroUsuario p = new CadastroUsuario(_userApp, true, int.MinValue);
             abrirModulo(p, Models.Modulos.DF_NOME_MODULO_USUARIO);
         }
 
         private void pesquisarToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            PesquisarUsuário p = new PesquisarUsuário();
+            PesquisarUsuário p = new PesquisarUsuário(_userApp);
             abrirModulo(p, Models.Modulos.DF_NOME_MODULO_USUARIO);
         }
 
@@ -89,7 +94,7 @@ namespace SteelGymDesktop.View
             l.Show();
         }
 
-        private void abrirModulo(Form form, String nomeModulo)
+        public void abrirModulo(Form form, String nomeModulo)
         {
             // Muda o nome do módulo na toolbar
             txtNomeModulo.Text = nomeModulo;

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SteelGymDesktop.Applications.Interfaces;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,14 +13,17 @@ namespace SteelGymDesktop.View
 {
     public partial class PesquisarAluno : Form
     {
-        public PesquisarAluno()
+        private readonly IUserAppService _userApp;
+
+        public PesquisarAluno(IUserAppService userApp)
         {
+            _userApp = userApp;
             InitializeComponent();
         }
 
         private void PesquisarAluno_Load(object sender, EventArgs e)
         {
-
+            chkAtivo.Checked = true;
         }
 
         private void txtIDAluno_KeyPress(object sender, KeyPressEventArgs e)
@@ -39,8 +43,6 @@ namespace SteelGymDesktop.View
 
         private void btnPesquisar_Click(object sender, EventArgs e)
         {
-            //dtgAlunos.DataSource = new DataView();
-
             dtgAlunos.Rows.Clear();
 
             for (int i = 0; i < 100; i++)
@@ -56,13 +58,7 @@ namespace SteelGymDesktop.View
             txtIDAluno.Text = "";
             txtNome.Text = "";
             txtRG.Text = "";
-            //dtgAlunos.DataSource = new DataView();
             dtgAlunos.Rows.Clear();
-        }
-
-        private void btnIncluir_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

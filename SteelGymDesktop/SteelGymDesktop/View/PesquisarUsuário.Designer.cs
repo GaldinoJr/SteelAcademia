@@ -41,8 +41,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.Buttons = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.Excluir = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.chkAtivo = new System.Windows.Forms.CheckBox();
             this.IDAluno = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Rg = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -73,8 +72,6 @@
             this.dtgUsuario.AllowUserToDeleteRows = false;
             this.dtgUsuario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgUsuario.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Buttons,
-            this.Excluir,
             this.IDAluno,
             this.Nome,
             this.Rg,
@@ -86,6 +83,7 @@
             this.dtgUsuario.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dtgUsuario.Size = new System.Drawing.Size(779, 316);
             this.dtgUsuario.TabIndex = 24;
+            this.dtgUsuario.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgUsuario_CellDoubleClick);
             // 
             // btnLimpar
             // 
@@ -96,6 +94,7 @@
             this.btnLimpar.TabIndex = 23;
             this.btnLimpar.Text = "Limpar";
             this.btnLimpar.UseVisualStyleBackColor = true;
+            this.btnLimpar.Click += new System.EventHandler(this.btnLimpar_Click);
             // 
             // btnPesquisar
             // 
@@ -168,25 +167,20 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(318, 8);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(244, 29);
+            this.label1.Size = new System.Drawing.Size(268, 29);
             this.label1.TabIndex = 13;
-            this.label1.Text = "Pesquisa de Alunos";
+            this.label1.Text = "Pesquisa de Usuários";
             // 
-            // Buttons
+            // chkAtivo
             // 
-            this.Buttons.HeaderText = "";
-            this.Buttons.Name = "Buttons";
-            this.Buttons.ReadOnly = true;
-            this.Buttons.Text = "Editar";
-            this.Buttons.ToolTipText = "Clique para editar o Aluno";
-            this.Buttons.Width = 40;
-            // 
-            // Excluir
-            // 
-            this.Excluir.HeaderText = "";
-            this.Excluir.Name = "Excluir";
-            this.Excluir.ReadOnly = true;
-            this.Excluir.Width = 40;
+            this.chkAtivo.AutoSize = true;
+            this.chkAtivo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkAtivo.Location = new System.Drawing.Point(279, 122);
+            this.chkAtivo.Name = "chkAtivo";
+            this.chkAtivo.Size = new System.Drawing.Size(63, 21);
+            this.chkAtivo.TabIndex = 27;
+            this.chkAtivo.Text = "Ativo";
+            this.chkAtivo.UseVisualStyleBackColor = true;
             // 
             // IDAluno
             // 
@@ -225,6 +219,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(899, 564);
+            this.Controls.Add(this.chkAtivo);
             this.Controls.Add(this.txtRG);
             this.Controls.Add(this.txtCPF);
             this.Controls.Add(this.dtgUsuario);
@@ -261,8 +256,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridViewButtonColumn Buttons;
-        private System.Windows.Forms.DataGridViewButtonColumn Excluir;
+        private System.Windows.Forms.CheckBox chkAtivo;
         private System.Windows.Forms.DataGridViewTextBoxColumn IDAluno;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nome;
         private System.Windows.Forms.DataGridViewTextBoxColumn Rg;

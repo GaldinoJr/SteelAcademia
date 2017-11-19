@@ -21,5 +21,20 @@ namespace SteelGymDesktop
         {
             return (s.Equals("") || s == null);
         }
+
+        public static void ShowMessageWarning(string msg)
+        {
+            MessageBox.Show(msg, "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+        }
+
+        public static void DisabledCursor()
+        {
+            Cursor.Current = Cursors.WaitCursor;
+        }
+
+        public static void EnabledCursor()
+        {
+            Cursor.Current = Cursors.Default;
+        }
     }
 }

@@ -40,7 +40,7 @@
             this.label19 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtCidade = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
             this.txtBairro = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
@@ -48,7 +48,7 @@
             this.label14 = new System.Windows.Forms.Label();
             this.txtNumero = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtEndereco = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.txtEmail = new System.Windows.Forms.TextBox();
@@ -58,20 +58,13 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtNome = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.txtUserName = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
             this.txtSobrenome = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.txtSenha = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.txtConfirmaSenha = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
             this.btnSalvar = new System.Windows.Forms.Button();
             this.btnLimpar = new System.Windows.Forms.Button();
-            this.label39 = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.chkAtivo = new System.Windows.Forms.CheckBox();
-            this.panel2.SuspendLayout();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtUserName = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -201,12 +194,12 @@
             this.label17.TabIndex = 116;
             this.label17.Text = "UF:";
             // 
-            // textBox3
+            // txtCidade
             // 
-            this.textBox3.Location = new System.Drawing.Point(109, 255);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(241, 20);
-            this.textBox3.TabIndex = 11;
+            this.txtCidade.Location = new System.Drawing.Point(109, 255);
+            this.txtCidade.Name = "txtCidade";
+            this.txtCidade.Size = new System.Drawing.Size(241, 20);
+            this.txtCidade.TabIndex = 11;
             // 
             // label16
             // 
@@ -269,12 +262,12 @@
             this.label13.TabIndex = 108;
             this.label13.Text = "Número:";
             // 
-            // textBox2
+            // txtEndereco
             // 
-            this.textBox2.Location = new System.Drawing.Point(127, 203);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(501, 20);
-            this.textBox2.TabIndex = 7;
+            this.txtEndereco.Location = new System.Drawing.Point(127, 203);
+            this.txtEndereco.Name = "txtEndereco";
+            this.txtEndereco.Size = new System.Drawing.Size(501, 20);
+            this.txtEndereco.TabIndex = 7;
             // 
             // label12
             // 
@@ -358,23 +351,6 @@
             this.label3.TabIndex = 86;
             this.label3.Text = "Nome:";
             // 
-            // txtUserName
-            // 
-            this.txtUserName.Location = new System.Drawing.Point(187, 316);
-            this.txtUserName.Name = "txtUserName";
-            this.txtUserName.Size = new System.Drawing.Size(157, 20);
-            this.txtUserName.TabIndex = 16;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(43, 317);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(138, 17);
-            this.label4.TabIndex = 124;
-            this.label4.Text = "Nome de Usuário:";
-            // 
             // txtSobrenome
             // 
             this.txtSobrenome.Location = new System.Drawing.Point(415, 146);
@@ -392,80 +368,26 @@
             this.label6.TabIndex = 126;
             this.label6.Text = "Sobrenome:";
             // 
-            // txtSenha
-            // 
-            this.txtSenha.Location = new System.Drawing.Point(187, 342);
-            this.txtSenha.Name = "txtSenha";
-            this.txtSenha.PasswordChar = '*';
-            this.txtSenha.Size = new System.Drawing.Size(157, 20);
-            this.txtSenha.TabIndex = 17;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(122, 342);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(59, 17);
-            this.label8.TabIndex = 128;
-            this.label8.Text = "Senha:";
-            // 
-            // txtConfirmaSenha
-            // 
-            this.txtConfirmaSenha.Location = new System.Drawing.Point(187, 368);
-            this.txtConfirmaSenha.Name = "txtConfirmaSenha";
-            this.txtConfirmaSenha.PasswordChar = '*';
-            this.txtConfirmaSenha.Size = new System.Drawing.Size(157, 20);
-            this.txtConfirmaSenha.TabIndex = 18;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(47, 369);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(134, 17);
-            this.label9.TabIndex = 130;
-            this.label9.Text = "Confirmar Senha:";
-            // 
             // btnSalvar
             // 
             this.btnSalvar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSalvar.Location = new System.Drawing.Point(255, 410);
+            this.btnSalvar.Location = new System.Drawing.Point(259, 329);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(72, 30);
             this.btnSalvar.TabIndex = 131;
             this.btnSalvar.Text = "Salvar";
             this.btnSalvar.UseVisualStyleBackColor = true;
+            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
             // btnLimpar
             // 
             this.btnLimpar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLimpar.Location = new System.Drawing.Point(552, 410);
+            this.btnLimpar.Location = new System.Drawing.Point(556, 329);
             this.btnLimpar.Name = "btnLimpar";
             this.btnLimpar.Size = new System.Drawing.Size(72, 30);
             this.btnLimpar.TabIndex = 132;
             this.btnLimpar.Text = "Limpar";
             this.btnLimpar.UseVisualStyleBackColor = true;
-            // 
-            // label39
-            // 
-            this.label39.AutoSize = true;
-            this.label39.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label39.Location = new System.Drawing.Point(319, 1);
-            this.label39.Name = "label39";
-            this.label39.Size = new System.Drawing.Size(108, 15);
-            this.label39.TabIndex = 84;
-            this.label39.Text = "Dados de Login";
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.panel2.Controls.Add(this.label39);
-            this.panel2.Location = new System.Drawing.Point(0, 283);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(898, 20);
-            this.panel2.TabIndex = 133;
             // 
             // chkAtivo
             // 
@@ -478,19 +400,31 @@
             this.chkAtivo.Text = "Ativo";
             this.chkAtivo.UseVisualStyleBackColor = true;
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(43, 291);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(138, 17);
+            this.label4.TabIndex = 124;
+            this.label4.Text = "Nome de Usuário:";
+            // 
+            // txtUserName
+            // 
+            this.txtUserName.Location = new System.Drawing.Point(187, 290);
+            this.txtUserName.Name = "txtUserName";
+            this.txtUserName.Size = new System.Drawing.Size(157, 20);
+            this.txtUserName.TabIndex = 16;
+            // 
             // CadastroUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(899, 564);
             this.Controls.Add(this.chkAtivo);
-            this.Controls.Add(this.panel2);
             this.Controls.Add(this.btnLimpar);
             this.Controls.Add(this.btnSalvar);
-            this.Controls.Add(this.txtConfirmaSenha);
-            this.Controls.Add(this.label9);
-            this.Controls.Add(this.txtSenha);
-            this.Controls.Add(this.label8);
             this.Controls.Add(this.txtSobrenome);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.txtUserName);
@@ -505,7 +439,7 @@
             this.Controls.Add(this.label19);
             this.Controls.Add(this.label18);
             this.Controls.Add(this.label17);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.txtCidade);
             this.Controls.Add(this.label16);
             this.Controls.Add(this.txtBairro);
             this.Controls.Add(this.label15);
@@ -513,7 +447,7 @@
             this.Controls.Add(this.label14);
             this.Controls.Add(this.txtNumero);
             this.Controls.Add(this.label13);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.txtEndereco);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.txtEmail);
@@ -527,8 +461,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "CadastroUsuario";
             this.Text = "Cadastro Usuario";
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
+            this.Load += new System.EventHandler(this.CadastroUsuario_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -547,7 +480,7 @@
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtCidade;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.TextBox txtBairro;
         private System.Windows.Forms.Label label15;
@@ -555,7 +488,7 @@
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.TextBox txtNumero;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtEndereco;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox txtEmail;
@@ -565,18 +498,12 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtNome;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txtUserName;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtSobrenome;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox txtSenha;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox txtConfirmaSenha;
-        private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Button btnSalvar;
         private System.Windows.Forms.Button btnLimpar;
-        private System.Windows.Forms.Label label39;
-        private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.CheckBox chkAtivo;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox txtUserName;
     }
 }
