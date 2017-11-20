@@ -46,7 +46,6 @@
             this.label15 = new System.Windows.Forms.Label();
             this.txtComplemento = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
-            this.txtNumero = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.txtEndereco = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
@@ -65,6 +64,7 @@
             this.chkAtivo = new System.Windows.Forms.CheckBox();
             this.label4 = new System.Windows.Forms.Label();
             this.txtUserName = new System.Windows.Forms.TextBox();
+            this.txtNumero = new System.Windows.Forms.MaskedTextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -245,13 +245,6 @@
             this.label14.TabIndex = 110;
             this.label14.Text = "Complemento:";
             // 
-            // txtNumero
-            // 
-            this.txtNumero.Location = new System.Drawing.Point(709, 204);
-            this.txtNumero.Name = "txtNumero";
-            this.txtNumero.Size = new System.Drawing.Size(97, 20);
-            this.txtNumero.TabIndex = 8;
-            // 
             // label13
             // 
             this.label13.AutoSize = true;
@@ -417,11 +410,20 @@
             this.txtUserName.Size = new System.Drawing.Size(157, 20);
             this.txtUserName.TabIndex = 16;
             // 
+            // txtNumero
+            // 
+            this.txtNumero.Location = new System.Drawing.Point(709, 201);
+            this.txtNumero.Mask = "99999999";
+            this.txtNumero.Name = "txtNumero";
+            this.txtNumero.Size = new System.Drawing.Size(52, 20);
+            this.txtNumero.TabIndex = 135;
+            // 
             // CadastroUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(899, 564);
+            this.Controls.Add(this.txtNumero);
             this.Controls.Add(this.chkAtivo);
             this.Controls.Add(this.btnLimpar);
             this.Controls.Add(this.btnSalvar);
@@ -445,7 +447,6 @@
             this.Controls.Add(this.label15);
             this.Controls.Add(this.txtComplemento);
             this.Controls.Add(this.label14);
-            this.Controls.Add(this.txtNumero);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.txtEndereco);
             this.Controls.Add(this.label12);
@@ -486,7 +487,6 @@
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.TextBox txtComplemento;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.TextBox txtNumero;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.TextBox txtEndereco;
         private System.Windows.Forms.Label label12;
@@ -505,5 +505,6 @@
         private System.Windows.Forms.CheckBox chkAtivo;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtUserName;
+        private System.Windows.Forms.MaskedTextBox txtNumero;
     }
 }

@@ -19,7 +19,25 @@ namespace SteelGymDesktop
 
         public static bool ValidaString(string s)
         {
-            return (s.Equals("") || s == null);
+            return !(s.Equals("") || s == null);
+        }
+
+        public static bool ValidaRg(string s)
+        {
+            String campo = RemoverCaracteres(s);
+            return (campo.Length < 8);
+        }
+
+        public static bool ValidaCpf(string s)
+        {
+            String campo = RemoverCaracteres(s);
+            return (campo.Length < 11);
+        }
+
+        private static String RemoverCaracteres(String s)
+        {
+            String campo = s.Replace(" ", "").Replace(",", "").Replace("-", "");
+            return campo;
         }
 
         public static void ShowMessageWarning(string msg)
