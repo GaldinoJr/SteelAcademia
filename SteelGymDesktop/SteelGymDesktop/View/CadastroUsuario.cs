@@ -84,7 +84,8 @@ namespace SteelGymDesktop.View
                 _user.CPF = txtCPF.Text;
                 _user.Email = txtEmail.Text;
                 _user.Address = txtEndereco.Text;
-                _user.Number = Convert.ToInt32(txtNumero.Text);
+                if(Util.ValidaString(txtNumero.Text))
+                    _user.Number = Convert.ToInt32(txtNumero.Text);
                 _user.Complement = txtComplemento.Text;
                 _user.Neighborhood = txtBairro.Text;
                 _user.City = txtCidade.Text;
@@ -132,31 +133,31 @@ namespace SteelGymDesktop.View
             msgError = "";
             bool pass = true;
 
-            if (Util.ValidaString(txtNome.Text))
+            if (!Util.ValidaString(txtNome.Text))
             {
                 msgError += " - Campo 'Nome' invalido.";
                 pass = false;
             }
 
-            if (Util.ValidaString(txtRG.Text))
+            if (Util.ValidaRg(txtRG.Text))
             {
                 msgError += " - Campo 'RG' invalido.";
                 pass = false;
             }
 
-            if (Util.ValidaString(txtCPF.Text))
+            if (Util.ValidaCpf(txtCPF.Text))
             {
                 msgError += " - Campo 'CPF' invalido.";
                 pass = false;
             }
 
-            if (Util.ValidaString(txtEmail.Text))
+            if (!Util.ValidaString(txtEmail.Text))
             {
                 msgError += " - Campo 'e-Mail' invalido.";
                 pass = false;
             }
 
-            if (Util.ValidaString(txtUserName.Text))
+            if (!Util.ValidaString(txtUserName.Text))
             {
                 msgError += " - Campo 'Nome de Usuário' invalido.";
                 pass = false;

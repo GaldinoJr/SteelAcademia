@@ -3,7 +3,7 @@ namespace SteelGymDesktop.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class CreateBase : DbMigration
+    public partial class teste1 : DbMigration
     {
         public override void Up()
         {
@@ -12,13 +12,13 @@ namespace SteelGymDesktop.Migrations
                 c => new
                     {
                         UserId = c.Int(nullable: false, identity: true),
-                        Name = c.String(maxLength: 255, unicode: false),
+                        Name = c.String(nullable: false, maxLength: 250, unicode: false),
                         LastName = c.String(maxLength: 255, unicode: false),
                         RG = c.String(maxLength: 255, unicode: false),
                         CPF = c.String(maxLength: 255, unicode: false),
                         Email = c.String(maxLength: 255, unicode: false),
                         Address = c.String(maxLength: 255, unicode: false),
-                        Number = c.Int(nullable: false),
+                        Number = c.Int(),
                         Complement = c.String(maxLength: 255, unicode: false),
                         Neighborhood = c.String(maxLength: 255, unicode: false),
                         Active = c.Boolean(nullable: false),
@@ -29,9 +29,10 @@ namespace SteelGymDesktop.Migrations
                         Phone2 = c.String(maxLength: 255, unicode: false),
                         UserName = c.String(maxLength: 255, unicode: false),
                         Password = c.String(maxLength: 255, unicode: false),
-                        UpdateDate = c.DateTime(nullable: false),
+                        UpdateDate = c.DateTime(),
                         CreateDate = c.DateTime(nullable: false),
-                        UpdateUserId = c.Int(nullable: false),
+                        UpdateUserId = c.Int(),
+                        CreateUserId = c.Int(nullable: false),
                     })
                 .PrimaryKey(t => t.UserId);
             
