@@ -95,17 +95,9 @@
     <Compile Include="Infrastructure\DataAccess\DbConnection.cs" />
     <Compile Include="Infrastructure\Repository\RepositoryBase.cs" />
     <Compile Include="Infrastructure\Repository\UserRepository.cs" />
-    <Compile Include="Migrations\201711130028122_CreateBase.cs" />
-    <Compile Include="Migrations\201711130028122_CreateBase.Designer.cs">
-      <DependentUpon>201711130028122_CreateBase.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201711130109168_UpdateBase.cs" />
-    <Compile Include="Migrations\201711130109168_UpdateBase.Designer.cs">
-      <DependentUpon>201711130109168_UpdateBase.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201711192121105_update user.cs" />
-    <Compile Include="Migrations\201711192121105_update user.Designer.cs">
-      <DependentUpon>201711192121105_update user.cs</DependentUpon>
+    <Compile Include="Migrations\201711201537523_teste1.cs" />
+    <Compile Include="Migrations\201711201537523_teste1.Designer.cs">
+      <DependentUpon>201711201537523_teste1.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Modulos.cs" />
@@ -166,14 +158,8 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Migrations\201711130028122_CreateBase.resx">
-      <DependentUpon>201711130028122_CreateBase.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201711130109168_UpdateBase.resx">
-      <DependentUpon>201711130109168_UpdateBase.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201711192121105_update user.resx">
-      <DependentUpon>201711192121105_update user.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201711201537523_teste1.resx">
+      <DependentUpon>201711201537523_teste1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\CadastroAluno.resx">
       <DependentUpon>CadastroAluno.cs</DependentUpon>
@@ -216,7 +202,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

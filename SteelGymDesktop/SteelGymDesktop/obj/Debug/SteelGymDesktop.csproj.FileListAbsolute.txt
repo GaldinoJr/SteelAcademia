@@ -89,9 +89,6 @@ C:\Users\Galdino\Documents\Projetos\ACADEMIA_DANIEL_SISTEMA_DESKTOP\SteelAcademi
 C:\Users\Galdino\Documents\Projetos\ACADEMIA_DANIEL_SISTEMA_DESKTOP\SteelAcademia\SteelGymDesktop\SteelGymDesktop\bin\Debug\System.Web.WebPages.Deployment.xml
 C:\Users\Galdino\Documents\Projetos\ACADEMIA_DANIEL_SISTEMA_DESKTOP\SteelAcademia\SteelGymDesktop\SteelGymDesktop\bin\Debug\System.Web.WebPages.Razor.xml
 C:\Users\Galdino\Documents\Projetos\ACADEMIA_DANIEL_SISTEMA_DESKTOP\SteelAcademia\SteelGymDesktop\SteelGymDesktop\obj\Debug\SteelGymDesktop.csprojResolveAssemblyReference.cache
-C:\Users\Galdino\Documents\Projetos\ACADEMIA_DANIEL_SISTEMA_DESKTOP\SteelAcademia\SteelGymDesktop\SteelGymDesktop\obj\Debug\SteelGymDesktop.Migrations.CreateBase.resources
-C:\Users\Galdino\Documents\Projetos\ACADEMIA_DANIEL_SISTEMA_DESKTOP\SteelAcademia\SteelGymDesktop\SteelGymDesktop\obj\Debug\SteelGymDesktop.Migrations.UpdateBase.resources
-C:\Users\Galdino\Documents\Projetos\ACADEMIA_DANIEL_SISTEMA_DESKTOP\SteelAcademia\SteelGymDesktop\SteelGymDesktop\obj\Debug\SteelGymDesktop.Migrations.updateuser.resources
 C:\Users\Galdino\Documents\Projetos\ACADEMIA_DANIEL_SISTEMA_DESKTOP\SteelAcademia\SteelGymDesktop\SteelGymDesktop\obj\Debug\SteelGymDesktop.View.CadastroAluno.resources
 C:\Users\Galdino\Documents\Projetos\ACADEMIA_DANIEL_SISTEMA_DESKTOP\SteelAcademia\SteelGymDesktop\SteelGymDesktop\obj\Debug\SteelGymDesktop.View.CadastroMovimentacao.resources
 C:\Users\Galdino\Documents\Projetos\ACADEMIA_DANIEL_SISTEMA_DESKTOP\SteelAcademia\SteelGymDesktop\SteelGymDesktop\obj\Debug\SteelGymDesktop.View.CadastroUsuario.resources
@@ -105,3 +102,4 @@ C:\Users\Galdino\Documents\Projetos\ACADEMIA_DANIEL_SISTEMA_DESKTOP\SteelAcademi
 C:\Users\Galdino\Documents\Projetos\ACADEMIA_DANIEL_SISTEMA_DESKTOP\SteelAcademia\SteelGymDesktop\SteelGymDesktop\obj\Debug\SteelGymDesktop.csproj.CoreCompileInputs.cache
 C:\Users\Galdino\Documents\Projetos\ACADEMIA_DANIEL_SISTEMA_DESKTOP\SteelAcademia\SteelGymDesktop\SteelGymDesktop\obj\Debug\SteelGymDesktop.exe
 C:\Users\Galdino\Documents\Projetos\ACADEMIA_DANIEL_SISTEMA_DESKTOP\SteelAcademia\SteelGymDesktop\SteelGymDesktop\obj\Debug\SteelGymDesktop.pdb
+C:\Users\Galdino\Documents\Projetos\ACADEMIA_DANIEL_SISTEMA_DESKTOP\SteelAcademia\SteelGymDesktop\SteelGymDesktop\obj\Debug\SteelGymDesktop.Migrations.teste1.resources

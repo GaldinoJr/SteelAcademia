@@ -30,7 +30,7 @@ namespace SteelGymDesktop.View
             {
                 dtgUsuario.Rows.Clear();
 
-                if (!Util.ValidaString(txtIDAluno.Text))
+                if (Util.ValidaString(txtIDAluno.Text))
                 {
                     var user = _userApp.GetById(Convert.ToInt32(txtIDAluno.Text));
 
