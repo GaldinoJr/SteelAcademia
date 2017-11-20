@@ -39,8 +39,6 @@
             this.btnPesquisar = new System.Windows.Forms.Button();
             this.btnLimpar = new System.Windows.Forms.Button();
             this.dtgAlunos = new System.Windows.Forms.DataGridView();
-            this.Buttons = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.Excluir = new System.Windows.Forms.DataGridViewButtonColumn();
             this.IDAluno = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Rg = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -146,8 +144,6 @@
             this.dtgAlunos.AllowUserToDeleteRows = false;
             this.dtgAlunos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgAlunos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Buttons,
-            this.Excluir,
             this.IDAluno,
             this.Nome,
             this.Rg,
@@ -160,22 +156,7 @@
             this.dtgAlunos.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dtgAlunos.Size = new System.Drawing.Size(879, 330);
             this.dtgAlunos.TabIndex = 12;
-            // 
-            // Buttons
-            // 
-            this.Buttons.HeaderText = "";
-            this.Buttons.Name = "Buttons";
-            this.Buttons.ReadOnly = true;
-            this.Buttons.Text = "Editar";
-            this.Buttons.ToolTipText = "Clique para editar o Aluno";
-            this.Buttons.Width = 40;
-            // 
-            // Excluir
-            // 
-            this.Excluir.HeaderText = "";
-            this.Excluir.Name = "Excluir";
-            this.Excluir.ReadOnly = true;
-            this.Excluir.Width = 40;
+            this.dtgAlunos.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgAlunos_CellDoubleClick);
             // 
             // IDAluno
             // 
@@ -282,16 +263,14 @@
         private System.Windows.Forms.Button btnPesquisar;
         private System.Windows.Forms.Button btnLimpar;
         private System.Windows.Forms.DataGridView dtgAlunos;
-        private System.Windows.Forms.DataGridViewButtonColumn Buttons;
-        private System.Windows.Forms.DataGridViewButtonColumn Excluir;
+        private System.Windows.Forms.MaskedTextBox txtCPF;
+        private System.Windows.Forms.MaskedTextBox txtRG;
+        private System.Windows.Forms.CheckBox chkAtivo;
         private System.Windows.Forms.DataGridViewTextBoxColumn IDAluno;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nome;
         private System.Windows.Forms.DataGridViewTextBoxColumn Rg;
         private System.Windows.Forms.DataGridViewTextBoxColumn CPF;
         private System.Windows.Forms.DataGridViewTextBoxColumn Ativo;
         private System.Windows.Forms.DataGridViewTextBoxColumn DataPagamento;
-        private System.Windows.Forms.MaskedTextBox txtCPF;
-        private System.Windows.Forms.MaskedTextBox txtRG;
-        private System.Windows.Forms.CheckBox chkAtivo;
     }
 }

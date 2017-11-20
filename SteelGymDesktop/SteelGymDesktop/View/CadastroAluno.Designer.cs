@@ -48,7 +48,7 @@
             this.label10 = new System.Windows.Forms.Label();
             this.txtIMC = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtEndereco = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.txtNumero = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
@@ -56,7 +56,7 @@
             this.label14 = new System.Windows.Forms.Label();
             this.txtBairro = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtCidade = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
@@ -109,7 +109,7 @@
             this.label41 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.cboUF = new System.Windows.Forms.ComboBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cboUFRep = new System.Windows.Forms.ComboBox();
             this.txtRG = new System.Windows.Forms.MaskedTextBox();
             this.txtCPF = new System.Windows.Forms.MaskedTextBox();
             this.chkAtivo = new System.Windows.Forms.CheckBox();
@@ -179,6 +179,7 @@
             this.cboEstadoCivil.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboEstadoCivil.FormattingEnabled = true;
             this.cboEstadoCivil.Items.AddRange(new object[] {
+            "",
             "Solteiro",
             "Casado",
             "Viúvo",
@@ -240,6 +241,7 @@
             this.cboSexo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboSexo.FormattingEnabled = true;
             this.cboSexo.Items.AddRange(new object[] {
+            "",
             "Masculino",
             "Feminino"});
             this.cboSexo.Location = new System.Drawing.Point(562, 123);
@@ -302,12 +304,12 @@
             this.label11.TabIndex = 25;
             this.label11.Text = "IMC:";
             // 
-            // textBox2
+            // txtEndereco
             // 
-            this.textBox2.Location = new System.Drawing.Point(110, 204);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(501, 20);
-            this.textBox2.TabIndex = 28;
+            this.txtEndereco.Location = new System.Drawing.Point(110, 204);
+            this.txtEndereco.Name = "txtEndereco";
+            this.txtEndereco.Size = new System.Drawing.Size(501, 20);
+            this.txtEndereco.TabIndex = 28;
             // 
             // label12
             // 
@@ -371,12 +373,12 @@
             this.label15.TabIndex = 33;
             this.label15.Text = "Bairro:";
             // 
-            // textBox3
+            // txtCidade
             // 
-            this.textBox3.Location = new System.Drawing.Point(92, 256);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(241, 20);
-            this.textBox3.TabIndex = 36;
+            this.txtCidade.Location = new System.Drawing.Point(92, 256);
+            this.txtCidade.Name = "txtCidade";
+            this.txtCidade.Size = new System.Drawing.Size(241, 20);
+            this.txtCidade.TabIndex = 36;
             // 
             // label16
             // 
@@ -484,6 +486,7 @@
             this.cboParentesco1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboParentesco1.FormattingEnabled = true;
             this.cboParentesco1.Items.AddRange(new object[] {
+            "",
             "Pai",
             "Mãe",
             "Irmão",
@@ -498,6 +501,7 @@
             this.cboParentesco2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboParentesco2.FormattingEnabled = true;
             this.cboParentesco2.Items.AddRange(new object[] {
+            "",
             "Pai",
             "Mãe",
             "Irmão",
@@ -539,6 +543,7 @@
             this.cboParentesco3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboParentesco3.FormattingEnabled = true;
             this.cboParentesco3.Items.AddRange(new object[] {
+            "",
             "Pai",
             "Mãe",
             "Irmão",
@@ -580,6 +585,7 @@
             this.cboRespomsavel.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboRespomsavel.FormattingEnabled = true;
             this.cboRespomsavel.Items.AddRange(new object[] {
+            "",
             "Pai",
             "Mãe",
             "Irmão",
@@ -775,6 +781,7 @@
             this.btnSalvar.TabIndex = 81;
             this.btnSalvar.Text = "Salvar";
             this.btnSalvar.UseVisualStyleBackColor = true;
+            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
             // btnLimpar
             // 
@@ -785,6 +792,7 @@
             this.btnLimpar.TabIndex = 82;
             this.btnLimpar.Text = "Limpar";
             this.btnLimpar.UseVisualStyleBackColor = true;
+            this.btnLimpar.Click += new System.EventHandler(this.btnLimpar_Click);
             // 
             // panel1
             // 
@@ -867,6 +875,7 @@
             this.cboUF.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboUF.FormattingEnabled = true;
             this.cboUF.Items.AddRange(new object[] {
+            "",
             "AC",
             "AL",
             "AM",
@@ -899,11 +908,12 @@
             this.cboUF.Size = new System.Drawing.Size(39, 21);
             this.cboUF.TabIndex = 38;
             // 
-            // comboBox1
+            // cboUFRep
             // 
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.cboUFRep.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboUFRep.FormattingEnabled = true;
+            this.cboUFRep.Items.AddRange(new object[] {
+            "",
             "AC",
             "AL",
             "AM",
@@ -931,10 +941,10 @@
             "SE",
             "SP",
             "TO"});
-            this.comboBox1.Location = new System.Drawing.Point(373, 489);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(39, 21);
-            this.comboBox1.TabIndex = 74;
+            this.cboUFRep.Location = new System.Drawing.Point(373, 489);
+            this.cboUFRep.Name = "cboUFRep";
+            this.cboUFRep.Size = new System.Drawing.Size(39, 21);
+            this.cboUFRep.TabIndex = 74;
             // 
             // txtRG
             // 
@@ -963,7 +973,7 @@
             this.chkAtivo.Text = "Ativo";
             this.chkAtivo.UseVisualStyleBackColor = true;
             // 
-            // CadastrarAluno
+            // CadastroAluno
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -971,7 +981,7 @@
             this.Controls.Add(this.chkAtivo);
             this.Controls.Add(this.txtCPF);
             this.Controls.Add(this.txtRG);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.cboUFRep);
             this.Controls.Add(this.cboUF);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
@@ -1019,7 +1029,7 @@
             this.Controls.Add(this.label19);
             this.Controls.Add(this.label18);
             this.Controls.Add(this.label17);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.txtCidade);
             this.Controls.Add(this.label16);
             this.Controls.Add(this.txtBairro);
             this.Controls.Add(this.label15);
@@ -1027,7 +1037,7 @@
             this.Controls.Add(this.label14);
             this.Controls.Add(this.txtNumero);
             this.Controls.Add(this.label13);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.txtEndereco);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.txtIMC);
             this.Controls.Add(this.label11);
@@ -1049,7 +1059,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "CadastrarAluno";
+            this.Name = "CadastroAluno";
             this.Text = "CadastrarAluno";
             this.Load += new System.EventHandler(this.CadastrarAluno_Load);
             this.panel1.ResumeLayout(false);
@@ -1086,7 +1096,7 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox txtIMC;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtEndereco;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.TextBox txtNumero;
         private System.Windows.Forms.Label label13;
@@ -1094,7 +1104,7 @@
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.TextBox txtBairro;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtCidade;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label18;
@@ -1147,7 +1157,7 @@
         private System.Windows.Forms.Label label41;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.ComboBox cboUF;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cboUFRep;
         private System.Windows.Forms.MaskedTextBox txtRG;
         private System.Windows.Forms.MaskedTextBox txtCPF;
         private System.Windows.Forms.CheckBox chkAtivo;

@@ -33,27 +33,34 @@ namespace SteelGymDesktop.View
 
         private void LoadUser(int userId)
         {
-            _user = _userApp.GetById(userId);
+            try
+            {
+                _user = _userApp.GetById(userId);
 
-            txtNome.Text = _user.Name;
-            txtSobrenome.Text = _user.LastName;
-            txtRG.Text = _user.RG;
-            txtCPF.Text = _user.CPF;
-            txtEmail.Text = _user.Email;
-            txtEndereco.Text = _user.Address;
-            txtNumero.Text = _user.Number.ToString();
-            txtComplemento.Text = _user.Complement;
-            txtBairro.Text = _user.Neighborhood;
-            txtCidade.Text = _user.City;
-            cboUF.Text = _user.UF;
-            txtCEP.Text = _user.CEP;
-            txtTel1.Text = _user.Phone1;
-            txtTel2.Text = _user.Phone2;
-            txtUserName.Text = _user.UserName;
-            chkAtivo.Checked = _user.Active;
-            txtUsuario.Text = _user.UserId.ToString();
+                txtNome.Text = _user.Name;
+                txtSobrenome.Text = _user.LastName;
+                txtRG.Text = _user.RG;
+                txtCPF.Text = _user.CPF;
+                txtEmail.Text = _user.Email;
+                txtEndereco.Text = _user.Address;
+                txtNumero.Text = _user.Number.ToString();
+                txtComplemento.Text = _user.Complement;
+                txtBairro.Text = _user.Neighborhood;
+                txtCidade.Text = _user.City;
+                cboUF.Text = _user.UF;
+                txtCEP.Text = _user.CEP;
+                txtTel1.Text = _user.Phone1;
+                txtTel2.Text = _user.Phone2;
+                txtUserName.Text = _user.UserName;
+                chkAtivo.Checked = _user.Active;
+                txtUsuario.Text = _user.UserId.ToString();
 
-            txtUserName.Enabled = false;
+                txtUserName.Enabled = false;
+            }
+            catch (Exception ex)
+            {
+                Util.ShowMessageWarning(ex.Message);
+            }
         }
 
         private void btnSalvar_Click(object sender, System.EventArgs e)

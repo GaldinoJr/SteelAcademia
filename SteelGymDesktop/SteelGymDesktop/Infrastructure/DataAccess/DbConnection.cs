@@ -14,6 +14,7 @@ namespace SteelGymDesktop.Infrastructure.DataAccess
         { }
 
         public DbSet<User> Users { get; set; }
+        public DbSet<Student> Students { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
@@ -35,6 +36,7 @@ namespace SteelGymDesktop.Infrastructure.DataAccess
                 .Configure(c => c.HasColumnType("datetime"));
 
             modelBuilder.Configurations.Add(new Config.UserConfiguration());
+            modelBuilder.Configurations.Add(new Config.StudentConfiguration());
         }
 
         public override int SaveChanges()

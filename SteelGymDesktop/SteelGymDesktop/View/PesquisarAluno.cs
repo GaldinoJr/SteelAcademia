@@ -13,11 +13,12 @@ namespace SteelGymDesktop.View
 {
     public partial class PesquisarAluno : Form
     {
-        private readonly IUserAppService _userApp;
+        private readonly IStudentAppService _studentApp;
+        private int _studenId;
 
-        public PesquisarAluno(IUserAppService userApp)
+        public PesquisarAluno(IStudentAppService studentApp)
         {
-            _userApp = userApp;
+            _studentApp = studentApp;
             InitializeComponent();
         }
 
@@ -43,13 +44,42 @@ namespace SteelGymDesktop.View
 
         private void btnPesquisar_Click(object sender, EventArgs e)
         {
-            dtgAlunos.Rows.Clear();
+            Util.DisabledCursor();
 
-            for (int i = 0; i < 100; i++)
+            try
             {
-                dtgAlunos.Rows.Add("", "", i.ToString(), "Teste " + i.ToString(), "12.345.678-" + i.ToString(), "123.456.789-0" + i.ToString(),
-                    "Sim", "28/05/2017");
+                dtgAlunos.Rows.Clear();
+
+                if (!Util.ValidaString(txtIDAluno.Text))
+                {
+                    var student = _studentApp.GetById(Convert.ToInt32(txtIDAluno.Text));
+
+                    if (student != null)
+                        dtgAlunos.Rows.Add(student.StudentId, student.Name, student.RG, student.CPF, (student.Active ? "Sim" : "Não"), student.PayDay);
+                    else
+                        Util.ShowMessageWarning("Não foi encontrado Aluno com este Id.");
+                }
+                else
+                {
+                    var students = _studentApp.GetByFilter(chkAtivo.Checked, txtNome.Text, txtRG.Text, txtCPF.Text);
+
+                    if (students != null)
+                    {
+                        foreach (var student in students)
+                        {
+                            dtgAlunos.Rows.Add(student.StudentId, student.Name, student.RG, student.CPF, (student.Active ? "Sim" : "Não"), student.PayDay);
+                        }
+                    }
+                    else
+                        Util.ShowMessageWarning("Não foi encontrado alunos com esses parametros.");
+                }
             }
+            catch (Exception ex)
+            {
+                Util.ShowMessageWarning(ex.Message);
+            }
+
+            Util.EnabledCursor();
         }
 
         private void btnLimpar_Click(object sender, EventArgs e)
@@ -59,6 +89,31 @@ namespace SteelGymDesktop.View
             txtNome.Text = "";
             txtRG.Text = "";
             dtgAlunos.Rows.Clear();
+        }
+
+        private void dtgAlunos_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                var index = e.RowIndex;
+                var row = dtgAlunos.Rows[index];
+
+                _studenId = Convert.ToInt32(row.Cells[0].Value);
+
+                UpdateStudent();
+            }
+            catch (Exception ex)
+            {
+                Util.ShowMessageWarning(ex.Message);
+            }
+        }
+
+        private void UpdateStudent()
+        {
+            CadastroAluno p = new CadastroAluno(_studentApp, false, _studenId);
+            p.ShowDialog();
+
+            btnPesquisar_Click(null, null);
         }
     }
 }

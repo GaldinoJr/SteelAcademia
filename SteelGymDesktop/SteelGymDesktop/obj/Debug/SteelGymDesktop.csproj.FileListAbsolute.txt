@@ -66,3 +66,5 @@ C:\inetpub\wwwroot\SteelAcademia\SteelGymDesktop\SteelGymDesktop\obj\Debug\Steel
 C:\inetpub\wwwroot\SteelAcademia\SteelGymDesktop\SteelGymDesktop\obj\Debug\SteelGymDesktop.csproj.GenerateResource.Cache
 C:\inetpub\wwwroot\SteelAcademia\SteelGymDesktop\SteelGymDesktop\obj\Debug\SteelGymDesktop.exe
 C:\inetpub\wwwroot\SteelAcademia\SteelGymDesktop\SteelGymDesktop\obj\Debug\SteelGymDesktop.pdb
+C:\inetpub\wwwroot\SteelAcademia\SteelGymDesktop\SteelGymDesktop\obj\Debug\SteelGymDesktop.Migrations.cadaluno.resources
+C:\inetpub\wwwroot\SteelAcademia\SteelGymDesktop\SteelGymDesktop\obj\Debug\SteelGymDesktop.csprojResolveAssemblyReference.cache

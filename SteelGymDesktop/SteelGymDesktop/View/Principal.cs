@@ -14,10 +14,12 @@ namespace SteelGymDesktop.View
     public partial class Principal : Form
     {
         private readonly IUserAppService _userApp;
+        private readonly IStudentAppService _studentApp;
 
-        public Principal(IUserAppService userApp)
+        public Principal(IUserAppService userApp, IStudentAppService studentApp)
         {
             _userApp = userApp;
+            _studentApp = studentApp;
 
             InitializeComponent();
         }
@@ -30,13 +32,13 @@ namespace SteelGymDesktop.View
 
         private void cadastroToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            CadastroAluno p = new CadastroAluno();
+            CadastroAluno p = new CadastroAluno(_studentApp, true, int.MinValue);
             abrirModulo(p, Models.Modulos.DF_NOME_MODULO_ALUNO);
         }
 
         private void pesquisarToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            PesquisarAluno p = new PesquisarAluno(_userApp);
+            PesquisarAluno p = new PesquisarAluno(_studentApp);
             abrirModulo(p, Models.Modulos.DF_NOME_MODULO_ALUNO);
         }
 

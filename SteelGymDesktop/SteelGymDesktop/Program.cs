@@ -18,6 +18,10 @@ namespace SteelGymDesktop
         private static IUserService _userService;
         private static IUserRepository _userRepository;
 
+        private static IStudentAppService _studentAppService;
+        private static IStudentService _studentService;
+        private static IStudentRepository _studentRepository;
+
         [STAThread]
         static void Main()
         {
@@ -27,12 +31,16 @@ namespace SteelGymDesktop
             _userService = new UserService(_userRepository);
             _userAppService = new UserAppService(_userService);
 
+            _studentRepository = new StudentRepository();
+            _studentService = new StudentService(_studentRepository);
+            _studentAppService = new StudentAppService(_studentService);
+
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
             View.Login l = new View.Login();
             if (l.ShowDialog() == DialogResult.OK)
-                Application.Run(new View.Principal(_userAppService));
+                Application.Run(new View.Principal(_userAppService, _studentAppService));
         }
     }
 }
