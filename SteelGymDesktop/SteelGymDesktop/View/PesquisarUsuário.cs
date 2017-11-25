@@ -22,7 +22,7 @@ namespace SteelGymDesktop.View
             chkAtivo.Checked = true;
         }
 
-        private void btnPesquisar_Click(object sender, EventArgs e)
+        private void BtnPesquisar_Click(object sender, EventArgs e)
         {
             Util.DisabledCursor();
 
@@ -62,7 +62,7 @@ namespace SteelGymDesktop.View
             Util.EnabledCursor();
         }
 
-        private void btnLimpar_Click(object sender, EventArgs e)
+        private void BtnLimpar_Click(object sender, EventArgs e)
         {
             txtCPF.Text = "";
             txtIDAluno.Text = "";
@@ -76,10 +76,10 @@ namespace SteelGymDesktop.View
             CadastroUsuario p = new CadastroUsuario(_userApp, false, _userId);
             p.ShowDialog();
 
-            btnPesquisar_Click(null, null);
+            BtnPesquisar_Click(null, null);
         }
 
-        private void dtgUsuario_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        private void DtgUsuario_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             try
             {
