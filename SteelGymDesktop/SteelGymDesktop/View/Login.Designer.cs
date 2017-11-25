@@ -40,23 +40,29 @@
             // 
             // btnLostPassword
             // 
-            this.btnLostPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLostPassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(21)))), ((int)(((byte)(86)))));
+            this.btnLostPassword.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnLostPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLostPassword.ForeColor = System.Drawing.Color.White;
             this.btnLostPassword.Location = new System.Drawing.Point(189, 300);
             this.btnLostPassword.Name = "btnLostPassword";
             this.btnLostPassword.Size = new System.Drawing.Size(163, 27);
             this.btnLostPassword.TabIndex = 13;
-            this.btnLostPassword.Text = "Esqueci minha senha";
-            this.btnLostPassword.UseVisualStyleBackColor = true;
+            this.btnLostPassword.Text = "Esqueci a senha";
+            this.btnLostPassword.UseVisualStyleBackColor = false;
             // 
             // btnLogin
             // 
-            this.btnLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(21)))), ((int)(((byte)(86)))));
+            this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogin.ForeColor = System.Drawing.Color.White;
             this.btnLogin.Location = new System.Drawing.Point(78, 300);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(72, 27);
             this.btnLogin.TabIndex = 12;
             this.btnLogin.Text = "Login";
-            this.btnLogin.UseVisualStyleBackColor = true;
+            this.btnLogin.UseVisualStyleBackColor = false;
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
             // txtPassword
@@ -90,6 +96,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(74, 228);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(76, 24);
@@ -100,6 +107,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(74, 161);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(179, 24);
@@ -110,6 +118,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(37)))), ((int)(((byte)(72)))));
             this.ClientSize = new System.Drawing.Size(427, 354);
             this.Controls.Add(this.btnLostPassword);
             this.Controls.Add(this.btnLogin);
