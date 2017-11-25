@@ -63,7 +63,7 @@ namespace SteelGymDesktop.View
             }
         }
 
-        private void btnSalvar_Click(object sender, System.EventArgs e)
+        private void BtnSalvar_Click(object sender, System.EventArgs e)
         {
             try
             {
