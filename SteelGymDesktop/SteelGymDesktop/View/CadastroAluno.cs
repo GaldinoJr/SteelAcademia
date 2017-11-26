@@ -81,7 +81,7 @@ namespace SteelGymDesktop.View
             }
         }
 
-        private void btnSalvar_Click(object sender, EventArgs e)
+        private void BtnSalvar_Click(object sender, EventArgs e)
         {
             try
             {
@@ -174,22 +174,22 @@ namespace SteelGymDesktop.View
             return pass;
         }
 
-        private void btnLimpar_Click(object sender, EventArgs e)
+        private void BtnLimpar_Click(object sender, EventArgs e)
         {
             Limpar();
         }
 
-        private void txtIMC_KeyPress(object sender, KeyPressEventArgs e)
+        private void TxtIMC_KeyPress(object sender, KeyPressEventArgs e)
         {
             e.Handled = Util.ValidaNumero(e);
         }
 
-        private void txtNumero_KeyPress(object sender, KeyPressEventArgs e)
+        private void TxtNumero_KeyPress(object sender, KeyPressEventArgs e)
         {
             e.Handled = Util.ValidaNumero(e);
         }
 
-        private void txtNumeroResp_KeyPress(object sender, KeyPressEventArgs e)
+        private void TxtNumeroResp_KeyPress(object sender, KeyPressEventArgs e)
         {
             e.Handled = Util.ValidaNumero(e);
         }
