@@ -45,26 +45,26 @@
             this.fecharToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.txtNomeModulo = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.panel8 = new System.Windows.Forms.Panel();
             this.panel9 = new System.Windows.Forms.Panel();
             this.panel10 = new System.Windows.Forms.Panel();
             this.panel11 = new System.Windows.Forms.Panel();
             this.panel12 = new System.Windows.Forms.Panel();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.toolbar = new System.Windows.Forms.Panel();
+            this.txtNomeModulo = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             Menu = new System.Windows.Forms.MenuStrip();
             Menu.SuspendLayout();
             this.panel3.SuspendLayout();
-            this.panel2.SuspendLayout();
             this.panel5.SuspendLayout();
-            this.panel7.SuspendLayout();
             this.panel9.SuspendLayout();
             this.panel10.SuspendLayout();
+            this.panel7.SuspendLayout();
+            this.toolbar.SuspendLayout();
             this.SuspendLayout();
             // 
             // Menu
@@ -92,7 +92,7 @@
             // homeToolStripMenuItem
             // 
             this.homeToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(43)))), ((int)(((byte)(80)))));
-            this.homeToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.homeToolStripMenuItem.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.homeToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("homeToolStripMenuItem.Image")));
             this.homeToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.homeToolStripMenuItem.Name = "homeToolStripMenuItem";
@@ -100,7 +100,7 @@
             this.homeToolStripMenuItem.Size = new System.Drawing.Size(126, 83);
             this.homeToolStripMenuItem.Text = "Home";
             this.homeToolStripMenuItem.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.homeToolStripMenuItem.Click += new System.EventHandler(this.homeToolStripMenuItem_Click);
+            this.homeToolStripMenuItem.Click += new System.EventHandler(this.HomeToolStripMenuItem_Click);
             // 
             // alunoToolStripMenuItem
             // 
@@ -120,16 +120,16 @@
             // cadastroToolStripMenuItem
             // 
             this.cadastroToolStripMenuItem.Name = "cadastroToolStripMenuItem";
-            this.cadastroToolStripMenuItem.Size = new System.Drawing.Size(142, 24);
+            this.cadastroToolStripMenuItem.Size = new System.Drawing.Size(152, 24);
             this.cadastroToolStripMenuItem.Text = "Incluir";
-            this.cadastroToolStripMenuItem.Click += new System.EventHandler(this.cadastroToolStripMenuItem_Click);
+            this.cadastroToolStripMenuItem.Click += new System.EventHandler(this.CadastroToolStripMenuItem_Click);
             // 
             // pesquisarToolStripMenuItem
             // 
             this.pesquisarToolStripMenuItem.Name = "pesquisarToolStripMenuItem";
-            this.pesquisarToolStripMenuItem.Size = new System.Drawing.Size(142, 24);
+            this.pesquisarToolStripMenuItem.Size = new System.Drawing.Size(152, 24);
             this.pesquisarToolStripMenuItem.Text = "Pesquisar";
-            this.pesquisarToolStripMenuItem.Click += new System.EventHandler(this.pesquisarToolStripMenuItem_Click);
+            this.pesquisarToolStripMenuItem.Click += new System.EventHandler(this.PesquisarToolStripMenuItem_Click);
             // 
             // pagamentoToolStripMenuItem
             // 
@@ -142,7 +142,7 @@
             this.pagamentoToolStripMenuItem.Size = new System.Drawing.Size(126, 83);
             this.pagamentoToolStripMenuItem.Text = "Pagamento";
             this.pagamentoToolStripMenuItem.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.pagamentoToolStripMenuItem.Click += new System.EventHandler(this.pagamentoToolStripMenuItem_Click);
+            this.pagamentoToolStripMenuItem.Click += new System.EventHandler(this.PagamentoToolStripMenuItem_Click);
             // 
             // comprovantesToolStripMenuItem
             // 
@@ -154,7 +154,7 @@
             this.comprovantesToolStripMenuItem.Size = new System.Drawing.Size(126, 83);
             this.comprovantesToolStripMenuItem.Text = "Comprovantes";
             this.comprovantesToolStripMenuItem.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.comprovantesToolStripMenuItem.Click += new System.EventHandler(this.comprovantesToolStripMenuItem_Click);
+            this.comprovantesToolStripMenuItem.Click += new System.EventHandler(this.ComprovantesToolStripMenuItem_Click);
             // 
             // cadastroDeUsuarioToolStripMenuItem
             // 
@@ -176,14 +176,14 @@
             this.incluirToolStripMenuItem.Name = "incluirToolStripMenuItem";
             this.incluirToolStripMenuItem.Size = new System.Drawing.Size(142, 24);
             this.incluirToolStripMenuItem.Text = "Incluir";
-            this.incluirToolStripMenuItem.Click += new System.EventHandler(this.incluirToolStripMenuItem_Click);
+            this.incluirToolStripMenuItem.Click += new System.EventHandler(this.IncluirToolStripMenuItem_Click);
             // 
             // pesquisarToolStripMenuItem1
             // 
             this.pesquisarToolStripMenuItem1.Name = "pesquisarToolStripMenuItem1";
             this.pesquisarToolStripMenuItem1.Size = new System.Drawing.Size(142, 24);
             this.pesquisarToolStripMenuItem1.Text = "Pesquisar";
-            this.pesquisarToolStripMenuItem1.Click += new System.EventHandler(this.pesquisarToolStripMenuItem1_Click);
+            this.pesquisarToolStripMenuItem1.Click += new System.EventHandler(this.PesquisarToolStripMenuItem1_Click);
             // 
             // movimentaçõesToolStripMenuItem
             // 
@@ -223,14 +223,14 @@
             this.fecharToolStripMenuItem.Size = new System.Drawing.Size(126, 83);
             this.fecharToolStripMenuItem.Text = "Sair";
             this.fecharToolStripMenuItem.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.fecharToolStripMenuItem.Click += new System.EventHandler(this.fecharToolStripMenuItem_Click);
+            this.fecharToolStripMenuItem.Click += new System.EventHandler(this.FecharToolStripMenuItem_Click);
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(37)))), ((int)(((byte)(72)))));
-            this.panel1.Location = new System.Drawing.Point(144, 55);
+            this.panel1.Location = new System.Drawing.Point(144, 58);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(940, 586);
+            this.panel1.Size = new System.Drawing.Size(930, 611);
             this.panel1.TabIndex = 6;
             // 
             // panel3
@@ -243,46 +243,6 @@
             this.panel3.Size = new System.Drawing.Size(10, 83);
             this.panel3.TabIndex = 0;
             // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.Color.White;
-            this.panel4.Location = new System.Drawing.Point(0, 86);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(10, 83);
-            this.panel4.TabIndex = 1;
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(26)))), ((int)(((byte)(70)))));
-            this.panel2.Controls.Add(this.txtNomeModulo);
-            this.panel2.Controls.Add(this.label1);
-            this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1084, 58);
-            this.panel2.TabIndex = 0;
-            // 
-            // txtNomeModulo
-            // 
-            this.txtNomeModulo.AutoSize = true;
-            this.txtNomeModulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNomeModulo.ForeColor = System.Drawing.Color.White;
-            this.txtNomeModulo.Location = new System.Drawing.Point(560, 14);
-            this.txtNomeModulo.Name = "txtNomeModulo";
-            this.txtNomeModulo.Size = new System.Drawing.Size(68, 25);
-            this.txtNomeModulo.TabIndex = 1;
-            this.txtNomeModulo.Text = "Home";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(6, 21);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(124, 18);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Academia Steel";
-            // 
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(21)))), ((int)(((byte)(86)))));
@@ -293,31 +253,6 @@
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(10, 83);
             this.panel5.TabIndex = 2;
-            // 
-            // panel6
-            // 
-            this.panel6.BackColor = System.Drawing.Color.White;
-            this.panel6.Location = new System.Drawing.Point(0, 86);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(10, 83);
-            this.panel6.TabIndex = 1;
-            // 
-            // panel7
-            // 
-            this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(21)))), ((int)(((byte)(86)))));
-            this.panel7.Controls.Add(this.panel8);
-            this.panel7.Location = new System.Drawing.Point(0, 81);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(10, 83);
-            this.panel7.TabIndex = 3;
-            // 
-            // panel8
-            // 
-            this.panel8.BackColor = System.Drawing.Color.White;
-            this.panel8.Location = new System.Drawing.Point(0, 86);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(10, 83);
-            this.panel8.TabIndex = 1;
             // 
             // panel9
             // 
@@ -354,13 +289,79 @@
             this.panel12.Size = new System.Drawing.Size(10, 83);
             this.panel12.TabIndex = 1;
             // 
+            // panel7
+            // 
+            this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(21)))), ((int)(((byte)(86)))));
+            this.panel7.Controls.Add(this.panel8);
+            this.panel7.Location = new System.Drawing.Point(0, 81);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(10, 83);
+            this.panel7.TabIndex = 3;
+            // 
+            // panel8
+            // 
+            this.panel8.BackColor = System.Drawing.Color.White;
+            this.panel8.Location = new System.Drawing.Point(0, 86);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(10, 83);
+            this.panel8.TabIndex = 1;
+            // 
+            // panel6
+            // 
+            this.panel6.BackColor = System.Drawing.Color.White;
+            this.panel6.Location = new System.Drawing.Point(0, 86);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(10, 83);
+            this.panel6.TabIndex = 1;
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.White;
+            this.panel4.Location = new System.Drawing.Point(0, 86);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(10, 83);
+            this.panel4.TabIndex = 1;
+            // 
+            // toolbar
+            // 
+            this.toolbar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(26)))), ((int)(((byte)(70)))));
+            this.toolbar.Controls.Add(this.txtNomeModulo);
+            this.toolbar.Controls.Add(this.label1);
+            this.toolbar.Location = new System.Drawing.Point(0, 0);
+            this.toolbar.Name = "toolbar";
+            this.toolbar.Size = new System.Drawing.Size(5084, 58);
+            this.toolbar.TabIndex = 0;
+            // 
+            // txtNomeModulo
+            // 
+            this.txtNomeModulo.AutoSize = true;
+            this.txtNomeModulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNomeModulo.ForeColor = System.Drawing.Color.White;
+            this.txtNomeModulo.Location = new System.Drawing.Point(560, 14);
+            this.txtNomeModulo.Name = "txtNomeModulo";
+            this.txtNomeModulo.Size = new System.Drawing.Size(68, 25);
+            this.txtNomeModulo.TabIndex = 1;
+            this.txtNomeModulo.Text = "Home";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(6, 21);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(124, 18);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Academia Steel";
+            // 
             // Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(37)))), ((int)(((byte)(72)))));
             this.ClientSize = new System.Drawing.Size(1076, 641);
             this.Controls.Add(this.panel3);
-            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.toolbar);
             this.Controls.Add(this.panel1);
             this.Controls.Add(Menu);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -371,12 +372,12 @@
             Menu.ResumeLayout(false);
             Menu.PerformLayout();
             this.panel3.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
             this.panel5.ResumeLayout(false);
-            this.panel7.ResumeLayout(false);
             this.panel9.ResumeLayout(false);
             this.panel10.ResumeLayout(false);
+            this.panel7.ResumeLayout(false);
+            this.toolbar.ResumeLayout(false);
+            this.toolbar.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -398,7 +399,7 @@
         private System.Windows.Forms.ToolStripMenuItem pesquisarToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem inclusãoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem pesquisaToolStripMenuItem;
-        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel toolbar;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label txtNomeModulo;
         private System.Windows.Forms.Panel panel3;

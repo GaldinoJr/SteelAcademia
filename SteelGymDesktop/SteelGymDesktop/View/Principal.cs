@@ -22,52 +22,64 @@ namespace SteelGymDesktop.View
             _studentApp = studentApp;
 
             InitializeComponent();
+            // Full screen
+            FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            WindowState = FormWindowState.Maximized;
+            // Centralizar Painel
+            int largura = ((Screen.PrimaryScreen.WorkingArea.Width - this.Width) / 2);
+            int altura = (Screen.PrimaryScreen.WorkingArea.Height - this.Height) / 2;
+            panel1.Location = new Point(largura, altura);
+            panel1.Anchor = AnchorStyles.None;
+            // Centralizar titulo
+            int larguraTitulo = Screen.PrimaryScreen.WorkingArea.Width / 2 - txtNomeModulo.Height;
+            int alturaTitulo = this.toolbar.Height/4;
+            txtNomeModulo.Location = new Point(larguraTitulo,alturaTitulo);
         }
 
         private void Index_Load(object sender, EventArgs e)
         {
             Home home = new Home();
-            abrirModulo(home, Models.Modulos.DF_NOME_MODULO_HOME);
+            AbrirModulo(home, Models.Modulos.DF_NOME_MODULO_HOME);
         }
 
-        private void cadastroToolStripMenuItem_Click(object sender, EventArgs e)
+        private void CadastroToolStripMenuItem_Click(object sender, EventArgs e)
         {
             CadastroAluno p = new CadastroAluno(_studentApp, true, int.MinValue);
-            abrirModulo(p, Models.Modulos.DF_NOME_MODULO_ALUNO);
+            AbrirModulo(p, Models.Modulos.DF_NOME_MODULO_ALUNO);
         }
 
-        private void pesquisarToolStripMenuItem_Click(object sender, EventArgs e)
+        private void PesquisarToolStripMenuItem_Click(object sender, EventArgs e)
         {
             PesquisarAluno p = new PesquisarAluno(_studentApp);
-            abrirModulo(p, Models.Modulos.DF_NOME_MODULO_ALUNO);
+            AbrirModulo(p, Models.Modulos.DF_NOME_MODULO_ALUNO);
         }
 
-        private void pagamentoToolStripMenuItem_Click(object sender, EventArgs e)
+        private void PagamentoToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void comprovantesToolStripMenuItem_Click(object sender, EventArgs e)
+        private void ComprovantesToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void incluirToolStripMenuItem_Click(object sender, EventArgs e)
+        private void IncluirToolStripMenuItem_Click(object sender, EventArgs e)
         {
             CadastroUsuario p = new CadastroUsuario(_userApp, true, int.MinValue);
-            abrirModulo(p, Models.Modulos.DF_NOME_MODULO_USUARIO);
+            AbrirModulo(p, Models.Modulos.DF_NOME_MODULO_USUARIO);
         }
 
-        private void pesquisarToolStripMenuItem1_Click(object sender, EventArgs e)
+        private void PesquisarToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             PesquisarUsuário p = new PesquisarUsuário(_userApp);
-            abrirModulo(p, Models.Modulos.DF_NOME_MODULO_USUARIO);
+            AbrirModulo(p, Models.Modulos.DF_NOME_MODULO_USUARIO);
         }
 
-        private void homeToolStripMenuItem_Click(object sender, EventArgs e)
+        private void HomeToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Home h = new Home();
-            abrirModulo(h, Models.Modulos.DF_NOME_MODULO_HOME);
+            AbrirModulo(h, Models.Modulos.DF_NOME_MODULO_HOME);
         }
 
         // Métodos
@@ -84,7 +96,7 @@ namespace SteelGymDesktop.View
             targetForm.WindowState = FormWindowState.Normal;
         }
 
-        private void fecharToolStripMenuItem_Click(object sender, EventArgs e)
+        private void FecharToolStripMenuItem_Click(object sender, EventArgs e)
         {
             panel1.Controls.Clear();
             Login l = new Login();
@@ -96,7 +108,7 @@ namespace SteelGymDesktop.View
             l.Show();
         }
 
-        public void abrirModulo(Form form, String nomeModulo)
+        public void AbrirModulo(Form form, String nomeModulo)
         {
             // Muda o nome do módulo na toolbar
             txtNomeModulo.Text = nomeModulo;
