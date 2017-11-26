@@ -27,22 +27,22 @@ namespace SteelGymDesktop.View
             chkAtivo.Checked = true;
         }
 
-        private void txtIDAluno_KeyPress(object sender, KeyPressEventArgs e)
+        private void TxtIDAluno_KeyPress(object sender, KeyPressEventArgs e)
         {
             e.Handled = Util.ValidaNumero(e);
         }
 
-        private void txtRG_KeyPress(object sender, KeyPressEventArgs e)
+        private void TxtRG_KeyPress(object sender, KeyPressEventArgs e)
         {
             e.Handled = Util.ValidaNumero(e);
         }
 
-        private void txtCPF_KeyPress(object sender, KeyPressEventArgs e)
+        private void TxtCPF_KeyPress(object sender, KeyPressEventArgs e)
         {
             e.Handled = Util.ValidaNumero(e);
         }
 
-        private void btnPesquisar_Click(object sender, EventArgs e)
+        private void BtnPesquisar_Click(object sender, EventArgs e)
         {
             Util.DisabledCursor();
 
@@ -82,7 +82,7 @@ namespace SteelGymDesktop.View
             Util.EnabledCursor();
         }
 
-        private void btnLimpar_Click(object sender, EventArgs e)
+        private void BtnLimpar_Click(object sender, EventArgs e)
         {
             txtCPF.Text = "";
             txtIDAluno.Text = "";
@@ -91,7 +91,7 @@ namespace SteelGymDesktop.View
             dtgAlunos.Rows.Clear();
         }
 
-        private void dtgAlunos_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        private void DtgAlunos_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             try
             {
@@ -113,7 +113,7 @@ namespace SteelGymDesktop.View
             CadastroAluno p = new CadastroAluno(_studentApp, false, _studenId);
             p.ShowDialog();
 
-            btnPesquisar_Click(null, null);
+            BtnPesquisar_Click(null, null);
         }
     }
 }
