@@ -17,6 +17,15 @@ namespace SteelGymDesktop
                 return false;
         }
 
+        public static bool ValidaStringSemEspaco(string s)
+        {
+            if(ValidaString(s) && !s.Contains(" "))
+            {
+                return true;
+            }
+            return false;
+        }
+
         public static bool ValidaString(string s)
         {
             return !(s.Equals("") || s == null);
