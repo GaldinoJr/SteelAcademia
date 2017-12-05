@@ -49,7 +49,6 @@
             this.label11 = new System.Windows.Forms.Label();
             this.txtEndereco = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
-            this.txtNumero = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.txtComplemento = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
@@ -93,7 +92,6 @@
             this.label34 = new System.Windows.Forms.Label();
             this.txtComplementoResp = new System.Windows.Forms.TextBox();
             this.label35 = new System.Windows.Forms.Label();
-            this.txtNumeroResp = new System.Windows.Forms.TextBox();
             this.label36 = new System.Windows.Forms.Label();
             this.txtEnderecoResp = new System.Windows.Forms.TextBox();
             this.label37 = new System.Windows.Forms.Label();
@@ -108,6 +106,8 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.txtNumero = new System.Windows.Forms.MaskedTextBox();
+            this.txtNumeroResp = new System.Windows.Forms.MaskedTextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -183,7 +183,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(308, 73);
+            this.label5.Location = new System.Drawing.Point(427, 73);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(42, 17);
             this.label5.TabIndex = 13;
@@ -274,7 +274,7 @@
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(446, 73);
+            this.label10.Location = new System.Drawing.Point(301, 73);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(36, 17);
             this.label10.TabIndex = 23;
@@ -316,14 +316,6 @@
             this.label12.Size = new System.Drawing.Size(82, 17);
             this.label12.TabIndex = 27;
             this.label12.Text = "Endereço:";
-            // 
-            // txtNumero
-            // 
-            this.txtNumero.Location = new System.Drawing.Point(648, 19);
-            this.txtNumero.Name = "txtNumero";
-            this.txtNumero.Size = new System.Drawing.Size(97, 20);
-            this.txtNumero.TabIndex = 30;
-            this.txtNumero.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtNumero_KeyPress);
             // 
             // label13
             // 
@@ -755,14 +747,6 @@
             this.label35.TabIndex = 67;
             this.label35.Text = "Compl.:";
             // 
-            // txtNumeroResp
-            // 
-            this.txtNumeroResp.Location = new System.Drawing.Point(636, 47);
-            this.txtNumeroResp.Name = "txtNumeroResp";
-            this.txtNumeroResp.Size = new System.Drawing.Size(97, 20);
-            this.txtNumeroResp.TabIndex = 66;
-            this.txtNumeroResp.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtNumeroResp_KeyPress);
-            // 
             // label36
             // 
             this.label36.AutoSize = true;
@@ -798,7 +782,7 @@
             this.btnSalvar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSalvar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSalvar.ForeColor = System.Drawing.Color.White;
-            this.btnSalvar.Location = new System.Drawing.Point(12, 581);
+            this.btnSalvar.Location = new System.Drawing.Point(709, 578);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(155, 30);
             this.btnSalvar.TabIndex = 81;
@@ -812,7 +796,7 @@
             this.btnLimpar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLimpar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLimpar.ForeColor = System.Drawing.Color.White;
-            this.btnLimpar.Location = new System.Drawing.Point(173, 581);
+            this.btnLimpar.Location = new System.Drawing.Point(548, 578);
             this.btnLimpar.Name = "btnLimpar";
             this.btnLimpar.Size = new System.Drawing.Size(155, 30);
             this.btnLimpar.TabIndex = 82;
@@ -898,7 +882,7 @@
             // 
             // txtRG
             // 
-            this.txtRG.Location = new System.Drawing.Point(484, 72);
+            this.txtRG.Location = new System.Drawing.Point(339, 72);
             this.txtRG.Mask = "99.999.999-9";
             this.txtRG.Name = "txtRG";
             this.txtRG.Size = new System.Drawing.Size(82, 20);
@@ -906,7 +890,7 @@
             // 
             // txtCPF
             // 
-            this.txtCPF.Location = new System.Drawing.Point(346, 73);
+            this.txtCPF.Location = new System.Drawing.Point(465, 73);
             this.txtCPF.Mask = "999.999.999-99";
             this.txtCPF.Name = "txtCPF";
             this.txtCPF.Size = new System.Drawing.Size(89, 20);
@@ -957,10 +941,10 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.txtNumero);
             this.groupBox2.Controls.Add(this.label12);
             this.groupBox2.Controls.Add(this.txtEndereco);
             this.groupBox2.Controls.Add(this.label13);
-            this.groupBox2.Controls.Add(this.txtNumero);
             this.groupBox2.Controls.Add(this.label14);
             this.groupBox2.Controls.Add(this.cboUF);
             this.groupBox2.Controls.Add(this.txtComplemento);
@@ -1007,6 +991,7 @@
             // 
             // groupBox4
             // 
+            this.groupBox4.Controls.Add(this.txtNumeroResp);
             this.groupBox4.Controls.Add(this.txtResponsavel);
             this.groupBox4.Controls.Add(this.label28);
             this.groupBox4.Controls.Add(this.label27);
@@ -1016,7 +1001,6 @@
             this.groupBox4.Controls.Add(this.txtEnderecoResp);
             this.groupBox4.Controls.Add(this.label36);
             this.groupBox4.Controls.Add(this.txtTelResp2);
-            this.groupBox4.Controls.Add(this.txtNumeroResp);
             this.groupBox4.Controls.Add(this.txtTelResp1);
             this.groupBox4.Controls.Add(this.label35);
             this.groupBox4.Controls.Add(this.txtCEPResp);
@@ -1036,6 +1020,22 @@
             this.groupBox4.TabIndex = 89;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Menor de 18 anos (Dados do responsável)";
+            // 
+            // txtNumero
+            // 
+            this.txtNumero.Location = new System.Drawing.Point(648, 19);
+            this.txtNumero.Mask = "99999999";
+            this.txtNumero.Name = "txtNumero";
+            this.txtNumero.Size = new System.Drawing.Size(52, 20);
+            this.txtNumero.TabIndex = 47;
+            // 
+            // txtNumeroResp
+            // 
+            this.txtNumeroResp.Location = new System.Drawing.Point(636, 46);
+            this.txtNumeroResp.Mask = "99999999";
+            this.txtNumeroResp.Name = "txtNumeroResp";
+            this.txtNumeroResp.Size = new System.Drawing.Size(52, 20);
+            this.txtNumeroResp.TabIndex = 81;
             // 
             // CadastroAluno
             // 
@@ -1086,7 +1086,6 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox txtEndereco;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox txtNumero;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.TextBox txtComplemento;
         private System.Windows.Forms.Label label14;
@@ -1130,7 +1129,6 @@
         private System.Windows.Forms.Label label34;
         private System.Windows.Forms.TextBox txtComplementoResp;
         private System.Windows.Forms.Label label35;
-        private System.Windows.Forms.TextBox txtNumeroResp;
         private System.Windows.Forms.Label label36;
         private System.Windows.Forms.TextBox txtEnderecoResp;
         private System.Windows.Forms.Label label37;
@@ -1145,5 +1143,7 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.MaskedTextBox txtNumero;
+        private System.Windows.Forms.MaskedTextBox txtNumeroResp;
     }
 }

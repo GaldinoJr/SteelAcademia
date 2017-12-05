@@ -209,7 +209,7 @@ namespace SteelGymDesktop.View
             return name.ToLower() + "@" + number;
         }
 
-        private void btnLimpar_Click(object sender, EventArgs e)
+        private void BtnLimpar_Click(object sender, EventArgs e)
         {
             Limpar();
         }

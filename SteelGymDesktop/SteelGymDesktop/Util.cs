@@ -34,13 +34,19 @@ namespace SteelGymDesktop
         public static bool ValidaRg(string s)
         {
             String campo = RemoverCaracteres(s);
-            return (campo.Length < 8);
+            return (campo.Length >= 7 && campo.Length <= 9);
         }
 
         public static bool ValidaCpf(string s)
         {
             String campo = RemoverCaracteres(s);
-            return (campo.Length < 11);
+            return (campo.Length == 11);
+        }
+
+        public static bool ValidaTelefone(string s)
+        {
+            s = RemoverCaracteres(s);
+            return ValidaString(s);
         }
 
         private static String RemoverCaracteres(String s)
@@ -62,6 +68,26 @@ namespace SteelGymDesktop
         public static void EnabledCursor()
         {
             Cursor.Current = Cursors.Default;
+        }
+
+        internal static bool ValidaData(DateTime date)
+        {
+            int currentYear = DateTime.Today.Year;
+            if (date.Year >= currentYear)
+            {
+                return false;
+            }
+            return true;
+        }
+
+        internal static bool IsMinor(DateTime date)
+        {
+            int currentYear = DateTime.Today.Year;
+            if ((currentYear - date.Year) < 18)
+            {
+                return false;
+            }
+            return true;
         }
     }
 }

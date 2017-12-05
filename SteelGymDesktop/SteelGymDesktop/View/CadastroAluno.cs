@@ -103,10 +103,16 @@ namespace SteelGymDesktop.View
                 _student.Email = txtEmail.Text;
                 _student.Sex = cboSexo.Text;
                 _student.RG = txtRG.Text;
-                _student.IMC = Convert.ToDecimal(txtIMC.Text);
+                if (Util.ValidaString(txtIMC.Text))
+                {
+                    _student.IMC = Convert.ToDecimal(txtIMC.Text);
+                }
                 _student.Active = chkAtivo.Checked;
                 _student.Address = txtEndereco.Text;
-                _student.Number = Convert.ToInt32(txtNumero.Text);
+                if (Util.ValidaString(txtNumero.Text))
+                {
+                    _student.Number = Convert.ToInt32(txtNumero.Text);
+                }
                 _student.Complement = txtComplemento.Text;
                 _student.Neighborhood = txtBairro.Text;
                 _student.City = txtCidade.Text;
@@ -123,7 +129,10 @@ namespace SteelGymDesktop.View
                 _student.ResponsibleName = txtResponsavel.Text;
                 _student.ResponsibleDegree = cboRespomsavel.Text;
                 _student.ResponsibleAddress = txtEnderecoResp.Text;
-                _student.ResponsibleNumber = Convert.ToInt32(txtNumeroResp.Text);
+                if (Util.ValidaString(txtNumeroResp.Text))
+                {
+                    _student.ResponsibleNumber = Convert.ToInt32(txtNumeroResp.Text);
+                }
                 _student.ResponsibleComplement = txtComplementoResp.Text;
                 _student.ResponsibleNeighborhood = txtBairroResp.Text;
                 _student.ResponsibleCity = txtCidadeResp.Text;
@@ -164,13 +173,88 @@ namespace SteelGymDesktop.View
         {
             msgError = "";
             bool pass = true;
-
-            if (Util.ValidaString(txtNome.Text))
+            bool isMinor = false;
+            if (!Util.ValidaString(txtNome.Text))
             {
                 msgError += " - Campo 'Nome' invalido.";
                 pass = false;
+                txtNome.Focus();
+            }
+            //varDate = dateTimePicker1.Value.Date;
+            if (!Util.ValidaData(dtpNascimento.Value.Date))
+            {
+                msgError += " - Campo 'Data de nascimento' invalido.";
+                if (pass)
+                {
+                    dtpNascimento.Focus();
+                }
+                pass = false;
+                //isMenor
+                if(!Util.IsMinor(dtpNascimento.Value.Date))
+                {
+                    isMinor = true;
+                }
+            }
+            if(!Util.ValidaRg(txtRG.Text))
+            {
+                msgError += " - Campo 'RG' invalido.";
+                if (pass)
+                {
+                    txtRG.Focus();
+                }
+                pass = false;
+            }
+            if (!Util.ValidaCpf(txtCPF.Text))
+            {
+                msgError += " - Campo 'CPF' invalido.";
+                if (pass)
+                {
+                    txtCPF.Focus();
+                }
+                pass = false;
+            }
+            if(cboSexo.SelectedIndex == -1)
+            {
+                msgError += " - Campo 'Sexo' não selecionado.";
+                if (pass)
+                {
+                    cboSexo.Focus();
+                }
+                pass = false;
             }
 
+            //E caso o aluno seja menor, eu Obrigo o nome e o grau de parentesco 
+            if (isMinor)
+            {
+                if(!Util.ValidaString(txtResponsavel.Text))
+                {
+                    msgError += " - Campo 'Nome do responsável' invalido.";
+                    if (pass)
+                    {
+                        txtResponsavel.Focus();
+                    }
+                    pass = false;
+                }
+                if(cboRespomsavel.SelectedIndex == -1)
+                {
+                    msgError += " - Campo 'Parentesco do responsável' não selecionado.";
+                    if (pass)
+                    {
+                        cboRespomsavel.Focus();
+                    }
+                    pass = false;
+                }
+                if(!Util.ValidaTelefone(txtTelResp1.Text))
+                {
+                    msgError += " - Campo 'Telefone do responsável' invalido.";
+                    if (pass)
+                    {
+                        txtTelResp1.Focus();
+                    }
+                    pass = false;
+                }
+            }
+           
             return pass;
         }
 

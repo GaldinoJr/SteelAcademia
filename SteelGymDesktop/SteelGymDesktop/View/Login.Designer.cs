@@ -44,7 +44,7 @@
             this.btnLostPassword.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLostPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLostPassword.ForeColor = System.Drawing.Color.White;
-            this.btnLostPassword.Location = new System.Drawing.Point(189, 300);
+            this.btnLostPassword.Location = new System.Drawing.Point(78, 287);
             this.btnLostPassword.Name = "btnLostPassword";
             this.btnLostPassword.Size = new System.Drawing.Size(163, 27);
             this.btnLostPassword.TabIndex = 13;
@@ -57,7 +57,7 @@
             this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogin.ForeColor = System.Drawing.Color.White;
-            this.btnLogin.Location = new System.Drawing.Point(78, 300);
+            this.btnLogin.Location = new System.Drawing.Point(280, 287);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(72, 27);
             this.btnLogin.TabIndex = 12;
