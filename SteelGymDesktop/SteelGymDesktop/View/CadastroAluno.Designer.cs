@@ -103,15 +103,19 @@
             this.txtCPF = new System.Windows.Forms.MaskedTextBox();
             this.chkAtivo = new System.Windows.Forms.CheckBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.dtpMensalidade = new System.Windows.Forms.DateTimePicker();
+            this.label38 = new System.Windows.Forms.Label();
+            this.txtMensalidade = new System.Windows.Forms.MaskedTextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.txtNumero = new System.Windows.Forms.MaskedTextBox();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.gbMenor = new System.Windows.Forms.GroupBox();
             this.txtNumeroResp = new System.Windows.Forms.MaskedTextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
-            this.groupBox4.SuspendLayout();
+            this.gbMenor.SuspendLayout();
             this.SuspendLayout();
             // 
             // txtNome
@@ -119,7 +123,7 @@
             this.txtNome.Location = new System.Drawing.Point(109, 46);
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(501, 20);
-            this.txtNome.TabIndex = 8;
+            this.txtNome.TabIndex = 1;
             // 
             // label3
             // 
@@ -138,7 +142,7 @@
             this.txtIDAluno.Name = "txtIDAluno";
             this.txtIDAluno.ReadOnly = true;
             this.txtIDAluno.Size = new System.Drawing.Size(97, 20);
-            this.txtIDAluno.TabIndex = 10;
+            this.txtIDAluno.TabIndex = 0;
             // 
             // label2
             // 
@@ -176,7 +180,7 @@
             this.cboEstadoCivil.Location = new System.Drawing.Point(109, 72);
             this.cboEstadoCivil.Name = "cboEstadoCivil";
             this.cboEstadoCivil.Size = new System.Drawing.Size(186, 21);
-            this.cboEstadoCivil.TabIndex = 12;
+            this.cboEstadoCivil.TabIndex = 3;
             // 
             // label5
             // 
@@ -207,14 +211,15 @@
             this.dtpNascimento.Location = new System.Drawing.Point(719, 43);
             this.dtpNascimento.Name = "dtpNascimento";
             this.dtpNascimento.Size = new System.Drawing.Size(103, 20);
-            this.dtpNascimento.TabIndex = 16;
+            this.dtpNascimento.TabIndex = 2;
+            this.dtpNascimento.ValueChanged += new System.EventHandler(this.DtpNascimento_ValueChanged);
             // 
             // txtEmail
             // 
             this.txtEmail.Location = new System.Drawing.Point(109, 99);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(381, 20);
-            this.txtEmail.TabIndex = 18;
+            this.txtEmail.TabIndex = 6;
             // 
             // label7
             // 
@@ -238,7 +243,7 @@
             this.cboSexo.Location = new System.Drawing.Point(561, 98);
             this.cboSexo.Name = "cboSexo";
             this.cboSexo.Size = new System.Drawing.Size(105, 21);
-            this.cboSexo.TabIndex = 20;
+            this.cboSexo.TabIndex = 7;
             // 
             // label8
             // 
@@ -256,7 +261,7 @@
             this.txtProfissao.Location = new System.Drawing.Point(109, 125);
             this.txtProfissao.Name = "txtProfissao";
             this.txtProfissao.Size = new System.Drawing.Size(431, 20);
-            this.txtProfissao.TabIndex = 22;
+            this.txtProfissao.TabIndex = 8;
             // 
             // label9
             // 
@@ -285,7 +290,7 @@
             this.txtIMC.Location = new System.Drawing.Point(602, 125);
             this.txtIMC.Name = "txtIMC";
             this.txtIMC.Size = new System.Drawing.Size(134, 20);
-            this.txtIMC.TabIndex = 26;
+            this.txtIMC.TabIndex = 9;
             this.txtIMC.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtIMC_KeyPress);
             // 
             // label11
@@ -304,7 +309,7 @@
             this.txtEndereco.Location = new System.Drawing.Point(110, 19);
             this.txtEndereco.Name = "txtEndereco";
             this.txtEndereco.Size = new System.Drawing.Size(501, 20);
-            this.txtEndereco.TabIndex = 28;
+            this.txtEndereco.TabIndex = 12;
             // 
             // label12
             // 
@@ -333,7 +338,7 @@
             this.txtComplemento.Location = new System.Drawing.Point(110, 43);
             this.txtComplemento.Name = "txtComplemento";
             this.txtComplemento.Size = new System.Drawing.Size(241, 20);
-            this.txtComplemento.TabIndex = 32;
+            this.txtComplemento.TabIndex = 14;
             // 
             // label14
             // 
@@ -351,7 +356,7 @@
             this.txtBairro.Location = new System.Drawing.Point(433, 45);
             this.txtBairro.Name = "txtBairro";
             this.txtBairro.Size = new System.Drawing.Size(209, 20);
-            this.txtBairro.TabIndex = 34;
+            this.txtBairro.TabIndex = 15;
             // 
             // label15
             // 
@@ -369,7 +374,7 @@
             this.txtCidade.Location = new System.Drawing.Point(110, 67);
             this.txtCidade.Name = "txtCidade";
             this.txtCidade.Size = new System.Drawing.Size(241, 20);
-            this.txtCidade.TabIndex = 36;
+            this.txtCidade.TabIndex = 16;
             // 
             // label16
             // 
@@ -431,7 +436,7 @@
             this.txtCEP.Mask = "99999-999";
             this.txtCEP.Name = "txtCEP";
             this.txtCEP.Size = new System.Drawing.Size(58, 20);
-            this.txtCEP.TabIndex = 44;
+            this.txtCEP.TabIndex = 18;
             // 
             // txtTel1
             // 
@@ -439,7 +444,7 @@
             this.txtTel1.Mask = "(99) 9999-9999";
             this.txtTel1.Name = "txtTel1";
             this.txtTel1.Size = new System.Drawing.Size(82, 20);
-            this.txtTel1.TabIndex = 45;
+            this.txtTel1.TabIndex = 19;
             // 
             // txtTel2
             // 
@@ -447,14 +452,14 @@
             this.txtTel2.Mask = "(99) 9999-9999";
             this.txtTel2.Name = "txtTel2";
             this.txtTel2.Size = new System.Drawing.Size(82, 20);
-            this.txtTel2.TabIndex = 46;
+            this.txtTel2.TabIndex = 20;
             // 
             // txtNomeParentesco1
             // 
             this.txtNomeParentesco1.Location = new System.Drawing.Point(110, 25);
             this.txtNomeParentesco1.Name = "txtNomeParentesco1";
             this.txtNomeParentesco1.Size = new System.Drawing.Size(375, 20);
-            this.txtNomeParentesco1.TabIndex = 48;
+            this.txtNomeParentesco1.TabIndex = 21;
             // 
             // label21
             // 
@@ -491,7 +496,7 @@
             this.cboParentesco1.Location = new System.Drawing.Point(605, 25);
             this.cboParentesco1.Name = "cboParentesco1";
             this.cboParentesco1.Size = new System.Drawing.Size(186, 21);
-            this.cboParentesco1.TabIndex = 50;
+            this.cboParentesco1.TabIndex = 22;
             // 
             // cboParentesco2
             // 
@@ -506,7 +511,7 @@
             this.cboParentesco2.Location = new System.Drawing.Point(605, 51);
             this.cboParentesco2.Name = "cboParentesco2";
             this.cboParentesco2.Size = new System.Drawing.Size(186, 21);
-            this.cboParentesco2.TabIndex = 54;
+            this.cboParentesco2.TabIndex = 24;
             // 
             // label23
             // 
@@ -524,7 +529,7 @@
             this.txtNomeParentesco2.Location = new System.Drawing.Point(110, 51);
             this.txtNomeParentesco2.Name = "txtNomeParentesco2";
             this.txtNomeParentesco2.Size = new System.Drawing.Size(375, 20);
-            this.txtNomeParentesco2.TabIndex = 52;
+            this.txtNomeParentesco2.TabIndex = 23;
             // 
             // label24
             // 
@@ -550,7 +555,7 @@
             this.cboParentesco3.Location = new System.Drawing.Point(605, 77);
             this.cboParentesco3.Name = "cboParentesco3";
             this.cboParentesco3.Size = new System.Drawing.Size(186, 21);
-            this.cboParentesco3.TabIndex = 58;
+            this.cboParentesco3.TabIndex = 26;
             // 
             // label25
             // 
@@ -568,7 +573,7 @@
             this.txtNomeParentesco3.Location = new System.Drawing.Point(110, 77);
             this.txtNomeParentesco3.Name = "txtNomeParentesco3";
             this.txtNomeParentesco3.Size = new System.Drawing.Size(375, 20);
-            this.txtNomeParentesco3.TabIndex = 56;
+            this.txtNomeParentesco3.TabIndex = 25;
             // 
             // label26
             // 
@@ -594,7 +599,7 @@
             this.cboRespomsavel.Location = new System.Drawing.Point(603, 19);
             this.cboRespomsavel.Name = "cboRespomsavel";
             this.cboRespomsavel.Size = new System.Drawing.Size(186, 21);
-            this.cboRespomsavel.TabIndex = 62;
+            this.cboRespomsavel.TabIndex = 28;
             // 
             // label27
             // 
@@ -612,7 +617,7 @@
             this.txtResponsavel.Location = new System.Drawing.Point(109, 20);
             this.txtResponsavel.Name = "txtResponsavel";
             this.txtResponsavel.Size = new System.Drawing.Size(374, 20);
-            this.txtResponsavel.TabIndex = 60;
+            this.txtResponsavel.TabIndex = 27;
             // 
             // label28
             // 
@@ -631,7 +636,7 @@
             this.txtTelResp2.Mask = "(99) 9999-9999";
             this.txtTelResp2.Name = "txtTelResp2";
             this.txtTelResp2.Size = new System.Drawing.Size(82, 20);
-            this.txtTelResp2.TabIndex = 80;
+            this.txtTelResp2.TabIndex = 37;
             // 
             // txtTelResp1
             // 
@@ -639,7 +644,7 @@
             this.txtTelResp1.Mask = "(99) 9999-9999";
             this.txtTelResp1.Name = "txtTelResp1";
             this.txtTelResp1.Size = new System.Drawing.Size(82, 20);
-            this.txtTelResp1.TabIndex = 79;
+            this.txtTelResp1.TabIndex = 36;
             // 
             // txtCEPResp
             // 
@@ -647,7 +652,7 @@
             this.txtCEPResp.Mask = "99999-999";
             this.txtCEPResp.Name = "txtCEPResp";
             this.txtCEPResp.Size = new System.Drawing.Size(58, 20);
-            this.txtCEPResp.TabIndex = 78;
+            this.txtCEPResp.TabIndex = 35;
             // 
             // label29
             // 
@@ -698,7 +703,7 @@
             this.txtCidadeResp.Location = new System.Drawing.Point(109, 99);
             this.txtCidadeResp.Name = "txtCidadeResp";
             this.txtCidadeResp.Size = new System.Drawing.Size(241, 20);
-            this.txtCidadeResp.TabIndex = 72;
+            this.txtCidadeResp.TabIndex = 39;
             // 
             // label33
             // 
@@ -716,7 +721,7 @@
             this.txtBairroResp.Location = new System.Drawing.Point(441, 72);
             this.txtBairroResp.Name = "txtBairroResp";
             this.txtBairroResp.Size = new System.Drawing.Size(209, 20);
-            this.txtBairroResp.TabIndex = 70;
+            this.txtBairroResp.TabIndex = 32;
             // 
             // label34
             // 
@@ -734,7 +739,7 @@
             this.txtComplementoResp.Location = new System.Drawing.Point(109, 73);
             this.txtComplementoResp.Name = "txtComplementoResp";
             this.txtComplementoResp.Size = new System.Drawing.Size(241, 20);
-            this.txtComplementoResp.TabIndex = 68;
+            this.txtComplementoResp.TabIndex = 31;
             // 
             // label35
             // 
@@ -763,7 +768,7 @@
             this.txtEnderecoResp.Location = new System.Drawing.Point(109, 46);
             this.txtEnderecoResp.Name = "txtEnderecoResp";
             this.txtEnderecoResp.Size = new System.Drawing.Size(485, 20);
-            this.txtEnderecoResp.TabIndex = 64;
+            this.txtEnderecoResp.TabIndex = 29;
             // 
             // label37
             // 
@@ -782,10 +787,10 @@
             this.btnSalvar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSalvar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSalvar.ForeColor = System.Drawing.Color.White;
-            this.btnSalvar.Location = new System.Drawing.Point(709, 578);
+            this.btnSalvar.Location = new System.Drawing.Point(709, 609);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(155, 30);
-            this.btnSalvar.TabIndex = 81;
+            this.btnSalvar.TabIndex = 130;
             this.btnSalvar.Text = "Salvar";
             this.btnSalvar.UseVisualStyleBackColor = false;
             this.btnSalvar.Click += new System.EventHandler(this.BtnSalvar_Click);
@@ -796,7 +801,7 @@
             this.btnLimpar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLimpar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLimpar.ForeColor = System.Drawing.Color.White;
-            this.btnLimpar.Location = new System.Drawing.Point(548, 578);
+            this.btnLimpar.Location = new System.Drawing.Point(548, 609);
             this.btnLimpar.Name = "btnLimpar";
             this.btnLimpar.Size = new System.Drawing.Size(155, 30);
             this.btnLimpar.TabIndex = 82;
@@ -840,7 +845,7 @@
             this.cboUF.Location = new System.Drawing.Point(389, 67);
             this.cboUF.Name = "cboUF";
             this.cboUF.Size = new System.Drawing.Size(39, 21);
-            this.cboUF.TabIndex = 38;
+            this.cboUF.TabIndex = 17;
             // 
             // cboUFRep
             // 
@@ -878,7 +883,7 @@
             this.cboUFRep.Location = new System.Drawing.Point(396, 99);
             this.cboUFRep.Name = "cboUFRep";
             this.cboUFRep.Size = new System.Drawing.Size(39, 21);
-            this.cboUFRep.TabIndex = 74;
+            this.cboUFRep.TabIndex = 34;
             // 
             // txtRG
             // 
@@ -886,7 +891,7 @@
             this.txtRG.Mask = "99.999.999-9";
             this.txtRG.Name = "txtRG";
             this.txtRG.Size = new System.Drawing.Size(82, 20);
-            this.txtRG.TabIndex = 24;
+            this.txtRG.TabIndex = 4;
             // 
             // txtCPF
             // 
@@ -894,7 +899,7 @@
             this.txtCPF.Mask = "999.999.999-99";
             this.txtCPF.Name = "txtCPF";
             this.txtCPF.Size = new System.Drawing.Size(89, 20);
-            this.txtCPF.TabIndex = 14;
+            this.txtCPF.TabIndex = 5;
             // 
             // chkAtivo
             // 
@@ -910,6 +915,10 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.dtpMensalidade);
+            this.groupBox1.Controls.Add(this.label38);
+            this.groupBox1.Controls.Add(this.txtMensalidade);
+            this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.txtNome);
             this.groupBox1.Controls.Add(this.label2);
@@ -932,12 +941,51 @@
             this.groupBox1.Controls.Add(this.label11);
             this.groupBox1.Controls.Add(this.txtIMC);
             this.groupBox1.ForeColor = System.Drawing.Color.White;
-            this.groupBox1.Location = new System.Drawing.Point(13, 13);
+            this.groupBox1.Location = new System.Drawing.Point(13, 19);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(851, 159);
+            this.groupBox1.Size = new System.Drawing.Size(851, 181);
             this.groupBox1.TabIndex = 86;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Dados Pessoais";
+            // 
+            // dtpMensalidade
+            // 
+            this.dtpMensalidade.CustomFormat = "dd/MM/YYYY";
+            this.dtpMensalidade.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpMensalidade.Location = new System.Drawing.Point(339, 151);
+            this.dtpMensalidade.Name = "dtpMensalidade";
+            this.dtpMensalidade.Size = new System.Drawing.Size(103, 20);
+            this.dtpMensalidade.TabIndex = 11;
+            // 
+            // label38
+            // 
+            this.label38.AutoSize = true;
+            this.label38.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label38.ForeColor = System.Drawing.Color.White;
+            this.label38.Location = new System.Drawing.Point(204, 153);
+            this.label38.Name = "label38";
+            this.label38.Size = new System.Drawing.Size(133, 17);
+            this.label38.TabIndex = 50;
+            this.label38.Text = "Data Pagamento:";
+            // 
+            // txtMensalidade
+            // 
+            this.txtMensalidade.Location = new System.Drawing.Point(139, 151);
+            this.txtMensalidade.Mask = "99999999";
+            this.txtMensalidade.Name = "txtMensalidade";
+            this.txtMensalidade.Size = new System.Drawing.Size(52, 20);
+            this.txtMensalidade.TabIndex = 10;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(4, 152);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(129, 17);
+            this.label1.TabIndex = 48;
+            this.label1.Text = "Mensalidade R$:";
             // 
             // groupBox2
             // 
@@ -960,12 +1008,20 @@
             this.groupBox2.Controls.Add(this.txtTel1);
             this.groupBox2.Controls.Add(this.txtTel2);
             this.groupBox2.ForeColor = System.Drawing.Color.White;
-            this.groupBox2.Location = new System.Drawing.Point(12, 178);
+            this.groupBox2.Location = new System.Drawing.Point(12, 206);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(852, 117);
             this.groupBox2.TabIndex = 87;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Dados Complementares";
+            // 
+            // txtNumero
+            // 
+            this.txtNumero.Location = new System.Drawing.Point(648, 19);
+            this.txtNumero.Mask = "99999999";
+            this.txtNumero.Name = "txtNumero";
+            this.txtNumero.Size = new System.Drawing.Size(52, 20);
+            this.txtNumero.TabIndex = 13;
             // 
             // groupBox3
             // 
@@ -982,52 +1038,45 @@
             this.groupBox3.Controls.Add(this.label25);
             this.groupBox3.Controls.Add(this.cboParentesco3);
             this.groupBox3.ForeColor = System.Drawing.Color.White;
-            this.groupBox3.Location = new System.Drawing.Point(12, 301);
+            this.groupBox3.Location = new System.Drawing.Point(12, 329);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(852, 107);
             this.groupBox3.TabIndex = 88;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Contato Urgente (em caso de urgência)";
             // 
-            // groupBox4
+            // gbMenor
             // 
-            this.groupBox4.Controls.Add(this.txtNumeroResp);
-            this.groupBox4.Controls.Add(this.txtResponsavel);
-            this.groupBox4.Controls.Add(this.label28);
-            this.groupBox4.Controls.Add(this.label27);
-            this.groupBox4.Controls.Add(this.cboRespomsavel);
-            this.groupBox4.Controls.Add(this.cboUFRep);
-            this.groupBox4.Controls.Add(this.label37);
-            this.groupBox4.Controls.Add(this.txtEnderecoResp);
-            this.groupBox4.Controls.Add(this.label36);
-            this.groupBox4.Controls.Add(this.txtTelResp2);
-            this.groupBox4.Controls.Add(this.txtTelResp1);
-            this.groupBox4.Controls.Add(this.label35);
-            this.groupBox4.Controls.Add(this.txtCEPResp);
-            this.groupBox4.Controls.Add(this.txtComplementoResp);
-            this.groupBox4.Controls.Add(this.label29);
-            this.groupBox4.Controls.Add(this.label34);
-            this.groupBox4.Controls.Add(this.label30);
-            this.groupBox4.Controls.Add(this.txtBairroResp);
-            this.groupBox4.Controls.Add(this.label31);
-            this.groupBox4.Controls.Add(this.label33);
-            this.groupBox4.Controls.Add(this.label32);
-            this.groupBox4.Controls.Add(this.txtCidadeResp);
-            this.groupBox4.ForeColor = System.Drawing.Color.White;
-            this.groupBox4.Location = new System.Drawing.Point(13, 414);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(851, 161);
-            this.groupBox4.TabIndex = 89;
-            this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "Menor de 18 anos (Dados do responsável)";
-            // 
-            // txtNumero
-            // 
-            this.txtNumero.Location = new System.Drawing.Point(648, 19);
-            this.txtNumero.Mask = "99999999";
-            this.txtNumero.Name = "txtNumero";
-            this.txtNumero.Size = new System.Drawing.Size(52, 20);
-            this.txtNumero.TabIndex = 47;
+            this.gbMenor.Controls.Add(this.txtNumeroResp);
+            this.gbMenor.Controls.Add(this.txtResponsavel);
+            this.gbMenor.Controls.Add(this.label28);
+            this.gbMenor.Controls.Add(this.label27);
+            this.gbMenor.Controls.Add(this.cboRespomsavel);
+            this.gbMenor.Controls.Add(this.cboUFRep);
+            this.gbMenor.Controls.Add(this.label37);
+            this.gbMenor.Controls.Add(this.txtEnderecoResp);
+            this.gbMenor.Controls.Add(this.label36);
+            this.gbMenor.Controls.Add(this.txtTelResp2);
+            this.gbMenor.Controls.Add(this.txtTelResp1);
+            this.gbMenor.Controls.Add(this.label35);
+            this.gbMenor.Controls.Add(this.txtCEPResp);
+            this.gbMenor.Controls.Add(this.txtComplementoResp);
+            this.gbMenor.Controls.Add(this.label29);
+            this.gbMenor.Controls.Add(this.label34);
+            this.gbMenor.Controls.Add(this.label30);
+            this.gbMenor.Controls.Add(this.txtBairroResp);
+            this.gbMenor.Controls.Add(this.label31);
+            this.gbMenor.Controls.Add(this.label33);
+            this.gbMenor.Controls.Add(this.label32);
+            this.gbMenor.Controls.Add(this.txtCidadeResp);
+            this.gbMenor.ForeColor = System.Drawing.Color.White;
+            this.gbMenor.Location = new System.Drawing.Point(13, 442);
+            this.gbMenor.Name = "gbMenor";
+            this.gbMenor.Size = new System.Drawing.Size(851, 161);
+            this.gbMenor.TabIndex = 89;
+            this.gbMenor.TabStop = false;
+            this.gbMenor.Text = "Menor de 18 anos (Dados do responsável)";
+            this.gbMenor.Visible = false;
             // 
             // txtNumeroResp
             // 
@@ -1035,15 +1084,15 @@
             this.txtNumeroResp.Mask = "99999999";
             this.txtNumeroResp.Name = "txtNumeroResp";
             this.txtNumeroResp.Size = new System.Drawing.Size(52, 20);
-            this.txtNumeroResp.TabIndex = 81;
+            this.txtNumeroResp.TabIndex = 30;
             // 
             // CadastroAluno
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(37)))), ((int)(((byte)(72)))));
-            this.ClientSize = new System.Drawing.Size(899, 620);
-            this.Controls.Add(this.groupBox4);
+            this.ClientSize = new System.Drawing.Size(899, 651);
+            this.Controls.Add(this.gbMenor);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
@@ -1051,7 +1100,7 @@
             this.Controls.Add(this.btnSalvar);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "CadastroAluno";
-            this.Text = "CadastrarAluno";
+            this.Text = "Cadastro de aluno";
             this.Load += new System.EventHandler(this.CadastrarAluno_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -1059,8 +1108,8 @@
             this.groupBox2.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
-            this.groupBox4.ResumeLayout(false);
-            this.groupBox4.PerformLayout();
+            this.gbMenor.ResumeLayout(false);
+            this.gbMenor.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1142,8 +1191,12 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.GroupBox gbMenor;
         private System.Windows.Forms.MaskedTextBox txtNumero;
         private System.Windows.Forms.MaskedTextBox txtNumeroResp;
+        private System.Windows.Forms.MaskedTextBox txtMensalidade;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DateTimePicker dtpMensalidade;
+        private System.Windows.Forms.Label label38;
     }
 }

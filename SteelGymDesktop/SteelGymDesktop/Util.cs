@@ -80,14 +80,29 @@ namespace SteelGymDesktop
             return true;
         }
 
-        internal static bool IsMinor(DateTime date)
+        internal static bool IsMinor(DateTime datePerson)
         {
-            int currentYear = DateTime.Today.Year;
-            if ((currentYear - date.Year) < 18)
+            DateTime dateNow = DateTime.Today;
+            int yearAdult = dateNow.Year - 18;
+            if (datePerson.Year > yearAdult)
             {
-                return false;
+                return true;
             }
-            return true;
+            else if (datePerson.Year == yearAdult)
+            {
+                if (datePerson.Month > dateNow.Month)
+                {
+                    return true;
+                }
+                else if (datePerson.Month == dateNow.Month)
+                {
+                    if (datePerson.Day > dateNow.Day)
+                    {
+                        return true;
+                    }
+                }
+            }
+            return false;
         }
     }
 }

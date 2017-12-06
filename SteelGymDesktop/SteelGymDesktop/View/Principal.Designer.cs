@@ -85,7 +85,7 @@
             Menu.Location = new System.Drawing.Point(0, 0);
             Menu.Name = "Menu";
             Menu.Padding = new System.Windows.Forms.Padding(10, 58, 0, 2);
-            Menu.Size = new System.Drawing.Size(147, 641);
+            Menu.Size = new System.Drawing.Size(147, 699);
             Menu.TabIndex = 5;
             Menu.Text = "Home";
             // 
@@ -120,14 +120,14 @@
             // cadastroToolStripMenuItem
             // 
             this.cadastroToolStripMenuItem.Name = "cadastroToolStripMenuItem";
-            this.cadastroToolStripMenuItem.Size = new System.Drawing.Size(152, 24);
+            this.cadastroToolStripMenuItem.Size = new System.Drawing.Size(142, 24);
             this.cadastroToolStripMenuItem.Text = "Incluir";
             this.cadastroToolStripMenuItem.Click += new System.EventHandler(this.CadastroToolStripMenuItem_Click);
             // 
             // pesquisarToolStripMenuItem
             // 
             this.pesquisarToolStripMenuItem.Name = "pesquisarToolStripMenuItem";
-            this.pesquisarToolStripMenuItem.Size = new System.Drawing.Size(152, 24);
+            this.pesquisarToolStripMenuItem.Size = new System.Drawing.Size(142, 24);
             this.pesquisarToolStripMenuItem.Text = "Pesquisar";
             this.pesquisarToolStripMenuItem.Click += new System.EventHandler(this.PesquisarToolStripMenuItem_Click);
             // 
@@ -230,7 +230,7 @@
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(37)))), ((int)(((byte)(72)))));
             this.panel1.Location = new System.Drawing.Point(144, 58);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(930, 611);
+            this.panel1.Size = new System.Drawing.Size(930, 695);
             this.panel1.TabIndex = 6;
             // 
             // panel3
@@ -359,7 +359,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(37)))), ((int)(((byte)(72)))));
-            this.ClientSize = new System.Drawing.Size(1076, 641);
+            this.ClientSize = new System.Drawing.Size(1076, 699);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.toolbar);
             this.Controls.Add(this.panel1);

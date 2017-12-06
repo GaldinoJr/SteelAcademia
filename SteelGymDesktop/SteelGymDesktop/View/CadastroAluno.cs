@@ -11,7 +11,7 @@ namespace SteelGymDesktop.View
         private readonly bool _isCreate;
         private readonly int _studentId;
         private Student _student;
-
+        private bool isMenor;
         public CadastroAluno(IStudentAppService studentApp, bool isCreate, int studentId)
         {
             _studentApp = studentApp;
@@ -27,7 +27,35 @@ namespace SteelGymDesktop.View
             if (_studentId != int.MinValue)
             {
                 LoadStudent(_studentId);
+                HabilityResponsibleData();
             }
+            else
+            {
+                InitWithAdultAge();
+            }
+        }
+        
+        private void InitWithAdultAge()
+        {
+            DateTime initialDate = DateTime.Today;
+            int year = initialDate.Year - 18;
+            DateTime upDate = new DateTime(year, initialDate.Month, initialDate.Day);
+            dtpNascimento.Text = upDate.ToString("dd/MM/yyyy");
+        }
+
+        
+
+        private void HabilityResponsibleData()
+        {
+            if(Util.IsMinor(dtpNascimento.Value.Date))
+            {
+                isMenor = true;
+            }
+            else
+            {
+                isMenor = false;
+            }
+            gbMenor.Visible = isMenor;
         }
 
         private void LoadStudent(int studentId)
@@ -173,7 +201,6 @@ namespace SteelGymDesktop.View
         {
             msgError = "";
             bool pass = true;
-            bool isMinor = false;
             if (!Util.ValidaString(txtNome.Text))
             {
                 msgError += " - Campo 'Nome' invalido.";
@@ -190,10 +217,7 @@ namespace SteelGymDesktop.View
                 }
                 pass = false;
                 //isMenor
-                if(!Util.IsMinor(dtpNascimento.Value.Date))
-                {
-                    isMinor = true;
-                }
+
             }
             if(!Util.ValidaRg(txtRG.Text))
             {
@@ -224,7 +248,7 @@ namespace SteelGymDesktop.View
             }
 
             //E caso o aluno seja menor, eu Obrigo o nome e o grau de parentesco 
-            if (isMinor)
+            if (isMenor)
             {
                 if(!Util.ValidaString(txtResponsavel.Text))
                 {
@@ -315,6 +339,11 @@ namespace SteelGymDesktop.View
             txtCEPResp.Text = "";
             txtTelResp1.Text = "";
             txtTelResp2.Text = "";
+        }
+
+        private void DtpNascimento_ValueChanged(object sender, EventArgs e)
+        {
+            HabilityResponsibleData();
         }
     }
 }
