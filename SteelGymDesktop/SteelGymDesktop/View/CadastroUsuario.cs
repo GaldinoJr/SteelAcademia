@@ -141,7 +141,7 @@ namespace SteelGymDesktop.View
             }
             if (!Util.ValidaString(txtNome.Text))
             {
-                msgError += " - Campo 'Nome' invalido.";
+                msgError += " - Campo 'Nome' invalido."; 
                 if (pass)
                 {
                     txtNome.Focus();
