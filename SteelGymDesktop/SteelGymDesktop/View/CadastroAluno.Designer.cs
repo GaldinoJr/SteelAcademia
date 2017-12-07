@@ -45,7 +45,6 @@
             this.txtProfissao = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.txtIMC = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.txtEndereco = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
@@ -103,7 +102,7 @@
             this.txtCPF = new System.Windows.Forms.MaskedTextBox();
             this.chkAtivo = new System.Windows.Forms.CheckBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.dtpMensalidade = new System.Windows.Forms.DateTimePicker();
+            this.cboDiaPagamento = new System.Windows.Forms.ComboBox();
             this.label38 = new System.Windows.Forms.Label();
             this.txtMensalidade = new System.Windows.Forms.MaskedTextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -112,6 +111,7 @@
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.gbMenor = new System.Windows.Forms.GroupBox();
             this.txtNumeroResp = new System.Windows.Forms.MaskedTextBox();
+            this.txtIMC = new System.Windows.Forms.MaskedTextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -285,14 +285,6 @@
             this.label10.TabIndex = 23;
             this.label10.Text = "RG:";
             // 
-            // txtIMC
-            // 
-            this.txtIMC.Location = new System.Drawing.Point(602, 125);
-            this.txtIMC.Name = "txtIMC";
-            this.txtIMC.Size = new System.Drawing.Size(134, 20);
-            this.txtIMC.TabIndex = 9;
-            this.txtIMC.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtIMC_KeyPress);
-            // 
             // label11
             // 
             this.label11.AutoSize = true;
@@ -413,22 +405,22 @@
             // 
             this.label19.AutoSize = true;
             this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.Location = new System.Drawing.Point(47, 91);
+            this.label19.Location = new System.Drawing.Point(24, 91);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(50, 17);
+            this.label19.Size = new System.Drawing.Size(76, 17);
             this.label19.TabIndex = 41;
-            this.label19.Text = "Tel 1:";
+            this.label19.Text = "Tel (Cel):";
             // 
             // label20
             // 
             this.label20.AutoSize = true;
             this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label20.ForeColor = System.Drawing.Color.White;
-            this.label20.Location = new System.Drawing.Point(198, 93);
+            this.label20.Location = new System.Drawing.Point(203, 92);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(50, 17);
+            this.label20.Size = new System.Drawing.Size(137, 17);
             this.label20.TabIndex = 43;
-            this.label20.Text = "Tel 2:";
+            this.label20.Text = "Tel (Residêncial):";
             // 
             // txtCEP
             // 
@@ -440,15 +432,15 @@
             // 
             // txtTel1
             // 
-            this.txtTel1.Location = new System.Drawing.Point(110, 90);
-            this.txtTel1.Mask = "(99) 9999-9999";
+            this.txtTel1.Location = new System.Drawing.Point(110, 91);
+            this.txtTel1.Mask = "(99) 99999-9999";
             this.txtTel1.Name = "txtTel1";
-            this.txtTel1.Size = new System.Drawing.Size(82, 20);
+            this.txtTel1.Size = new System.Drawing.Size(87, 20);
             this.txtTel1.TabIndex = 19;
             // 
             // txtTel2
             // 
-            this.txtTel2.Location = new System.Drawing.Point(254, 91);
+            this.txtTel2.Location = new System.Drawing.Point(346, 89);
             this.txtTel2.Mask = "(99) 9999-9999";
             this.txtTel2.Name = "txtTel2";
             this.txtTel2.Size = new System.Drawing.Size(82, 20);
@@ -632,7 +624,7 @@
             // 
             // txtTelResp2
             // 
-            this.txtTelResp2.Location = new System.Drawing.Point(253, 124);
+            this.txtTelResp2.Location = new System.Drawing.Point(339, 125);
             this.txtTelResp2.Mask = "(99) 9999-9999";
             this.txtTelResp2.Name = "txtTelResp2";
             this.txtTelResp2.Size = new System.Drawing.Size(82, 20);
@@ -641,9 +633,9 @@
             // txtTelResp1
             // 
             this.txtTelResp1.Location = new System.Drawing.Point(109, 125);
-            this.txtTelResp1.Mask = "(99) 9999-9999";
+            this.txtTelResp1.Mask = "(99) 99999-9999";
             this.txtTelResp1.Name = "txtTelResp1";
-            this.txtTelResp1.Size = new System.Drawing.Size(82, 20);
+            this.txtTelResp1.Size = new System.Drawing.Size(87, 20);
             this.txtTelResp1.TabIndex = 36;
             // 
             // txtCEPResp
@@ -661,20 +653,20 @@
             this.label29.ForeColor = System.Drawing.Color.White;
             this.label29.Location = new System.Drawing.Point(197, 126);
             this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(50, 17);
+            this.label29.Size = new System.Drawing.Size(137, 17);
             this.label29.TabIndex = 77;
-            this.label29.Text = "Tel 2:";
+            this.label29.Text = "Tel (Residêncial):";
             // 
             // label30
             // 
             this.label30.AutoSize = true;
             this.label30.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label30.ForeColor = System.Drawing.Color.White;
-            this.label30.Location = new System.Drawing.Point(53, 126);
+            this.label30.Location = new System.Drawing.Point(20, 125);
             this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(50, 17);
+            this.label30.Size = new System.Drawing.Size(76, 17);
             this.label30.TabIndex = 76;
-            this.label30.Text = "Tel 1:";
+            this.label30.Text = "Tel (Cel):";
             // 
             // label31
             // 
@@ -703,7 +695,7 @@
             this.txtCidadeResp.Location = new System.Drawing.Point(109, 99);
             this.txtCidadeResp.Name = "txtCidadeResp";
             this.txtCidadeResp.Size = new System.Drawing.Size(241, 20);
-            this.txtCidadeResp.TabIndex = 39;
+            this.txtCidadeResp.TabIndex = 33;
             // 
             // label33
             // 
@@ -804,7 +796,7 @@
             this.btnLimpar.Location = new System.Drawing.Point(548, 609);
             this.btnLimpar.Name = "btnLimpar";
             this.btnLimpar.Size = new System.Drawing.Size(155, 30);
-            this.btnLimpar.TabIndex = 82;
+            this.btnLimpar.TabIndex = 0;
             this.btnLimpar.Text = "Limpar";
             this.btnLimpar.UseVisualStyleBackColor = false;
             this.btnLimpar.Click += new System.EventHandler(this.BtnLimpar_Click);
@@ -909,13 +901,14 @@
             this.chkAtivo.Location = new System.Drawing.Point(226, 19);
             this.chkAtivo.Name = "chkAtivo";
             this.chkAtivo.Size = new System.Drawing.Size(63, 21);
-            this.chkAtivo.TabIndex = 25;
+            this.chkAtivo.TabIndex = 0;
             this.chkAtivo.Text = "Ativo";
             this.chkAtivo.UseVisualStyleBackColor = true;
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.dtpMensalidade);
+            this.groupBox1.Controls.Add(this.txtIMC);
+            this.groupBox1.Controls.Add(this.cboDiaPagamento);
             this.groupBox1.Controls.Add(this.label38);
             this.groupBox1.Controls.Add(this.txtMensalidade);
             this.groupBox1.Controls.Add(this.label1);
@@ -939,7 +932,6 @@
             this.groupBox1.Controls.Add(this.txtProfissao);
             this.groupBox1.Controls.Add(this.label10);
             this.groupBox1.Controls.Add(this.label11);
-            this.groupBox1.Controls.Add(this.txtIMC);
             this.groupBox1.ForeColor = System.Drawing.Color.White;
             this.groupBox1.Location = new System.Drawing.Point(13, 19);
             this.groupBox1.Name = "groupBox1";
@@ -948,44 +940,73 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Dados Pessoais";
             // 
-            // dtpMensalidade
+            // cboDiaPagamento
             // 
-            this.dtpMensalidade.CustomFormat = "dd/MM/YYYY";
-            this.dtpMensalidade.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpMensalidade.Location = new System.Drawing.Point(339, 151);
-            this.dtpMensalidade.Name = "dtpMensalidade";
-            this.dtpMensalidade.Size = new System.Drawing.Size(103, 20);
-            this.dtpMensalidade.TabIndex = 11;
+            this.cboDiaPagamento.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboDiaPagamento.FormattingEnabled = true;
+            this.cboDiaPagamento.Items.AddRange(new object[] {
+            "",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15",
+            "16",
+            "17",
+            "18",
+            "19",
+            "20",
+            "21",
+            "22",
+            "23",
+            "24",
+            "25",
+            "26",
+            "27",
+            "28"});
+            this.cboDiaPagamento.Location = new System.Drawing.Point(109, 150);
+            this.cboDiaPagamento.Name = "cboDiaPagamento";
+            this.cboDiaPagamento.Size = new System.Drawing.Size(105, 21);
+            this.cboDiaPagamento.TabIndex = 10;
             // 
             // label38
             // 
             this.label38.AutoSize = true;
             this.label38.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label38.ForeColor = System.Drawing.Color.White;
-            this.label38.Location = new System.Drawing.Point(204, 153);
+            this.label38.Location = new System.Drawing.Point(19, 151);
             this.label38.Name = "label38";
-            this.label38.Size = new System.Drawing.Size(133, 17);
+            this.label38.Size = new System.Drawing.Size(84, 17);
             this.label38.TabIndex = 50;
-            this.label38.Text = "Data Pagamento:";
+            this.label38.Text = "Dia Pagto:";
             // 
             // txtMensalidade
             // 
-            this.txtMensalidade.Location = new System.Drawing.Point(139, 151);
-            this.txtMensalidade.Mask = "99999999";
+            this.txtMensalidade.Location = new System.Drawing.Point(401, 151);
             this.txtMensalidade.Name = "txtMensalidade";
             this.txtMensalidade.Size = new System.Drawing.Size(52, 20);
-            this.txtMensalidade.TabIndex = 10;
+            this.txtMensalidade.TabIndex = 11;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(4, 152);
+            this.label1.Location = new System.Drawing.Point(223, 152);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(129, 17);
+            this.label1.Size = new System.Drawing.Size(172, 17);
             this.label1.TabIndex = 48;
-            this.label1.Text = "Mensalidade R$:";
+            this.label1.Text = "Valor Mensalidade R$:";
             // 
             // groupBox2
             // 
@@ -1086,6 +1107,14 @@
             this.txtNumeroResp.Size = new System.Drawing.Size(52, 20);
             this.txtNumeroResp.TabIndex = 30;
             // 
+            // txtIMC
+            // 
+            this.txtIMC.Location = new System.Drawing.Point(598, 125);
+            this.txtIMC.Mask = "999";
+            this.txtIMC.Name = "txtIMC";
+            this.txtIMC.Size = new System.Drawing.Size(26, 20);
+            this.txtIMC.TabIndex = 9;
+            // 
             // CadastroAluno
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1131,7 +1160,6 @@
         private System.Windows.Forms.TextBox txtProfissao;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox txtIMC;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox txtEndereco;
         private System.Windows.Forms.Label label12;
@@ -1196,7 +1224,8 @@
         private System.Windows.Forms.MaskedTextBox txtNumeroResp;
         private System.Windows.Forms.MaskedTextBox txtMensalidade;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DateTimePicker dtpMensalidade;
         private System.Windows.Forms.Label label38;
+        private System.Windows.Forms.ComboBox cboDiaPagamento;
+        private System.Windows.Forms.MaskedTextBox txtIMC;
     }
 }

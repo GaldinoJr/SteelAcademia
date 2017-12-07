@@ -99,7 +99,9 @@ namespace SteelGymDesktop.View
                 cboUFRep.Text = _student.ResponsibleUF;
                 txtCEPResp.Text = _student.ResponsibleCEP;
                 txtTelResp1.Text = _student.ResponsiblePhone1;
-                txtTelResp1.Text = _student.ResponsiblePhone2;
+                txtTelResp2.Text = _student.ResponsiblePhone2;
+                cboDiaPagamento.Text =_student.PayDay.ToString();
+                txtMensalidade.Text = _student.PaymentAmount.ToString();
 
                 txtIDAluno.Enabled = false;
             }
@@ -128,6 +130,12 @@ namespace SteelGymDesktop.View
                 _student.CivilStatus = cboEstadoCivil.Text;
                 _student.CPF = txtCPF.Text;
                 _student.BirthDate = Convert.ToDateTime(dtpNascimento.Text);
+                _student.PayDay = Convert.ToInt32(cboDiaPagamento.Text);
+                cboDiaPagamento.Text = _student.PayDay.ToString();
+                if (Util.ValidaString(txtMensalidade.Text))
+                {
+                    _student.PaymentAmount = Convert.ToDecimal(txtMensalidade.Text.ToString().Replace(",","."));
+                }
                 _student.Email = txtEmail.Text;
                 _student.Sex = cboSexo.Text;
                 _student.RG = txtRG.Text;
@@ -207,7 +215,6 @@ namespace SteelGymDesktop.View
                 pass = false;
                 txtNome.Focus();
             }
-            //varDate = dateTimePicker1.Value.Date;
             if (!Util.ValidaData(dtpNascimento.Value.Date))
             {
                 msgError += " - Campo 'Data de nascimento' invalido.";
@@ -216,8 +223,6 @@ namespace SteelGymDesktop.View
                     dtpNascimento.Focus();
                 }
                 pass = false;
-                //isMenor
-
             }
             if(!Util.ValidaRg(txtRG.Text))
             {
@@ -246,7 +251,24 @@ namespace SteelGymDesktop.View
                 }
                 pass = false;
             }
-
+            if (cboDiaPagamento.SelectedIndex == -1)
+            {
+                msgError += " - Campo 'Data de pagamento' invalido.";
+                if (pass)
+                {
+                    cboDiaPagamento.Focus();
+                }
+                pass = false;
+            }
+            if (!Util.ValidaString(txtMensalidade.Text))
+            {
+                msgError += " - Campo 'Mensalidade R$' invalido.";
+                if (pass)
+                {
+                    txtCPF.Focus();
+                }
+                pass = false;
+            }
             //E caso o aluno seja menor, eu Obrigo o nome e o grau de parentesco 
             if (isMenor)
             {
@@ -339,6 +361,9 @@ namespace SteelGymDesktop.View
             txtCEPResp.Text = "";
             txtTelResp1.Text = "";
             txtTelResp2.Text = "";
+            txtProfissao.Text = "";
+            txtMensalidade.Text = "";
+            cboDiaPagamento.Text ="";
         }
 
         private void DtpNascimento_ValueChanged(object sender, EventArgs e)

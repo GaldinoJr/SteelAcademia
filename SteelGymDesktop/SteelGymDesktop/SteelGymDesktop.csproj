@@ -103,13 +103,9 @@
     <Compile Include="Infrastructure\Repository\RepositoryBase.cs" />
     <Compile Include="Infrastructure\Repository\StudentRepository.cs" />
     <Compile Include="Infrastructure\Repository\UserRepository.cs" />
-    <Compile Include="Migrations\201711201537523_teste1.cs" />
-    <Compile Include="Migrations\201711201537523_teste1.Designer.cs">
-      <DependentUpon>201711201537523_teste1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201711201955315_cad aluno.cs" />
-    <Compile Include="Migrations\201711201955315_cad aluno.Designer.cs">
-      <DependentUpon>201711201955315_cad aluno.cs</DependentUpon>
+    <Compile Include="Migrations\201712070237337_Init.cs" />
+    <Compile Include="Migrations\201712070237337_Init.Designer.cs">
+      <DependentUpon>201712070237337_Init.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Modulos.cs" />
@@ -170,11 +166,8 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Migrations\201711201537523_teste1.resx">
-      <DependentUpon>201711201537523_teste1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201711201955315_cad aluno.resx">
-      <DependentUpon>201711201955315_cad aluno.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201712070237337_Init.resx">
+      <DependentUpon>201712070237337_Init.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\CadastroAluno.resx">
       <DependentUpon>CadastroAluno.cs</DependentUpon>
