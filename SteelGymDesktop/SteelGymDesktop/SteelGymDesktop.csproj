@@ -103,13 +103,9 @@
     <Compile Include="Infrastructure\Repository\RepositoryBase.cs" />
     <Compile Include="Infrastructure\Repository\StudentRepository.cs" />
     <Compile Include="Infrastructure\Repository\UserRepository.cs" />
-    <Compile Include="Migrations\201711201537523_teste1.cs" />
-    <Compile Include="Migrations\201711201537523_teste1.Designer.cs">
-      <DependentUpon>201711201537523_teste1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201711201955315_cad aluno.cs" />
-    <Compile Include="Migrations\201711201955315_cad aluno.Designer.cs">
-      <DependentUpon>201711201955315_cad aluno.cs</DependentUpon>
+    <Compile Include="Migrations\201712070050069_include_index_userName.cs" />
+    <Compile Include="Migrations\201712070050069_include_index_userName.Designer.cs">
+      <DependentUpon>201712070050069_include_index_userName.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Modulos.cs" />
@@ -170,11 +166,8 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Migrations\201711201537523_teste1.resx">
-      <DependentUpon>201711201537523_teste1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201711201955315_cad aluno.resx">
-      <DependentUpon>201711201955315_cad aluno.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201712070050069_include_index_userName.resx">
+      <DependentUpon>201712070050069_include_index_userName.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\CadastroAluno.resx">
       <DependentUpon>CadastroAluno.cs</DependentUpon>
@@ -226,21 +219,9 @@
     <Content Include="images\icon.ico" />
     <None Include="Resources\error%281%29.png" />
     <None Include="Resources\ic_comprovante.png" />
-    <None Include="Resources\ic_estudante.png" />
     <None Include="Resources\ic_home.png" />
-    <None Include="Resources\ic_movimentacao.png" />
-    <None Include="Resources\ic_pagamento.png" />
     <None Include="Resources\ic_usuario.png" />
-    <None Include="Resources\ic_comprovante1.png" />
-    <None Include="Resources\ic_comprovante2.png" />
-    <None Include="Resources\ic_comprovante3.png" />
-    <None Include="Resources\ic_home1.png" />
     <None Include="Resources\ic_aluno.png" />
-    <None Include="Resources\ic_aluno1.png" />
-    <None Include="Resources\ic_aluno2.png" />
-    <None Include="Resources\ic_aluno3.png" />
-    <None Include="Resources\ic_home2.png" />
-    <None Include="Resources\ic_aluno4.png" />
     <None Include="Resources\ic_logoff.png" />
     <None Include="Resources\ic_movimentacao2.png" />
     <None Include="Resources\ic_pagamento3.png" />

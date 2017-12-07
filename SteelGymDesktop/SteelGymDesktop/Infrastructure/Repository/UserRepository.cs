@@ -10,7 +10,20 @@ namespace SteelGymDesktop.Infrastructure.Repository
     {
         public IEnumerable<User> GetByFilter(bool active, string userName, string rg, string cpf)
         {
-            return Db.Users.Where(x => x.Active == active || x.UserName == userName || x.RG == rg || x.CPF == cpf);
+            IQueryable<User> query = Db.Users;
+
+            query.Where(x => x.Active == active);
+
+            if (Util.ValidaString(userName))
+                query = query.Where(x => x.UserName.Contains(userName));
+
+            if (Util.ValidaString(rg))
+                query = query.Where(x => x.RG == rg);
+
+            if (Util.ValidaString(cpf))
+                query = query.Where(x => x.CPF == cpf);
+
+            return query;
         }
     }
 }

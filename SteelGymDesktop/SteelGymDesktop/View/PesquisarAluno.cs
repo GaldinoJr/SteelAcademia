@@ -61,7 +61,8 @@ namespace SteelGymDesktop.View
                 }
                 else
                 {
-                    var students = _studentApp.GetByFilter(chkAtivo.Checked, txtNome.Text, txtRG.Text, txtCPF.Text);
+                    var students = _studentApp.GetByFilter(chkAtivo.Checked, txtNome.Text, 
+                        Util.RemoverCaracteres(txtRG.Text), Util.RemoverCaracteres(txtCPF.Text));
 
                     if (students != null)
                     {

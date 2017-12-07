@@ -149,7 +149,7 @@ namespace SteelGymDesktop.View
                 pass = false;
             }
 
-            if (Util.ValidaRg(txtRG.Text))
+            if (Util.ValidaRg(txtRG.Text.Replace(",", ".")))
             {
                 msgError += " - Campo 'RG' invalido.";
                 if(pass)
@@ -159,7 +159,7 @@ namespace SteelGymDesktop.View
                 pass = false;
             }
 
-            if (Util.ValidaCpf(txtCPF.Text))
+            if (Util.ValidaCpf(txtCPF.Text.Replace(",", ".")))
             {
                 msgError += " - Campo 'CPF' invalido.";
                 if (pass)

@@ -9,6 +9,7 @@ namespace SteelGymDesktop.Infrastructure.Config
         {
             HasKey(p => p.UserId);
             Property(p => p.Name).IsRequired().HasMaxLength(250);
+            HasIndex(p => p.UserName).IsUnique();
         }
     }
 }
