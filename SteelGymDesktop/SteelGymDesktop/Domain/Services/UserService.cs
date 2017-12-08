@@ -1,6 +1,7 @@
 ﻿using SteelGymDesktop.Domain.Entities;
 using SteelGymDesktop.Domain.Interfaces;
 using System.Collections.Generic;
+using System;
 
 namespace SteelGymDesktop.Domain.Services
 {
@@ -17,6 +18,11 @@ namespace SteelGymDesktop.Domain.Services
         public IEnumerable<User> GetByFilter(bool active, string userName, string rg, string cpf)
         {
             return _repository.GetByFilter(active, userName, rg, cpf);
+        }
+
+        public User Login(string userName, string password)
+        {
+            return _repository.Login(userName, password);
         }
     }
 }

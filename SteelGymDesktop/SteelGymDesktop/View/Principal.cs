@@ -15,11 +15,13 @@ namespace SteelGymDesktop.View
     {
         private readonly IUserAppService _userApp;
         private readonly IStudentAppService _studentApp;
+        private readonly SessionUser _userSession;
 
         public Principal(IUserAppService userApp, IStudentAppService studentApp)
         {
             _userApp = userApp;
             _studentApp = studentApp;
+            _userSession = Program.SessionUser;
 
             InitializeComponent();
             // Full screen
@@ -92,19 +94,19 @@ namespace SteelGymDesktop.View
 
         public void LeaveFullScreenMode(Form targetForm)
         {
-            targetForm.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Sizable;
+            targetForm.FormBorderStyle = FormBorderStyle.Sizable;
             targetForm.WindowState = FormWindowState.Normal;
         }
 
         private void FecharToolStripMenuItem_Click(object sender, EventArgs e)
         {
             panel1.Controls.Clear();
-            Login l = new Login();
+            Login l = new Login(_userApp);
             l.TopLevel = false;
             l.AutoScroll = true;
 
             panel1.Controls.Add(l);
-            l.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            l.FormBorderStyle = FormBorderStyle.None;
             l.Show();
         }
 
@@ -117,7 +119,7 @@ namespace SteelGymDesktop.View
             form.TopLevel = false;
             form.AutoScroll = true;
             panel1.Controls.Add(form);
-            form.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            form.FormBorderStyle = FormBorderStyle.None;
             form.Show();
         }
     }

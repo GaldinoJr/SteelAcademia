@@ -975,6 +975,7 @@
             this.txtMensalidade.Name = "txtMensalidade";
             this.txtMensalidade.Size = new System.Drawing.Size(52, 20);
             this.txtMensalidade.TabIndex = 10;
+            this.txtMensalidade.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtMensalidade_KeyPress);
             // 
             // label1
             // 
