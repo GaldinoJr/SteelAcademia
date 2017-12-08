@@ -17,6 +17,15 @@ namespace SteelGymDesktop
                 return false;
         }
 
+        public static bool ValidaStringSemEspaco(string s)
+        {
+            if(ValidaString(s) && !s.Contains(" "))
+            {
+                return true;
+            }
+            return false;
+        }
+
         public static bool ValidaString(string s)
         {
             return !(s.Equals("") || s == null);
@@ -25,13 +34,19 @@ namespace SteelGymDesktop
         public static bool ValidaRg(string s)
         {
             String campo = RemoverCaracteres(s);
-            return (campo.Length < 8);
+            return (campo.Length >= 7 && campo.Length <= 9);
         }
 
         public static bool ValidaCpf(string s)
         {
             String campo = RemoverCaracteres(s);
-            return (campo.Length < 11);
+            return (campo.Length == 11);
+        }
+
+        public static bool ValidaTelefone(string s)
+        {
+            s = RemoverCaracteres(s);
+            return ValidaString(s);
         }
 
         private static String RemoverCaracteres(String s)
@@ -53,6 +68,41 @@ namespace SteelGymDesktop
         public static void EnabledCursor()
         {
             Cursor.Current = Cursors.Default;
+        }
+
+        internal static bool ValidaData(DateTime date)
+        {
+            int currentYear = DateTime.Today.Year;
+            if (date.Year >= currentYear)
+            {
+                return false;
+            }
+            return true;
+        }
+
+        internal static bool IsMinor(DateTime datePerson)
+        {
+            DateTime dateNow = DateTime.Today;
+            int yearAdult = dateNow.Year - 18;
+            if (datePerson.Year > yearAdult)
+            {
+                return true;
+            }
+            else if (datePerson.Year == yearAdult)
+            {
+                if (datePerson.Month > dateNow.Month)
+                {
+                    return true;
+                }
+                else if (datePerson.Month == dateNow.Month)
+                {
+                    if (datePerson.Day > dateNow.Day)
+                    {
+                        return true;
+                    }
+                }
+            }
+            return false;
         }
     }
 }

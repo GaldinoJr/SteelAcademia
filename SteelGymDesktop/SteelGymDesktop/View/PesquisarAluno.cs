@@ -50,7 +50,7 @@ namespace SteelGymDesktop.View
             {
                 dtgAlunos.Rows.Clear();
 
-                if (!Util.ValidaString(txtIDAluno.Text))
+                if (Util.ValidaString(txtIDAluno.Text))
                 {
                     var student = _studentApp.GetById(Convert.ToInt32(txtIDAluno.Text));
 

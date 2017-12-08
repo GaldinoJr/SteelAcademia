@@ -133,33 +133,49 @@ namespace SteelGymDesktop.View
             msgError = "";
             bool pass = true;
 
+            if (!Util.ValidaStringSemEspaco(txtUserName.Text))
+            {
+                msgError += " - Campo 'Nome de Usuário' invalido.";
+                txtUserName.Focus();
+                pass = false;
+            }
             if (!Util.ValidaString(txtNome.Text))
             {
                 msgError += " - Campo 'Nome' invalido.";
+                if (pass)
+                {
+                    txtNome.Focus();
+                }
                 pass = false;
             }
 
             if (Util.ValidaRg(txtRG.Text))
             {
                 msgError += " - Campo 'RG' invalido.";
+                if(pass)
+                {
+                    txtRG.Focus();
+                }
                 pass = false;
             }
 
             if (Util.ValidaCpf(txtCPF.Text))
             {
                 msgError += " - Campo 'CPF' invalido.";
+                if (pass)
+                {
+                    txtCPF.Focus();
+                }
                 pass = false;
             }
 
             if (!Util.ValidaString(txtEmail.Text))
             {
                 msgError += " - Campo 'e-Mail' invalido.";
-                pass = false;
-            }
-
-            if (!Util.ValidaString(txtUserName.Text))
-            {
-                msgError += " - Campo 'Nome de Usuário' invalido.";
+                if (pass)
+                {
+                    txtEmail.Focus();
+                }
                 pass = false;
             }
 
@@ -178,11 +194,11 @@ namespace SteelGymDesktop.View
             txtComplemento.Text = "";
             txtBairro.Text = "";
             txtCidade.Text = "";
-            cboUF.Text = "";
             txtCEP.Text = "";
             txtTel1.Text = "";
             txtTel2.Text = "";
             txtUserName.Text = "";
+            cboUF.SelectedIndex = 0;
         }
 
         private string GeneratePassword(string name)
@@ -191,6 +207,11 @@ namespace SteelGymDesktop.View
             int number = r.Next(999);
 
             return name.ToLower() + "@" + number;
+        }
+
+        private void BtnLimpar_Click(object sender, EventArgs e)
+        {
+            Limpar();
         }
     }
 }

@@ -51,7 +51,7 @@
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(43)))), ((int)(((byte)(80)))));
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.label4);
-            this.panel1.Location = new System.Drawing.Point(25, 303);
+            this.panel1.Location = new System.Drawing.Point(25, 344);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(428, 259);
             this.panel1.TabIndex = 9;
@@ -83,7 +83,7 @@
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(43)))), ((int)(((byte)(80)))));
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.label3);
-            this.panel2.Location = new System.Drawing.Point(25, 21);
+            this.panel2.Location = new System.Drawing.Point(25, 62);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(428, 259);
             this.panel2.TabIndex = 10;
@@ -115,7 +115,7 @@
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(43)))), ((int)(((byte)(80)))));
             this.panel3.Controls.Add(this.label5);
             this.panel3.Controls.Add(this.label6);
-            this.panel3.Location = new System.Drawing.Point(481, 21);
+            this.panel3.Location = new System.Drawing.Point(481, 62);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(428, 259);
             this.panel3.TabIndex = 12;
@@ -147,7 +147,7 @@
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(43)))), ((int)(((byte)(80)))));
             this.panel4.Controls.Add(this.label7);
             this.panel4.Controls.Add(this.label8);
-            this.panel4.Location = new System.Drawing.Point(481, 303);
+            this.panel4.Location = new System.Drawing.Point(481, 344);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(428, 259);
             this.panel4.TabIndex = 11;
@@ -179,7 +179,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(37)))), ((int)(((byte)(72)))));
-            this.ClientSize = new System.Drawing.Size(936, 578);
+            this.ClientSize = new System.Drawing.Size(936, 651);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel2);

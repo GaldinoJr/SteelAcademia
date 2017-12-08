@@ -11,7 +11,7 @@ namespace SteelGymDesktop.View
         private readonly bool _isCreate;
         private readonly int _studentId;
         private Student _student;
-
+        private bool isMenor;
         public CadastroAluno(IStudentAppService studentApp, bool isCreate, int studentId)
         {
             _studentApp = studentApp;
@@ -27,7 +27,35 @@ namespace SteelGymDesktop.View
             if (_studentId != int.MinValue)
             {
                 LoadStudent(_studentId);
+                HabilityResponsibleData();
             }
+            else
+            {
+                InitWithAdultAge();
+            }
+        }
+        
+        private void InitWithAdultAge()
+        {
+            DateTime initialDate = DateTime.Today;
+            int year = initialDate.Year - 18;
+            DateTime upDate = new DateTime(year, initialDate.Month, initialDate.Day);
+            dtpNascimento.Text = upDate.ToString("dd/MM/yyyy");
+        }
+
+        
+
+        private void HabilityResponsibleData()
+        {
+            if(Util.IsMinor(dtpNascimento.Value.Date))
+            {
+                isMenor = true;
+            }
+            else
+            {
+                isMenor = false;
+            }
+            gbMenor.Visible = isMenor;
         }
 
         private void LoadStudent(int studentId)
@@ -71,7 +99,9 @@ namespace SteelGymDesktop.View
                 cboUFRep.Text = _student.ResponsibleUF;
                 txtCEPResp.Text = _student.ResponsibleCEP;
                 txtTelResp1.Text = _student.ResponsiblePhone1;
-                txtTelResp1.Text = _student.ResponsiblePhone2;
+                txtTelResp2.Text = _student.ResponsiblePhone2;
+                cboDiaPagamento.Text =_student.PayDay.ToString();
+                txtMensalidade.Text = _student.PaymentAmount.ToString();
 
                 txtIDAluno.Enabled = false;
             }
@@ -100,13 +130,25 @@ namespace SteelGymDesktop.View
                 _student.CivilStatus = cboEstadoCivil.Text;
                 _student.CPF = txtCPF.Text;
                 _student.BirthDate = Convert.ToDateTime(dtpNascimento.Text);
+                _student.PayDay = Convert.ToInt32(cboDiaPagamento.Text);
+                cboDiaPagamento.Text = _student.PayDay.ToString();
+                if (Util.ValidaString(txtMensalidade.Text))
+                {
+                    _student.PaymentAmount = Convert.ToDecimal(txtMensalidade.Text.ToString().Replace(",","."));
+                }
                 _student.Email = txtEmail.Text;
                 _student.Sex = cboSexo.Text;
                 _student.RG = txtRG.Text;
-                _student.IMC = Convert.ToDecimal(txtIMC.Text);
+                if (Util.ValidaString(txtIMC.Text))
+                {
+                    _student.IMC = Convert.ToDecimal(txtIMC.Text);
+                }
                 _student.Active = chkAtivo.Checked;
                 _student.Address = txtEndereco.Text;
-                _student.Number = Convert.ToInt32(txtNumero.Text);
+                if (Util.ValidaString(txtNumero.Text))
+                {
+                    _student.Number = Convert.ToInt32(txtNumero.Text);
+                }
                 _student.Complement = txtComplemento.Text;
                 _student.Neighborhood = txtBairro.Text;
                 _student.City = txtCidade.Text;
@@ -123,7 +165,10 @@ namespace SteelGymDesktop.View
                 _student.ResponsibleName = txtResponsavel.Text;
                 _student.ResponsibleDegree = cboRespomsavel.Text;
                 _student.ResponsibleAddress = txtEnderecoResp.Text;
-                _student.ResponsibleNumber = Convert.ToInt32(txtNumeroResp.Text);
+                if (Util.ValidaString(txtNumeroResp.Text))
+                {
+                    _student.ResponsibleNumber = Convert.ToInt32(txtNumeroResp.Text);
+                }
                 _student.ResponsibleComplement = txtComplementoResp.Text;
                 _student.ResponsibleNeighborhood = txtBairroResp.Text;
                 _student.ResponsibleCity = txtCidadeResp.Text;
@@ -164,13 +209,98 @@ namespace SteelGymDesktop.View
         {
             msgError = "";
             bool pass = true;
-
-            if (Util.ValidaString(txtNome.Text))
+            if (!Util.ValidaString(txtNome.Text))
             {
                 msgError += " - Campo 'Nome' invalido.";
                 pass = false;
+                txtNome.Focus();
             }
-
+            if (!Util.ValidaData(dtpNascimento.Value.Date))
+            {
+                msgError += " - Campo 'Data de nascimento' invalido.";
+                if (pass)
+                {
+                    dtpNascimento.Focus();
+                }
+                pass = false;
+            }
+            if(!Util.ValidaRg(txtRG.Text))
+            {
+                msgError += " - Campo 'RG' invalido.";
+                if (pass)
+                {
+                    txtRG.Focus();
+                }
+                pass = false;
+            }
+            if (!Util.ValidaCpf(txtCPF.Text))
+            {
+                msgError += " - Campo 'CPF' invalido.";
+                if (pass)
+                {
+                    txtCPF.Focus();
+                }
+                pass = false;
+            }
+            if(cboSexo.SelectedIndex == -1)
+            {
+                msgError += " - Campo 'Sexo' não selecionado.";
+                if (pass)
+                {
+                    cboSexo.Focus();
+                }
+                pass = false;
+            }
+            if (cboDiaPagamento.SelectedIndex == -1)
+            {
+                msgError += " - Campo 'Data de pagamento' invalido.";
+                if (pass)
+                {
+                    cboDiaPagamento.Focus();
+                }
+                pass = false;
+            }
+            if (!Util.ValidaString(txtMensalidade.Text))
+            {
+                msgError += " - Campo 'Mensalidade R$' invalido.";
+                if (pass)
+                {
+                    txtCPF.Focus();
+                }
+                pass = false;
+            }
+            //E caso o aluno seja menor, eu Obrigo o nome e o grau de parentesco 
+            if (isMenor)
+            {
+                if(!Util.ValidaString(txtResponsavel.Text))
+                {
+                    msgError += " - Campo 'Nome do responsável' invalido.";
+                    if (pass)
+                    {
+                        txtResponsavel.Focus();
+                    }
+                    pass = false;
+                }
+                if(cboRespomsavel.SelectedIndex == -1)
+                {
+                    msgError += " - Campo 'Parentesco do responsável' não selecionado.";
+                    if (pass)
+                    {
+                        cboRespomsavel.Focus();
+                    }
+                    pass = false;
+                }
+                if(!Util.ValidaTelefone(txtTelResp1.Text))
+                {
+                    msgError += " - Campo 'Telefone do responsável' invalido.";
+                    if (pass)
+                    {
+                        txtTelResp1.Focus();
+                    }
+                    pass = false;
+                }
+            }
+           
             return pass;
         }
 
@@ -231,6 +361,14 @@ namespace SteelGymDesktop.View
             txtCEPResp.Text = "";
             txtTelResp1.Text = "";
             txtTelResp2.Text = "";
+            txtProfissao.Text = "";
+            txtMensalidade.Text = "";
+            cboDiaPagamento.Text ="";
+        }
+
+        private void DtpNascimento_ValueChanged(object sender, EventArgs e)
+        {
+            HabilityResponsibleData();
         }
     }
 }
