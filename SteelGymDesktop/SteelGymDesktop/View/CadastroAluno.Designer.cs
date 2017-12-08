@@ -102,6 +102,7 @@
             this.txtCPF = new System.Windows.Forms.MaskedTextBox();
             this.chkAtivo = new System.Windows.Forms.CheckBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtIMC = new System.Windows.Forms.MaskedTextBox();
             this.cboDiaPagamento = new System.Windows.Forms.ComboBox();
             this.label38 = new System.Windows.Forms.Label();
             this.txtMensalidade = new System.Windows.Forms.MaskedTextBox();
@@ -111,7 +112,10 @@
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.gbMenor = new System.Windows.Forms.GroupBox();
             this.txtNumeroResp = new System.Windows.Forms.MaskedTextBox();
-            this.txtIMC = new System.Windows.Forms.MaskedTextBox();
+            this.label39 = new System.Windows.Forms.Label();
+            this.dtpAvaliacao = new System.Windows.Forms.DateTimePicker();
+            this.cboPeriodicidadeAvaliacao = new System.Windows.Forms.ComboBox();
+            this.label40 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -301,7 +305,7 @@
             this.txtEndereco.Location = new System.Drawing.Point(110, 19);
             this.txtEndereco.Name = "txtEndereco";
             this.txtEndereco.Size = new System.Drawing.Size(501, 20);
-            this.txtEndereco.TabIndex = 12;
+            this.txtEndereco.TabIndex = 14;
             // 
             // label12
             // 
@@ -330,7 +334,7 @@
             this.txtComplemento.Location = new System.Drawing.Point(110, 43);
             this.txtComplemento.Name = "txtComplemento";
             this.txtComplemento.Size = new System.Drawing.Size(241, 20);
-            this.txtComplemento.TabIndex = 14;
+            this.txtComplemento.TabIndex = 16;
             // 
             // label14
             // 
@@ -348,7 +352,7 @@
             this.txtBairro.Location = new System.Drawing.Point(433, 45);
             this.txtBairro.Name = "txtBairro";
             this.txtBairro.Size = new System.Drawing.Size(209, 20);
-            this.txtBairro.TabIndex = 15;
+            this.txtBairro.TabIndex = 17;
             // 
             // label15
             // 
@@ -366,7 +370,7 @@
             this.txtCidade.Location = new System.Drawing.Point(110, 67);
             this.txtCidade.Name = "txtCidade";
             this.txtCidade.Size = new System.Drawing.Size(241, 20);
-            this.txtCidade.TabIndex = 16;
+            this.txtCidade.TabIndex = 18;
             // 
             // label16
             // 
@@ -428,7 +432,7 @@
             this.txtCEP.Mask = "99999-999";
             this.txtCEP.Name = "txtCEP";
             this.txtCEP.Size = new System.Drawing.Size(58, 20);
-            this.txtCEP.TabIndex = 18;
+            this.txtCEP.TabIndex = 20;
             // 
             // txtTel1
             // 
@@ -436,7 +440,7 @@
             this.txtTel1.Mask = "(99) 99999-9999";
             this.txtTel1.Name = "txtTel1";
             this.txtTel1.Size = new System.Drawing.Size(87, 20);
-            this.txtTel1.TabIndex = 19;
+            this.txtTel1.TabIndex = 21;
             // 
             // txtTel2
             // 
@@ -444,14 +448,14 @@
             this.txtTel2.Mask = "(99) 9999-9999";
             this.txtTel2.Name = "txtTel2";
             this.txtTel2.Size = new System.Drawing.Size(82, 20);
-            this.txtTel2.TabIndex = 20;
+            this.txtTel2.TabIndex = 22;
             // 
             // txtNomeParentesco1
             // 
             this.txtNomeParentesco1.Location = new System.Drawing.Point(110, 25);
             this.txtNomeParentesco1.Name = "txtNomeParentesco1";
             this.txtNomeParentesco1.Size = new System.Drawing.Size(375, 20);
-            this.txtNomeParentesco1.TabIndex = 21;
+            this.txtNomeParentesco1.TabIndex = 23;
             // 
             // label21
             // 
@@ -488,7 +492,7 @@
             this.cboParentesco1.Location = new System.Drawing.Point(605, 25);
             this.cboParentesco1.Name = "cboParentesco1";
             this.cboParentesco1.Size = new System.Drawing.Size(186, 21);
-            this.cboParentesco1.TabIndex = 22;
+            this.cboParentesco1.TabIndex = 24;
             // 
             // cboParentesco2
             // 
@@ -503,7 +507,7 @@
             this.cboParentesco2.Location = new System.Drawing.Point(605, 51);
             this.cboParentesco2.Name = "cboParentesco2";
             this.cboParentesco2.Size = new System.Drawing.Size(186, 21);
-            this.cboParentesco2.TabIndex = 24;
+            this.cboParentesco2.TabIndex = 26;
             // 
             // label23
             // 
@@ -521,7 +525,7 @@
             this.txtNomeParentesco2.Location = new System.Drawing.Point(110, 51);
             this.txtNomeParentesco2.Name = "txtNomeParentesco2";
             this.txtNomeParentesco2.Size = new System.Drawing.Size(375, 20);
-            this.txtNomeParentesco2.TabIndex = 23;
+            this.txtNomeParentesco2.TabIndex = 25;
             // 
             // label24
             // 
@@ -547,7 +551,7 @@
             this.cboParentesco3.Location = new System.Drawing.Point(605, 77);
             this.cboParentesco3.Name = "cboParentesco3";
             this.cboParentesco3.Size = new System.Drawing.Size(186, 21);
-            this.cboParentesco3.TabIndex = 26;
+            this.cboParentesco3.TabIndex = 28;
             // 
             // label25
             // 
@@ -565,7 +569,7 @@
             this.txtNomeParentesco3.Location = new System.Drawing.Point(110, 77);
             this.txtNomeParentesco3.Name = "txtNomeParentesco3";
             this.txtNomeParentesco3.Size = new System.Drawing.Size(375, 20);
-            this.txtNomeParentesco3.TabIndex = 25;
+            this.txtNomeParentesco3.TabIndex = 27;
             // 
             // label26
             // 
@@ -591,7 +595,7 @@
             this.cboRespomsavel.Location = new System.Drawing.Point(603, 19);
             this.cboRespomsavel.Name = "cboRespomsavel";
             this.cboRespomsavel.Size = new System.Drawing.Size(186, 21);
-            this.cboRespomsavel.TabIndex = 28;
+            this.cboRespomsavel.TabIndex = 30;
             // 
             // label27
             // 
@@ -609,7 +613,7 @@
             this.txtResponsavel.Location = new System.Drawing.Point(109, 20);
             this.txtResponsavel.Name = "txtResponsavel";
             this.txtResponsavel.Size = new System.Drawing.Size(374, 20);
-            this.txtResponsavel.TabIndex = 27;
+            this.txtResponsavel.TabIndex = 29;
             // 
             // label28
             // 
@@ -628,7 +632,7 @@
             this.txtTelResp2.Mask = "(99) 9999-9999";
             this.txtTelResp2.Name = "txtTelResp2";
             this.txtTelResp2.Size = new System.Drawing.Size(82, 20);
-            this.txtTelResp2.TabIndex = 37;
+            this.txtTelResp2.TabIndex = 39;
             // 
             // txtTelResp1
             // 
@@ -636,7 +640,7 @@
             this.txtTelResp1.Mask = "(99) 99999-9999";
             this.txtTelResp1.Name = "txtTelResp1";
             this.txtTelResp1.Size = new System.Drawing.Size(87, 20);
-            this.txtTelResp1.TabIndex = 36;
+            this.txtTelResp1.TabIndex = 38;
             // 
             // txtCEPResp
             // 
@@ -644,7 +648,7 @@
             this.txtCEPResp.Mask = "99999-999";
             this.txtCEPResp.Name = "txtCEPResp";
             this.txtCEPResp.Size = new System.Drawing.Size(58, 20);
-            this.txtCEPResp.TabIndex = 35;
+            this.txtCEPResp.TabIndex = 37;
             // 
             // label29
             // 
@@ -695,7 +699,7 @@
             this.txtCidadeResp.Location = new System.Drawing.Point(109, 99);
             this.txtCidadeResp.Name = "txtCidadeResp";
             this.txtCidadeResp.Size = new System.Drawing.Size(241, 20);
-            this.txtCidadeResp.TabIndex = 33;
+            this.txtCidadeResp.TabIndex = 35;
             // 
             // label33
             // 
@@ -713,7 +717,7 @@
             this.txtBairroResp.Location = new System.Drawing.Point(441, 72);
             this.txtBairroResp.Name = "txtBairroResp";
             this.txtBairroResp.Size = new System.Drawing.Size(209, 20);
-            this.txtBairroResp.TabIndex = 32;
+            this.txtBairroResp.TabIndex = 34;
             // 
             // label34
             // 
@@ -731,7 +735,7 @@
             this.txtComplementoResp.Location = new System.Drawing.Point(109, 73);
             this.txtComplementoResp.Name = "txtComplementoResp";
             this.txtComplementoResp.Size = new System.Drawing.Size(241, 20);
-            this.txtComplementoResp.TabIndex = 31;
+            this.txtComplementoResp.TabIndex = 33;
             // 
             // label35
             // 
@@ -760,7 +764,7 @@
             this.txtEnderecoResp.Location = new System.Drawing.Point(109, 46);
             this.txtEnderecoResp.Name = "txtEnderecoResp";
             this.txtEnderecoResp.Size = new System.Drawing.Size(485, 20);
-            this.txtEnderecoResp.TabIndex = 29;
+            this.txtEnderecoResp.TabIndex = 31;
             // 
             // label37
             // 
@@ -837,7 +841,7 @@
             this.cboUF.Location = new System.Drawing.Point(389, 67);
             this.cboUF.Name = "cboUF";
             this.cboUF.Size = new System.Drawing.Size(39, 21);
-            this.cboUF.TabIndex = 17;
+            this.cboUF.TabIndex = 19;
             // 
             // cboUFRep
             // 
@@ -875,7 +879,7 @@
             this.cboUFRep.Location = new System.Drawing.Point(396, 99);
             this.cboUFRep.Name = "cboUFRep";
             this.cboUFRep.Size = new System.Drawing.Size(39, 21);
-            this.cboUFRep.TabIndex = 34;
+            this.cboUFRep.TabIndex = 36;
             // 
             // txtRG
             // 
@@ -907,6 +911,10 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.cboPeriodicidadeAvaliacao);
+            this.groupBox1.Controls.Add(this.label40);
+            this.groupBox1.Controls.Add(this.label39);
+            this.groupBox1.Controls.Add(this.dtpAvaliacao);
             this.groupBox1.Controls.Add(this.txtIMC);
             this.groupBox1.Controls.Add(this.cboDiaPagamento);
             this.groupBox1.Controls.Add(this.label38);
@@ -939,6 +947,14 @@
             this.groupBox1.TabIndex = 86;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Dados Pessoais";
+            // 
+            // txtIMC
+            // 
+            this.txtIMC.Location = new System.Drawing.Point(598, 125);
+            this.txtIMC.Mask = "999";
+            this.txtIMC.Name = "txtIMC";
+            this.txtIMC.Size = new System.Drawing.Size(26, 20);
+            this.txtIMC.TabIndex = 9;
             // 
             // cboDiaPagamento
             // 
@@ -976,7 +992,7 @@
             "28"});
             this.cboDiaPagamento.Location = new System.Drawing.Point(109, 150);
             this.cboDiaPagamento.Name = "cboDiaPagamento";
-            this.cboDiaPagamento.Size = new System.Drawing.Size(105, 21);
+            this.cboDiaPagamento.Size = new System.Drawing.Size(50, 21);
             this.cboDiaPagamento.TabIndex = 10;
             // 
             // label38
@@ -992,7 +1008,7 @@
             // 
             // txtMensalidade
             // 
-            this.txtMensalidade.Location = new System.Drawing.Point(401, 151);
+            this.txtMensalidade.Location = new System.Drawing.Point(298, 151);
             this.txtMensalidade.Name = "txtMensalidade";
             this.txtMensalidade.Size = new System.Drawing.Size(52, 20);
             this.txtMensalidade.TabIndex = 11;
@@ -1002,11 +1018,11 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(223, 152);
+            this.label1.Location = new System.Drawing.Point(165, 152);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(172, 17);
+            this.label1.Size = new System.Drawing.Size(129, 17);
             this.label1.TabIndex = 48;
-            this.label1.Text = "Valor Mensalidade R$:";
+            this.label1.Text = "Mensalidade R$:";
             // 
             // groupBox2
             // 
@@ -1042,7 +1058,7 @@
             this.txtNumero.Mask = "99999999";
             this.txtNumero.Name = "txtNumero";
             this.txtNumero.Size = new System.Drawing.Size(52, 20);
-            this.txtNumero.TabIndex = 13;
+            this.txtNumero.TabIndex = 15;
             // 
             // groupBox3
             // 
@@ -1105,15 +1121,61 @@
             this.txtNumeroResp.Mask = "99999999";
             this.txtNumeroResp.Name = "txtNumeroResp";
             this.txtNumeroResp.Size = new System.Drawing.Size(52, 20);
-            this.txtNumeroResp.TabIndex = 30;
+            this.txtNumeroResp.TabIndex = 32;
             // 
-            // txtIMC
+            // label39
             // 
-            this.txtIMC.Location = new System.Drawing.Point(598, 125);
-            this.txtIMC.Mask = "999";
-            this.txtIMC.Name = "txtIMC";
-            this.txtIMC.Size = new System.Drawing.Size(26, 20);
-            this.txtIMC.TabIndex = 9;
+            this.label39.AutoSize = true;
+            this.label39.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label39.ForeColor = System.Drawing.Color.White;
+            this.label39.Location = new System.Drawing.Point(358, 152);
+            this.label39.Name = "label39";
+            this.label39.Size = new System.Drawing.Size(132, 17);
+            this.label39.TabIndex = 52;
+            this.label39.Text = "Ultima avaliação:";
+            // 
+            // dtpAvaliacao
+            // 
+            this.dtpAvaliacao.CustomFormat = "dd/MM/YYYY";
+            this.dtpAvaliacao.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpAvaliacao.Location = new System.Drawing.Point(491, 151);
+            this.dtpAvaliacao.Name = "dtpAvaliacao";
+            this.dtpAvaliacao.Size = new System.Drawing.Size(103, 20);
+            this.dtpAvaliacao.TabIndex = 12;
+            // 
+            // cboPeriodicidadeAvaliacao
+            // 
+            this.cboPeriodicidadeAvaliacao.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboPeriodicidadeAvaliacao.FormattingEnabled = true;
+            this.cboPeriodicidadeAvaliacao.Items.AddRange(new object[] {
+            "",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11",
+            "12"});
+            this.cboPeriodicidadeAvaliacao.Location = new System.Drawing.Point(777, 150);
+            this.cboPeriodicidadeAvaliacao.Name = "cboPeriodicidadeAvaliacao";
+            this.cboPeriodicidadeAvaliacao.Size = new System.Drawing.Size(50, 21);
+            this.cboPeriodicidadeAvaliacao.TabIndex = 13;
+            // 
+            // label40
+            // 
+            this.label40.AutoSize = true;
+            this.label40.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label40.ForeColor = System.Drawing.Color.White;
+            this.label40.Location = new System.Drawing.Point(601, 152);
+            this.label40.Name = "label40";
+            this.label40.Size = new System.Drawing.Size(170, 17);
+            this.label40.TabIndex = 54;
+            this.label40.Text = "Periodicidade(Meses):";
             // 
             // CadastroAluno
             // 
@@ -1227,5 +1289,9 @@
         private System.Windows.Forms.Label label38;
         private System.Windows.Forms.ComboBox cboDiaPagamento;
         private System.Windows.Forms.MaskedTextBox txtIMC;
+        private System.Windows.Forms.ComboBox cboPeriodicidadeAvaliacao;
+        private System.Windows.Forms.Label label40;
+        private System.Windows.Forms.Label label39;
+        private System.Windows.Forms.DateTimePicker dtpAvaliacao;
     }
 }

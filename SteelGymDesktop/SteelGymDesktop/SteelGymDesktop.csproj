@@ -107,6 +107,10 @@
     <Compile Include="Migrations\201712070237337_Init.Designer.cs">
       <DependentUpon>201712070237337_Init.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201712080132323_colunasAlunos.cs" />
+    <Compile Include="Migrations\201712080132323_colunasAlunos.Designer.cs">
+      <DependentUpon>201712080132323_colunasAlunos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Modulos.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
@@ -168,6 +172,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Migrations\201712070237337_Init.resx">
       <DependentUpon>201712070237337_Init.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201712080132323_colunasAlunos.resx">
+      <DependentUpon>201712080132323_colunasAlunos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\CadastroAluno.resx">
       <DependentUpon>CadastroAluno.cs</DependentUpon>
