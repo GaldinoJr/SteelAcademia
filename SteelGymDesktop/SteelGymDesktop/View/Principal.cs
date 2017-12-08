@@ -98,7 +98,8 @@ namespace SteelGymDesktop.View
 
         private void FecharToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Application.Restart();
+            DialogForm p = new DialogForm();
+            p.ShowDialog();
         }
 
         public void AbrirModulo(Form form, String nomeModulo)
