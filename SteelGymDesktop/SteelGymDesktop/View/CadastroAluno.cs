@@ -387,6 +387,7 @@ namespace SteelGymDesktop.View
             txtMensalidade.Text = "";
             cboDiaPagamento.Text ="";
             cboPeriodicidadeAvaliacao.Text = "";
+            HabilityResponsibleData();
         }
 
         private void DtpNascimento_ValueChanged(object sender, EventArgs e)

@@ -98,14 +98,7 @@ namespace SteelGymDesktop.View
 
         private void FecharToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            panel1.Controls.Clear();
-            Login l = new Login();
-            l.TopLevel = false;
-            l.AutoScroll = true;
-
-            panel1.Controls.Add(l);
-            l.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            l.Show();
+            Application.Restart();
         }
 
         public void AbrirModulo(Form form, String nomeModulo)
