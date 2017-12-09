@@ -65,6 +65,7 @@
             this.txtUserName = new System.Windows.Forms.TextBox();
             this.txtNumero = new System.Windows.Forms.MaskedTextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.chkCanAccessFinancial = new System.Windows.Forms.CheckBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -436,6 +437,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.chkCanAccessFinancial);
             this.groupBox1.Controls.Add(this.label19);
             this.groupBox1.Controls.Add(this.txtTel2);
             this.groupBox1.ForeColor = System.Drawing.Color.White;
@@ -445,6 +447,19 @@
             this.groupBox1.TabIndex = 136;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Dados cadastrais";
+            // 
+            // chkCanAccessFinancial
+            // 
+            this.chkCanAccessFinancial.AutoSize = true;
+            this.chkCanAccessFinancial.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkCanAccessFinancial.ForeColor = System.Drawing.Color.White;
+            this.chkCanAccessFinancial.Location = new System.Drawing.Point(326, 71);
+            this.chkCanAccessFinancial.Name = "chkCanAccessFinancial";
+            this.chkCanAccessFinancial.Size = new System.Drawing.Size(252, 21);
+            this.chkCanAccessFinancial.TabIndex = 137;
+            this.chkCanAccessFinancial.Text = "Permite Acesso ao Financeiro?";
+            this.chkCanAccessFinancial.UseVisualStyleBackColor = true;
+            this.chkCanAccessFinancial.Visible = false;
             // 
             // CadastroUsuario
             // 
@@ -534,5 +549,6 @@
         private System.Windows.Forms.TextBox txtUserName;
         private System.Windows.Forms.MaskedTextBox txtNumero;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.CheckBox chkCanAccessFinancial;
     }
 }

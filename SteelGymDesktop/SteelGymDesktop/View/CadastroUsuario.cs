@@ -26,9 +26,10 @@ namespace SteelGymDesktop.View
             chkAtivo.Checked = true;
 
             if(_userId != int.MinValue)
-            {
                 LoadUser(_userId);
-            }
+
+            if (Program.SessionUser.Admin)
+                chkCanAccessFinancial.Visible = true;
         }
 
         private void LoadUser(int userId)
@@ -54,6 +55,9 @@ namespace SteelGymDesktop.View
                 txtUserName.Text = _user.UserName;
                 chkAtivo.Checked = _user.Active;
                 txtUsuario.Text = _user.UserId.ToString();
+
+                if(Program.SessionUser.Admin)
+                    chkCanAccessFinancial.Checked = _user.CanAccessFinancial;
 
                 txtUserName.Enabled = false;
             }
@@ -95,6 +99,9 @@ namespace SteelGymDesktop.View
                 _user.Phone2 = txtTel2.Text;
                 _user.UserName = txtUserName.Text;
                 _user.Active = chkAtivo.Checked;
+
+                if(Program.SessionUser.Admin)
+                    _user.CanAccessFinancial = chkCanAccessFinancial.Checked;
 
                 if (_isCreate)
                 {

@@ -34,3 +34,5 @@ C:\inetpub\wwwroot\SteelAcademia\SteelGymDesktop\SteelGymDesktop\bin\Debug\Syste
 C:\inetpub\wwwroot\SteelAcademia\SteelGymDesktop\SteelGymDesktop\obj\Debug\SteelGymDesktop.exe
 C:\inetpub\wwwroot\SteelAcademia\SteelGymDesktop\SteelGymDesktop\obj\Debug\SteelGymDesktop.pdb
 C:\inetpub\wwwroot\SteelAcademia\SteelGymDesktop\SteelGymDesktop\obj\Debug\SteelGymDesktop.Migrations.addcontroladmin.resources
+C:\inetpub\wwwroot\SteelAcademia\SteelGymDesktop\SteelGymDesktop\obj\Debug\SteelGymDesktop.csprojResolveAssemblyReference.cache
+C:\inetpub\wwwroot\SteelAcademia\SteelGymDesktop\SteelGymDesktop\obj\Debug\SteelGymDesktop.View.TrocarSenha.resources

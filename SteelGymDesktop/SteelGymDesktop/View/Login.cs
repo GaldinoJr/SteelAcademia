@@ -28,17 +28,44 @@ namespace SteelGymDesktop.View
                 return;
             }
 
-            var user = _userApp.Login(txtUser.Text, txtPassword.Text);
-
-            if(user != null)
+            try
             {
-                Program.SessionUser.Admin = user.IsAdmin;
-                Program.SessionUser.Id = user.UserId;
-                Program.SessionUser.Password = user.Password;
-                Program.SessionUser.UserName = user.UserName;
+                Util.DisabledCursor();
 
-                this.DialogResult = DialogResult.OK;
-                this.Close();
+                var user = _userApp.Login(txtUser.Text, txtPassword.Text);
+
+                Util.EnabledCursor();
+
+                if (user != null)
+                {
+                    if (user.FirstLogin)
+                    {
+                        TrocarSenha t = new TrocarSenha(_userApp, user);
+
+                        if (t.ShowDialog() == DialogResult.OK)
+                        {
+                            
+                        }
+                    }
+
+                    Program.SessionUser.Admin = user.IsAdmin;
+                    Program.SessionUser.Id = user.UserId;
+                    Program.SessionUser.Password = user.Password;
+                    Program.SessionUser.UserName = user.UserName;
+                    Program.SessionUser.CanAccessFinancial = user.CanAccessFinancial;
+
+                    this.DialogResult = DialogResult.OK;
+                    this.Close();
+                }
+                else
+                {
+                    Util.ShowMessageWarning("Usuário não encontrado.");
+                    return;
+                }
+            }
+            catch (Exception ex)
+            {
+                Util.ShowMessageWarning("Erro ao efetuar o login. Exception: " + ex.Message);
             }
         }
     }

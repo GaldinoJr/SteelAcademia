@@ -57,6 +57,7 @@
             this.toolbar = new System.Windows.Forms.Panel();
             this.txtNomeModulo = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.trocarSenhaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             Menu = new System.Windows.Forms.MenuStrip();
             Menu.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -161,7 +162,8 @@
             this.cadastroDeUsuarioToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(43)))), ((int)(((byte)(80)))));
             this.cadastroDeUsuarioToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.incluirToolStripMenuItem,
-            this.pesquisarToolStripMenuItem1});
+            this.pesquisarToolStripMenuItem1,
+            this.trocarSenhaToolStripMenuItem});
             this.cadastroDeUsuarioToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.cadastroDeUsuarioToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("cadastroDeUsuarioToolStripMenuItem.Image")));
             this.cadastroDeUsuarioToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -174,14 +176,14 @@
             // incluirToolStripMenuItem
             // 
             this.incluirToolStripMenuItem.Name = "incluirToolStripMenuItem";
-            this.incluirToolStripMenuItem.Size = new System.Drawing.Size(142, 24);
+            this.incluirToolStripMenuItem.Size = new System.Drawing.Size(165, 24);
             this.incluirToolStripMenuItem.Text = "Incluir";
             this.incluirToolStripMenuItem.Click += new System.EventHandler(this.IncluirToolStripMenuItem_Click);
             // 
             // pesquisarToolStripMenuItem1
             // 
             this.pesquisarToolStripMenuItem1.Name = "pesquisarToolStripMenuItem1";
-            this.pesquisarToolStripMenuItem1.Size = new System.Drawing.Size(142, 24);
+            this.pesquisarToolStripMenuItem1.Size = new System.Drawing.Size(165, 24);
             this.pesquisarToolStripMenuItem1.Text = "Pesquisar";
             this.pesquisarToolStripMenuItem1.Click += new System.EventHandler(this.PesquisarToolStripMenuItem1_Click);
             // 
@@ -354,6 +356,13 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Academia Steel";
             // 
+            // trocarSenhaToolStripMenuItem
+            // 
+            this.trocarSenhaToolStripMenuItem.Name = "trocarSenhaToolStripMenuItem";
+            this.trocarSenhaToolStripMenuItem.Size = new System.Drawing.Size(165, 24);
+            this.trocarSenhaToolStripMenuItem.Text = "Trocar Senha";
+            this.trocarSenhaToolStripMenuItem.Click += new System.EventHandler(this.trocarSenhaToolStripMenuItem_Click);
+            // 
             // Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -412,5 +421,6 @@
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.ToolStripMenuItem trocarSenhaToolStripMenuItem;
     }
 }

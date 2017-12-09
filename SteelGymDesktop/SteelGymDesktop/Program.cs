@@ -27,8 +27,6 @@ namespace SteelGymDesktop
         [STAThread]
         static void Main()
         {
-            //DependencyResolver.SetResolver(SimpleInjectiorController.RegisterServices());
-
             _userRepository = new UserRepository();
             _userService = new UserService(_userRepository);
             _userAppService = new UserAppService(_userService);

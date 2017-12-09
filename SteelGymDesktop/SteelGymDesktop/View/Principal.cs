@@ -1,12 +1,6 @@
 ﻿using SteelGymDesktop.Applications.Interfaces;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace SteelGymDesktop.View
@@ -15,27 +9,34 @@ namespace SteelGymDesktop.View
     {
         private readonly IUserAppService _userApp;
         private readonly IStudentAppService _studentApp;
-        private readonly SessionUser _userSession;
 
         public Principal(IUserAppService userApp, IStudentAppService studentApp)
         {
             _userApp = userApp;
             _studentApp = studentApp;
-            _userSession = Program.SessionUser;
-
             InitializeComponent();
+
             // Full screen
-            FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            FormBorderStyle = FormBorderStyle.None;
             WindowState = FormWindowState.Maximized;
+
             // Centralizar Painel
             int largura = ((Screen.PrimaryScreen.WorkingArea.Width - this.Width) / 2);
             int altura = (Screen.PrimaryScreen.WorkingArea.Height - this.Height) / 2;
             panel1.Location = new Point(largura, altura);
             panel1.Anchor = AnchorStyles.None;
+
             // Centralizar titulo
             int larguraTitulo = Screen.PrimaryScreen.WorkingArea.Width / 2 - txtNomeModulo.Height;
             int alturaTitulo = this.toolbar.Height/4;
             txtNomeModulo.Location = new Point(larguraTitulo,alturaTitulo);
+
+            if(!Program.SessionUser.Admin)
+            {
+                pagamentoToolStripMenuItem.Enabled = Program.SessionUser.CanAccessFinancial;
+                comprovantesToolStripMenuItem.Enabled = Program.SessionUser.CanAccessFinancial;
+                movimentaçõesToolStripMenuItem.Enabled = Program.SessionUser.CanAccessFinancial;
+            }
         }
 
         private void Index_Load(object sender, EventArgs e)
@@ -121,6 +122,29 @@ namespace SteelGymDesktop.View
             panel1.Controls.Add(form);
             form.FormBorderStyle = FormBorderStyle.None;
             form.Show();
+        }
+
+        private void trocarSenhaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                var user = _userApp.GetById(Program.SessionUser.Id);
+
+                TrocarSenha t = new TrocarSenha(_userApp, user);
+
+                if (t.ShowDialog() == DialogResult.OK)
+                {
+                    Program.SessionUser.Admin = user.IsAdmin;
+                    Program.SessionUser.Id = user.UserId;
+                    Program.SessionUser.Password = user.Password;
+                    Program.SessionUser.UserName = user.UserName;
+                    Program.SessionUser.CanAccessFinancial = user.CanAccessFinancial;
+                }
+            }
+            catch (Exception ex)
+            {
+                Util.ShowMessageWarning(ex.Message);
+            }
         }
     }
 }
