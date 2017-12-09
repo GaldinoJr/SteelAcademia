@@ -22,5 +22,10 @@ namespace SteelGymDesktop.Applications
         {
             return _service.GetByFilter(active, name, rg, cpf);
         }
+
+        public int GetCount(bool active)
+        {
+            return _service.GetCount(active);
+        }
     }
 }
