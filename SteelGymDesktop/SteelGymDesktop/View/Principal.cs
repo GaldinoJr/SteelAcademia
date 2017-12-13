@@ -38,7 +38,7 @@ namespace SteelGymDesktop.View
 
         private void Index_Load(object sender, EventArgs e)
         {
-            Home home = new Home(_studentApp);
+            Home home = new Home(_studentApp, panel1, txtNomeModulo);
             AbrirModulo(home, Models.Modulos.DF_NOME_MODULO_HOME);
         }
 
@@ -78,7 +78,7 @@ namespace SteelGymDesktop.View
 
         private void HomeToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Home h = new Home(_studentApp);
+            Home h = new Home(_studentApp, panel1, txtNomeModulo);
             AbrirModulo(h, Models.Modulos.DF_NOME_MODULO_HOME);
         }
 

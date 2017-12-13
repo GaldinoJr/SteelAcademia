@@ -23,5 +23,25 @@ namespace SteelGymDesktop.Domain.Services
         {
             return _repository.GetCount(active);
         }
+
+        public int GetCountLateAvaliations()
+        {
+            return _repository.GetCountLateAvaliations();
+        }
+
+        public int GetCountLatePayments()
+        {
+            return _repository.GetCountLatePayments();
+        }
+
+        public IEnumerable<Student> LoadLateAvaliations()
+        {
+            return _repository.LoadLateAvaliations();
+        }
+
+        public IEnumerable<Student> LoadLatePayments()
+        {
+            return _repository.LoadLatePayments();
+        }
     }
 }

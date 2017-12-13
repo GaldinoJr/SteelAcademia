@@ -1,4 +1,5 @@
 ﻿using SteelGymDesktop.Applications.Interfaces;
+using SteelGymDesktop.Domain.Entities;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -15,16 +16,44 @@ namespace SteelGymDesktop.View
     {
         private readonly IStudentAppService _studentApp;
         private int _studenId;
+        bool fgActive;
+        public const int DEF_SEARCH_LATE_PAYMENTS = 1001;
+        public const int DEF_SEARCH_LATE_EVALUATIONS = 1002;
+
+        public PesquisarAluno(IStudentAppService studentApp, int typeSearch)
+        {
+            _studentApp = studentApp;
+            InitializeComponent();
+            this.fgActive = true;
+            switch(typeSearch)
+            {
+                case DEF_SEARCH_LATE_EVALUATIONS:
+                    FilterLateEvaluations();
+                    break;
+                case DEF_SEARCH_LATE_PAYMENTS:
+                    break;
+            }
+        }
+
+        public PesquisarAluno(IStudentAppService studentApp, bool fgActive)
+        {
+            _studentApp = studentApp;
+            InitializeComponent();
+            FilterSearch(fgActive, "", "", "");
+            this.fgActive = fgActive;
+        }
 
         public PesquisarAluno(IStudentAppService studentApp)
         {
             _studentApp = studentApp;
             InitializeComponent();
+            this.fgActive = true;
         }
 
         private void PesquisarAluno_Load(object sender, EventArgs e)
         {
             chkAtivo.Checked = true;
+            chkAtivo.Checked = fgActive;
         }
 
         private void TxtIDAluno_KeyPress(object sender, KeyPressEventArgs e)
@@ -61,17 +90,7 @@ namespace SteelGymDesktop.View
                 }
                 else
                 {
-                    var students = _studentApp.GetByFilter(chkAtivo.Checked, txtNome.Text, txtRG.Text, txtCPF.Text);
-
-                    if (students != null)
-                    {
-                        foreach (var student in students)
-                        {
-                            dtgAlunos.Rows.Add(student.StudentId, student.Name, student.RG, student.CPF, (student.Active ? "Sim" : "Não"), student.PayDay);
-                        }
-                    }
-                    else
-                        Util.ShowMessageWarning("Não foi encontrado alunos com esses parametros.");
+                    FilterSearch(chkAtivo.Checked, txtNome.Text, txtRG.Text, txtCPF.Text);
                 }
             }
             catch (Exception ex)
@@ -80,6 +99,37 @@ namespace SteelGymDesktop.View
             }
 
             Util.EnabledCursor();
+        }
+
+        private void Filter(IEnumerable<Student> students)
+        {
+            if (students != null)
+            {
+                foreach (var student in students)
+                {
+                    dtgAlunos.Rows.Add(student.StudentId, student.Name, student.RG, student.CPF, (student.Active ? "Sim" : "Não"), student.PayDay);
+                }
+            }
+            else
+                Util.ShowMessageWarning("Não foi encontrado alunos com esses parametros.");
+        }
+
+        private void FilterSearch(bool @checked, string nome, string rg, string cpf)
+        {
+            var students = _studentApp.GetByFilter(@checked, nome, rg, cpf);
+            Filter(students);
+        }
+
+        private void FilterLateEvaluations()
+        {
+            var students = _studentApp.LoadLateAvaliations();
+            Filter(students);
+        }
+
+        private void FilterLoadLatePayments()
+        {
+            var students = _studentApp.LoadLatePayments();
+            Filter(students);
         }
 
         private void BtnLimpar_Click(object sender, EventArgs e)

@@ -78,6 +78,7 @@
             this.txtQuantityActiveStudents.TabIndex = 7;
             this.txtQuantityActiveStudents.Text = "-";
             this.txtQuantityActiveStudents.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.txtQuantityActiveStudents.Click += new System.EventHandler(this.TxtQuantityActiveStudents_Click);
             // 
             // panel_late_payment
             // 
@@ -111,6 +112,7 @@
             this.txtQuatityLatePayments.TabIndex = 7;
             this.txtQuatityLatePayments.Text = "-";
             this.txtQuatityLatePayments.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.txtQuatityLatePayments.Click += new System.EventHandler(this.TxtQuatityLatePayments_Click);
             // 
             // panel_late_avaliation
             // 
@@ -144,6 +146,7 @@
             this.txtQuantityLateAvaliations.TabIndex = 7;
             this.txtQuantityLateAvaliations.Text = "-";
             this.txtQuantityLateAvaliations.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.txtQuantityLateAvaliations.Click += new System.EventHandler(this.TxtQuantityLateAvaliations_Click);
             // 
             // panel_inative_student
             // 
@@ -177,6 +180,7 @@
             this.txtQuantityInativeStudents.TabIndex = 7;
             this.txtQuantityInativeStudents.Text = "-";
             this.txtQuantityInativeStudents.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.txtQuantityInativeStudents.Click += new System.EventHandler(this.TxtQuantityInativeStudents_Click);
             // 
             // Home
             // 

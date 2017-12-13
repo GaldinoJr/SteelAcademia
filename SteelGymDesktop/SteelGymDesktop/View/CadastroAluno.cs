@@ -1,6 +1,7 @@
 ﻿using SteelGymDesktop.Applications.Interfaces;
 using SteelGymDesktop.Domain.Entities;
 using System;
+using System.Data.Entity;
 using System.Windows.Forms;
 
 namespace SteelGymDesktop.View

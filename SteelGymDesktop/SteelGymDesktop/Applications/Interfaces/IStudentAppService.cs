@@ -7,5 +7,9 @@ namespace SteelGymDesktop.Applications.Interfaces
     {
         IEnumerable<Student> GetByFilter(bool active, string name, string rg, string cpf);
         int GetCount(bool active);
+        IEnumerable<Student> LoadLatePayments();
+        int GetCountLatePayments();
+        IEnumerable<Student> LoadLateAvaliations();
+        int GetCountLateAvaliations();
     }
 }
