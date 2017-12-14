@@ -38,7 +38,7 @@ namespace SteelGymDesktop.View
 
         private void Index_Load(object sender, EventArgs e)
         {
-            Home home = new Home();
+            Home home = new Home(_studentApp, panel1, txtNomeModulo);
             AbrirModulo(home, Models.Modulos.DF_NOME_MODULO_HOME);
         }
 
@@ -78,7 +78,7 @@ namespace SteelGymDesktop.View
 
         private void HomeToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Home h = new Home();
+            Home h = new Home(_studentApp, panel1, txtNomeModulo);
             AbrirModulo(h, Models.Modulos.DF_NOME_MODULO_HOME);
         }
 
@@ -98,14 +98,8 @@ namespace SteelGymDesktop.View
 
         private void FecharToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            panel1.Controls.Clear();
-            Login l = new Login();
-            l.TopLevel = false;
-            l.AutoScroll = true;
-
-            panel1.Controls.Add(l);
-            l.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            l.Show();
+            DialogForm p = new DialogForm();
+            p.ShowDialog();
         }
 
         public void AbrirModulo(Form form, String nomeModulo)

@@ -28,33 +28,34 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel_active_student = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.txtQuantityActiveStudents = new System.Windows.Forms.Label();
+            this.panel_late_payment = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.panel3 = new System.Windows.Forms.Panel();
+            this.txtQuatityLatePayments = new System.Windows.Forms.Label();
+            this.panel_late_avaliation = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.panel4 = new System.Windows.Forms.Panel();
+            this.txtQuantityLateAvaliations = new System.Windows.Forms.Label();
+            this.panel_inative_student = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
-            this.panel3.SuspendLayout();
-            this.panel4.SuspendLayout();
+            this.txtQuantityInativeStudents = new System.Windows.Forms.Label();
+            this.panel_active_student.SuspendLayout();
+            this.panel_late_payment.SuspendLayout();
+            this.panel_late_avaliation.SuspendLayout();
+            this.panel_inative_student.SuspendLayout();
             this.SuspendLayout();
             // 
-            // panel1
+            // panel_active_student
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(43)))), ((int)(((byte)(80)))));
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.label4);
-            this.panel1.Location = new System.Drawing.Point(25, 344);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(428, 259);
-            this.panel1.TabIndex = 9;
+            this.panel_active_student.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(43)))), ((int)(((byte)(80)))));
+            this.panel_active_student.Controls.Add(this.label1);
+            this.panel_active_student.Controls.Add(this.txtQuantityActiveStudents);
+            this.panel_active_student.Location = new System.Drawing.Point(25, 344);
+            this.panel_active_student.Name = "panel_active_student";
+            this.panel_active_student.Size = new System.Drawing.Size(428, 259);
+            this.panel_active_student.TabIndex = 9;
+            this.panel_active_student.Click += new System.EventHandler(this.Panel_active_student_Click);
             // 
             // label1
             // 
@@ -67,26 +68,28 @@
             this.label1.TabIndex = 8;
             this.label1.Text = "Alunos ativos";
             // 
-            // label4
+            // txtQuantityActiveStudents
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 80F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(21)))), ((int)(((byte)(86)))));
-            this.label4.Location = new System.Drawing.Point(90, 41);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(233, 120);
-            this.label4.TabIndex = 7;
-            this.label4.Text = "110";
+            this.txtQuantityActiveStudents.Font = new System.Drawing.Font("Microsoft Sans Serif", 80F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtQuantityActiveStudents.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(21)))), ((int)(((byte)(86)))));
+            this.txtQuantityActiveStudents.Location = new System.Drawing.Point(3, 50);
+            this.txtQuantityActiveStudents.Name = "txtQuantityActiveStudents";
+            this.txtQuantityActiveStudents.Size = new System.Drawing.Size(424, 120);
+            this.txtQuantityActiveStudents.TabIndex = 7;
+            this.txtQuantityActiveStudents.Text = "-";
+            this.txtQuantityActiveStudents.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.txtQuantityActiveStudents.Click += new System.EventHandler(this.TxtQuantityActiveStudents_Click);
             // 
-            // panel2
+            // panel_late_payment
             // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(43)))), ((int)(((byte)(80)))));
-            this.panel2.Controls.Add(this.label2);
-            this.panel2.Controls.Add(this.label3);
-            this.panel2.Location = new System.Drawing.Point(25, 62);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(428, 259);
-            this.panel2.TabIndex = 10;
+            this.panel_late_payment.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(43)))), ((int)(((byte)(80)))));
+            this.panel_late_payment.Controls.Add(this.label2);
+            this.panel_late_payment.Controls.Add(this.txtQuatityLatePayments);
+            this.panel_late_payment.Location = new System.Drawing.Point(25, 62);
+            this.panel_late_payment.Name = "panel_late_payment";
+            this.panel_late_payment.Size = new System.Drawing.Size(428, 259);
+            this.panel_late_payment.TabIndex = 10;
+            this.panel_late_payment.Click += new System.EventHandler(this.Panel_late_payment_Click);
             // 
             // label2
             // 
@@ -99,26 +102,28 @@
             this.label2.TabIndex = 8;
             this.label2.Text = "Mensalidades atrasadas";
             // 
-            // label3
+            // txtQuatityLatePayments
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 80F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(21)))), ((int)(((byte)(86)))));
-            this.label3.Location = new System.Drawing.Point(158, 41);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(111, 120);
-            this.label3.TabIndex = 7;
-            this.label3.Text = "5";
+            this.txtQuatityLatePayments.Font = new System.Drawing.Font("Microsoft Sans Serif", 80F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtQuatityLatePayments.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(21)))), ((int)(((byte)(86)))));
+            this.txtQuatityLatePayments.Location = new System.Drawing.Point(3, 41);
+            this.txtQuatityLatePayments.Name = "txtQuatityLatePayments";
+            this.txtQuatityLatePayments.Size = new System.Drawing.Size(424, 120);
+            this.txtQuatityLatePayments.TabIndex = 7;
+            this.txtQuatityLatePayments.Text = "-";
+            this.txtQuatityLatePayments.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.txtQuatityLatePayments.Click += new System.EventHandler(this.TxtQuatityLatePayments_Click);
             // 
-            // panel3
+            // panel_late_avaliation
             // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(43)))), ((int)(((byte)(80)))));
-            this.panel3.Controls.Add(this.label5);
-            this.panel3.Controls.Add(this.label6);
-            this.panel3.Location = new System.Drawing.Point(481, 62);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(428, 259);
-            this.panel3.TabIndex = 12;
+            this.panel_late_avaliation.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(43)))), ((int)(((byte)(80)))));
+            this.panel_late_avaliation.Controls.Add(this.label5);
+            this.panel_late_avaliation.Controls.Add(this.txtQuantityLateAvaliations);
+            this.panel_late_avaliation.Location = new System.Drawing.Point(481, 62);
+            this.panel_late_avaliation.Name = "panel_late_avaliation";
+            this.panel_late_avaliation.Size = new System.Drawing.Size(428, 259);
+            this.panel_late_avaliation.TabIndex = 12;
+            this.panel_late_avaliation.Click += new System.EventHandler(this.Panel_late_avaliation_Click);
             // 
             // label5
             // 
@@ -131,26 +136,28 @@
             this.label5.TabIndex = 8;
             this.label5.Text = "Avaliações vencidas";
             // 
-            // label6
+            // txtQuantityLateAvaliations
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 80F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(21)))), ((int)(((byte)(86)))));
-            this.label6.Location = new System.Drawing.Point(132, 41);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(172, 120);
-            this.label6.TabIndex = 7;
-            this.label6.Text = "10";
+            this.txtQuantityLateAvaliations.Font = new System.Drawing.Font("Microsoft Sans Serif", 80F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtQuantityLateAvaliations.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(21)))), ((int)(((byte)(86)))));
+            this.txtQuantityLateAvaliations.Location = new System.Drawing.Point(1, 41);
+            this.txtQuantityLateAvaliations.Name = "txtQuantityLateAvaliations";
+            this.txtQuantityLateAvaliations.Size = new System.Drawing.Size(424, 120);
+            this.txtQuantityLateAvaliations.TabIndex = 7;
+            this.txtQuantityLateAvaliations.Text = "-";
+            this.txtQuantityLateAvaliations.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.txtQuantityLateAvaliations.Click += new System.EventHandler(this.TxtQuantityLateAvaliations_Click);
             // 
-            // panel4
+            // panel_inative_student
             // 
-            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(43)))), ((int)(((byte)(80)))));
-            this.panel4.Controls.Add(this.label7);
-            this.panel4.Controls.Add(this.label8);
-            this.panel4.Location = new System.Drawing.Point(481, 344);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(428, 259);
-            this.panel4.TabIndex = 11;
+            this.panel_inative_student.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(43)))), ((int)(((byte)(80)))));
+            this.panel_inative_student.Controls.Add(this.label7);
+            this.panel_inative_student.Controls.Add(this.txtQuantityInativeStudents);
+            this.panel_inative_student.Location = new System.Drawing.Point(481, 344);
+            this.panel_inative_student.Name = "panel_inative_student";
+            this.panel_inative_student.Size = new System.Drawing.Size(428, 259);
+            this.panel_inative_student.TabIndex = 11;
+            this.panel_inative_student.Click += new System.EventHandler(this.Panel_inative_student_Click);
             // 
             // label7
             // 
@@ -163,16 +170,17 @@
             this.label7.TabIndex = 8;
             this.label7.Text = "Alunos inativos";
             // 
-            // label8
+            // txtQuantityInativeStudents
             // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 80F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(21)))), ((int)(((byte)(86)))));
-            this.label8.Location = new System.Drawing.Point(132, 41);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(172, 120);
-            this.label8.TabIndex = 7;
-            this.label8.Text = "20";
+            this.txtQuantityInativeStudents.Font = new System.Drawing.Font("Microsoft Sans Serif", 80F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtQuantityInativeStudents.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(21)))), ((int)(((byte)(86)))));
+            this.txtQuantityInativeStudents.Location = new System.Drawing.Point(3, 41);
+            this.txtQuantityInativeStudents.Name = "txtQuantityInativeStudents";
+            this.txtQuantityInativeStudents.Size = new System.Drawing.Size(424, 120);
+            this.txtQuantityInativeStudents.TabIndex = 7;
+            this.txtQuantityInativeStudents.Text = "-";
+            this.txtQuantityInativeStudents.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.txtQuantityInativeStudents.Click += new System.EventHandler(this.TxtQuantityInativeStudents_Click);
             // 
             // Home
             // 
@@ -180,36 +188,36 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(37)))), ((int)(((byte)(72)))));
             this.ClientSize = new System.Drawing.Size(936, 651);
-            this.Controls.Add(this.panel3);
-            this.Controls.Add(this.panel4);
-            this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panel_late_avaliation);
+            this.Controls.Add(this.panel_inative_student);
+            this.Controls.Add(this.panel_late_payment);
+            this.Controls.Add(this.panel_active_student);
             this.Name = "Home";
             this.Text = "Home";
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
-            this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
+            this.panel_active_student.ResumeLayout(false);
+            this.panel_active_student.PerformLayout();
+            this.panel_late_payment.ResumeLayout(false);
+            this.panel_late_payment.PerformLayout();
+            this.panel_late_avaliation.ResumeLayout(false);
+            this.panel_late_avaliation.PerformLayout();
+            this.panel_inative_student.ResumeLayout(false);
+            this.panel_inative_student.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel_active_student;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label txtQuantityActiveStudents;
+        private System.Windows.Forms.Panel panel_late_payment;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Label txtQuatityLatePayments;
+        private System.Windows.Forms.Panel panel_late_avaliation;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Label txtQuantityLateAvaliations;
+        private System.Windows.Forms.Panel panel_inative_student;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label txtQuantityInativeStudents;
     }
 }

@@ -1,6 +1,7 @@
 ﻿using SteelGymDesktop.Applications.Interfaces;
 using SteelGymDesktop.Domain.Entities;
 using System;
+using System.Data.Entity;
 using System.Windows.Forms;
 
 namespace SteelGymDesktop.View
@@ -68,7 +69,9 @@ namespace SteelGymDesktop.View
                 txtNome.Text = _student.Name;
                 cboEstadoCivil.Text = _student.CivilStatus;
                 txtCPF.Text = _student.CPF;
+                cboPeriodicidadeAvaliacao.Text = _student.EvaluationPeriodicity.ToString();
                 dtpNascimento.Value = (DateTime)_student.BirthDate;
+                dtpAvaliacao.Value = (DateTime)_student.EvaliationDate;
                 txtEmail.Text = _student.Email;
                 cboSexo.Text = _student.Sex;
                 txtRG.Text = _student.RG;
@@ -130,8 +133,9 @@ namespace SteelGymDesktop.View
                 _student.CivilStatus = cboEstadoCivil.Text;
                 _student.CPF = txtCPF.Text;
                 _student.BirthDate = Convert.ToDateTime(dtpNascimento.Text);
+                _student.EvaliationDate = Convert.ToDateTime(dtpAvaliacao.Text);
+                _student.EvaluationPeriodicity = Convert.ToInt32(cboPeriodicidadeAvaliacao.Text);
                 _student.PayDay = Convert.ToInt32(cboDiaPagamento.Text);
-                cboDiaPagamento.Text = _student.PayDay.ToString();
                 if (Util.ValidaString(txtMensalidade.Text))
                 {
                     _student.PaymentAmount = Convert.ToDecimal(txtMensalidade.Text.ToString().Replace(",","."));
@@ -269,6 +273,24 @@ namespace SteelGymDesktop.View
                 }
                 pass = false;
             }
+            if (!Util.ValidaString(dtpAvaliacao.Text))
+            {
+                msgError += " - Campo 'Data de avaliação' invalido.";
+                if (pass)
+                {
+                    dtpAvaliacao.Focus();
+                }
+                pass = false;
+            }
+            if (cboPeriodicidadeAvaliacao.SelectedIndex == -1)
+            {
+                msgError += " - Campo 'Periodicidade' invalido.";
+                if (pass)
+                {
+                    cboPeriodicidadeAvaliacao.Focus();
+                }
+                pass = false;
+            }
             //E caso o aluno seja menor, eu Obrigo o nome e o grau de parentesco 
             if (isMenor)
             {
@@ -330,6 +352,7 @@ namespace SteelGymDesktop.View
             cboEstadoCivil.Text = "";
             txtCPF.Text = "";
             dtpNascimento.Text = "";
+            dtpAvaliacao.Text = "";
             txtEmail.Text = "";
             cboSexo.Text = "";
             txtRG.Text = "";
@@ -364,6 +387,8 @@ namespace SteelGymDesktop.View
             txtProfissao.Text = "";
             txtMensalidade.Text = "";
             cboDiaPagamento.Text ="";
+            cboPeriodicidadeAvaliacao.Text = "";
+            HabilityResponsibleData();
         }
 
         private void DtpNascimento_ValueChanged(object sender, EventArgs e)
