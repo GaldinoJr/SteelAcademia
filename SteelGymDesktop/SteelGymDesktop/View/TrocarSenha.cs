@@ -9,24 +9,34 @@ namespace SteelGymDesktop.View
     {
         private readonly IUserAppService _userApp;
         private readonly User _user;
+        private readonly bool _forgotPassword;
 
-        public TrocarSenha(IUserAppService userApp, User user)
+        public TrocarSenha(IUserAppService userApp, User user, bool forgotPassword)
         {
             _userApp = userApp;
             _user = user;
+            _forgotPassword = forgotPassword;
+
             InitializeComponent();
 
-            FormBorderStyle = FormBorderStyle.FixedSingle;
-            MaximizeBox = false;
-            MinimizeBox = false;
-            ControlBox = false;
+            if (!_forgotPassword)
+            {
+                FormBorderStyle = FormBorderStyle.FixedSingle;
+                MaximizeBox = false;
+                MinimizeBox = false;
+                ControlBox = false;
+            }
         }
 
         private void btnSalvar_Click(object sender, EventArgs e)
         {
             if (!Util.ValidaString(txtCurrentPassword.Text))
             {
-                Util.ShowMessageWarning("Preencha o campo Senha Atual.");
+                if (!_forgotPassword)
+                    Util.ShowMessageWarning("Preencha o campo Senha Atual.");
+                else
+                    Util.ShowMessageWarning("Preencha o campo Senha Atual.");
+
                 return;
             }
 
@@ -36,10 +46,13 @@ namespace SteelGymDesktop.View
                 return;
             }
 
-            if (!txtCurrentPassword.Text.Equals(_user.Password))
+            if (!_forgotPassword)
             {
-                Util.ShowMessageWarning("Campo 'Senha Atual' difere da senha salva.");
-                return;
+                if (!txtCurrentPassword.Text.Equals(_user.Password))
+                {
+                    Util.ShowMessageWarning("Campo 'Senha Atual' difere da senha salva.");
+                    return;
+                }
             }
 
             if (!Util.ValidaString(txtConfirmPassword.Text))
@@ -64,6 +77,17 @@ namespace SteelGymDesktop.View
             {
                 Util.DisabledCursor();
 
+                if (_forgotPassword)
+                {
+                    var userAdm = _userApp.Login("admin_admin", txtCurrentPassword.Text);
+
+                    if(userAdm == null)
+                    {
+                        Util.ShowMessageWarning("A senha do administrador está incorreta.");
+                        return;
+                    }
+                }
+
                 _user.Password = txtNewPassword.Text;
                 _user.FirstLogin = false;
 
@@ -80,6 +104,12 @@ namespace SteelGymDesktop.View
             {
                 Util.ShowMessageWarning("Erro ao efetuar a troca de senha: " + ex.Message);
             }
+        }
+
+        private void TrocarSenha_Load(object sender, EventArgs e)
+        {
+            if(_forgotPassword)
+                lblCurrentPassword.Text = "Senha do Administrador";
         }
     }
 }

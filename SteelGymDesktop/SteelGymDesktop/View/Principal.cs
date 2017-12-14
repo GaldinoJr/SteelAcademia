@@ -130,7 +130,7 @@ namespace SteelGymDesktop.View
             {
                 var user = _userApp.GetById(Program.SessionUser.Id);
 
-                TrocarSenha t = new TrocarSenha(_userApp, user);
+                TrocarSenha t = new TrocarSenha(_userApp, user, false);
 
                 if (t.ShowDialog() == DialogResult.OK)
                 {

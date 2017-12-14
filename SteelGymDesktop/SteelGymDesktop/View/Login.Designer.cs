@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             this.btnLostPassword = new System.Windows.Forms.Button();
             this.btnLogin = new System.Windows.Forms.Button();
             this.txtPassword = new System.Windows.Forms.TextBox();
@@ -50,6 +51,7 @@
             this.btnLostPassword.TabIndex = 13;
             this.btnLostPassword.Text = "Esqueci a senha";
             this.btnLostPassword.UseVisualStyleBackColor = false;
+            this.btnLostPassword.Click += new System.EventHandler(this.btnLostPassword_Click);
             // 
             // btnLogin
             // 
@@ -127,6 +129,7 @@
             this.Controls.Add(this.txtUser);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Login";
             this.Text = "Login";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

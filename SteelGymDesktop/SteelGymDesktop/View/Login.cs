@@ -40,7 +40,7 @@ namespace SteelGymDesktop.View
                 {
                     if (user.FirstLogin)
                     {
-                        TrocarSenha t = new TrocarSenha(_userApp, user);
+                        TrocarSenha t = new TrocarSenha(_userApp, user, false);
 
                         if (t.ShowDialog() == DialogResult.OK)
                         {
@@ -61,6 +61,41 @@ namespace SteelGymDesktop.View
                 {
                     Util.ShowMessageWarning("Usuário não encontrado.");
                     return;
+                }
+            }
+            catch (Exception ex)
+            {
+                Util.ShowMessageWarning("Erro ao efetuar o login. Exception: " + ex.Message);
+            }
+        }
+
+        private void btnLostPassword_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (!Util.ValidaString(txtUser.Text))
+                {
+                    Util.ShowMessageWarning("Preencha o campo Usuário.");
+                    return;
+                }
+
+                Util.DisabledCursor();
+
+                var userr = _userApp.GetByUserName(txtUser.Text);
+
+                Util.EnabledCursor();
+
+                if (userr == null)
+                {
+                    Util.ShowMessageWarning("Usuário não encontrado.");
+                    return;
+                }
+
+                TrocarSenha t = new TrocarSenha(_userApp, userr, true);
+
+                if (t.ShowDialog() == DialogResult.OK)
+                {
+
                 }
             }
             catch (Exception ex)

@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.txtCurrentPassword = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lblCurrentPassword = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.txtNewPassword = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -47,16 +47,16 @@
             this.txtCurrentPassword.Size = new System.Drawing.Size(274, 26);
             this.txtCurrentPassword.TabIndex = 11;
             // 
-            // label2
+            // lblCurrentPassword
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(74, 60);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(129, 24);
-            this.label2.TabIndex = 8;
-            this.label2.Text = "Senha Atual:";
+            this.lblCurrentPassword.AutoSize = true;
+            this.lblCurrentPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCurrentPassword.ForeColor = System.Drawing.Color.White;
+            this.lblCurrentPassword.Location = new System.Drawing.Point(74, 60);
+            this.lblCurrentPassword.Name = "lblCurrentPassword";
+            this.lblCurrentPassword.Size = new System.Drawing.Size(129, 24);
+            this.lblCurrentPassword.TabIndex = 8;
+            this.lblCurrentPassword.Text = "Senha Atual:";
             // 
             // label1
             // 
@@ -135,10 +135,11 @@
             this.Controls.Add(this.txtNewPassword);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txtCurrentPassword);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.lblCurrentPassword);
             this.Controls.Add(this.label1);
             this.Name = "TrocarSenha";
             this.Text = "Trocar de Senha";
+            this.Load += new System.EventHandler(this.TrocarSenha_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -146,7 +147,7 @@
 
         #endregion
         private System.Windows.Forms.TextBox txtCurrentPassword;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblCurrentPassword;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtNewPassword;
         private System.Windows.Forms.Label label3;

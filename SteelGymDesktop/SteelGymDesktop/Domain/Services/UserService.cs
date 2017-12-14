@@ -20,6 +20,11 @@ namespace SteelGymDesktop.Domain.Services
             return _repository.GetByFilter(active, userName, rg, cpf);
         }
 
+        public User GetByUserName(string userName)
+        {
+            return _repository.GetByUserName(userName);
+        }
+
         public User Login(string userName, string password)
         {
             return _repository.Login(userName, password);

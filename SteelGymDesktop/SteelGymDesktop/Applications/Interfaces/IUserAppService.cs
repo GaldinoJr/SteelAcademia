@@ -7,5 +7,6 @@ namespace SteelGymDesktop.Applications.Interfaces
     {
         IEnumerable<User> GetByFilter(bool active, string userName, string rg, string cpf);
         User Login(string userName, string password);
+        User GetByUserName(string userName);
     }
 }

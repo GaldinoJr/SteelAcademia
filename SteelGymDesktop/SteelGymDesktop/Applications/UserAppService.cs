@@ -21,6 +21,11 @@ namespace SteelGymDesktop.Applications
             return _service.GetByFilter(active, userName, rg, cpf);
         }
 
+        public User GetByUserName(string userName)
+        {
+            return _service.GetByUserName(userName);
+        }
+
         public User Login(string userName, string password)
         {
             return _service.Login(userName, password);
