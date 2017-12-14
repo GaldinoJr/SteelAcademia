@@ -27,5 +27,8 @@ namespace SteelGymDesktop.Domain.Entities
         public DateTime CreateDate { get; set; }
         public int? UpdateUserId { get; set; }
         public int CreateUserId { get; set; }
+        public bool IsAdmin { get; set; }
+        public bool CanAccessFinancial { get; set; }
+        public bool FirstLogin { get; set; }
     }
 }
