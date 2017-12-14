@@ -134,14 +134,6 @@
     <Compile Include="Infrastructure\Repository\RepositoryBase.cs" />
     <Compile Include="Infrastructure\Repository\StudentRepository.cs" />
     <Compile Include="Infrastructure\Repository\UserRepository.cs" />
-    <Compile Include="Migrations\201712070050069_include_index_userName.cs" />
-    <Compile Include="Migrations\201712070050069_include_index_userName.Designer.cs">
-      <DependentUpon>201712070050069_include_index_userName.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201712080130260_add control admin.cs" />
-    <Compile Include="Migrations\201712080130260_add control admin.Designer.cs">
-      <DependentUpon>201712080130260_add control admin.cs</DependentUpon>
-    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Modulos.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
@@ -208,12 +200,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Migrations\201712070050069_include_index_userName.resx">
-      <DependentUpon>201712070050069_include_index_userName.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201712080130260_add control admin.resx">
-      <DependentUpon>201712080130260_add control admin.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="View\CadastroAluno.resx">
       <DependentUpon>CadastroAluno.cs</DependentUpon>
     </EmbeddedResource>
