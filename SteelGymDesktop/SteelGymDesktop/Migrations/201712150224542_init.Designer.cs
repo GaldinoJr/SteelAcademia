@@ -7,13 +7,13 @@ namespace SteelGymDesktop.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.2.0-61023")]
-    public sealed partial class colunasAlunos : IMigrationMetadata
+    public sealed partial class init : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(colunasAlunos));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(init));
         
         string IMigrationMetadata.Id
         {
-            get { return "201712080132323_colunasAlunos"; }
+            get { return "201712150224542_init"; }
         }
         
         string IMigrationMetadata.Source

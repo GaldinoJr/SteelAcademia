@@ -15,11 +15,13 @@ namespace SteelGymDesktop.View
     {
         private readonly IUserAppService _userApp;
         private readonly IStudentAppService _studentApp;
+        private readonly IMovimentationAppService _MovimentacaoApp;
 
-        public Principal(IUserAppService userApp, IStudentAppService studentApp)
+        public Principal(IUserAppService userApp, IStudentAppService studentApp, IMovimentationAppService movimentacaoApp)
         {
             _userApp = userApp;
             _studentApp = studentApp;
+            _MovimentacaoApp = movimentacaoApp;
 
             InitializeComponent();
             // Full screen
@@ -113,6 +115,17 @@ namespace SteelGymDesktop.View
             panel1.Controls.Add(form);
             form.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             form.Show();
+        }
+
+        private void InclusãoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CadastroMovimentacao p = new CadastroMovimentacao(_MovimentacaoApp);
+            AbrirModulo(p, Models.Modulos.DF_NOME_MODULO_MOVIMENTACOES);
+        }
+
+        private void PesquisaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

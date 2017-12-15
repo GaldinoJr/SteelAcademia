@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace SteelGymDesktop.View
 {
-    public partial class CadastroMovimentacao : Form
+    public partial class PesquisaMovimentacao : Form
     {
-        public CadastroMovimentacao(Applications.Interfaces.IMovimentationAppService _MovimentacaoApp)
+        public PesquisaMovimentacao()
         {
             InitializeComponent();
         }
