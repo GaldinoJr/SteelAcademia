@@ -69,6 +69,7 @@
             // 
             this.dtgUsuario.AllowUserToAddRows = false;
             this.dtgUsuario.AllowUserToDeleteRows = false;
+            this.dtgUsuario.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(43)))), ((int)(((byte)(80)))));
             this.dtgUsuario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgUsuario.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.IDAluno,

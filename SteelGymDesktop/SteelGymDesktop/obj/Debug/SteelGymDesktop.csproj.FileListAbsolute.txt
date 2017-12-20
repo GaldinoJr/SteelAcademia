@@ -79,3 +79,4 @@ C:\Users\Galdino\Documents\Projetos\ACADEMIA_DANIEL_SISTEMA_DESKTOP\Sistema\Stee
 C:\Users\Galdino\Documents\Projetos\ACADEMIA_DANIEL_SISTEMA_DESKTOP\Sistema\SteelAcademia\SteelGymDesktop\SteelGymDesktop\obj\Debug\SteelGymDesktop.csproj.CoreCompileInputs.cache
 C:\Users\Galdino\Documents\Projetos\ACADEMIA_DANIEL_SISTEMA_DESKTOP\Sistema\SteelAcademia\SteelGymDesktop\SteelGymDesktop\obj\Debug\SteelGymDesktop.exe
 C:\Users\Galdino\Documents\Projetos\ACADEMIA_DANIEL_SISTEMA_DESKTOP\Sistema\SteelAcademia\SteelGymDesktop\SteelGymDesktop\obj\Debug\SteelGymDesktop.pdb
+C:\Users\Galdino\Documents\Projetos\ACADEMIA_DANIEL_SISTEMA_DESKTOP\Sistema\SteelAcademia\SteelGymDesktop\SteelGymDesktop\obj\Debug\SteelGymDesktop.View.PesquisaMovimentacao.resources

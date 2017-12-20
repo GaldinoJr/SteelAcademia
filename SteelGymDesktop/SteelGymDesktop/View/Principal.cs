@@ -114,7 +114,41 @@ namespace SteelGymDesktop.View
             form.AutoScroll = true;
             panel1.Controls.Add(form);
             form.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+
+            controlPanelSelected(nomeModulo);
+
             form.Show();
+        }
+
+        private void controlPanelSelected(string nomeModulo)
+        {
+            panelSelectedHome.Visible =
+                panelSelectedMovimentation.Visible =
+                panelSelectedPayment.Visible =
+                panelSelectedReceipt.Visible =
+                panelSelectedStudent.Visible =
+                panelSelectedUser.Visible = false;
+            switch (nomeModulo)
+            {
+                case Models.Modulos.DF_NOME_MODULO_HOME:
+                    panelSelectedHome.Visible = true;
+                    break;
+                case Models.Modulos.DF_NOME_MODULO_ALUNO:
+                    panelSelectedStudent.Visible = true;
+                    break;
+                case Models.Modulos.DF_NOME_MODULO_PAGAMENTO:
+                    panelSelectedPayment.Visible = true;
+                    break;
+                case Models.Modulos.DF_NOME_MODULO_COMPROVANTE:
+                    panelSelectedReceipt.Visible = true;
+                    break;
+                case Models.Modulos.DF_NOME_MODULO_USUARIO:
+                    panelSelectedUser.Visible = true;
+                    break;
+                case Models.Modulos.DF_NOME_MODULO_MOVIMENTACOES:
+                    panelSelectedMovimentation.Visible = true;
+                    break;
+            }
         }
 
         private void InclusãoToolStripMenuItem_Click(object sender, EventArgs e)
@@ -125,7 +159,8 @@ namespace SteelGymDesktop.View
 
         private void PesquisaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            PesquisaMovimentacao p = new PesquisaMovimentacao(_MovimentacaoApp);
+            AbrirModulo(p, Models.Modulos.DF_NOME_MODULO_MOVIMENTACOES);
         }
     }
 }

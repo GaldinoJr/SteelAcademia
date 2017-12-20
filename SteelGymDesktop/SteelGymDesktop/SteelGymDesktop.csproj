@@ -206,6 +206,9 @@
     <EmbeddedResource Include="View\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\PesquisaMovimentacao.resx">
+      <DependentUpon>PesquisaMovimentacao.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\PesquisarAluno.resx">
       <DependentUpon>PesquisarAluno.cs</DependentUpon>
     </EmbeddedResource>
