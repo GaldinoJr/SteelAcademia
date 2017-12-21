@@ -1,6 +1,9 @@
 ﻿using SteelGymDesktop.Domain.Entities;
 using SteelGymDesktop.Domain.Interfaces;
+using System;
 using System.Collections.Generic;
+using System.Data.Entity;
+using System.Data.Entity.Core.Objects;
 using System.Linq;
 
 namespace SteelGymDesktop.Infrastructure.Repository
@@ -9,20 +12,41 @@ namespace SteelGymDesktop.Infrastructure.Repository
     {
         public IEnumerable<Student> GetByFilter(bool active, string name, string rg, string cpf)
         {
-            IQueryable<Student> query = Db.Students;
+            return Db.Students.Where(x => x.Active == active || x.Name == name || x.RG == rg || x.CPF == cpf);
+        }
 
-            query.Where(x => x.Active == active);
+        public int GetCount(bool active)
+        {
+            return Db.Students.Where(x => x.Active == active).Count();
+        }
 
-            if (Util.ValidaString(name))
-                query = query.Where(x => x.Name.Contains(name));
+        public int GetCountLateAvaliations()
+        {
+            DateTime? currentDate = System.DateTime.Now;
+            return Db.Students.Where(x =>
+                DbFunctions.DiffDays(x.EvaliationDate, currentDate) >= (x.EvaluationPeriodicity * 30) &&
+                x.Active == true
+            ).Count();
+        }
 
-            if (Util.ValidaString(rg))
-                query = query.Where(x => x.RG == rg);
+        public int GetCountLatePayments()
+        {
+            throw new System.NotImplementedException();
+        }
 
-            if (Util.ValidaString(cpf))
-                query = query.Where(x => x.CPF == cpf);
+        public IEnumerable<Student> LoadLateAvaliations()
+        {
+            DateTime? currentDate = System.DateTime.Now;
+            return Db.Students.Where(x =>
+                DbFunctions.DiffDays(x.EvaliationDate, currentDate) >= (x.EvaluationPeriodicity * 30) &&
+                x.Active == true
+            );
+        }
 
-            return query;
+        public IEnumerable<Student> LoadLatePayments()
+        {
+            // TODO PRECISA DOS PAGAMENTOS PARA VERIFICAR
+            throw new System.NotImplementedException();
         }
     }
 }

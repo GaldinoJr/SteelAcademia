@@ -2,10 +2,7 @@ namespace SteelGymDesktop.Migrations
 {
     using SteelGymDesktop.Domain.Entities;
     using SteelGymDesktop.Infrastructure.DataAccess;
-    using System;
-    using System.Data.Entity;
     using System.Data.Entity.Migrations;
-    using System.Linq;
 
     internal sealed class Configuration : DbMigrationsConfiguration<DbConnection>
     {
@@ -26,7 +23,7 @@ namespace SteelGymDesktop.Migrations
             _user.CanAccessFinancial = true;
             _user.Password = "admin@@123";
             _user.FirstLogin = true;
-            _user.UserName = "admin_admin";
+            _user.UserName = "admin";
 
             context.Users.Add(_user);
             context.SaveChanges();

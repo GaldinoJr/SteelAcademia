@@ -8,7 +8,7 @@ namespace SteelGymDesktop.Domain.Services
     {
         private readonly IStudentRepository _repository;
 
-        public StudentService(IStudentRepository repository) 
+        public StudentService(IStudentRepository repository)
             : base(repository)
         {
             _repository = repository;
@@ -17,6 +17,31 @@ namespace SteelGymDesktop.Domain.Services
         public IEnumerable<Student> GetByFilter(bool active, string name, string rg, string cpf)
         {
             return _repository.GetByFilter(active, name, rg, cpf);
+        }
+
+        public int GetCount(bool active)
+        {
+            return _repository.GetCount(active);
+        }
+
+        public int GetCountLateAvaliations()
+        {
+            return _repository.GetCountLateAvaliations();
+        }
+
+        public int GetCountLatePayments()
+        {
+            return _repository.GetCountLatePayments();
+        }
+
+        public IEnumerable<Student> LoadLateAvaliations()
+        {
+            return _repository.LoadLateAvaliations();
+        }
+
+        public IEnumerable<Student> LoadLatePayments()
+        {
+            return _repository.LoadLatePayments();
         }
     }
 }

@@ -45,7 +45,7 @@
             this.txtProfissao = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.txtIMC = new System.Windows.Forms.TextBox();
+            //this.txtIMC = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.txtEndereco = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();

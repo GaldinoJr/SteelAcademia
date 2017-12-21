@@ -19,7 +19,7 @@ namespace SteelGymDesktop.View
 
             InitializeComponent();
 
-            if (!_forgotPassword)
+            if (_forgotPassword)
             {
                 FormBorderStyle = FormBorderStyle.FixedSingle;
                 MaximizeBox = false;

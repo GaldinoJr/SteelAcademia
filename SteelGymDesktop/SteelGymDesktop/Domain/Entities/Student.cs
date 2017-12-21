@@ -8,8 +8,11 @@ namespace SteelGymDesktop.Domain.Entities
         public string Name { get; set; }
         public string CivilStatus { get; set; }
         public string CPF { get; set; }
-        public DateTime? BirthDate { get; set; } 
-        public DateTime? PayDay { get; set; }
+        public DateTime? BirthDate { get; set; }
+        public DateTime? EvaliationDate { get; set; }
+        public int PayDay { get; set; }
+        public int EvaluationPeriodicity { get; set; }
+        public decimal PaymentAmount { get; set; }
         public string Email { get; set; }
         public string Sex { get; set; }
         public decimal IMC { get; set; }
