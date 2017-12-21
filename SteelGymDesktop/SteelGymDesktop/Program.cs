@@ -22,11 +22,11 @@ namespace SteelGymDesktop
         private static IStudentService _studentService;
         private static IStudentRepository _studentRepository;
 
+        public static SessionUser SessionUser { get; set; }
+
         [STAThread]
         static void Main()
         {
-            //DependencyResolver.SetResolver(SimpleInjectiorController.RegisterServices());
-
             _userRepository = new UserRepository();
             _userService = new UserService(_userRepository);
             _userAppService = new UserAppService(_userService);
@@ -38,7 +38,9 @@ namespace SteelGymDesktop
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
-            View.Login l = new View.Login();
+            SessionUser = new SessionUser();
+
+            View.Login l = new View.Login(_userAppService);
             if (l.ShowDialog() == DialogResult.OK)
                 Application.Run(new View.Principal(_userAppService, _studentAppService));
         }

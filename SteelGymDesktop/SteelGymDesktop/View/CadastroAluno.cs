@@ -333,7 +333,11 @@ namespace SteelGymDesktop.View
 
         private void TxtIMC_KeyPress(object sender, KeyPressEventArgs e)
         {
-            e.Handled = Util.ValidaNumero(e);
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != ','))
+                e.Handled = true;
+
+            if ((e.KeyChar == ',') && ((sender as TextBox).Text.IndexOf(',') > -1))
+                e.Handled = true;
         }
 
         private void TxtNumero_KeyPress(object sender, KeyPressEventArgs e)
@@ -394,6 +398,15 @@ namespace SteelGymDesktop.View
         private void DtpNascimento_ValueChanged(object sender, EventArgs e)
         {
             HabilityResponsibleData();
+        }
+
+        private void txtMensalidade_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != ','))
+                e.Handled = true;
+
+            if ((e.KeyChar == ',') && ((sender as TextBox).Text.IndexOf(',') > -1))
+                e.Handled = true;
         }
     }
 }

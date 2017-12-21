@@ -49,7 +49,7 @@ namespace SteelGymDesktop
             return ValidaString(s);
         }
 
-        private static String RemoverCaracteres(String s)
+        public static String RemoverCaracteres(String s)
         {
             String campo = s.Replace(" ", "").Replace(",", "").Replace("-", "");
             return campo;

@@ -45,6 +45,7 @@
             this.txtProfissao = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
+            this.txtIMC = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.txtEndereco = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
@@ -1011,6 +1012,7 @@
             this.txtMensalidade.Location = new System.Drawing.Point(298, 151);
             this.txtMensalidade.Name = "txtMensalidade";
             this.txtMensalidade.Size = new System.Drawing.Size(52, 20);
+            this.txtMensalidade.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtMensalidade_KeyPress);
             this.txtMensalidade.TabIndex = 11;
             // 
             // label1
