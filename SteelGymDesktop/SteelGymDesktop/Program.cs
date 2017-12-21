@@ -24,17 +24,27 @@ namespace SteelGymDesktop
 
         public static SessionUser SessionUser { get; set; }
 
+        private static IMovimentationAppService _movimentationAppService;
+        private static IMovimentationService _movimentationService;
+        private static IMovimentationRepository _movimentationRepository;
+
         [STAThread]
         static void Main()
         {
+            //DependencyResolver.SetResolver(SimpleInjectiorController.RegisterServices());
+            // 1 - user
             _userRepository = new UserRepository();
             _userService = new UserService(_userRepository);
             _userAppService = new UserAppService(_userService);
-
+            // 2 student
             _studentRepository = new StudentRepository();
             _studentService = new StudentService(_studentRepository);
             _studentAppService = new StudentAppService(_studentService);
-
+            // 3 - movimentation
+            _movimentationRepository = new MovimentationRepository();
+            _movimentationService = new MovimentationService(_movimentationRepository);
+            _movimentationAppService = new MovimentationAppService(_movimentationService);
+            //
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
@@ -42,7 +52,7 @@ namespace SteelGymDesktop
 
             View.Login l = new View.Login(_userAppService);
             if (l.ShowDialog() == DialogResult.OK)
-                Application.Run(new View.Principal(_userAppService, _studentAppService));
+                Application.Run(new View.Principal(_userAppService, _studentAppService, _movimentationAppService));
         }
     }
 }

@@ -15,11 +15,14 @@ namespace SteelGymDesktop.View
     {
         private readonly IUserAppService _userApp;
         private readonly IStudentAppService _studentApp;
+        private readonly IMovimentationAppService _MovimentacaoApp;
 
-        public Principal(IUserAppService userApp, IStudentAppService studentApp)
+        public Principal(IUserAppService userApp, IStudentAppService studentApp, IMovimentationAppService movimentacaoApp)
         {
             _userApp = userApp;
             _studentApp = studentApp;
+            _MovimentacaoApp = movimentacaoApp;
+
             InitializeComponent();
 
             // Full screen
@@ -127,30 +130,53 @@ namespace SteelGymDesktop.View
             form.AutoScroll = true;
             panel1.Controls.Add(form);
             form.FormBorderStyle = FormBorderStyle.None;
+
+            controlPanelSelected(nomeModulo);
+
             form.Show();
         }
 
-        private void trocarSenhaToolStripMenuItem_Click(object sender, EventArgs e)
+        private void controlPanelSelected(string nomeModulo)
         {
-            try
+            panelSelectedHome.Visible =
+                panelSelectedMovimentation.Visible =
+                panelSelectedPayment.Visible =
+                panelSelectedReceipt.Visible =
+                panelSelectedStudent.Visible =
+                panelSelectedUser.Visible = false;
+            switch (nomeModulo)
             {
-                var user = _userApp.GetById(Program.SessionUser.Id);
-
-                TrocarSenha t = new TrocarSenha(_userApp, user, false);
-
-                if (t.ShowDialog() == DialogResult.OK)
-                {
-                    Program.SessionUser.Admin = user.IsAdmin;
-                    Program.SessionUser.Id = user.UserId;
-                    Program.SessionUser.Password = user.Password;
-                    Program.SessionUser.UserName = user.UserName;
-                    Program.SessionUser.CanAccessFinancial = user.CanAccessFinancial;
-                }
+                case Models.Modulos.DF_NOME_MODULO_HOME:
+                    panelSelectedHome.Visible = true;
+                    break;
+                case Models.Modulos.DF_NOME_MODULO_ALUNO:
+                    panelSelectedStudent.Visible = true;
+                    break;
+                case Models.Modulos.DF_NOME_MODULO_PAGAMENTO:
+                    panelSelectedPayment.Visible = true;
+                    break;
+                case Models.Modulos.DF_NOME_MODULO_COMPROVANTE:
+                    panelSelectedReceipt.Visible = true;
+                    break;
+                case Models.Modulos.DF_NOME_MODULO_USUARIO:
+                    panelSelectedUser.Visible = true;
+                    break;
+                case Models.Modulos.DF_NOME_MODULO_MOVIMENTACOES:
+                    panelSelectedMovimentation.Visible = true;
+                    break;
             }
-            catch (Exception ex)
-            {
-                Util.ShowMessageWarning(ex.Message);
-            }
+        }
+
+        private void InclusãoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CadastroMovimentacao p = new CadastroMovimentacao(_MovimentacaoApp);
+            AbrirModulo(p, Models.Modulos.DF_NOME_MODULO_MOVIMENTACOES);
+        }
+
+        private void PesquisaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            PesquisaMovimentacao p = new PesquisaMovimentacao(_MovimentacaoApp);
+            AbrirModulo(p, Models.Modulos.DF_NOME_MODULO_MOVIMENTACOES);
         }
     }
 }

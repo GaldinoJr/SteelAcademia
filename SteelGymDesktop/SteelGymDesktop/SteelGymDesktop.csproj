@@ -113,24 +113,31 @@
   <ItemGroup>
     <Compile Include="Applications\AppServiceBase.cs" />
     <Compile Include="Applications\Interfaces\IAppServiceBase.cs" />
+    <Compile Include="Applications\Interfaces\IMovimentationAppService.cs" />
     <Compile Include="Applications\Interfaces\IStudentAppService.cs" />
     <Compile Include="Applications\Interfaces\IUserAppService.cs" />
+    <Compile Include="Applications\MovimentationAppService.cs" />
     <Compile Include="Applications\StudentAppService.cs" />
     <Compile Include="Applications\UserAppService.cs" />
+    <Compile Include="Domain\Entities\Movimentation.cs" />
     <Compile Include="Domain\Entities\Student.cs" />
     <Compile Include="Domain\Entities\User.cs" />
+    <Compile Include="Domain\Interfaces\IMovimentationRepository.cs" />
+    <Compile Include="Domain\Interfaces\IMovimentationService.cs" />
     <Compile Include="Domain\Interfaces\IRepositoryBase.cs" />
     <Compile Include="Domain\Interfaces\IServiceBase.cs" />
     <Compile Include="Domain\Interfaces\IStudentRepository.cs" />
     <Compile Include="Domain\Interfaces\IStudentService.cs" />
     <Compile Include="Domain\Interfaces\IUserRepository.cs" />
     <Compile Include="Domain\Interfaces\IUserService.cs" />
+    <Compile Include="Domain\Services\MovimentationService.cs" />
     <Compile Include="Domain\Services\ServiceBase.cs" />
     <Compile Include="Domain\Services\StudentService.cs" />
     <Compile Include="Domain\Services\UserService.cs" />
     <Compile Include="Infrastructure\Config\StudentConfiguration.cs" />
     <Compile Include="Infrastructure\Config\UserConfiguration.cs" />
     <Compile Include="Infrastructure\DataAccess\DbConnection.cs" />
+    <Compile Include="Infrastructure\Repository\MovimentationRepository.cs" />
     <Compile Include="Infrastructure\Repository\RepositoryBase.cs" />
     <Compile Include="Infrastructure\Repository\StudentRepository.cs" />
     <Compile Include="Infrastructure\Repository\UserRepository.cs" />
@@ -186,6 +193,12 @@
     <Compile Include="View\Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\PesquisaMovimentacao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\PesquisaMovimentacao.Designer.cs">
+      <DependentUpon>PesquisaMovimentacao.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\PesquisarAluno.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -226,6 +239,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\PesquisaMovimentacao.resx">
+      <DependentUpon>PesquisaMovimentacao.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\PesquisarAluno.resx">
       <DependentUpon>PesquisarAluno.cs</DependentUpon>

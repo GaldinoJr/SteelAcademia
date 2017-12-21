@@ -44,28 +44,30 @@
             this.pesquisaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.fecharToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.panel9 = new System.Windows.Forms.Panel();
-            this.panel10 = new System.Windows.Forms.Panel();
-            this.panel11 = new System.Windows.Forms.Panel();
-            this.panel12 = new System.Windows.Forms.Panel();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.panel8 = new System.Windows.Forms.Panel();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
             this.toolbar = new System.Windows.Forms.Panel();
             this.txtNomeModulo = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.trocarSenhaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.panelSelectedHome = new System.Windows.Forms.Panel();
+            this.panel13 = new System.Windows.Forms.Panel();
+            this.panelSelectedStudent = new System.Windows.Forms.Panel();
+            this.panel11 = new System.Windows.Forms.Panel();
+            this.panelSelectedPayment = new System.Windows.Forms.Panel();
+            this.panel15 = new System.Windows.Forms.Panel();
+            this.panelSelectedReceipt = new System.Windows.Forms.Panel();
+            this.panel17 = new System.Windows.Forms.Panel();
+            this.panelSelectedUser = new System.Windows.Forms.Panel();
+            this.panel19 = new System.Windows.Forms.Panel();
+            this.panelSelectedMovimentation = new System.Windows.Forms.Panel();
+            this.panel21 = new System.Windows.Forms.Panel();
             Menu = new System.Windows.Forms.MenuStrip();
             Menu.SuspendLayout();
-            this.panel3.SuspendLayout();
-            this.panel5.SuspendLayout();
-            this.panel9.SuspendLayout();
-            this.panel10.SuspendLayout();
-            this.panel7.SuspendLayout();
             this.toolbar.SuspendLayout();
+            this.panelSelectedHome.SuspendLayout();
+            this.panelSelectedStudent.SuspendLayout();
+            this.panelSelectedPayment.SuspendLayout();
+            this.panelSelectedReceipt.SuspendLayout();
+            this.panelSelectedUser.SuspendLayout();
+            this.panelSelectedMovimentation.SuspendLayout();
             this.SuspendLayout();
             // 
             // Menu
@@ -207,12 +209,14 @@
             this.inclusãoToolStripMenuItem.Name = "inclusãoToolStripMenuItem";
             this.inclusãoToolStripMenuItem.Size = new System.Drawing.Size(136, 24);
             this.inclusãoToolStripMenuItem.Text = "Inclusão";
+            this.inclusãoToolStripMenuItem.Click += new System.EventHandler(this.InclusãoToolStripMenuItem_Click);
             // 
             // pesquisaToolStripMenuItem
             // 
             this.pesquisaToolStripMenuItem.Name = "pesquisaToolStripMenuItem";
             this.pesquisaToolStripMenuItem.Size = new System.Drawing.Size(136, 24);
             this.pesquisaToolStripMenuItem.Text = "Pesquisa";
+            this.pesquisaToolStripMenuItem.Click += new System.EventHandler(this.PesquisaToolStripMenuItem_Click);
             // 
             // fecharToolStripMenuItem
             // 
@@ -234,95 +238,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(930, 695);
             this.panel1.TabIndex = 6;
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(21)))), ((int)(((byte)(86)))));
-            this.panel3.Controls.Add(this.panel5);
-            this.panel3.Controls.Add(this.panel4);
-            this.panel3.Location = new System.Drawing.Point(0, 59);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(10, 83);
-            this.panel3.TabIndex = 0;
-            // 
-            // panel5
-            // 
-            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(21)))), ((int)(((byte)(86)))));
-            this.panel5.Controls.Add(this.panel9);
-            this.panel5.Controls.Add(this.panel7);
-            this.panel5.Controls.Add(this.panel6);
-            this.panel5.Location = new System.Drawing.Point(0, 2);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(10, 83);
-            this.panel5.TabIndex = 2;
-            // 
-            // panel9
-            // 
-            this.panel9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(21)))), ((int)(((byte)(86)))));
-            this.panel9.Controls.Add(this.panel10);
-            this.panel9.Controls.Add(this.panel12);
-            this.panel9.Location = new System.Drawing.Point(1, 0);
-            this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(10, 83);
-            this.panel9.TabIndex = 4;
-            // 
-            // panel10
-            // 
-            this.panel10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(21)))), ((int)(((byte)(86)))));
-            this.panel10.Controls.Add(this.panel11);
-            this.panel10.Location = new System.Drawing.Point(0, 81);
-            this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(10, 83);
-            this.panel10.TabIndex = 3;
-            // 
-            // panel11
-            // 
-            this.panel11.BackColor = System.Drawing.Color.White;
-            this.panel11.Location = new System.Drawing.Point(0, 86);
-            this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(10, 83);
-            this.panel11.TabIndex = 1;
-            // 
-            // panel12
-            // 
-            this.panel12.BackColor = System.Drawing.Color.White;
-            this.panel12.Location = new System.Drawing.Point(0, 86);
-            this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(10, 83);
-            this.panel12.TabIndex = 1;
-            // 
-            // panel7
-            // 
-            this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(21)))), ((int)(((byte)(86)))));
-            this.panel7.Controls.Add(this.panel8);
-            this.panel7.Location = new System.Drawing.Point(0, 81);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(10, 83);
-            this.panel7.TabIndex = 3;
-            // 
-            // panel8
-            // 
-            this.panel8.BackColor = System.Drawing.Color.White;
-            this.panel8.Location = new System.Drawing.Point(0, 86);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(10, 83);
-            this.panel8.TabIndex = 1;
-            // 
-            // panel6
-            // 
-            this.panel6.BackColor = System.Drawing.Color.White;
-            this.panel6.Location = new System.Drawing.Point(0, 86);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(10, 83);
-            this.panel6.TabIndex = 1;
-            // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.Color.White;
-            this.panel4.Location = new System.Drawing.Point(0, 86);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(10, 83);
-            this.panel4.TabIndex = 1;
             // 
             // toolbar
             // 
@@ -356,6 +271,114 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Academia Steel";
             // 
+            // panelSelectedHome
+            // 
+            this.panelSelectedHome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(21)))), ((int)(((byte)(86)))));
+            this.panelSelectedHome.Controls.Add(this.panel13);
+            this.panelSelectedHome.Location = new System.Drawing.Point(0, 58);
+            this.panelSelectedHome.Name = "panelSelectedHome";
+            this.panelSelectedHome.Size = new System.Drawing.Size(10, 78);
+            this.panelSelectedHome.TabIndex = 4;
+            this.panelSelectedHome.Visible = false;
+            // 
+            // panel13
+            // 
+            this.panel13.BackColor = System.Drawing.Color.White;
+            this.panel13.Location = new System.Drawing.Point(0, 86);
+            this.panel13.Name = "panel13";
+            this.panel13.Size = new System.Drawing.Size(10, 83);
+            this.panel13.TabIndex = 1;
+            // 
+            // panelSelectedStudent
+            // 
+            this.panelSelectedStudent.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(21)))), ((int)(((byte)(86)))));
+            this.panelSelectedStudent.Controls.Add(this.panel11);
+            this.panelSelectedStudent.Location = new System.Drawing.Point(0, 142);
+            this.panelSelectedStudent.Name = "panelSelectedStudent";
+            this.panelSelectedStudent.Size = new System.Drawing.Size(10, 78);
+            this.panelSelectedStudent.TabIndex = 5;
+            this.panelSelectedStudent.Visible = false;
+            // 
+            // panel11
+            // 
+            this.panel11.BackColor = System.Drawing.Color.White;
+            this.panel11.Location = new System.Drawing.Point(0, 86);
+            this.panel11.Name = "panel11";
+            this.panel11.Size = new System.Drawing.Size(10, 83);
+            this.panel11.TabIndex = 1;
+            // 
+            // panelSelectedPayment
+            // 
+            this.panelSelectedPayment.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(21)))), ((int)(((byte)(86)))));
+            this.panelSelectedPayment.Controls.Add(this.panel15);
+            this.panelSelectedPayment.Location = new System.Drawing.Point(0, 226);
+            this.panelSelectedPayment.Name = "panelSelectedPayment";
+            this.panelSelectedPayment.Size = new System.Drawing.Size(10, 78);
+            this.panelSelectedPayment.TabIndex = 5;
+            this.panelSelectedPayment.Visible = false;
+            // 
+            // panel15
+            // 
+            this.panel15.BackColor = System.Drawing.Color.White;
+            this.panel15.Location = new System.Drawing.Point(0, 86);
+            this.panel15.Name = "panel15";
+            this.panel15.Size = new System.Drawing.Size(10, 83);
+            this.panel15.TabIndex = 1;
+            // 
+            // panelSelectedReceipt
+            // 
+            this.panelSelectedReceipt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(21)))), ((int)(((byte)(86)))));
+            this.panelSelectedReceipt.Controls.Add(this.panel17);
+            this.panelSelectedReceipt.Location = new System.Drawing.Point(0, 310);
+            this.panelSelectedReceipt.Name = "panelSelectedReceipt";
+            this.panelSelectedReceipt.Size = new System.Drawing.Size(10, 78);
+            this.panelSelectedReceipt.TabIndex = 5;
+            this.panelSelectedReceipt.Visible = false;
+            // 
+            // panel17
+            // 
+            this.panel17.BackColor = System.Drawing.Color.White;
+            this.panel17.Location = new System.Drawing.Point(0, 86);
+            this.panel17.Name = "panel17";
+            this.panel17.Size = new System.Drawing.Size(10, 83);
+            this.panel17.TabIndex = 1;
+            // 
+            // panelSelectedUser
+            // 
+            this.panelSelectedUser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(21)))), ((int)(((byte)(86)))));
+            this.panelSelectedUser.Controls.Add(this.panel19);
+            this.panelSelectedUser.Location = new System.Drawing.Point(0, 394);
+            this.panelSelectedUser.Name = "panelSelectedUser";
+            this.panelSelectedUser.Size = new System.Drawing.Size(10, 78);
+            this.panelSelectedUser.TabIndex = 5;
+            this.panelSelectedUser.Visible = false;
+            // 
+            // panel19
+            // 
+            this.panel19.BackColor = System.Drawing.Color.White;
+            this.panel19.Location = new System.Drawing.Point(0, 86);
+            this.panel19.Name = "panel19";
+            this.panel19.Size = new System.Drawing.Size(10, 83);
+            this.panel19.TabIndex = 1;
+            // 
+            // panelSelectedMovimentation
+            // 
+            this.panelSelectedMovimentation.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(21)))), ((int)(((byte)(86)))));
+            this.panelSelectedMovimentation.Controls.Add(this.panel21);
+            this.panelSelectedMovimentation.Location = new System.Drawing.Point(0, 478);
+            this.panelSelectedMovimentation.Name = "panelSelectedMovimentation";
+            this.panelSelectedMovimentation.Size = new System.Drawing.Size(10, 78);
+            this.panelSelectedMovimentation.TabIndex = 5;
+            this.panelSelectedMovimentation.Visible = false;
+            // 
+            // panel21
+            // 
+            this.panel21.BackColor = System.Drawing.Color.White;
+            this.panel21.Location = new System.Drawing.Point(0, 86);
+            this.panel21.Name = "panel21";
+            this.panel21.Size = new System.Drawing.Size(10, 83);
+            this.panel21.TabIndex = 1;
+            // 
             // trocarSenhaToolStripMenuItem
             // 
             this.trocarSenhaToolStripMenuItem.Name = "trocarSenhaToolStripMenuItem";
@@ -369,7 +392,12 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(37)))), ((int)(((byte)(72)))));
             this.ClientSize = new System.Drawing.Size(1076, 699);
-            this.Controls.Add(this.panel3);
+            this.Controls.Add(this.panelSelectedMovimentation);
+            this.Controls.Add(this.panelSelectedUser);
+            this.Controls.Add(this.panelSelectedReceipt);
+            this.Controls.Add(this.panelSelectedPayment);
+            this.Controls.Add(this.panelSelectedStudent);
+            this.Controls.Add(this.panelSelectedHome);
             this.Controls.Add(this.toolbar);
             this.Controls.Add(this.panel1);
             this.Controls.Add(Menu);
@@ -380,13 +408,14 @@
             this.Load += new System.EventHandler(this.Index_Load);
             Menu.ResumeLayout(false);
             Menu.PerformLayout();
-            this.panel3.ResumeLayout(false);
-            this.panel5.ResumeLayout(false);
-            this.panel9.ResumeLayout(false);
-            this.panel10.ResumeLayout(false);
-            this.panel7.ResumeLayout(false);
             this.toolbar.ResumeLayout(false);
             this.toolbar.PerformLayout();
+            this.panelSelectedHome.ResumeLayout(false);
+            this.panelSelectedStudent.ResumeLayout(false);
+            this.panelSelectedPayment.ResumeLayout(false);
+            this.panelSelectedReceipt.ResumeLayout(false);
+            this.panelSelectedUser.ResumeLayout(false);
+            this.panelSelectedMovimentation.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -411,16 +440,22 @@
         private System.Windows.Forms.Panel toolbar;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label txtNomeModulo;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Panel panel9;
-        private System.Windows.Forms.Panel panel10;
+        private System.Windows.Forms.Panel panelSelectedHome;
+        private System.Windows.Forms.Panel panel13;
+        private System.Windows.Forms.Panel panelSelectedStudent;
         private System.Windows.Forms.Panel panel11;
         private System.Windows.Forms.Panel panel12;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.ToolStripMenuItem trocarSenhaToolStripMenuItem;
+        private System.Windows.Forms.Panel panelSelectedPayment;
+        private System.Windows.Forms.Panel panel15;
+        private System.Windows.Forms.Panel panelSelectedReceipt;
+        private System.Windows.Forms.Panel panel17;
+        private System.Windows.Forms.Panel panelSelectedUser;
+        private System.Windows.Forms.Panel panel19;
+        private System.Windows.Forms.Panel panelSelectedMovimentation;
+        private System.Windows.Forms.Panel panel21;
     }
 }

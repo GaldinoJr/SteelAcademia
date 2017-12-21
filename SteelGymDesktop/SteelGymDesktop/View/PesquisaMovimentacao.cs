@@ -7,13 +7,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using SteelGymDesktop.Applications.Interfaces;
 
 namespace SteelGymDesktop.View
 {
-    public partial class CadastroMovimentacao : Form
+    public partial class PesquisaMovimentacao : Form
     {
-        public CadastroMovimentacao(Applications.Interfaces.IMovimentationAppService _MovimentacaoApp)
+        private IMovimentationAppService _MovimentacaoApp;
+
+        public PesquisaMovimentacao(IMovimentationAppService movimentacaoApp)
         {
+            _MovimentacaoApp = movimentacaoApp;
             InitializeComponent();
         }
     }
