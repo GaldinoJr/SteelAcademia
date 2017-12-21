@@ -167,6 +167,29 @@ namespace SteelGymDesktop.View
             }
         }
 
+        private void trocarSenhaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                var user = _userApp.GetById(Program.SessionUser.Id);
+
+                TrocarSenha t = new TrocarSenha(_userApp, user, false);
+
+                if (t.ShowDialog() == DialogResult.OK)
+                {
+                    Program.SessionUser.Admin = user.IsAdmin;
+                    Program.SessionUser.Id = user.UserId;
+                    Program.SessionUser.Password = user.Password;
+                    Program.SessionUser.UserName = user.UserName;
+                    Program.SessionUser.CanAccessFinancial = user.CanAccessFinancial;
+                }
+            }
+            catch (Exception ex)
+            {
+                Util.ShowMessageWarning(ex.Message);
+            }
+        }
+
         private void InclusãoToolStripMenuItem_Click(object sender, EventArgs e)
         {
             CadastroMovimentacao p = new CadastroMovimentacao(_MovimentacaoApp);
