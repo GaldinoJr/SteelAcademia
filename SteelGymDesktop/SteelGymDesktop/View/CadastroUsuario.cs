@@ -99,6 +99,7 @@ namespace SteelGymDesktop.View
                 _user.Phone2 = txtTel2.Text;
                 _user.UserName = txtUserName.Text;
                 _user.Active = chkAtivo.Checked;
+                _user.FirstLogin = true;
 
                 if(Program.SessionUser.Admin)
                     _user.CanAccessFinancial = chkCanAccessFinancial.Checked;

@@ -79,7 +79,7 @@ namespace SteelGymDesktop.View
 
                 if (_forgotPassword)
                 {
-                    var userAdm = _userApp.Login("admin_admin", txtCurrentPassword.Text);
+                    var userAdm = _userApp.Login("admin", txtCurrentPassword.Text);
 
                     if(userAdm == null)
                     {
