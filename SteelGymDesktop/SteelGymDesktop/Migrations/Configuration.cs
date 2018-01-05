@@ -8,22 +8,23 @@ namespace SteelGymDesktop.Migrations
     {
         public Configuration()
         {
-            AutomaticMigrationsEnabled = false;
+            AutomaticMigrationsEnabled = true;
         }
 
         protected override void Seed(DbConnection context)
         {
-            var _user = new User();
-
-            _user.Name = "Administrador";
-            _user.Number = 0;
-            _user.UF = "SP";
-            _user.Active = true;
-            _user.IsAdmin = true;
-            _user.CanAccessFinancial = true;
-            _user.Password = "admin@@123";
-            _user.FirstLogin = true;
-            _user.UserName = "admin";
+            var _user = new User()
+            {
+                Name = "Administrador",
+                Number = 0,
+                UF = "SP",
+                Active = true,
+                IsAdmin = true,
+                CanAccessFinancial = true,
+                Password = "admin@@123",
+                FirstLogin = true,
+                UserName = "admin"
+            };
 
             context.Users.Add(_user);
             context.SaveChanges();

@@ -38,3 +38,5 @@ C:\inetpub\wwwroot\SteelAcademia\SteelGymDesktop\SteelGymDesktop\obj\Debug\Steel
 C:\inetpub\wwwroot\SteelAcademia\SteelGymDesktop\SteelGymDesktop\obj\Debug\SteelGymDesktop.application
 C:\inetpub\wwwroot\SteelAcademia\SteelGymDesktop\SteelGymDesktop\obj\Debug\SteelGymDesktop.exe
 C:\inetpub\wwwroot\SteelAcademia\SteelGymDesktop\SteelGymDesktop\obj\Debug\SteelGymDesktop.pdb
+C:\inetpub\wwwroot\SteelAcademia\SteelGymDesktop\SteelGymDesktop\obj\Debug\SteelGymDesktop.Migrations.teste.resources
+C:\inetpub\wwwroot\SteelAcademia\SteelGymDesktop\SteelGymDesktop\obj\Debug\SteelGymDesktop.View.PesquisaMovimentacao.resources

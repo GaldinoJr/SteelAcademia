@@ -34,6 +34,9 @@ namespace SteelGymDesktop.View
                 {
                     var user = _userApp.GetById(Convert.ToInt32(txtIDAluno.Text));
 
+                    if (!Program.SessionUser.Admin && user.IsAdmin)
+                        user = null;
+
                     if (user != null)
                         dtgUsuario.Rows.Add(user.UserId, user.Name + " " + user.LastName, user.RG, user.CPF, (user.Active ? "Sim" : "Não"));
                     else
@@ -42,6 +45,9 @@ namespace SteelGymDesktop.View
                 else
                 {
                     var users = _userApp.GetByFilter(chkAtivo.Checked, txtNome.Text, Util.RemoverCaracteres(txtRG.Text), Util.RemoverCaracteres(txtCPF.Text));
+
+                    if (!Program.SessionUser.Admin)
+                        users = users.Where(x => !x.IsAdmin);
 
                     if (users != null)
                     {

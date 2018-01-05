@@ -46,6 +46,10 @@ namespace SteelGymDesktop.View
                 comprovantesToolStripMenuItem.Enabled = Program.SessionUser.CanAccessFinancial;
                 movimentaçõesToolStripMenuItem.Enabled = Program.SessionUser.CanAccessFinancial;
             }
+
+            pagamentoToolStripMenuItem.Enabled = false;
+            comprovantesToolStripMenuItem.Enabled = false;
+            movimentaçõesToolStripMenuItem.Enabled = false;
         }
 
         private void Index_Load(object sender, EventArgs e)

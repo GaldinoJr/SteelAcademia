@@ -91,14 +91,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="SteelGymDesktop.exe" size="1621984">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="SteelGymDesktop.exe" size="1640928">
       <assemblyIdentity name="SteelGymDesktop" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>7dL9zqQ7hqEcStf3JAI8VWCRtPYl0KUduK9xjseM/10=</dsig:DigestValue>
+        <dsig:DigestValue>RzESwKN9oRZrzKxGubx+4+tg9sIS3K/X8v0qcyL5OzQ=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
