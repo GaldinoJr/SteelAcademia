@@ -39,11 +39,11 @@
             this.cadastroDeUsuarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.incluirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pesquisarToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.trocarSenhaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.movimentaçõesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.inclusãoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pesquisaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.fecharToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.trocarSenhaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1 = new System.Windows.Forms.Panel();
             this.toolbar = new System.Windows.Forms.Panel();
             this.txtNomeModulo = new System.Windows.Forms.Label();
@@ -190,6 +190,13 @@
             this.pesquisarToolStripMenuItem1.Text = "Pesquisar";
             this.pesquisarToolStripMenuItem1.Click += new System.EventHandler(this.PesquisarToolStripMenuItem1_Click);
             // 
+            // trocarSenhaToolStripMenuItem
+            // 
+            this.trocarSenhaToolStripMenuItem.Name = "trocarSenhaToolStripMenuItem";
+            this.trocarSenhaToolStripMenuItem.Size = new System.Drawing.Size(165, 24);
+            this.trocarSenhaToolStripMenuItem.Text = "Trocar Senha";
+            this.trocarSenhaToolStripMenuItem.Click += new System.EventHandler(this.trocarSenhaToolStripMenuItem_Click);
+            // 
             // movimentaçõesToolStripMenuItem
             // 
             this.movimentaçõesToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(43)))), ((int)(((byte)(80)))));
@@ -208,14 +215,14 @@
             // inclusãoToolStripMenuItem
             // 
             this.inclusãoToolStripMenuItem.Name = "inclusãoToolStripMenuItem";
-            this.inclusãoToolStripMenuItem.Size = new System.Drawing.Size(136, 24);
+            this.inclusãoToolStripMenuItem.Size = new System.Drawing.Size(152, 24);
             this.inclusãoToolStripMenuItem.Text = "Inclusão";
             this.inclusãoToolStripMenuItem.Click += new System.EventHandler(this.InclusãoToolStripMenuItem_Click);
             // 
             // pesquisaToolStripMenuItem
             // 
             this.pesquisaToolStripMenuItem.Name = "pesquisaToolStripMenuItem";
-            this.pesquisaToolStripMenuItem.Size = new System.Drawing.Size(136, 24);
+            this.pesquisaToolStripMenuItem.Size = new System.Drawing.Size(152, 24);
             this.pesquisaToolStripMenuItem.Text = "Pesquisa";
             this.pesquisaToolStripMenuItem.Click += new System.EventHandler(this.PesquisaToolStripMenuItem_Click);
             // 
@@ -379,13 +386,6 @@
             this.panel21.Name = "panel21";
             this.panel21.Size = new System.Drawing.Size(10, 83);
             this.panel21.TabIndex = 1;
-            // 
-            // trocarSenhaToolStripMenuItem
-            // 
-            this.trocarSenhaToolStripMenuItem.Name = "trocarSenhaToolStripMenuItem";
-            this.trocarSenhaToolStripMenuItem.Size = new System.Drawing.Size(165, 24);
-            this.trocarSenhaToolStripMenuItem.Text = "Trocar Senha";
-            this.trocarSenhaToolStripMenuItem.Click += new System.EventHandler(this.trocarSenhaToolStripMenuItem_Click);
             // 
             // Principal
             // 

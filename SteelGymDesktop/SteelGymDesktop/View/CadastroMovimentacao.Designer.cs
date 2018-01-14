@@ -38,10 +38,10 @@
             this.cboTipoPagamento = new System.Windows.Forms.ComboBox();
             this.dtpDataMovimentacao = new System.Windows.Forms.DateTimePicker();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.rbEntrada = new System.Windows.Forms.RadioButton();
-            this.rbSaida = new System.Windows.Forms.RadioButton();
-            this.btnSalvar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.btnSalvar = new System.Windows.Forms.Button();
+            this.rbSaida = new System.Windows.Forms.RadioButton();
+            this.rbEntrada = new System.Windows.Forms.RadioButton();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -147,17 +147,29 @@
             this.panel1.Size = new System.Drawing.Size(545, 281);
             this.panel1.TabIndex = 19;
             // 
-            // rbEntrada
+            // label1
             // 
-            this.rbEntrada.AutoSize = true;
-            this.rbEntrada.ForeColor = System.Drawing.Color.White;
-            this.rbEntrada.Location = new System.Drawing.Point(208, 178);
-            this.rbEntrada.Name = "rbEntrada";
-            this.rbEntrada.Size = new System.Drawing.Size(62, 17);
-            this.rbEntrada.TabIndex = 5;
-            this.rbEntrada.TabStop = true;
-            this.rbEntrada.Text = "Entrada";
-            this.rbEntrada.UseVisualStyleBackColor = true;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(22, 178);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(176, 17);
+            this.label1.TabIndex = 22;
+            this.label1.Text = "Tipo da movimentação:";
+            // 
+            // btnSalvar
+            // 
+            this.btnSalvar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(21)))), ((int)(((byte)(86)))));
+            this.btnSalvar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSalvar.ForeColor = System.Drawing.Color.White;
+            this.btnSalvar.Location = new System.Drawing.Point(338, 227);
+            this.btnSalvar.Name = "btnSalvar";
+            this.btnSalvar.Size = new System.Drawing.Size(155, 30);
+            this.btnSalvar.TabIndex = 21;
+            this.btnSalvar.Text = "Salvar";
+            this.btnSalvar.UseVisualStyleBackColor = false;
+            this.btnSalvar.Click += new System.EventHandler(this.BtnSalvar_Click);
             // 
             // rbSaida
             // 
@@ -171,28 +183,17 @@
             this.rbSaida.Text = "Saida";
             this.rbSaida.UseVisualStyleBackColor = true;
             // 
-            // btnSalvar
+            // rbEntrada
             // 
-            this.btnSalvar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(21)))), ((int)(((byte)(86)))));
-            this.btnSalvar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSalvar.ForeColor = System.Drawing.Color.White;
-            this.btnSalvar.Location = new System.Drawing.Point(338, 227);
-            this.btnSalvar.Name = "btnSalvar";
-            this.btnSalvar.Size = new System.Drawing.Size(155, 30);
-            this.btnSalvar.TabIndex = 21;
-            this.btnSalvar.Text = "Salvar";
-            this.btnSalvar.UseVisualStyleBackColor = false;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(22, 178);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(176, 17);
-            this.label1.TabIndex = 22;
-            this.label1.Text = "Tipo da movimentação:";
+            this.rbEntrada.AutoSize = true;
+            this.rbEntrada.ForeColor = System.Drawing.Color.White;
+            this.rbEntrada.Location = new System.Drawing.Point(208, 178);
+            this.rbEntrada.Name = "rbEntrada";
+            this.rbEntrada.Size = new System.Drawing.Size(62, 17);
+            this.rbEntrada.TabIndex = 5;
+            this.rbEntrada.TabStop = true;
+            this.rbEntrada.Text = "Entrada";
+            this.rbEntrada.UseVisualStyleBackColor = true;
             // 
             // CadastroMovimentacao
             // 

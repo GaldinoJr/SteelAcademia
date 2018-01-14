@@ -44,12 +44,12 @@ namespace SteelGymDesktop.View
             {
                 pagamentoToolStripMenuItem.Enabled = Program.SessionUser.CanAccessFinancial;
                 comprovantesToolStripMenuItem.Enabled = Program.SessionUser.CanAccessFinancial;
-                movimentaçõesToolStripMenuItem.Enabled = Program.SessionUser.CanAccessFinancial;
+                //movimentaçõesToolStripMenuItem.Enabled = Program.SessionUser.CanAccessFinancial;
             }
 
             pagamentoToolStripMenuItem.Enabled = false;
             comprovantesToolStripMenuItem.Enabled = false;
-            movimentaçõesToolStripMenuItem.Enabled = false;
+            //movimentaçõesToolStripMenuItem.Enabled = false;
         }
 
         private void Index_Load(object sender, EventArgs e)
@@ -190,7 +190,7 @@ namespace SteelGymDesktop.View
 
         private void InclusãoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            CadastroMovimentacao p = new CadastroMovimentacao(_MovimentacaoApp);
+            CadastroMovimentacao p = new CadastroMovimentacao(_MovimentacaoApp, true, int.MinValue);
             AbrirModulo(p, Models.Modulos.DF_NOME_MODULO_MOVIMENTACOES);
         }
 

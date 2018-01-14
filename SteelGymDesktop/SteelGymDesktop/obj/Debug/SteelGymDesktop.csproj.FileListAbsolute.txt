@@ -83,4 +83,3 @@ C:\Users\Galdino\Documents\Projetos\ACADEMIA_DANIEL_SISTEMA_DESKTOP\Sistema2\Ste
 C:\Users\Galdino\Documents\Projetos\ACADEMIA_DANIEL_SISTEMA_DESKTOP\Sistema2\SteelAcademia\SteelGymDesktop\SteelGymDesktop\obj\Debug\SteelGymDesktop.application
 C:\Users\Galdino\Documents\Projetos\ACADEMIA_DANIEL_SISTEMA_DESKTOP\Sistema2\SteelAcademia\SteelGymDesktop\SteelGymDesktop\obj\Debug\SteelGymDesktop.exe
 C:\Users\Galdino\Documents\Projetos\ACADEMIA_DANIEL_SISTEMA_DESKTOP\Sistema2\SteelAcademia\SteelGymDesktop\SteelGymDesktop\obj\Debug\SteelGymDesktop.pdb
-C:\Users\Galdino\Documents\Projetos\ACADEMIA_DANIEL_SISTEMA_DESKTOP\Sistema2\SteelAcademia\SteelGymDesktop\SteelGymDesktop\obj\Debug\SteelGymDesktop.Migrations.dev.resources

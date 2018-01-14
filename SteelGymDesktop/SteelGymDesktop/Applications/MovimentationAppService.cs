@@ -18,9 +18,9 @@ namespace SteelGymDesktop.Applications
             _service = servicebase;
         }
 
-        public IEnumerable<Movimentation> GetByFilter(DateTime? DataMovimentacao, bool fgEntrada, bool fgTodosStatus)
+        public IEnumerable<Movimentation> GetByFilter(DateTime? DataDeMovimentacao, DateTime? DataAteMovimentacao, bool fgEntrada, bool fgTodosStatus)
         {
-            return _service.GetByFilter(DataMovimentacao, fgEntrada, fgTodosStatus);
+            return _service.GetByFilter(DataDeMovimentacao, DataAteMovimentacao, fgEntrada, fgTodosStatus);
         }
     }
 }

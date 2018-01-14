@@ -73,7 +73,7 @@ namespace SteelGymDesktop
         internal static bool ValidaData(DateTime date)
         {
             int currentYear = DateTime.Today.Year;
-            if (date.Year >= currentYear)
+            if (date.Year > currentYear)
             {
                 return false;
             }

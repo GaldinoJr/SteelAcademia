@@ -1,0 +1,56 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+using SteelGymDesktop.Applications.Interfaces;
+
+namespace SteelGymDesktop.View
+{
+    public partial class PesquisaMovimentacao : Form
+    {
+        private IMovimentationAppService _MovimentacaoApp;
+
+        public PesquisaMovimentacao(IMovimentationAppService movimentacaoApp)
+        {
+            _MovimentacaoApp = movimentacaoApp;
+            InitializeComponent();
+        }
+
+        private void btnPesquisar_Click(object sender, EventArgs e)
+        {
+            Util.DisabledCursor();
+
+            try
+            {
+                dtgMovimentacoes.Rows.Clear();
+
+                var students = _studentApp.GetByFilter(@checked, nome, rg, cpf);
+                Filter(students);
+            }
+            catch (Exception ex)
+            {
+                Util.ShowMessageWarning(ex.Message);
+            }
+
+            Util.EnabledCursor();
+        }
+
+        private void Filter(IEnumerable<Student> students)
+        {
+            if (students != null)
+            {
+                foreach (var student in students)
+                {
+                    dtgAlunos.Rows.Add(student.StudentId, student.Name, student.RG, student.CPF, (student.Active ? "Sim" : "Não"), student.PayDay);
+                }
+            }
+            else
+                Util.ShowMessageWarning("Não foi encontrado alunos com esses parametros.");
+        }
+    }
+}

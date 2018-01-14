@@ -9,6 +9,6 @@ namespace SteelGymDesktop.Domain.Interfaces
 {
     public interface IMovimentationService : IServiceBase<Movimentation>
     {
-        IEnumerable<Movimentation> GetByFilter(DateTime? DataMovimentacao, bool fgEntrada, bool fgTodosStatus);
+        IEnumerable<Movimentation> GetByFilter(DateTime? DataMovimentacao, DateTime? DataAteMovimentacao, bool fgEntrada, bool fgTodosStatus);
     }
 }
