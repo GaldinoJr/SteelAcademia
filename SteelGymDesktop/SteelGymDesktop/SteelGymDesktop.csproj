@@ -141,6 +141,10 @@
     <Compile Include="Infrastructure\Repository\RepositoryBase.cs" />
     <Compile Include="Infrastructure\Repository\StudentRepository.cs" />
     <Compile Include="Infrastructure\Repository\UserRepository.cs" />
+    <Compile Include="Migrations\201801141856081_dev.cs" />
+    <Compile Include="Migrations\201801141856081_dev.Designer.cs">
+      <DependentUpon>201801141856081_dev.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Modulos.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
@@ -219,6 +223,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Migrations\201801141856081_dev.resx">
+      <DependentUpon>201801141856081_dev.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\CadastroAluno.resx">
       <DependentUpon>CadastroAluno.cs</DependentUpon>
     </EmbeddedResource>
