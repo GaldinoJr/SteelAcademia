@@ -88,7 +88,7 @@ namespace SteelGymDesktop.View
                 if (_isCreate)
                     _movimentation = new Movimentation();
                 _movimentation.Origin = txtDescricao.Text;
-                _movimentation.Value = Convert.ToDecimal(txtValor.Text);
+                _movimentation.Value = Convert.ToDecimal(txtValor.Text.ToString().Replace(",", ".").Replace(" ",""));
                 _movimentation.tipoPagamento = cboTipoPagamento.Text;
                 _movimentation.DataMovimentacao = Convert.ToDateTime(dtpDataMovimentacao.Text);
                 if(rbEntrada.Checked)
