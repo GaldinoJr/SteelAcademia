@@ -121,6 +121,7 @@
     <Compile Include="Applications\UserAppService.cs" />
     <Compile Include="Domain\Entities\Movimentation.cs" />
     <Compile Include="Domain\Entities\Student.cs" />
+    <Compile Include="Domain\Entities\TestTable.cs" />
     <Compile Include="Domain\Entities\User.cs" />
     <Compile Include="Domain\Interfaces\IMovimentationRepository.cs" />
     <Compile Include="Domain\Interfaces\IMovimentationService.cs" />
@@ -135,6 +136,7 @@
     <Compile Include="Domain\Services\StudentService.cs" />
     <Compile Include="Domain\Services\UserService.cs" />
     <Compile Include="Infrastructure\Config\StudentConfiguration.cs" />
+    <Compile Include="Infrastructure\Config\TestTablerConfiguration .cs" />
     <Compile Include="Infrastructure\Config\UserConfiguration.cs" />
     <Compile Include="Infrastructure\DataAccess\DbConnection.cs" />
     <Compile Include="Infrastructure\Repository\MovimentationRepository.cs" />
@@ -282,6 +284,8 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Database\SteelGymDatabase.mdf" />
+    <Content Include="Database\SteelGymDatabase_log.ldf" />
     <Content Include="images\icon.ico" />
     <None Include="Resources\error%281%29.png" />
     <None Include="Resources\ic_comprovante.png" />
@@ -294,6 +298,7 @@
     <Content Include="_ndice.ico" />
     <None Include="Resources\índice.jpg" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

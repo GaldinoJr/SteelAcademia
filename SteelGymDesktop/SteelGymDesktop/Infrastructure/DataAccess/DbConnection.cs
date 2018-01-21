@@ -16,6 +16,7 @@ namespace SteelGymDesktop.Infrastructure.DataAccess
         public DbSet<User> Users { get; set; }
         public DbSet<Student> Students { get; set; }
         public DbSet<Movimentation> Movimentations { get; set; }
+        public DbSet<TestTable> TestTable { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
@@ -38,6 +39,7 @@ namespace SteelGymDesktop.Infrastructure.DataAccess
 
             modelBuilder.Configurations.Add(new Config.UserConfiguration());
             modelBuilder.Configurations.Add(new Config.StudentConfiguration());
+            modelBuilder.Configurations.Add(new Config.TestTablerConfiguration());
         }
 
         public override int SaveChanges()

@@ -65,7 +65,7 @@ namespace SteelGymDesktop.View
             }
             catch (Exception ex)
             {
-                Util.ShowMessageWarning("Erro ao efetuar o login. Exception: " + ex.Message);
+                Util.ShowMessageWarning("Erro ao efetuar o login. Exception: " + ex);
             }
         }
 

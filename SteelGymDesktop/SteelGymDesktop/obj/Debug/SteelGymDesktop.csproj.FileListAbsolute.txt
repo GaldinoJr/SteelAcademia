@@ -1,3 +1,5 @@
+C:\inetpub\wwwroot\SteelAcademia\SteelGymDesktop\SteelGymDesktop\bin\Debug\Database\SteelGymDatabase.mdf
+C:\inetpub\wwwroot\SteelAcademia\SteelGymDesktop\SteelGymDesktop\bin\Debug\Database\SteelGymDatabase_log.ldf
 C:\inetpub\wwwroot\SteelAcademia\SteelGymDesktop\SteelGymDesktop\bin\Debug\SteelGymDesktop.exe.config
 C:\inetpub\wwwroot\SteelAcademia\SteelGymDesktop\SteelGymDesktop\bin\Debug\SteelGymDesktop.exe.manifest
 C:\inetpub\wwwroot\SteelAcademia\SteelGymDesktop\SteelGymDesktop\bin\Debug\SteelGymDesktop.application
@@ -22,6 +24,7 @@ C:\inetpub\wwwroot\SteelAcademia\SteelGymDesktop\SteelGymDesktop\bin\Debug\Syste
 C:\inetpub\wwwroot\SteelAcademia\SteelGymDesktop\SteelGymDesktop\bin\Debug\System.Web.WebPages.xml
 C:\inetpub\wwwroot\SteelAcademia\SteelGymDesktop\SteelGymDesktop\bin\Debug\System.Web.WebPages.Deployment.xml
 C:\inetpub\wwwroot\SteelAcademia\SteelGymDesktop\SteelGymDesktop\bin\Debug\System.Web.WebPages.Razor.xml
+C:\inetpub\wwwroot\SteelAcademia\SteelGymDesktop\SteelGymDesktop\obj\Debug\SteelGymDesktop.Migrations.testeNewDb.resources
 C:\inetpub\wwwroot\SteelAcademia\SteelGymDesktop\SteelGymDesktop\obj\Debug\SteelGymDesktop.View.CadastroAluno.resources
 C:\inetpub\wwwroot\SteelAcademia\SteelGymDesktop\SteelGymDesktop\obj\Debug\SteelGymDesktop.View.CadastroMovimentacao.resources
 C:\inetpub\wwwroot\SteelAcademia\SteelGymDesktop\SteelGymDesktop\obj\Debug\SteelGymDesktop.View.CadastroUsuario.resources
@@ -29,6 +32,7 @@ C:\inetpub\wwwroot\SteelAcademia\SteelGymDesktop\SteelGymDesktop\obj\Debug\Steel
 C:\inetpub\wwwroot\SteelAcademia\SteelGymDesktop\SteelGymDesktop\obj\Debug\SteelGymDesktop.View.Home.resources
 C:\inetpub\wwwroot\SteelAcademia\SteelGymDesktop\SteelGymDesktop\obj\Debug\SteelGymDesktop.View.TrocarSenha.resources
 C:\inetpub\wwwroot\SteelAcademia\SteelGymDesktop\SteelGymDesktop\obj\Debug\SteelGymDesktop.View.Login.resources
+C:\inetpub\wwwroot\SteelAcademia\SteelGymDesktop\SteelGymDesktop\obj\Debug\SteelGymDesktop.View.PesquisaMovimentacao.resources
 C:\inetpub\wwwroot\SteelAcademia\SteelGymDesktop\SteelGymDesktop\obj\Debug\SteelGymDesktop.View.PesquisarAluno.resources
 C:\inetpub\wwwroot\SteelAcademia\SteelGymDesktop\SteelGymDesktop\obj\Debug\SteelGymDesktop.View.PesquisarUsuário.resources
 C:\inetpub\wwwroot\SteelAcademia\SteelGymDesktop\SteelGymDesktop\obj\Debug\SteelGymDesktop.View.Principal.resources
@@ -38,5 +42,3 @@ C:\inetpub\wwwroot\SteelAcademia\SteelGymDesktop\SteelGymDesktop\obj\Debug\Steel
 C:\inetpub\wwwroot\SteelAcademia\SteelGymDesktop\SteelGymDesktop\obj\Debug\SteelGymDesktop.application
 C:\inetpub\wwwroot\SteelAcademia\SteelGymDesktop\SteelGymDesktop\obj\Debug\SteelGymDesktop.exe
 C:\inetpub\wwwroot\SteelAcademia\SteelGymDesktop\SteelGymDesktop\obj\Debug\SteelGymDesktop.pdb
-C:\inetpub\wwwroot\SteelAcademia\SteelGymDesktop\SteelGymDesktop\obj\Debug\SteelGymDesktop.Migrations.teste.resources
-C:\inetpub\wwwroot\SteelAcademia\SteelGymDesktop\SteelGymDesktop\obj\Debug\SteelGymDesktop.View.PesquisaMovimentacao.resources

@@ -98,7 +98,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>RzESwKN9oRZrzKxGubx+4+tg9sIS3K/X8v0qcyL5OzQ=</dsig:DigestValue>
+        <dsig:DigestValue>YZAJMldB4tVyEepopY8hGBvgrTCsTIr+xDUJWeHTjNk=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -183,6 +183,24 @@
       <dsig:DigestValue>zXCJ284NWx98cB99YmsO1AAsEqPmH7jjUbAxnUWbtvU=</dsig:DigestValue>
     </hash>
   </file>
+  <file name="Database\SteelGymDatabase.mdf" size="3342336" writeableType="applicationData">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>SXwgLgzuEMOsg2l1TMu4Sw7asfn0VDEstzIVa243JAQ=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Database\SteelGymDatabase_log.ldf" size="851968" writeableType="applicationData">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>GF2sWoBjfMQazHFrl/0qLEtFnzFAq4z1wPaA7aPI7y8=</dsig:DigestValue>
+    </hash>
+  </file>
   <file name="images\icon.ico" size="179582">
     <hash>
       <dsig:Transforms>
@@ -192,13 +210,13 @@
       <dsig:DigestValue>zXCJ284NWx98cB99YmsO1AAsEqPmH7jjUbAxnUWbtvU=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="SteelGymDesktop.exe.config" size="1124">
+  <file name="SteelGymDesktop.exe.config" size="1250">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>PxJoHfg46Ua0+45jXdGAf2LaYBVCXJr3JhTkboqfWUk=</dsig:DigestValue>
+      <dsig:DigestValue>DXz3j7vigCioCHbZNmF/y9US5b+h6qJvCMKmvFV+a7E=</dsig:DigestValue>
     </hash>
   </file>
 </asmv1:assembly>
