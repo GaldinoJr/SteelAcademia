@@ -16,9 +16,9 @@ namespace SteelGymDesktop.Domain.Services
             _repository = repository;
         }
 
-        public IEnumerable<Movimentation> GetByFilter(DateTime? DataMovimentacao, bool fgEntrada, bool fgTodosStatus)
+        public IEnumerable<Movimentation> GetByFilter(DateTime? DataMovimentacao, DateTime? DataAteMovimentacao, bool fgEntrada, bool fgTodosStatus)
         {
-            return _repository.GetByFilter(DataMovimentacao, fgEntrada, fgTodosStatus);
+            return _repository.GetByFilter(DataMovimentacao, DataAteMovimentacao, fgEntrada, fgTodosStatus);
         }
     }
 }

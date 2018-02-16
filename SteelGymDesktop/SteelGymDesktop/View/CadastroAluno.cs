@@ -257,7 +257,7 @@ namespace SteelGymDesktop.View
             }
             if (cboDiaPagamento.SelectedIndex == -1)
             {
-                msgError += " - Campo 'Data de pagamento' invalido.";
+                msgError += " - Campo 'Dia de pagamento' invalido.";
                 if (pass)
                 {
                     cboDiaPagamento.Focus();
@@ -269,7 +269,7 @@ namespace SteelGymDesktop.View
                 msgError += " - Campo 'Mensalidade R$' invalido.";
                 if (pass)
                 {
-                    txtCPF.Focus();
+                    txtMensalidade.Focus();
                 }
                 pass = false;
             }

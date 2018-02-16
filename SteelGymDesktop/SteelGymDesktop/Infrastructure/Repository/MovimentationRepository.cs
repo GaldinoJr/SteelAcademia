@@ -10,15 +10,15 @@ namespace SteelGymDesktop.Infrastructure.Repository
 {
     public class MovimentationRepository : RepositoryBase<Movimentation>, IMovimentationRepository
     {
-        public IEnumerable<Movimentation> GetByFilter(DateTime? DataMovimentacao, bool fgEntrada, bool fgTodosStatus)
+        public IEnumerable<Movimentation> GetByFilter(DateTime? DataDeMovimentacao, DateTime? DataAteMovimentacao, bool fgEntrada, bool fgTodosStatus)
         {
             if (fgTodosStatus)
             {
-                return Db.Movimentations.Where(x => x.DataMovimentacao == DataMovimentacao);
+                return Db.Movimentations.Where(x => x.DataMovimentacao >= DataDeMovimentacao && x.DataMovimentacao <= DataAteMovimentacao);
             }
             else
             {
-                return Db.Movimentations.Where(x => x.DataMovimentacao == DataMovimentacao && x.FgEntrada == fgEntrada);
+                return Db.Movimentations.Where(x => x.DataMovimentacao >= DataDeMovimentacao && x.DataMovimentacao <= DataAteMovimentacao && x.FgEntrada == fgEntrada);
             }
         }
     }

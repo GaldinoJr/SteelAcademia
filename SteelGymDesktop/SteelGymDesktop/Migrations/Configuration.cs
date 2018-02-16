@@ -26,8 +26,8 @@ namespace SteelGymDesktop.Migrations
                 UserName = "admin"
             };
 
-            //context.Users.Add(_user);
-            //context.SaveChanges();
+            context.Users.Add(_user);
+            context.SaveChanges();
 
             base.Seed(context);
         }

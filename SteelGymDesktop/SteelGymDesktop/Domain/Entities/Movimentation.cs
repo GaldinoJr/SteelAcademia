@@ -14,5 +14,6 @@ namespace SteelGymDesktop.Domain.Entities
         public bool FgEntrada{ get; set; }
         public string tipoPagamento { get; set; }
         public DateTime? DataMovimentacao { get; set; }
+        public decimal Value { get; set; }
     }
 }
