@@ -9,7 +9,14 @@ namespace SteelGymDesktop.Infrastructure.Repository
 {
     public class RepositoryBase<TEntity> : IDisposable, IRepositoryBase<TEntity> where TEntity : class
     {
-        protected DbConnection Db = new DbConnection();
+        //protected DbConnection Db = ;
+        public DbConnection Db
+        {
+            get
+            {
+                return Program.Context;
+            }
+        }
 
         public void Add(TEntity obj)
         {

@@ -5,8 +5,6 @@ VisualStudioVersion = 15.0.26430.16
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SteelGymDesktop", "SteelGymDesktop\SteelGymDesktop.csproj", "{2FEC3B19-B667-4633-A5B0-A2D4B24E4908}"
 EndProject
-Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "SetupSteelGym", "SetupSteelGym\SetupSteelGym.vdproj", "{1AE70114-1398-4FFB-B920-00C18A72A9E5}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -17,8 +15,6 @@ Global
 		{2FEC3B19-B667-4633-A5B0-A2D4B24E4908}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2FEC3B19-B667-4633-A5B0-A2D4B24E4908}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2FEC3B19-B667-4633-A5B0-A2D4B24E4908}.Release|Any CPU.Build.0 = Release|Any CPU
-		{1AE70114-1398-4FFB-B920-00C18A72A9E5}.Debug|Any CPU.ActiveCfg = Debug
-		{1AE70114-1398-4FFB-B920-00C18A72A9E5}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

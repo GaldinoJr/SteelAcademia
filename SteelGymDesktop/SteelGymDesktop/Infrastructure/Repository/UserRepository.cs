@@ -12,7 +12,7 @@ namespace SteelGymDesktop.Infrastructure.Repository
         {
             IQueryable<User> query = Db.Users;
 
-            query.Where(x => x.Active == active);
+            query.Where(x => Convert.ToBoolean(x.Active) == active);
 
             if (Util.ValidaString(userName))
                 query = query.Where(x => x.UserName.Contains(userName));

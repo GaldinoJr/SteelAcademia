@@ -1,4 +1,6 @@
-﻿namespace SteelGymDesktop
+﻿using SteelGymDesktop.Infrastructure.DataAccess;
+
+namespace SteelGymDesktop
 {
     public class SessionUser
     {

@@ -1,11 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using SteelGymDesktop.Applications.Interfaces;
 using SteelGymDesktop.Domain.Entities;
@@ -31,6 +25,7 @@ namespace SteelGymDesktop.View
                 dtgMovimentacoes.Rows.Clear();
                 bool fgTodos = false;
                 bool fgEntrada = false;
+
                 if (rbEntrada.Checked == false && rbSaida.Checked == false)
                 {
                     fgTodos = true;
@@ -38,10 +33,9 @@ namespace SteelGymDesktop.View
                 else
                 {
                     if (rbEntrada.Checked)
-                    {
                         fgEntrada = true;
-                    }
                 }
+
                 var movimentations = _MovimentacaoApp.GetByFilter(dtpDe.Value.Date, dtpAte.Value.Date, fgEntrada, fgTodos);
                 Filter(movimentations);
             }
@@ -60,18 +54,17 @@ namespace SteelGymDesktop.View
                 decimal totalValueEnter = 0;
                 decimal totalValueExit = 0;
                 decimal result = 0;
+
                 foreach (var m in movimentations)
                 {
-                    dtgMovimentacoes.Rows.Add(m.MovimentationId, m.Origin, m.Value, (m.FgEntrada ? "Entrada" : "Saída"), m.DataMovimentacao);
-                    if (m.FgEntrada)
-                    {
+                    dtgMovimentacoes.Rows.Add(m.MovimentationId, m.Origin, m.Value, (Convert.ToBoolean(m.FgEntrada) ? "Entrada" : "Saída"), m.DataMovimentacao);
+
+                    if (Convert.ToBoolean(m.FgEntrada))
                         totalValueEnter += m.Value;
-                    }
                     else
-                    {
                         totalValueExit += m.Value;
-                    }
                 }
+
                 result = totalValueEnter - totalValueExit;
                 lblTotalEntrada.Text = totalValueEnter.ToString();
                 lblTotalSaida.Text = totalValueExit.ToString();
@@ -88,6 +81,7 @@ namespace SteelGymDesktop.View
             rbEntrada.Checked = false;
             rbSaida.Checked = false;
         }
+
         private void DtgMovimentacoes_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             try

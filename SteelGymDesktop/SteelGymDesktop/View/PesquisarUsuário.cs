@@ -34,11 +34,11 @@ namespace SteelGymDesktop.View
                 {
                     var user = _userApp.GetById(Convert.ToInt32(txtIDAluno.Text));
 
-                    if (!Program.SessionUser.Admin && user.IsAdmin)
+                    if (!Program.SessionUser.Admin && Convert.ToBoolean(user.IsAdmin))
                         user = null;
 
                     if (user != null)
-                        dtgUsuario.Rows.Add(user.UserId, user.Name + " " + user.LastName, user.RG, user.CPF, (user.Active ? "Sim" : "Não"));
+                        dtgUsuario.Rows.Add(user.UserId, user.Name + " " + user.LastName, user.RG, user.CPF, (Convert.ToBoolean(user.Active) ? "Sim" : "Não"));
                     else
                         Util.ShowMessageWarning("Não foi encontrado usuário com este Id.");
                 }
@@ -47,13 +47,13 @@ namespace SteelGymDesktop.View
                     var users = _userApp.GetByFilter(chkAtivo.Checked, txtNome.Text, Util.RemoverCaracteres(txtRG.Text), Util.RemoverCaracteres(txtCPF.Text));
 
                     if (!Program.SessionUser.Admin)
-                        users = users.Where(x => !x.IsAdmin);
+                        users = users.Where(x => !Convert.ToBoolean(x.IsAdmin));
 
                     if (users != null)
                     {
                         foreach (var user in users)
                         {
-                            dtgUsuario.Rows.Add(user.UserId, user.Name + " " + user.LastName, user.RG, user.CPF, (user.Active ? "Sim" : "Não"));
+                            dtgUsuario.Rows.Add(user.UserId, user.Name + " " + user.LastName, user.RG, user.CPF, (Convert.ToBoolean(user.Active) ? "Sim" : "Não"));
                         }
                     }
                     else

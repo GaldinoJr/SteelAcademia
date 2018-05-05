@@ -53,11 +53,11 @@ namespace SteelGymDesktop.View
                 txtTel1.Text = _user.Phone1;
                 txtTel2.Text = _user.Phone2;
                 txtUserName.Text = _user.UserName;
-                chkAtivo.Checked = _user.Active;
+                chkAtivo.Checked = Convert.ToBoolean(_user.Active);
                 txtUsuario.Text = _user.UserId.ToString();
 
                 if(Program.SessionUser.Admin)
-                    chkCanAccessFinancial.Checked = _user.CanAccessFinancial;
+                    chkCanAccessFinancial.Checked = Convert.ToBoolean(_user.CanAccessFinancial);
 
                 txtUserName.Enabled = false;
             }
@@ -98,11 +98,16 @@ namespace SteelGymDesktop.View
                 _user.Phone1 = txtTel1.Text;
                 _user.Phone2 = txtTel2.Text;
                 _user.UserName = txtUserName.Text;
-                _user.Active = chkAtivo.Checked;
-                _user.FirstLogin = true;
+                _user.Active = Convert.ToInt32(chkAtivo.Checked);
+                _user.FirstLogin = 1;
 
-                if(Program.SessionUser.Admin)
-                    _user.CanAccessFinancial = chkCanAccessFinancial.Checked;
+                _user.IsAdmin = 0;
+                _user.CreateUserId = Program.SessionUser.Id;
+
+                if (Program.SessionUser.Admin)
+                    _user.CanAccessFinancial = Convert.ToInt32(chkCanAccessFinancial.Checked);
+                else
+                    _user.CanAccessFinancial = 0;
 
                 if (_isCreate)
                 {

@@ -2,6 +2,7 @@
 using SteelGymDesktop.Applications.Interfaces;
 using SteelGymDesktop.Domain.Interfaces;
 using SteelGymDesktop.Domain.Services;
+using SteelGymDesktop.Infrastructure.DataAccess;
 using SteelGymDesktop.Infrastructure.Repository;
 using System;
 using System.Collections.Generic;
@@ -23,6 +24,7 @@ namespace SteelGymDesktop
         private static IStudentRepository _studentRepository;
 
         public static SessionUser SessionUser { get; set; }
+        public static DbConnection Context { get; set; }
 
         private static IMovimentationAppService _movimentationAppService;
         private static IMovimentationService _movimentationService;
@@ -49,6 +51,7 @@ namespace SteelGymDesktop
             Application.SetCompatibleTextRenderingDefault(false);
 
             SessionUser = new SessionUser();
+            Context = new DbConnection();
 
             View.Login l = new View.Login(_userAppService);
             if (l.ShowDialog() == DialogResult.OK)

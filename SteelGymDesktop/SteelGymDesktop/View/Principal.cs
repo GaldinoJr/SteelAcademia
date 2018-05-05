@@ -175,11 +175,11 @@ namespace SteelGymDesktop.View
 
                 if (t.ShowDialog() == DialogResult.OK)
                 {
-                    Program.SessionUser.Admin = user.IsAdmin;
+                    Program.SessionUser.Admin = Convert.ToBoolean(user.IsAdmin);
                     Program.SessionUser.Id = user.UserId;
                     Program.SessionUser.Password = user.Password;
                     Program.SessionUser.UserName = user.UserName;
-                    Program.SessionUser.CanAccessFinancial = user.CanAccessFinancial;
+                    Program.SessionUser.CanAccessFinancial = Convert.ToBoolean(user.CanAccessFinancial);
                 }
             }
             catch (Exception ex)

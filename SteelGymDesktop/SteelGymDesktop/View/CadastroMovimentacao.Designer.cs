@@ -80,6 +80,7 @@
             this.txtValor.Name = "txtValor";
             this.txtValor.Size = new System.Drawing.Size(100, 20);
             this.txtValor.TabIndex = 2;
+            this.txtValor.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtValor_KeyPress);
             // 
             // label4
             // 
@@ -204,10 +205,10 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "CadastroMovimentacao";
             this.Text = "Cadastro de Movimentacao";
+            this.Load += new System.EventHandler(this.CadastroMovimentacao_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
-            this.Load += new System.EventHandler(this.CadastroMovimentacao_Load);
 
         }
 

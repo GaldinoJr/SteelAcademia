@@ -84,7 +84,7 @@ namespace SteelGymDesktop.View
                     var student = _studentApp.GetById(Convert.ToInt32(txtIDAluno.Text));
 
                     if (student != null)
-                        dtgAlunos.Rows.Add(student.StudentId, student.Name, student.RG, student.CPF, (student.Active ? "Sim" : "Não"), student.PayDay);
+                        dtgAlunos.Rows.Add(student.StudentId, student.Name, student.RG, student.CPF, (Convert.ToBoolean(student.Active) ? "Sim" : "Não"), student.PayDay);
                     else
                         Util.ShowMessageWarning("Não foi encontrado Aluno com este Id.");
                 }
@@ -107,7 +107,7 @@ namespace SteelGymDesktop.View
             {
                 foreach (var student in students)
                 {
-                    dtgAlunos.Rows.Add(student.StudentId, student.Name, student.RG, student.CPF, (student.Active ? "Sim" : "Não"), student.PayDay);
+                    dtgAlunos.Rows.Add(student.StudentId, student.Name, student.RG, student.CPF, (Convert.ToBoolean(student.Active) ? "Sim" : "Não"), student.PayDay);
                 }
             }
             else

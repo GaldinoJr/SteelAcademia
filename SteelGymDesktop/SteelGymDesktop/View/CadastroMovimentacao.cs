@@ -43,8 +43,8 @@ namespace SteelGymDesktop.View
                 txtDescricao.Text = _movimentation.Origin;
                 txtValor.Text = _movimentation.Value.ToString();
                 cboTipoPagamento.Text = _movimentation.tipoPagamento;
-                dtpDataMovimentacao.Value = (DateTime)_movimentation.DataMovimentacao;
-                if(_movimentation.FgEntrada)
+                dtpDataMovimentacao.Value = Convert.ToDateTime(_movimentation.DataMovimentacao);
+                if(Convert.ToBoolean(_movimentation.FgEntrada))
                 {
                     rbSaida.Checked = false;
                     rbEntrada.Checked = true;
@@ -90,15 +90,13 @@ namespace SteelGymDesktop.View
                 _movimentation.Origin = txtDescricao.Text;
                 _movimentation.Value = Convert.ToDecimal(txtValor.Text.ToString().Replace(",", ".").Replace(" ",""));
                 _movimentation.tipoPagamento = cboTipoPagamento.Text;
-                _movimentation.DataMovimentacao = Convert.ToDateTime(dtpDataMovimentacao.Text);
-                if(rbEntrada.Checked)
-                {
-                    _movimentation.FgEntrada = true;
-                }
+                _movimentation.DataMovimentacao = dtpDataMovimentacao.Text;
+
+                if (rbEntrada.Checked)
+                    _movimentation.FgEntrada = 1;
                 else
-                {
-                    _movimentation.FgEntrada = false;
-                }
+                    _movimentation.FgEntrada = 0;
+
                 if (_isCreate)
                 {
                     Util.DisabledCursor();
@@ -173,6 +171,15 @@ namespace SteelGymDesktop.View
                 pass = false;
             }
             return pass;
+        }
+
+        private void txtValor_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != ','))
+                e.Handled = true;
+
+            if ((e.KeyChar == ',') && (((MaskedTextBox)sender).Text.IndexOf(',') > -1))
+                e.Handled = true;
         }
     }
 }

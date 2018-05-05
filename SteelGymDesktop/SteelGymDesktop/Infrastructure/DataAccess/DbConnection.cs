@@ -4,19 +4,24 @@ using SteelGymDesktop.Domain.Entities;
 using System;
 using System.Data.Entity;
 using System.Data.Entity.ModelConfiguration.Conventions;
+using System.Data.SQLite;
 using System.Linq;
 
 namespace SteelGymDesktop.Infrastructure.DataAccess
 {
     public class DbConnection : DbContext
     {
-        public DbConnection() : base("Contexto")
-        { }
+        public DbConnection() : base(new SQLiteConnection()
+        {
+            ConnectionString = new SQLiteConnectionStringBuilder() { DataSource = @"C:\SteelGym\DataBase\SteelGymDesktop.db", ForeignKeys = true }.ConnectionString
+        }, true)
+        {
+            Database.SetInitializer<DbConnection>(null);
+        }
 
         public DbSet<User> Users { get; set; }
         public DbSet<Student> Students { get; set; }
         public DbSet<Movimentation> Movimentations { get; set; }
-        public DbSet<TestTable> TestTable { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
@@ -24,22 +29,7 @@ namespace SteelGymDesktop.Infrastructure.DataAccess
             modelBuilder.Conventions.Remove<OneToManyCascadeDeleteConvention>();
             modelBuilder.Conventions.Remove<ManyToManyCascadeDeleteConvention>();
 
-            modelBuilder.Properties()
-                .Where(p => p.Name == p.ReflectedType.Name + "Id")
-                .Configure(p => p.IsKey());
-
-            modelBuilder.Properties<string>()
-                .Configure(p => p.HasColumnType("varchar"));
-
-            modelBuilder.Properties<string>()
-                .Configure(p => p.HasMaxLength(255));
-
-            modelBuilder.Properties<DateTime>()
-                .Configure(c => c.HasColumnType("datetime"));
-
-            modelBuilder.Configurations.Add(new Config.UserConfiguration());
-            modelBuilder.Configurations.Add(new Config.StudentConfiguration());
-            modelBuilder.Configurations.Add(new Config.TestTablerConfiguration());
+            base.OnModelCreating(modelBuilder);
         }
 
         public override int SaveChanges()
@@ -47,7 +37,7 @@ namespace SteelGymDesktop.Infrastructure.DataAccess
             foreach (var entry in ChangeTracker.Entries().Where(entry => entry.Entity.GetType().GetProperty("CreateDate") != null))
             {
                 if (entry.State == EntityState.Added)
-                    entry.Property("CreateDate").CurrentValue = DateTime.Now;
+                    entry.Property("CreateDate").CurrentValue = DateTime.Now.ToString();
 
                 if (entry.State == EntityState.Modified)
                     entry.Property("CreateDate").IsModified = false;

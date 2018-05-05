@@ -38,7 +38,7 @@ namespace SteelGymDesktop.View
 
                 if (user != null)
                 {
-                    if (user.FirstLogin)
+                    if (Convert.ToBoolean(user.FirstLogin))
                     {
                         TrocarSenha t = new TrocarSenha(_userApp, user, false);
 
@@ -48,11 +48,11 @@ namespace SteelGymDesktop.View
                         }
                     }
 
-                    Program.SessionUser.Admin = user.IsAdmin;
+                    Program.SessionUser.Admin = Convert.ToBoolean(user.IsAdmin);
                     Program.SessionUser.Id = user.UserId;
                     Program.SessionUser.Password = user.Password;
                     Program.SessionUser.UserName = user.UserName;
-                    Program.SessionUser.CanAccessFinancial = user.CanAccessFinancial;
+                    Program.SessionUser.CanAccessFinancial = Convert.ToBoolean(user.CanAccessFinancial);
 
                     this.DialogResult = DialogResult.OK;
                     this.Close();
@@ -102,6 +102,18 @@ namespace SteelGymDesktop.View
             {
                 Util.ShowMessageWarning("Erro ao efetuar o login. Exception: " + ex.Message);
             }
+        }
+
+        private void txtPassword_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((Keys)e.KeyChar == Keys.Enter)
+                BtnLogin_Click(null, null);
+        }
+
+        private void txtUser_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((Keys)e.KeyChar == Keys.Enter)
+                BtnLogin_Click(null, null);
         }
     }
 }

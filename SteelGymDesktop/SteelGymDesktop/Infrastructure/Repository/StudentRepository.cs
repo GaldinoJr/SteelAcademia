@@ -12,20 +12,20 @@ namespace SteelGymDesktop.Infrastructure.Repository
     {
         public IEnumerable<Student> GetByFilter(bool active, string name, string rg, string cpf)
         {
-            return Db.Students.Where(x => x.Active == active || x.Name == name || x.RG == rg || x.CPF == cpf);
+            return Db.Students.Where(x => Convert.ToBoolean(x.Active) == active || x.Name == name || x.RG == rg || x.CPF == cpf);
         }
 
         public int GetCount(bool active)
         {
-            return Db.Students.Where(x => x.Active == active).Count();
+            return Db.Students.Where(x => Convert.ToBoolean(x.Active) == active).Count();
         }
 
         public int GetCountLateAvaliations()
         {
             DateTime? currentDate = System.DateTime.Now;
             return Db.Students.Where(x =>
-                DbFunctions.DiffDays(x.EvaliationDate, currentDate) >= (x.EvaluationPeriodicity * 30) &&
-                x.Active == true
+                DbFunctions.DiffDays(Convert.ToDateTime(x.EvaliationDate), currentDate) >= (x.EvaluationPeriodicity * 30) &&
+                Convert.ToBoolean(x.Active) == true
             ).Count();
         }
 
@@ -38,8 +38,8 @@ namespace SteelGymDesktop.Infrastructure.Repository
         {
             DateTime? currentDate = System.DateTime.Now;
             return Db.Students.Where(x =>
-                DbFunctions.DiffDays(x.EvaliationDate, currentDate) >= (x.EvaluationPeriodicity * 30) &&
-                x.Active == true
+                DbFunctions.DiffDays(Convert.ToDateTime(x.EvaliationDate), currentDate) >= (x.EvaluationPeriodicity * 30) &&
+                Convert.ToBoolean(x.Active) == true
             );
         }
 

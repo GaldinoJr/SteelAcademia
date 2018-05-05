@@ -70,13 +70,13 @@ namespace SteelGymDesktop.View
                 cboEstadoCivil.Text = _student.CivilStatus;
                 txtCPF.Text = _student.CPF;
                 cboPeriodicidadeAvaliacao.Text = _student.EvaluationPeriodicity.ToString();
-                dtpNascimento.Value = (DateTime)_student.BirthDate;
-                dtpAvaliacao.Value = (DateTime)_student.EvaliationDate;
+                dtpNascimento.Value = Convert.ToDateTime(_student.BirthDate);
+                dtpAvaliacao.Value = Convert.ToDateTime(_student.EvaliationDate);
                 txtEmail.Text = _student.Email;
                 cboSexo.Text = _student.Sex;
                 txtRG.Text = _student.RG;
                 txtIMC.Text = _student.IMC.ToString();
-                chkAtivo.Checked = _student.Active;
+                chkAtivo.Checked = Convert.ToBoolean(_student.Active);
                 txtEndereco.Text = _student.Address;
                 txtNumero.Text = _student.Number.ToString();
                 txtComplemento.Text = _student.Complement;
@@ -132,8 +132,8 @@ namespace SteelGymDesktop.View
                 _student.Name = txtNome.Text;
                 _student.CivilStatus = cboEstadoCivil.Text;
                 _student.CPF = txtCPF.Text;
-                _student.BirthDate = Convert.ToDateTime(dtpNascimento.Text);
-                _student.EvaliationDate = Convert.ToDateTime(dtpAvaliacao.Text);
+                _student.BirthDate = dtpNascimento.Text;
+                _student.EvaliationDate = dtpAvaliacao.Text;
                 _student.EvaluationPeriodicity = Convert.ToInt32(cboPeriodicidadeAvaliacao.Text);
                 _student.PayDay = Convert.ToInt32(cboDiaPagamento.Text);
                 if (Util.ValidaString(txtMensalidade.Text))
@@ -147,7 +147,7 @@ namespace SteelGymDesktop.View
                 {
                     _student.IMC = Convert.ToDecimal(txtIMC.Text);
                 }
-                _student.Active = chkAtivo.Checked;
+                _student.Active = Convert.ToInt32(chkAtivo.Checked);
                 _student.Address = txtEndereco.Text;
                 if (Util.ValidaString(txtNumero.Text))
                 {
@@ -405,7 +405,7 @@ namespace SteelGymDesktop.View
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != ','))
                 e.Handled = true;
 
-            if ((e.KeyChar == ',') && ((sender as TextBox).Text.IndexOf(',') > -1))
+            if ((e.KeyChar == ',') && (((MaskedTextBox)sender).Text.IndexOf(',') > -1))
                 e.Handled = true;
         }
     }

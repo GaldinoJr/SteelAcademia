@@ -89,7 +89,7 @@ namespace SteelGymDesktop.View
                 }
 
                 _user.Password = txtNewPassword.Text;
-                _user.FirstLogin = false;
+                _user.FirstLogin = 0;
 
                 _userApp.Update(_user);
 
