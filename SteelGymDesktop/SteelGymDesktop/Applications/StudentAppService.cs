@@ -18,12 +18,12 @@ namespace SteelGymDesktop.Applications
             _service = servicebase;
         }
 
-        public IEnumerable<Student> GetByFilter(bool active, string name, string rg, string cpf)
+        public IEnumerable<Student> GetByFilter(int active, string name, string rg, string cpf)
         {
             return _service.GetByFilter(active, name, rg, cpf);
         }
 
-        public int GetCount(bool active)
+        public int GetCount(int active)
         {
             return _service.GetCount(active);
         }

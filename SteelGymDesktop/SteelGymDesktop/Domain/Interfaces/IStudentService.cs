@@ -5,8 +5,8 @@ namespace SteelGymDesktop.Domain.Interfaces
 {
     public interface IStudentService : IServiceBase<Student>
     {
-        IEnumerable<Student> GetByFilter(bool active, string name, string rg, string cpf);
-        int GetCount(bool active);
+        IEnumerable<Student> GetByFilter(int active, string name, string rg, string cpf);
+        int GetCount(int active);
         IEnumerable<Student> LoadLatePayments();
         IEnumerable<Student> LoadLateAvaliations();
         int GetCountLatePayments();

@@ -73,13 +73,13 @@ namespace SteelGymDesktop.Domain.Entities
         [Column(Name = "CreateUserId", DbType = "INTEGER")]
         public int CreateUserId { get; set; }
 
-        [Column(Name = "IsAdmin", DbType = "VARCHAR")]
+        [Column(Name = "IsAdmin", DbType = "INTEGER")]
         public int IsAdmin { get; set; }
 
-        [Column(Name = "CanAccessFinancial", DbType = "VARCHAR")]
+        [Column(Name = "CanAccessFinancial", DbType = "INTEGER")]
         public int CanAccessFinancial { get; set; }
 
-        [Column(Name = "FirstLogin", DbType = "VARCHAR")]
+        [Column(Name = "FirstLogin", DbType = "INTEGER")]
         public int FirstLogin { get; set; }
     }
 }

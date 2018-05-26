@@ -14,12 +14,12 @@ namespace SteelGymDesktop.Domain.Services
             _repository = repository;
         }
 
-        public IEnumerable<Student> GetByFilter(bool active, string name, string rg, string cpf)
+        public IEnumerable<Student> GetByFilter(int active, string name, string rg, string cpf)
         {
             return _repository.GetByFilter(active, name, rg, cpf);
         }
 
-        public int GetCount(bool active)
+        public int GetCount(int active)
         {
             return _repository.GetCount(active);
         }

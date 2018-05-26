@@ -107,7 +107,7 @@ namespace SteelGymDesktop.View
             {
                 foreach (var student in students)
                 {
-                    dtgAlunos.Rows.Add(student.StudentId, student.Name, student.RG, student.CPF, (Convert.ToBoolean(student.Active) ? "Sim" : "Não"), student.PayDay);
+                    dtgAlunos.Rows.Add(student.StudentId, student.Name, student.RG, student.CPF, (student.Active == 1 ? "Sim" : "Não"), student.PayDay);
                 }
             }
             else
@@ -116,7 +116,12 @@ namespace SteelGymDesktop.View
 
         private void FilterSearch(bool @checked, string nome, string rg, string cpf)
         {
-            var students = _studentApp.GetByFilter(@checked, nome, rg, cpf);
+            int nChecked = 0;
+            if(@checked)
+            {
+                nChecked = 1;
+            }
+            var students = _studentApp.GetByFilter(nChecked, nome, rg, cpf);
             Filter(students);
         }
 

@@ -47,13 +47,13 @@ namespace SteelGymDesktop.View
 
         private void LoadInativeStudents()
         {
-            var qttActive = _studentApp.GetCount(false);
+            var qttActive = _studentApp.GetCount(0);
             txtQuantityInativeStudents.Text = qttActive.ToString();
         }
 
         private void LoadActiveStudents()
         {
-            var qttActive = _studentApp.GetCount(true);
+            var qttActive = _studentApp.GetCount(1);
             txtQuantityActiveStudents.Text = qttActive.ToString();
         }
 
