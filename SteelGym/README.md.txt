@@ -1,0 +1,1 @@
+Esta pasta SteelGym e o seu conteúdo deve ser colocado na pasta raíz do sistema (C:/)

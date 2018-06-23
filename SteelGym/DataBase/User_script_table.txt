@@ -1,0 +1,28 @@
+CREATE TABLE `User` (
+    `UserId`             INTEGER PRIMARY KEY AUTOINCREMENT,
+    `Name`               TEXT NOT NULL,
+    `LastName`           TEXT NULL,
+    `RG`                 TEXT NULL,
+    `CPF`                TEXT NULL,
+    `Email`              TEXT NULL,
+    `Address`            TEXT NULL,
+    `Number`             INTEGER           NULL,
+    `Complement`         TEXT NULL,
+    `Neighborhood`       TEXT NULL,
+    `Active`             TEXT           NOT NULL,
+    `City`               TEXT NULL,
+    `UF`                 TEXT NULL,
+    `CEP`                TEXT NULL,
+    `Phone1`             TEXT NULL,
+    `Phone2`             TEXT NULL,
+    `UserName`           TEXT NULL,
+    `Password`           TEXT NULL,
+    `UpdateDate`         TEXT      NULL,
+    `CreateDate`         TEXT      NOT NULL,
+    `UpdateUserId`       INTEGER           NULL,
+    `CreateUserId`       INTEGER           NOT NULL,
+    `IsAdmin`            INTEGER           NOT NULL,
+    `CanAccessFinancial` INTEGER           NOT NULL,
+    `FirstLogin`         INTEGER           NOT NULL
+);
+INSERT INTO USER (UserId, Name, Email, Active, UserName, Password, CreateDate, CreateUserId, IsAdmin, CanAccessFinancial, FirstLogin) VALUES (0,'Admin','admin@admin.com', 1, 'admin','admin@123', date('now'), 0, 1, 1, 0);

@@ -1,0 +1,10 @@
+CREATE TABLE `Movimentation` (
+    `MovimentationId`   INTEGER PRIMARY KEY AUTOINCREMENT,
+    `UsuarioInclusaoId` INTEGER             NOT NULL,
+    `Origin`            TEXT   NULL,
+    `FgEntrada`         INTEGER             NOT NULL,
+    `tipoPagamento`     TEXT   NULL,
+    `DataMovimentacao`  TEXT        NULL,
+    `Value`             NUMERIC NOT NULL
+);
+
