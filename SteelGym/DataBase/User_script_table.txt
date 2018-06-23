@@ -9,7 +9,7 @@ CREATE TABLE `User` (
     `Number`             INTEGER           NULL,
     `Complement`         TEXT NULL,
     `Neighborhood`       TEXT NULL,
-    `Active`             TEXT           NOT NULL,
+    `Active`             INTEGER           NOT NULL,
     `City`               TEXT NULL,
     `UF`                 TEXT NULL,
     `CEP`                TEXT NULL,

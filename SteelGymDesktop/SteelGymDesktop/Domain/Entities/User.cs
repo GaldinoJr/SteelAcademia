@@ -37,7 +37,7 @@ namespace SteelGymDesktop.Domain.Entities
         [Column(Name = "Neighborhood", DbType = "VARCHAR")]
         public string Neighborhood { get; set; }
 
-        [Column(Name = "Active", DbType = "VARCHAR")]
+        [Column(Name = "Active", DbType = "INTEGER")]
         public int Active { get; set; }
 
         [Column(Name = "City", DbType = "VARCHAR")]
