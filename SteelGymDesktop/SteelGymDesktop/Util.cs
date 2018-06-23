@@ -51,7 +51,7 @@ namespace SteelGymDesktop
 
         public static String RemoverCaracteres(String s)
         {
-            String campo = s.Replace(" ", "").Replace(",", "").Replace("-", "");
+            String campo = s.Replace(" ", "").Replace(",", "").Replace("-", "").Replace(".", "");
             return campo;
         }
 

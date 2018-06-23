@@ -2,6 +2,7 @@
 using SteelGymDesktop.Domain.Entities;
 using System;
 using System.Data.Entity;
+using System.Globalization;
 using System.Windows.Forms;
 
 namespace SteelGymDesktop.View
@@ -13,6 +14,7 @@ namespace SteelGymDesktop.View
         private readonly int _studentId;
         private Student _student;
         private bool isMenor;
+
         public CadastroAluno(IStudentAppService studentApp, bool isCreate, int studentId)
         {
             _studentApp = studentApp;
@@ -38,13 +40,8 @@ namespace SteelGymDesktop.View
         
         private void InitWithAdultAge()
         {
-            DateTime initialDate = DateTime.Today;
-            int year = initialDate.Year - 18;
-            DateTime upDate = new DateTime(year, initialDate.Month, initialDate.Day);
-            dtpNascimento.Text = upDate.ToString("dd/MM/yyyy");
+            dtpNascimento.Value = dtpNascimento.Value.AddYears(-18);
         }
-
-        
 
         private void HabilityResponsibleData()
         {
