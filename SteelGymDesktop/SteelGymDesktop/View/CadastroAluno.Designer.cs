@@ -45,7 +45,6 @@
             this.txtProfissao = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            //this.txtIMC = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.txtEndereco = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
@@ -103,6 +102,10 @@
             this.txtCPF = new System.Windows.Forms.MaskedTextBox();
             this.chkAtivo = new System.Windows.Forms.CheckBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.cboPeriodicidadeAvaliacao = new System.Windows.Forms.ComboBox();
+            this.label40 = new System.Windows.Forms.Label();
+            this.label39 = new System.Windows.Forms.Label();
+            this.dtpAvaliacao = new System.Windows.Forms.DateTimePicker();
             this.txtIMC = new System.Windows.Forms.MaskedTextBox();
             this.cboDiaPagamento = new System.Windows.Forms.ComboBox();
             this.label38 = new System.Windows.Forms.Label();
@@ -113,10 +116,7 @@
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.gbMenor = new System.Windows.Forms.GroupBox();
             this.txtNumeroResp = new System.Windows.Forms.MaskedTextBox();
-            this.label39 = new System.Windows.Forms.Label();
-            this.dtpAvaliacao = new System.Windows.Forms.DateTimePicker();
-            this.cboPeriodicidadeAvaliacao = new System.Windows.Forms.ComboBox();
-            this.label40 = new System.Windows.Forms.Label();
+            this.btnCancel = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -949,6 +949,60 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Dados Pessoais";
             // 
+            // cboPeriodicidadeAvaliacao
+            // 
+            this.cboPeriodicidadeAvaliacao.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboPeriodicidadeAvaliacao.FormattingEnabled = true;
+            this.cboPeriodicidadeAvaliacao.Items.AddRange(new object[] {
+            "",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11",
+            "12"});
+            this.cboPeriodicidadeAvaliacao.Location = new System.Drawing.Point(777, 150);
+            this.cboPeriodicidadeAvaliacao.Name = "cboPeriodicidadeAvaliacao";
+            this.cboPeriodicidadeAvaliacao.Size = new System.Drawing.Size(50, 21);
+            this.cboPeriodicidadeAvaliacao.TabIndex = 13;
+            // 
+            // label40
+            // 
+            this.label40.AutoSize = true;
+            this.label40.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label40.ForeColor = System.Drawing.Color.White;
+            this.label40.Location = new System.Drawing.Point(601, 152);
+            this.label40.Name = "label40";
+            this.label40.Size = new System.Drawing.Size(170, 17);
+            this.label40.TabIndex = 54;
+            this.label40.Text = "Periodicidade(Meses):";
+            // 
+            // label39
+            // 
+            this.label39.AutoSize = true;
+            this.label39.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label39.ForeColor = System.Drawing.Color.White;
+            this.label39.Location = new System.Drawing.Point(358, 152);
+            this.label39.Name = "label39";
+            this.label39.Size = new System.Drawing.Size(132, 17);
+            this.label39.TabIndex = 52;
+            this.label39.Text = "Ultima avaliação:";
+            // 
+            // dtpAvaliacao
+            // 
+            this.dtpAvaliacao.CustomFormat = "dd/MM/YYYY";
+            this.dtpAvaliacao.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpAvaliacao.Location = new System.Drawing.Point(491, 151);
+            this.dtpAvaliacao.Name = "dtpAvaliacao";
+            this.dtpAvaliacao.Size = new System.Drawing.Size(103, 20);
+            this.dtpAvaliacao.TabIndex = 12;
+            // 
             // txtIMC
             // 
             this.txtIMC.Location = new System.Drawing.Point(598, 125);
@@ -1012,8 +1066,8 @@
             this.txtMensalidade.Location = new System.Drawing.Point(298, 151);
             this.txtMensalidade.Name = "txtMensalidade";
             this.txtMensalidade.Size = new System.Drawing.Size(52, 20);
-            this.txtMensalidade.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtMensalidade_KeyPress);
             this.txtMensalidade.TabIndex = 11;
+            this.txtMensalidade.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtMensalidade_KeyPress);
             // 
             // label1
             // 
@@ -1125,59 +1179,20 @@
             this.txtNumeroResp.Size = new System.Drawing.Size(52, 20);
             this.txtNumeroResp.TabIndex = 32;
             // 
-            // label39
+            // btnCancel
             // 
-            this.label39.AutoSize = true;
-            this.label39.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label39.ForeColor = System.Drawing.Color.White;
-            this.label39.Location = new System.Drawing.Point(358, 152);
-            this.label39.Name = "label39";
-            this.label39.Size = new System.Drawing.Size(132, 17);
-            this.label39.TabIndex = 52;
-            this.label39.Text = "Ultima avaliação:";
-            // 
-            // dtpAvaliacao
-            // 
-            this.dtpAvaliacao.CustomFormat = "dd/MM/YYYY";
-            this.dtpAvaliacao.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpAvaliacao.Location = new System.Drawing.Point(491, 151);
-            this.dtpAvaliacao.Name = "dtpAvaliacao";
-            this.dtpAvaliacao.Size = new System.Drawing.Size(103, 20);
-            this.dtpAvaliacao.TabIndex = 12;
-            // 
-            // cboPeriodicidadeAvaliacao
-            // 
-            this.cboPeriodicidadeAvaliacao.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboPeriodicidadeAvaliacao.FormattingEnabled = true;
-            this.cboPeriodicidadeAvaliacao.Items.AddRange(new object[] {
-            "",
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6",
-            "7",
-            "8",
-            "9",
-            "10",
-            "11",
-            "12"});
-            this.cboPeriodicidadeAvaliacao.Location = new System.Drawing.Point(777, 150);
-            this.cboPeriodicidadeAvaliacao.Name = "cboPeriodicidadeAvaliacao";
-            this.cboPeriodicidadeAvaliacao.Size = new System.Drawing.Size(50, 21);
-            this.cboPeriodicidadeAvaliacao.TabIndex = 13;
-            // 
-            // label40
-            // 
-            this.label40.AutoSize = true;
-            this.label40.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label40.ForeColor = System.Drawing.Color.White;
-            this.label40.Location = new System.Drawing.Point(601, 152);
-            this.label40.Name = "label40";
-            this.label40.Size = new System.Drawing.Size(170, 17);
-            this.label40.TabIndex = 54;
-            this.label40.Text = "Periodicidade(Meses):";
+            this.btnCancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(110)))), ((int)(((byte)(140)))));
+            this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancel.ForeColor = System.Drawing.Color.White;
+            this.btnCancel.Location = new System.Drawing.Point(387, 609);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(155, 30);
+            this.btnCancel.TabIndex = 135;
+            this.btnCancel.Text = "Cancelar";
+            this.btnCancel.UseVisualStyleBackColor = false;
+            this.btnCancel.Visible = false;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // CadastroAluno
             // 
@@ -1185,6 +1200,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(37)))), ((int)(((byte)(72)))));
             this.ClientSize = new System.Drawing.Size(899, 651);
+            this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.gbMenor);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
@@ -1295,5 +1311,6 @@
         private System.Windows.Forms.Label label40;
         private System.Windows.Forms.Label label39;
         private System.Windows.Forms.DateTimePicker dtpAvaliacao;
+        private System.Windows.Forms.Button btnCancel;
     }
 }

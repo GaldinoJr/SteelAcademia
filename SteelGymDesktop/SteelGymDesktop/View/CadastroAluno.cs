@@ -102,7 +102,7 @@ namespace SteelGymDesktop.View
                 txtTelResp2.Text = _student.ResponsiblePhone2;
                 cboDiaPagamento.Text =_student.PayDay.ToString();
                 txtMensalidade.Text = _student.PaymentAmount.ToString();
-
+                btnCancel.Visible = true;
                 txtIDAluno.Enabled = false;
             }
             catch (Exception ex)
@@ -404,6 +404,11 @@ namespace SteelGymDesktop.View
 
             if ((e.KeyChar == ',') && (((MaskedTextBox)sender).Text.IndexOf(',') > -1))
                 e.Handled = true;
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
