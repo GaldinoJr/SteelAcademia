@@ -41,11 +41,11 @@
             // 
             // btnLostPassword
             // 
-            this.btnLostPassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(21)))), ((int)(((byte)(86)))));
+            this.btnLostPassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(110)))), ((int)(((byte)(140)))));
             this.btnLostPassword.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLostPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLostPassword.ForeColor = System.Drawing.Color.White;
-            this.btnLostPassword.Location = new System.Drawing.Point(78, 287);
+            this.btnLostPassword.Location = new System.Drawing.Point(125, 358);
             this.btnLostPassword.Name = "btnLostPassword";
             this.btnLostPassword.Size = new System.Drawing.Size(163, 27);
             this.btnLostPassword.TabIndex = 13;
@@ -59,9 +59,9 @@
             this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogin.ForeColor = System.Drawing.Color.White;
-            this.btnLogin.Location = new System.Drawing.Point(280, 287);
+            this.btnLogin.Location = new System.Drawing.Point(78, 309);
             this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(72, 27);
+            this.btnLogin.Size = new System.Drawing.Size(274, 27);
             this.btnLogin.TabIndex = 12;
             this.btnLogin.Text = "LOGIN";
             this.btnLogin.UseVisualStyleBackColor = false;
@@ -123,7 +123,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(37)))), ((int)(((byte)(72)))));
-            this.ClientSize = new System.Drawing.Size(427, 354);
+            this.ClientSize = new System.Drawing.Size(427, 412);
             this.Controls.Add(this.btnLostPassword);
             this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.txtPassword);

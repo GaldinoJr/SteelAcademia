@@ -111,5 +111,10 @@ namespace SteelGymDesktop.View
             if(_forgotPassword)
                 lblCurrentPassword.Text = "Senha do Administrador";
         }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
