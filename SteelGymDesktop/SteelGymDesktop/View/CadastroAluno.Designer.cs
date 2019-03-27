@@ -94,7 +94,6 @@
             this.label36 = new System.Windows.Forms.Label();
             this.txtEnderecoResp = new System.Windows.Forms.TextBox();
             this.label37 = new System.Windows.Forms.Label();
-            this.btnSalvar = new System.Windows.Forms.Button();
             this.btnLimpar = new System.Windows.Forms.Button();
             this.cboUF = new System.Windows.Forms.ComboBox();
             this.cboUFRep = new System.Windows.Forms.ComboBox();
@@ -117,6 +116,7 @@
             this.gbMenor = new System.Windows.Forms.GroupBox();
             this.txtNumeroResp = new System.Windows.Forms.MaskedTextBox();
             this.btnCancel = new System.Windows.Forms.Button();
+            this.btnSalvar = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -778,20 +778,6 @@
             this.label37.TabIndex = 63;
             this.label37.Text = "Endereço:";
             // 
-            // btnSalvar
-            // 
-            this.btnSalvar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(21)))), ((int)(((byte)(86)))));
-            this.btnSalvar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSalvar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSalvar.ForeColor = System.Drawing.Color.White;
-            this.btnSalvar.Location = new System.Drawing.Point(709, 609);
-            this.btnSalvar.Name = "btnSalvar";
-            this.btnSalvar.Size = new System.Drawing.Size(155, 30);
-            this.btnSalvar.TabIndex = 130;
-            this.btnSalvar.Text = "Salvar";
-            this.btnSalvar.UseVisualStyleBackColor = false;
-            this.btnSalvar.Click += new System.EventHandler(this.BtnSalvar_Click);
-            // 
             // btnLimpar
             // 
             this.btnLimpar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(21)))), ((int)(((byte)(86)))));
@@ -1185,7 +1171,7 @@
             this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancel.ForeColor = System.Drawing.Color.White;
-            this.btnCancel.Location = new System.Drawing.Point(387, 609);
+            this.btnCancel.Location = new System.Drawing.Point(709, 609);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(155, 30);
             this.btnCancel.TabIndex = 135;
@@ -1193,6 +1179,20 @@
             this.btnCancel.UseVisualStyleBackColor = false;
             this.btnCancel.Visible = false;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            // 
+            // btnSalvar
+            // 
+            this.btnSalvar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(21)))), ((int)(((byte)(86)))));
+            this.btnSalvar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSalvar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSalvar.ForeColor = System.Drawing.Color.White;
+            this.btnSalvar.Location = new System.Drawing.Point(386, 609);
+            this.btnSalvar.Name = "btnSalvar";
+            this.btnSalvar.Size = new System.Drawing.Size(155, 30);
+            this.btnSalvar.TabIndex = 130;
+            this.btnSalvar.Text = "Salvar";
+            this.btnSalvar.UseVisualStyleBackColor = false;
+            this.btnSalvar.Click += new System.EventHandler(this.BtnSalvar_Click);
             // 
             // CadastroAluno
             // 
@@ -1289,7 +1289,6 @@
         private System.Windows.Forms.Label label36;
         private System.Windows.Forms.TextBox txtEnderecoResp;
         private System.Windows.Forms.Label label37;
-        private System.Windows.Forms.Button btnSalvar;
         private System.Windows.Forms.Button btnLimpar;
         private System.Windows.Forms.ComboBox cboUF;
         private System.Windows.Forms.ComboBox cboUFRep;
@@ -1312,5 +1311,6 @@
         private System.Windows.Forms.Label label39;
         private System.Windows.Forms.DateTimePicker dtpAvaliacao;
         private System.Windows.Forms.Button btnCancel;
+        private System.Windows.Forms.Button btnSalvar;
     }
 }

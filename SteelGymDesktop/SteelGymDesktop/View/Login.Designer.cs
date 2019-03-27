@@ -45,9 +45,9 @@
             this.btnLostPassword.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLostPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLostPassword.ForeColor = System.Drawing.Color.White;
-            this.btnLostPassword.Location = new System.Drawing.Point(125, 358);
+            this.btnLostPassword.Location = new System.Drawing.Point(118, 351);
             this.btnLostPassword.Name = "btnLostPassword";
-            this.btnLostPassword.Size = new System.Drawing.Size(163, 27);
+            this.btnLostPassword.Size = new System.Drawing.Size(194, 27);
             this.btnLostPassword.TabIndex = 13;
             this.btnLostPassword.Text = "Esqueci a senha";
             this.btnLostPassword.UseVisualStyleBackColor = false;

@@ -46,7 +46,7 @@
             // 
             // btnSim
             // 
-            this.btnSim.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(21)))), ((int)(((byte)(86)))));
+            this.btnSim.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(110)))), ((int)(((byte)(140)))));
             this.btnSim.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSim.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSim.ForeColor = System.Drawing.Color.White;

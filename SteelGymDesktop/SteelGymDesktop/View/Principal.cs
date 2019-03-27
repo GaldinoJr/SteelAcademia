@@ -44,12 +44,19 @@ namespace SteelGymDesktop.View
             {
                 pagamentoToolStripMenuItem.Enabled = Program.SessionUser.CanAccessFinancial;
                 comprovantesToolStripMenuItem.Enabled = Program.SessionUser.CanAccessFinancial;
-                //movimentaçõesToolStripMenuItem.Enabled = Program.SessionUser.CanAccessFinancial;
+                pagamentoToolStripMenuItem.Visible = Program.SessionUser.CanAccessFinancial;
+                comprovantesToolStripMenuItem.Visible = Program.SessionUser.CanAccessFinancial;
+                
+                movimentaçõesToolStripMenuItem.Enabled = false;
+                movimentaçõesToolStripMenuItem.Visible = false;
             }
 
-            pagamentoToolStripMenuItem.Enabled = false;
-            comprovantesToolStripMenuItem.Enabled = false;
-            movimentaçõesToolStripMenuItem.Enabled = false;
+            pagamentoToolStripMenuItem.Enabled = true;
+            comprovantesToolStripMenuItem.Enabled = true;
+            movimentaçõesToolStripMenuItem.Enabled = true;
+            pagamentoToolStripMenuItem.Visible = true;
+            comprovantesToolStripMenuItem.Visible = true;
+            movimentaçõesToolStripMenuItem.Visible = true;
         }
 
         private void Index_Load(object sender, EventArgs e)
