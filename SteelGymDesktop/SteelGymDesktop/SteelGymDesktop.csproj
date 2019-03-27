@@ -125,12 +125,14 @@
   <ItemGroup>
     <Compile Include="Applications\AppServiceBase.cs" />
     <Compile Include="Applications\Interfaces\IAppServiceBase.cs" />
+    <Compile Include="Applications\Interfaces\IPaymentAppService.cs" />
     <Compile Include="Applications\Interfaces\IMovimentationAppService.cs" />
     <Compile Include="Applications\Interfaces\IStudentAppService.cs" />
     <Compile Include="Applications\Interfaces\IUserAppService.cs" />
     <Compile Include="Applications\MovimentationAppService.cs" />
     <Compile Include="Applications\StudentAppService.cs" />
     <Compile Include="Applications\UserAppService.cs" />
+    <Compile Include="Domain\Entities\Payment.cs" />
     <Compile Include="Domain\Entities\Movimentation.cs" />
     <Compile Include="Domain\Entities\Student.cs" />
     <Compile Include="Domain\Entities\User.cs" />

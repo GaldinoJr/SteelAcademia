@@ -60,6 +60,9 @@
             this.panel19 = new System.Windows.Forms.Panel();
             this.panelSelectedMovimentation = new System.Windows.Forms.Panel();
             this.panel21 = new System.Windows.Forms.Panel();
+            this.incluirToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.pesquisarToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.imprimirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             Menu = new System.Windows.Forms.MenuStrip();
             Menu.SuspendLayout();
             this.toolbar.SuspendLayout();
@@ -124,20 +127,23 @@
             // cadastroToolStripMenuItem
             // 
             this.cadastroToolStripMenuItem.Name = "cadastroToolStripMenuItem";
-            this.cadastroToolStripMenuItem.Size = new System.Drawing.Size(142, 24);
+            this.cadastroToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
             this.cadastroToolStripMenuItem.Text = "Incluir";
             this.cadastroToolStripMenuItem.Click += new System.EventHandler(this.CadastroToolStripMenuItem_Click);
             // 
             // pesquisarToolStripMenuItem
             // 
             this.pesquisarToolStripMenuItem.Name = "pesquisarToolStripMenuItem";
-            this.pesquisarToolStripMenuItem.Size = new System.Drawing.Size(142, 24);
+            this.pesquisarToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
             this.pesquisarToolStripMenuItem.Text = "Pesquisar";
             this.pesquisarToolStripMenuItem.Click += new System.EventHandler(this.PesquisarToolStripMenuItem_Click);
             // 
             // pagamentoToolStripMenuItem
             // 
             this.pagamentoToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(43)))), ((int)(((byte)(80)))));
+            this.pagamentoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.incluirToolStripMenuItem1,
+            this.pesquisarToolStripMenuItem2});
             this.pagamentoToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.pagamentoToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("pagamentoToolStripMenuItem.Image")));
             this.pagamentoToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -151,6 +157,8 @@
             // comprovantesToolStripMenuItem
             // 
             this.comprovantesToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(43)))), ((int)(((byte)(80)))));
+            this.comprovantesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.imprimirToolStripMenuItem});
             this.comprovantesToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.comprovantesToolStripMenuItem.Image = global::SteelGymDesktop.Properties.Resources.ic_comprovante;
             this.comprovantesToolStripMenuItem.Name = "comprovantesToolStripMenuItem";
@@ -215,14 +223,14 @@
             // inclusãoToolStripMenuItem
             // 
             this.inclusãoToolStripMenuItem.Name = "inclusãoToolStripMenuItem";
-            this.inclusãoToolStripMenuItem.Size = new System.Drawing.Size(152, 24);
+            this.inclusãoToolStripMenuItem.Size = new System.Drawing.Size(136, 24);
             this.inclusãoToolStripMenuItem.Text = "Inclusão";
             this.inclusãoToolStripMenuItem.Click += new System.EventHandler(this.InclusãoToolStripMenuItem_Click);
             // 
             // pesquisaToolStripMenuItem
             // 
             this.pesquisaToolStripMenuItem.Name = "pesquisaToolStripMenuItem";
-            this.pesquisaToolStripMenuItem.Size = new System.Drawing.Size(152, 24);
+            this.pesquisaToolStripMenuItem.Size = new System.Drawing.Size(136, 24);
             this.pesquisaToolStripMenuItem.Text = "Pesquisa";
             this.pesquisaToolStripMenuItem.Click += new System.EventHandler(this.PesquisaToolStripMenuItem_Click);
             // 
@@ -246,6 +254,7 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(930, 695);
             this.panel1.TabIndex = 6;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // toolbar
             // 
@@ -387,6 +396,25 @@
             this.panel21.Size = new System.Drawing.Size(10, 83);
             this.panel21.TabIndex = 1;
             // 
+            // incluirToolStripMenuItem1
+            // 
+            this.incluirToolStripMenuItem1.Name = "incluirToolStripMenuItem1";
+            this.incluirToolStripMenuItem1.Size = new System.Drawing.Size(180, 24);
+            this.incluirToolStripMenuItem1.Text = "Incluir";
+            // 
+            // pesquisarToolStripMenuItem2
+            // 
+            this.pesquisarToolStripMenuItem2.Name = "pesquisarToolStripMenuItem2";
+            this.pesquisarToolStripMenuItem2.Size = new System.Drawing.Size(180, 24);
+            this.pesquisarToolStripMenuItem2.Text = "Pesquisar";
+            this.pesquisarToolStripMenuItem2.Click += new System.EventHandler(this.pesquisarToolStripMenuItem2_Click);
+            // 
+            // imprimirToolStripMenuItem
+            // 
+            this.imprimirToolStripMenuItem.Name = "imprimirToolStripMenuItem";
+            this.imprimirToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
+            this.imprimirToolStripMenuItem.Text = "Imprimir";
+            // 
             // Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -458,5 +486,8 @@
         private System.Windows.Forms.Panel panel19;
         private System.Windows.Forms.Panel panelSelectedMovimentation;
         private System.Windows.Forms.Panel panel21;
+        private System.Windows.Forms.ToolStripMenuItem incluirToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem pesquisarToolStripMenuItem2;
+        private System.Windows.Forms.ToolStripMenuItem imprimirToolStripMenuItem;
     }
 }

@@ -16,6 +16,7 @@ namespace SteelGymDesktop.View
         private readonly IUserAppService _userApp;
         private readonly IStudentAppService _studentApp;
         private readonly IMovimentationAppService _MovimentacaoApp;
+        private readonly IPaymentAppService _PagamentoApp;
 
         public Principal(IUserAppService userApp, IStudentAppService studentApp, IMovimentationAppService movimentacaoApp)
         {
@@ -205,6 +206,17 @@ namespace SteelGymDesktop.View
         {
             PesquisaMovimentacao p = new PesquisaMovimentacao(_MovimentacaoApp);
             AbrirModulo(p, Models.Modulos.DF_NOME_MODULO_MOVIMENTACOES);
+        }
+
+        private void pesquisarToolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            //PesquisarPagamento p = new PesquisarPagamento(_PagamentoApp);
+            //AbrirModulo(p, Models.Modulos.DF_NOME_MODULO_PAGAMENTO);
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
