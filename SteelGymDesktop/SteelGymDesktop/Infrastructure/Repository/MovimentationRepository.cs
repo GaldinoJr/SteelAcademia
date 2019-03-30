@@ -13,9 +13,9 @@ namespace SteelGymDesktop.Infrastructure.Repository
         public IEnumerable<Movimentation> GetByFilter(DateTime? DataDeMovimentacao, DateTime? DataAteMovimentacao, bool fgEntrada, bool fgTodosStatus)
         {
             if (fgTodosStatus)
-                return Db.Movimentations.Where(x => Convert.ToDateTime(x.DataMovimentacao) >= DataDeMovimentacao && Convert.ToDateTime(x.DataMovimentacao) <= DataAteMovimentacao);
+                return Db.Movimentations.ToList().Where(x => Convert.ToDateTime(x.DataMovimentacao) >= DataDeMovimentacao && Convert.ToDateTime(x.DataMovimentacao) <= DataAteMovimentacao);
             else
-                return Db.Movimentations.Where(x => Convert.ToDateTime(x.DataMovimentacao) >= DataDeMovimentacao && Convert.ToDateTime(x.DataMovimentacao) <= DataAteMovimentacao && Convert.ToBoolean(x.FgEntrada) == fgEntrada);
+                return Db.Movimentations.ToList().Where(x => Convert.ToDateTime(x.DataMovimentacao) >= DataDeMovimentacao && Convert.ToDateTime(x.DataMovimentacao) <= DataAteMovimentacao && Convert.ToBoolean(x.FgEntrada) == fgEntrada);
         }
     }
 }
