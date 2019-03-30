@@ -50,14 +50,14 @@ namespace SteelGymDesktop.View
                 
                 movimentaçõesToolStripMenuItem.Enabled = false;
                 movimentaçõesToolStripMenuItem.Visible = false;
+            } else {
+                pagamentoToolStripMenuItem.Enabled = true;
+                comprovantesToolStripMenuItem.Enabled = true;
+                movimentaçõesToolStripMenuItem.Enabled = true;
+                pagamentoToolStripMenuItem.Visible = true;
+                comprovantesToolStripMenuItem.Visible = true;
+                movimentaçõesToolStripMenuItem.Visible = true;
             }
-
-            pagamentoToolStripMenuItem.Enabled = true;
-            comprovantesToolStripMenuItem.Enabled = true;
-            movimentaçõesToolStripMenuItem.Enabled = true;
-            pagamentoToolStripMenuItem.Visible = true;
-            comprovantesToolStripMenuItem.Visible = true;
-            movimentaçõesToolStripMenuItem.Visible = true;
         }
 
         private void Index_Load(object sender, EventArgs e)
