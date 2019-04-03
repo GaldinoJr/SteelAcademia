@@ -40,6 +40,7 @@
             this.btnSalvar = new System.Windows.Forms.Button();
             this.rbNaoPago = new System.Windows.Forms.RadioButton();
             this.rbPago = new System.Windows.Forms.RadioButton();
+            this.PaymentId = new System.Windows.Forms.MaskedTextBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -170,12 +171,22 @@
             this.rbPago.Text = "Pago";
             this.rbPago.UseVisualStyleBackColor = true;
             // 
+            // PaymentId
+            // 
+            this.PaymentId.Location = new System.Drawing.Point(70, 297);
+            this.PaymentId.Name = "PaymentId";
+            this.PaymentId.ReadOnly = true;
+            this.PaymentId.Size = new System.Drawing.Size(98, 20);
+            this.PaymentId.TabIndex = 20;
+            this.PaymentId.Visible = false;
+            // 
             // CadastroPagamento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(37)))), ((int)(((byte)(72)))));
             this.ClientSize = new System.Drawing.Size(899, 651);
+            this.Controls.Add(this.PaymentId);
             this.Controls.Add(this.panel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "CadastroPagamento";
@@ -184,6 +195,7 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -199,5 +211,6 @@
         private System.Windows.Forms.RadioButton rbNaoPago;
         private System.Windows.Forms.RadioButton rbPago;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.MaskedTextBox PaymentId;
     }
 }

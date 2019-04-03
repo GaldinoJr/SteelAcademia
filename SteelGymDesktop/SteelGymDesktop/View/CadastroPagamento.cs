@@ -30,7 +30,7 @@ namespace SteelGymDesktop.View
             this._isCreate = isCreate;
             this._pagamentoId = pagamentoId;
             InitializeComponent();
-
+            
             var students = _studentApp.GetAllActive();
             cboAlunos.Items.Clear();
             if (students != null)
@@ -54,9 +54,10 @@ namespace SteelGymDesktop.View
         {
             try
             {
+
+                PaymentId.Text = pagamentoId.ToString();
                 _payment = _paymentApp.GetById(pagamentoId);
                 txtValor.Text = _payment.Value.ToString();
-
                 var students = _studentApp.GetAllActive();
                 cboAlunos.Items.Clear();
                 if (students != null)
@@ -86,7 +87,6 @@ namespace SteelGymDesktop.View
                     rbNaoPago.Checked = true;
                     rbPago.Checked = false;
                 }
-                DisableScreen();
             }
             catch (Exception ex)
             {
@@ -139,6 +139,18 @@ namespace SteelGymDesktop.View
                     Limpar();
 
                     Util.EnabledCursor();
+                }
+                else
+                {
+                    Util.DisabledCursor();
+
+                    _payment.PaymentId = Convert.ToInt32(PaymentId.Text);
+                    _paymentApp.Update(_payment);
+                    Util.ShowMessageWarning("Pagamento alterado com sucesso.");
+
+                    Util.EnabledCursor();
+
+                    this.Close();
                 }
             }
             catch (Exception ex)
