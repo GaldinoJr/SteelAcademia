@@ -13,7 +13,7 @@ namespace SteelGymDesktop.Domain.Services
             _repository = repository;
         }
 
-        public IEnumerable<Payment> GetByFilter(
+        public IEnumerable<Tuple<Payment, Student>> GetByFilter(
             DateTime? DataPagamento,
             DateTime? DataAtePagamento,
             int? studentId,

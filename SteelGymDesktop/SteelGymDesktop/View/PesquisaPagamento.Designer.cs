@@ -28,11 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dtpDe = new System.Windows.Forms.DateTimePicker();
-            this.label5 = new System.Windows.Forms.Label();
-            this.dtpAte = new System.Windows.Forms.DateTimePicker();
-            this.label1 = new System.Windows.Forms.Label();
             this.dtgPagamentos = new System.Windows.Forms.DataGridView();
+            this.IDMovimentation = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Rg = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TipoPagamento = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Ativo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnLimpar = new System.Windows.Forms.Button();
             this.btnPesquisar = new System.Windows.Forms.Button();
             this.rbNaoPago = new System.Windows.Forms.RadioButton();
@@ -40,53 +41,14 @@
             this.lblTotalEntrada = new System.Windows.Forms.Label();
             this.lblTotalSaida = new System.Windows.Forms.Label();
             this.lblResultado = new System.Windows.Forms.Label();
-            this.IDMovimentation = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Rg = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TipoPagamento = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Ativo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cboAlunos = new System.Windows.Forms.ComboBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.dtpDe = new System.Windows.Forms.DateTimePicker();
+            this.label1 = new System.Windows.Forms.Label();
+            this.dtpAte = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.dtgPagamentos)).BeginInit();
             this.SuspendLayout();
-            // 
-            // dtpDe
-            // 
-            this.dtpDe.CustomFormat = "dd/MM/YYYY";
-            this.dtpDe.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpDe.Location = new System.Drawing.Point(126, 121);
-            this.dtpDe.Name = "dtpDe";
-            this.dtpDe.Size = new System.Drawing.Size(103, 20);
-            this.dtpDe.TabIndex = 16;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(87, 121);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(33, 17);
-            this.label5.TabIndex = 17;
-            this.label5.Text = "De:";
-            // 
-            // dtpAte
-            // 
-            this.dtpAte.CustomFormat = "dd/MM/YYYY";
-            this.dtpAte.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpAte.Location = new System.Drawing.Point(287, 121);
-            this.dtpAte.Name = "dtpAte";
-            this.dtpAte.Size = new System.Drawing.Size(103, 20);
-            this.dtpAte.TabIndex = 18;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(244, 120);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(37, 17);
-            this.label1.TabIndex = 19;
-            this.label1.Text = "Até:";
             // 
             // dtgPagamentos
             // 
@@ -108,6 +70,38 @@
             this.dtgPagamentos.TabIndex = 22;
             this.dtgPagamentos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgPagamentos_CellContentClick);
             this.dtgPagamentos.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DtgPagamentos_CellDoubleClick);
+            // 
+            // IDMovimentation
+            // 
+            this.IDMovimentation.HeaderText = "ID";
+            this.IDMovimentation.Name = "IDMovimentation";
+            this.IDMovimentation.ReadOnly = true;
+            this.IDMovimentation.Width = 40;
+            // 
+            // Nome
+            // 
+            this.Nome.HeaderText = "Aluno";
+            this.Nome.Name = "Nome";
+            this.Nome.ReadOnly = true;
+            this.Nome.Width = 315;
+            // 
+            // Rg
+            // 
+            this.Rg.HeaderText = "Valor";
+            this.Rg.Name = "Rg";
+            this.Rg.ReadOnly = true;
+            // 
+            // TipoPagamento
+            // 
+            this.TipoPagamento.HeaderText = "Pago?";
+            this.TipoPagamento.Name = "TipoPagamento";
+            this.TipoPagamento.ReadOnly = true;
+            // 
+            // Ativo
+            // 
+            this.Ativo.HeaderText = "Data";
+            this.Ativo.Name = "Ativo";
+            this.Ativo.ReadOnly = true;
             // 
             // btnLimpar
             // 
@@ -191,37 +185,67 @@
             this.lblResultado.Size = new System.Drawing.Size(0, 17);
             this.lblResultado.TabIndex = 29;
             // 
-            // IDMovimentation
+            // cboAlunos
             // 
-            this.IDMovimentation.HeaderText = "ID";
-            this.IDMovimentation.Name = "IDMovimentation";
-            this.IDMovimentation.ReadOnly = true;
-            this.IDMovimentation.Width = 40;
+            this.cboAlunos.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.cboAlunos.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cboAlunos.FormattingEnabled = true;
+            this.cboAlunos.Location = new System.Drawing.Point(150, 86);
+            this.cboAlunos.Name = "cboAlunos";
+            this.cboAlunos.Size = new System.Drawing.Size(264, 21);
+            this.cboAlunos.Sorted = true;
+            this.cboAlunos.TabIndex = 30;
             // 
-            // Nome
+            // label4
             // 
-            this.Nome.HeaderText = "Aluno";
-            this.Nome.Name = "Nome";
-            this.Nome.ReadOnly = true;
-            this.Nome.Width = 315;
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(86, 86);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(54, 17);
+            this.label4.TabIndex = 31;
+            this.label4.Text = "Aluno:";
             // 
-            // Rg
+            // label5
             // 
-            this.Rg.HeaderText = "Valor";
-            this.Rg.Name = "Rg";
-            this.Rg.ReadOnly = true;
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.Location = new System.Drawing.Point(83, 122);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(33, 17);
+            this.label5.TabIndex = 17;
+            this.label5.Text = "De:";
             // 
-            // TipoPagamento
+            // dtpDe
             // 
-            this.TipoPagamento.HeaderText = "Pago?";
-            this.TipoPagamento.Name = "TipoPagamento";
-            this.TipoPagamento.ReadOnly = true;
+            this.dtpDe.CustomFormat = "dd/MM/YYYY";
+            this.dtpDe.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpDe.Location = new System.Drawing.Point(150, 122);
+            this.dtpDe.Name = "dtpDe";
+            this.dtpDe.Size = new System.Drawing.Size(103, 20);
+            this.dtpDe.TabIndex = 16;
             // 
-            // Ativo
+            // label1
             // 
-            this.Ativo.HeaderText = "Data";
-            this.Ativo.Name = "Ativo";
-            this.Ativo.ReadOnly = true;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(268, 121);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(37, 17);
+            this.label1.TabIndex = 19;
+            this.label1.Text = "Até:";
+            // 
+            // dtpAte
+            // 
+            this.dtpAte.CustomFormat = "dd/MM/YYYY";
+            this.dtpAte.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpAte.Location = new System.Drawing.Point(311, 122);
+            this.dtpAte.Name = "dtpAte";
+            this.dtpAte.Size = new System.Drawing.Size(103, 20);
+            this.dtpAte.TabIndex = 18;
             // 
             // PesquisaPagamento
             // 
@@ -229,6 +253,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(37)))), ((int)(((byte)(72)))));
             this.ClientSize = new System.Drawing.Size(899, 651);
+            this.Controls.Add(this.cboAlunos);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.lblResultado);
             this.Controls.Add(this.lblTotalSaida);
             this.Controls.Add(this.lblTotalEntrada);
@@ -250,11 +276,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.DateTimePicker dtpDe;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.DateTimePicker dtpAte;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dtgPagamentos;
         private System.Windows.Forms.Button btnLimpar;
         private System.Windows.Forms.Button btnPesquisar;
@@ -268,5 +289,11 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Rg;
         private System.Windows.Forms.DataGridViewTextBoxColumn TipoPagamento;
         private System.Windows.Forms.DataGridViewTextBoxColumn Ativo;
+        private System.Windows.Forms.ComboBox cboAlunos;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.DateTimePicker dtpDe;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DateTimePicker dtpAte;
     }
 }

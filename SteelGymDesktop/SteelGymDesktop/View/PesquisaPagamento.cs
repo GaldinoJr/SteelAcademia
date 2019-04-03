@@ -3,88 +3,93 @@ using System.Collections.Generic;
 using System.Windows.Forms;
 using SteelGymDesktop.Applications.Interfaces;
 using SteelGymDesktop.Domain.Entities;
+using SteelGymDesktop.Models;
 
 namespace SteelGymDesktop.View
 {
     public partial class PesquisaPagamento : Form
     {
-        private IPaymentAppService _PaymentApp;
+        private readonly IStudentAppService _studentApp;
+        private readonly IPaymentAppService _PaymentApp;
+        public IEnumerable<Student> students;
 
-        public PesquisaPagamento(IPaymentAppService paymentApp)
+        public PesquisaPagamento(IPaymentAppService paymentApp, IStudentAppService studentApp)
         {
             _PaymentApp = paymentApp;
+            _studentApp = studentApp;
+
             InitializeComponent();
+
+            var students = _studentApp.GetAllActive();
+            cboAlunos.Items.Clear();
+            if (students != null)
+            {
+                foreach (var student in students)
+                {
+                    cboAlunos.Items.Add(new ComboItem(student.Name, student.StudentId));
+                }
+            }
         }
 
         private void BtnPesquisar_Click(object sender, EventArgs e)
         {
-            //Util.DisabledCursor();
+            Util.DisabledCursor();
 
-            //try
-            //{
-            //    dtgPagamentos.Rows.Clear();
-            //    bool fgTodos = false;
-            //    bool fgEntrada = false;
+            try
+            {
+                dtgPagamentos.Rows.Clear();
+                bool fgTodos = false;
+                bool fgPago = false;
 
-            //    if (rbPago.Checked == false && rbNaoPago.Checked == false)
-            //    {
-            //        fgTodos = true;
-            //    }
-            //    else
-            //    {
-            //        if (rbPago.Checked)
-            //            fgEntrada = true;
-            //    }
+                if (rbPago.Checked == false && rbNaoPago.Checked == false)
+                {
+                    fgTodos = true;
+                }
+                else
+                {
+                    if (rbPago.Checked)
+                    {
+                        fgPago = true;
+                    }
+                }
 
-            //    var movimentations = _MovimentacaoApp.GetByFilter(dtpDe.Value.Date, dtpAte.Value.Date, fgEntrada, fgTodos);
-            //    Filter(movimentations);
-            //}
-            //catch (Exception ex)
-            //{
-            //    Util.ShowMessageWarning(ex.Message);
-            //}
+                int? StudentId = null;
+                if (cboAlunos.SelectedItem != null)
+                {
+                    StudentId = (int)((ComboItem)cboAlunos.SelectedItem).Value;
+                }
 
-            //Util.EnabledCursor();
+                var payments = _PaymentApp.GetByFilter(dtpDe.Value.Date, dtpAte.Value.Date, StudentId, fgPago, fgTodos);
+
+                Filter(payments);
+            }
+            catch (Exception ex)
+            {
+                Util.ShowMessageWarning(ex.Message);
+            }
+
+            Util.EnabledCursor();
         }
 
-        private void Filter(IEnumerable<Movimentation> movimentations)
+        private void Filter(IEnumerable<Tuple<Payment, Student>> payments)
         {
-            //if (movimentations != null)
-            //{
-            //    decimal totalValueEnter = 0;
-            //    decimal totalValueExit = 0;
-            //    decimal result = 0;
-
-            //    foreach (var m in movimentations)
-            //    {
-            //        dtgPagamentos.Rows.Add(
-            //            m.MovimentationId,
-            //            m.Origin,
-            //            m.Value,
-            //            m.tipoPagamento,
-            //            (Convert.ToBoolean(m.FgEntrada) ? "Entrada" : "Saída"),
-            //            m.DataMovimentacao
-            //        );
-
-            //        if (Convert.ToBoolean(m.FgEntrada))
-            //        {
-            //            totalValueEnter += m.Value;
-            //        }
-            //        else
-            //        {
-            //            totalValueExit += m.Value;
-            //        }
-            //    }
-
-            //    result = totalValueEnter - totalValueExit;
-            //    lblTotalEntrada.Text = totalValueEnter.ToString();
-            //    lblTotalSaida.Text = totalValueExit.ToString();
-            //    lblResultado.Text = result.ToString();
-            //}
-            //else
-            //{
-            //    Util.ShowMessageWarning("Não foram encontradas movimentações com esses parametros.");
-            //}
+            if (payments != null)
+            {
+                foreach (var m in payments)
+                {
+                    dtgPagamentos.Rows.Add(
+                        m.Item1.PaymentId,
+                        m.Item2.Name,
+                        m.Item1.Value,
+                        (Convert.ToBoolean(m.Item1.FgPago) ? "Pago" : "Não Pago"),
+                        m.Item1.DataPagamento
+                    );
+                }
+            }
+            else
+            {
+                Util.ShowMessageWarning("Não foram encontrados pagamentos com esses parametros.");
+            }
         }
 
         private void btnLimpar_Click(object sender, EventArgs e)
@@ -102,7 +107,7 @@ namespace SteelGymDesktop.View
                 var index = e.RowIndex;
                 var row = dtgPagamentos.Rows[index];
 
-                showMovimentation(Convert.ToInt32(row.Cells[0].Value));
+                showPagamento(Convert.ToInt32(row.Cells[0].Value));
             }
             catch (Exception ex)
             {
@@ -110,15 +115,14 @@ namespace SteelGymDesktop.View
             }
         }
 
-        private void showMovimentation(int idMovimentation)
+        private void showPagamento(int idMovimentation)
         {
-            //    CadastroMovimentacao p = new CadastroMovimentacao(_MovimentacaoApp, false, idMovimentation);
-            //    p.ShowDialog();
-
-            //    BtnPesquisar_Click(null, null);
+            CadastroPagamento p = new CadastroPagamento(_PaymentApp, _studentApp, false, idMovimentation);
+            p.ShowDialog();
+            BtnPesquisar_Click(null, null);
         }
 
-    private void dtgPagamentos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void dtgPagamentos_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }

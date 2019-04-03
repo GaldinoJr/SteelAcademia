@@ -6,7 +6,7 @@ namespace SteelGymDesktop.Domain.Interfaces
 {
     public interface IPaymentService : IServiceBase<Payment>
     {
-        IEnumerable<Payment> GetByFilter(
+        IEnumerable<Tuple<Payment, Student>> GetByFilter(
             DateTime? DataPagamento, 
             DateTime? DataAtePagamento,
             int? studentId,

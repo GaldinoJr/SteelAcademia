@@ -5,7 +5,7 @@ namespace SteelGymDesktop.Applications.Interfaces
 {
     public interface IPaymentAppService : IAppServiceBase<Payment>
     {
-        IEnumerable<Payment> GetByFilter(
+        IEnumerable<Tuple<Payment, Student>> GetByFilter(
             DateTime? DataPagamento,
             DateTime? DataAtePagamento,
             int? studentId,

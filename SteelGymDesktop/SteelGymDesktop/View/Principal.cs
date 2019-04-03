@@ -209,7 +209,7 @@ namespace SteelGymDesktop.View
 
         private void pesquisarToolStripMenuItem2_Click(object sender, EventArgs e)
         {
-            PesquisaPagamento pay = new PesquisaPagamento(_PaymentApp);
+            PesquisaPagamento pay = new PesquisaPagamento(_PaymentApp, _studentApp);
             AbrirModulo(pay, Models.Modulos.DF_NOME_MODULO_PAGAMENTO);
         }
 

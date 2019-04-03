@@ -5,7 +5,7 @@ namespace SteelGymDesktop.Domain.Interfaces
 {
     public interface IPaymentRepository : IRepositoryBase<Payment>
     {
-        IEnumerable<Payment> GetByFilter(
+        IEnumerable<Tuple<Payment, Student>> GetByFilter(
             DateTime? DataPagamento,
             DateTime? DataAtePagamento,
             int? studentId,

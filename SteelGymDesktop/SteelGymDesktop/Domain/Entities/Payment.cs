@@ -22,6 +22,9 @@ namespace SteelGymDesktop.Domain.Entities
         [Column(Name = "StudentId", DbType = "VARCHAR")]
         public int StudentId { get; set; }
 
+        //[Column(Name = "Student", DbType = "VARCHAR")]
+        //public int Student { get; set; }
+
         [Column(Name = "Value", DbType = "VARCHAR")]
         public decimal Value { get; set; }
     }

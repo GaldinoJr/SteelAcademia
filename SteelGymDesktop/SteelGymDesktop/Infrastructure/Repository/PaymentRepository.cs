@@ -8,7 +8,7 @@ namespace SteelGymDesktop.Infrastructure.Repository
 {
     public class PaymentRepository : RepositoryBase<Payment>, IPaymentRepository
     {
-        public IEnumerable<Payment> GetByFilter(
+        public IEnumerable<Tuple<Payment, Student>> GetByFilter(
             DateTime? DataPagamento,
             DateTime? DataAtePagamento,
             int? studentId,
@@ -16,21 +16,24 @@ namespace SteelGymDesktop.Infrastructure.Repository
             bool fgTodosStatus
         )
         {
-            if (fgTodosStatus)
-            {
-                return Db.Payments.ToList().Where(x =>
-                    Convert.ToDateTime(x.DataPagamento) >= DataPagamento &&
-                    Convert.ToDateTime(x.DataPagamento) <= DataAtePagamento
+
+            var query = Db.Payments
+                .AsEnumerable()
+                .Join(
+                    Db.Students, 
+                    payment => payment.StudentId, 
+                    student => student.StudentId,
+                    (payment, student) => Tuple.Create<Payment, Student>(payment, student)
+                )
+                .ToList().Where(x =>
+                    Convert.ToDateTime(x.Item1.DataPagamento) >= DataPagamento &&
+                    Convert.ToDateTime(x.Item1.DataPagamento) <= DataAtePagamento
                 );
+            if (!fgTodosStatus) {
+                query = query.Where(x => Convert.ToBoolean(x.Item1.FgPago) == fgPago );
             }
-            else
-            {
-                return Db.Payments.ToList().Where(x =>
-                    Convert.ToDateTime(x.DataPagamento) >= DataPagamento &&
-                    Convert.ToDateTime(x.DataPagamento) <= DataAtePagamento &&
-                    Convert.ToBoolean(x.FgPago) == fgPago
-                );
-            }
+
+            return query;
         }
     }
 }

@@ -15,7 +15,7 @@ namespace SteelGymDesktop.Applications
             _service = servicebase;
         }
 
-        public IEnumerable<Payment> GetByFilter(
+        public IEnumerable<Tuple<Payment, Student>> GetByFilter(
             DateTime? DataPagamento,
             DateTime? DataAtePagamento,
             int? studentId,

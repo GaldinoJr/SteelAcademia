@@ -57,8 +57,24 @@ namespace SteelGymDesktop.View
                 _payment = _paymentApp.GetById(pagamentoId);
                 txtValor.Text = _payment.Value.ToString();
 
-                //cboUsuarios.Text = _payment.tipo;
+                var students = _studentApp.GetAllActive();
+                cboAlunos.Items.Clear();
+                if (students != null)
+                {
+                    int index = 0;
+                    foreach (var student in students)
+                    {
+                        cboAlunos.Items.Add(new ComboItem(student.Name, student.StudentId));
 
+                        if (_payment.StudentId.ToString() == student.StudentId.ToString())
+                        {
+                            cboAlunos.SelectedIndex = index;
+                        }
+
+                        index++;
+                    }
+                }
+                
                 dtpDataPagamento.Value = Convert.ToDateTime(_payment.DataPagamento);
                 if(Convert.ToBoolean(_payment.FgPago))
                 {
@@ -106,7 +122,7 @@ namespace SteelGymDesktop.View
                 }
 
                 _payment.Value = Convert.ToDecimal(txtValor.Text.ToString().Replace(",", ".").Replace(" ",""));
-                _payment.StudentId = Int32.Parse(cboAlunos.ValueMember);
+                _payment.StudentId = (int) ((ComboItem)cboAlunos.SelectedItem).Value;
                 _payment.DataPagamento = dtpDataPagamento.Text;
 
                 if (rbPago.Checked)
@@ -119,7 +135,7 @@ namespace SteelGymDesktop.View
                     Util.DisabledCursor();
 
                     _paymentApp.Add(_payment);
-                    Util.ShowMessageWarning("Movimentação inserida com sucesso.");
+                    Util.ShowMessageWarning("Pagamento inserido com sucesso.");
                     Limpar();
 
                     Util.EnabledCursor();
