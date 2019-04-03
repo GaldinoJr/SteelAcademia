@@ -1,12 +1,13 @@
 ﻿using SteelGymDesktop.Domain.Entities;
 using System;
 using System.Collections.Generic;
-namespace SteelGymDesktop.Applications.Interfaces
+
+namespace SteelGymDesktop.Domain.Interfaces
 {
-    public interface IPaymentAppService : IAppServiceBase<Payment>
+    public interface IPaymentService : IServiceBase<Payment>
     {
         IEnumerable<Payment> GetByFilter(
-            DateTime? DataPagamento,
+            DateTime? DataPagamento, 
             DateTime? DataAtePagamento,
             int? studentId,
             bool fgPago,

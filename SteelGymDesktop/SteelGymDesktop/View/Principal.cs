@@ -1,12 +1,6 @@
 ﻿using SteelGymDesktop.Applications.Interfaces;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace SteelGymDesktop.View
@@ -16,13 +10,18 @@ namespace SteelGymDesktop.View
         private readonly IUserAppService _userApp;
         private readonly IStudentAppService _studentApp;
         private readonly IMovimentationAppService _MovimentacaoApp;
-        private readonly IPaymentAppService _PagamentoApp;
+        private readonly IPaymentAppService _PaymentApp;
 
-        public Principal(IUserAppService userApp, IStudentAppService studentApp, IMovimentationAppService movimentacaoApp)
+        public Principal(
+            IUserAppService userApp, 
+            IStudentAppService studentApp, 
+            IMovimentationAppService movimentacaoApp,
+            IPaymentAppService paymentApp)
         {
             _userApp = userApp;
             _studentApp = studentApp;
             _MovimentacaoApp = movimentacaoApp;
+            _PaymentApp = paymentApp;
 
             InitializeComponent();
 
@@ -80,7 +79,7 @@ namespace SteelGymDesktop.View
 
         private void PagamentoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            
         }
 
         private void ComprovantesToolStripMenuItem_Click(object sender, EventArgs e)
@@ -210,8 +209,8 @@ namespace SteelGymDesktop.View
 
         private void pesquisarToolStripMenuItem2_Click(object sender, EventArgs e)
         {
-            //PesquisarPagamento p = new PesquisarPagamento(_PagamentoApp);
-            //AbrirModulo(p, Models.Modulos.DF_NOME_MODULO_PAGAMENTO);
+            PesquisaPagamento pay = new PesquisaPagamento(_PaymentApp);
+            AbrirModulo(pay, Models.Modulos.DF_NOME_MODULO_PAGAMENTO);
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)

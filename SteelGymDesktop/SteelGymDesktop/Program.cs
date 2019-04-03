@@ -5,10 +5,6 @@ using SteelGymDesktop.Domain.Services;
 using SteelGymDesktop.Infrastructure.DataAccess;
 using SteelGymDesktop.Infrastructure.Repository;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using System.Web.Mvc;
 using System.Windows.Forms;
 
 namespace SteelGymDesktop
@@ -30,6 +26,11 @@ namespace SteelGymDesktop
         private static IMovimentationService _movimentationService;
         private static IMovimentationRepository _movimentationRepository;
 
+
+        private static IPaymentAppService _paymentAppService;
+        private static IPaymentService _paymentService;
+        private static IPaymentRepository _paymentRepository;
+
         [STAThread]
         static void Main()
         {
@@ -46,6 +47,11 @@ namespace SteelGymDesktop
             _movimentationRepository = new MovimentationRepository();
             _movimentationService = new MovimentationService(_movimentationRepository);
             _movimentationAppService = new MovimentationAppService(_movimentationService);
+            // 4 - payment
+            _paymentRepository = new PaymentRepository();
+            _paymentService = new PaymentService(_paymentRepository);
+            _paymentAppService = new PaymentAppService(_paymentService);
+
             //
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
@@ -55,7 +61,7 @@ namespace SteelGymDesktop
 
             View.Login l = new View.Login(_userAppService);
             if (l.ShowDialog() == DialogResult.OK)
-                Application.Run(new View.Principal(_userAppService, _studentAppService, _movimentationAppService));
+                Application.Run(new View.Principal(_userAppService, _studentAppService, _movimentationAppService, _paymentAppService));
         }
     }
 }

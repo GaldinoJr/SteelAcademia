@@ -129,6 +129,7 @@
     <Compile Include="Applications\Interfaces\IMovimentationAppService.cs" />
     <Compile Include="Applications\Interfaces\IStudentAppService.cs" />
     <Compile Include="Applications\Interfaces\IUserAppService.cs" />
+    <Compile Include="Applications\PaymentAppService.cs" />
     <Compile Include="Applications\MovimentationAppService.cs" />
     <Compile Include="Applications\StudentAppService.cs" />
     <Compile Include="Applications\UserAppService.cs" />
@@ -136,7 +137,9 @@
     <Compile Include="Domain\Entities\Movimentation.cs" />
     <Compile Include="Domain\Entities\Student.cs" />
     <Compile Include="Domain\Entities\User.cs" />
+    <Compile Include="Domain\Interfaces\IPaymentRepository.cs" />
     <Compile Include="Domain\Interfaces\IMovimentationRepository.cs" />
+    <Compile Include="Domain\Interfaces\IPaymentService.cs" />
     <Compile Include="Domain\Interfaces\IMovimentationService.cs" />
     <Compile Include="Domain\Interfaces\IRepositoryBase.cs" />
     <Compile Include="Domain\Interfaces\IServiceBase.cs" />
@@ -144,6 +147,7 @@
     <Compile Include="Domain\Interfaces\IStudentService.cs" />
     <Compile Include="Domain\Interfaces\IUserRepository.cs" />
     <Compile Include="Domain\Interfaces\IUserService.cs" />
+    <Compile Include="Domain\Services\PaymentService.cs" />
     <Compile Include="Domain\Services\MovimentationService.cs" />
     <Compile Include="Domain\Services\ServiceBase.cs" />
     <Compile Include="Domain\Services\StudentService.cs" />
@@ -151,6 +155,7 @@
     <Compile Include="Infrastructure\Config\StudentConfiguration.cs" />
     <Compile Include="Infrastructure\Config\UserConfiguration.cs" />
     <Compile Include="Infrastructure\DataAccess\DbConnection.cs" />
+    <Compile Include="Infrastructure\Repository\PaymentRepository.cs" />
     <Compile Include="Infrastructure\Repository\MovimentationRepository.cs" />
     <Compile Include="Infrastructure\Repository\RepositoryBase.cs" />
     <Compile Include="Infrastructure\Repository\StudentRepository.cs" />
@@ -188,6 +193,12 @@
     </Compile>
     <Compile Include="View\DialogForm.Designer.cs">
       <DependentUpon>DialogForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\PesquisaPagamento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\PesquisaPagamento.Designer.cs">
+      <DependentUpon>PesquisaPagamento.cs</DependentUpon>
     </Compile>
     <Compile Include="View\Home.cs">
       <SubType>Form</SubType>
@@ -247,6 +258,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\Home.resx">
       <DependentUpon>Home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\PesquisaPagamento.resx">
+      <DependentUpon>PesquisaPagamento.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\TrocarSenha.resx">
       <DependentUpon>TrocarSenha.cs</DependentUpon>
