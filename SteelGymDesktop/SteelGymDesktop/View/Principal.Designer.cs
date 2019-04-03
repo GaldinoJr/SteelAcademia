@@ -35,7 +35,10 @@
             this.cadastroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pesquisarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pagamentoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.incluirToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.pesquisarToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.comprovantesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.imprimirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cadastroDeUsuarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.incluirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pesquisarToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
@@ -60,9 +63,6 @@
             this.panel19 = new System.Windows.Forms.Panel();
             this.panelSelectedMovimentation = new System.Windows.Forms.Panel();
             this.panel21 = new System.Windows.Forms.Panel();
-            this.incluirToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.pesquisarToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
-            this.imprimirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             Menu = new System.Windows.Forms.MenuStrip();
             Menu.SuspendLayout();
             this.toolbar.SuspendLayout();
@@ -127,14 +127,14 @@
             // cadastroToolStripMenuItem
             // 
             this.cadastroToolStripMenuItem.Name = "cadastroToolStripMenuItem";
-            this.cadastroToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
+            this.cadastroToolStripMenuItem.Size = new System.Drawing.Size(142, 24);
             this.cadastroToolStripMenuItem.Text = "Incluir";
             this.cadastroToolStripMenuItem.Click += new System.EventHandler(this.CadastroToolStripMenuItem_Click);
             // 
             // pesquisarToolStripMenuItem
             // 
             this.pesquisarToolStripMenuItem.Name = "pesquisarToolStripMenuItem";
-            this.pesquisarToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
+            this.pesquisarToolStripMenuItem.Size = new System.Drawing.Size(142, 24);
             this.pesquisarToolStripMenuItem.Text = "Pesquisar";
             this.pesquisarToolStripMenuItem.Click += new System.EventHandler(this.PesquisarToolStripMenuItem_Click);
             // 
@@ -154,6 +154,20 @@
             this.pagamentoToolStripMenuItem.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.pagamentoToolStripMenuItem.Click += new System.EventHandler(this.PagamentoToolStripMenuItem_Click);
             // 
+            // incluirToolStripMenuItem1
+            // 
+            this.incluirToolStripMenuItem1.Name = "incluirToolStripMenuItem1";
+            this.incluirToolStripMenuItem1.Size = new System.Drawing.Size(180, 24);
+            this.incluirToolStripMenuItem1.Text = "Incluir";
+            this.incluirToolStripMenuItem1.Click += new System.EventHandler(this.incluirToolStripMenuItem1_Click);
+            // 
+            // pesquisarToolStripMenuItem2
+            // 
+            this.pesquisarToolStripMenuItem2.Name = "pesquisarToolStripMenuItem2";
+            this.pesquisarToolStripMenuItem2.Size = new System.Drawing.Size(180, 24);
+            this.pesquisarToolStripMenuItem2.Text = "Pesquisar";
+            this.pesquisarToolStripMenuItem2.Click += new System.EventHandler(this.pesquisarToolStripMenuItem2_Click);
+            // 
             // comprovantesToolStripMenuItem
             // 
             this.comprovantesToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(43)))), ((int)(((byte)(80)))));
@@ -167,6 +181,12 @@
             this.comprovantesToolStripMenuItem.Text = "Comprovantes";
             this.comprovantesToolStripMenuItem.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.comprovantesToolStripMenuItem.Click += new System.EventHandler(this.ComprovantesToolStripMenuItem_Click);
+            // 
+            // imprimirToolStripMenuItem
+            // 
+            this.imprimirToolStripMenuItem.Name = "imprimirToolStripMenuItem";
+            this.imprimirToolStripMenuItem.Size = new System.Drawing.Size(137, 24);
+            this.imprimirToolStripMenuItem.Text = "Imprimir";
             // 
             // cadastroDeUsuarioToolStripMenuItem
             // 
@@ -395,25 +415,6 @@
             this.panel21.Name = "panel21";
             this.panel21.Size = new System.Drawing.Size(10, 83);
             this.panel21.TabIndex = 1;
-            // 
-            // incluirToolStripMenuItem1
-            // 
-            this.incluirToolStripMenuItem1.Name = "incluirToolStripMenuItem1";
-            this.incluirToolStripMenuItem1.Size = new System.Drawing.Size(180, 24);
-            this.incluirToolStripMenuItem1.Text = "Incluir";
-            // 
-            // pesquisarToolStripMenuItem2
-            // 
-            this.pesquisarToolStripMenuItem2.Name = "pesquisarToolStripMenuItem2";
-            this.pesquisarToolStripMenuItem2.Size = new System.Drawing.Size(180, 24);
-            this.pesquisarToolStripMenuItem2.Text = "Pesquisar";
-            this.pesquisarToolStripMenuItem2.Click += new System.EventHandler(this.pesquisarToolStripMenuItem2_Click);
-            // 
-            // imprimirToolStripMenuItem
-            // 
-            this.imprimirToolStripMenuItem.Name = "imprimirToolStripMenuItem";
-            this.imprimirToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
-            this.imprimirToolStripMenuItem.Text = "Imprimir";
             // 
             // Principal
             // 

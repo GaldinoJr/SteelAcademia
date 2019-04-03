@@ -15,6 +15,11 @@ namespace SteelGymDesktop.Infrastructure.Repository
             return Db.Students.Where(x => x.Active == active || x.Name == name || x.RG == rg || x.CPF == cpf);
         }
 
+        public IEnumerable<Student> GetAllActive()
+        {
+            return Db.Students.Where(x => x.Active == 1);
+        }
+
         public int GetCount(int active)
         {
             return Db.Students.Where(x => (x.Active == active)).Count();

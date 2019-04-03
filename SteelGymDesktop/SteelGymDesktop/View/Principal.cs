@@ -217,5 +217,11 @@ namespace SteelGymDesktop.View
         {
 
         }
+
+        private void incluirToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            CadastroPagamento pay = new CadastroPagamento(_PaymentApp, _studentApp, true, int.MinValue);
+            AbrirModulo(pay, Models.Modulos.DF_NOME_MODULO_PAGAMENTO);
+        }
     }
 }

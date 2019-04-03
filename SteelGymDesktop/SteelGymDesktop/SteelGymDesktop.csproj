@@ -161,6 +161,7 @@
     <Compile Include="Infrastructure\Repository\StudentRepository.cs" />
     <Compile Include="Infrastructure\Repository\UserRepository.cs" />
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\ComboItem.cs" />
     <Compile Include="Models\Modulos.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -175,6 +176,12 @@
     </Compile>
     <Compile Include="View\CadastroAluno.Designer.cs">
       <DependentUpon>CadastroAluno.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\CadastroPagamento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\CadastroPagamento.Designer.cs">
+      <DependentUpon>CadastroPagamento.cs</DependentUpon>
     </Compile>
     <Compile Include="View\CadastroMovimentacao.cs">
       <SubType>Form</SubType>
@@ -246,6 +253,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="View\CadastroAluno.resx">
       <DependentUpon>CadastroAluno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\CadastroPagamento.resx">
+      <DependentUpon>CadastroPagamento.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\CadastroMovimentacao.resx">
       <DependentUpon>CadastroMovimentacao.cs</DependentUpon>

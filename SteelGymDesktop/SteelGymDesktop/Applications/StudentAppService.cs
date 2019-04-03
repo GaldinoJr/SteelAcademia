@@ -23,6 +23,11 @@ namespace SteelGymDesktop.Applications
             return _service.GetByFilter(active, name, rg, cpf);
         }
 
+        public IEnumerable<Student> GetAllActive()
+        {
+            return _service.GetAllActive();
+        }
+
         public int GetCount(int active)
         {
             return _service.GetCount(active);

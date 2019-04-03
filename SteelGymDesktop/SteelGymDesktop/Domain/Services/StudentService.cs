@@ -19,6 +19,11 @@ namespace SteelGymDesktop.Domain.Services
             return _repository.GetByFilter(active, name, rg, cpf);
         }
 
+        public IEnumerable<Student> GetAllActive()
+        {
+            return _repository.GetAllActive();
+        }
+
         public int GetCount(int active)
         {
             return _repository.GetCount(active);
