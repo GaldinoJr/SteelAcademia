@@ -1,0 +1,9 @@
+CREATE TABLE `Payment` (
+    `PaymentId`   INTEGER PRIMARY KEY AUTOINCREMENT,
+    `UsuarioInclusaoId` INTEGER             NOT NULL,
+    `DataPagamento`  TEXT        NULL,
+    `FgPago`         INTEGER             NOT NULL,
+    `StudentId`            INTEGER   NOT NULL,
+    `Value`             NUMERIC NOT NULL,
+    FOREIGN KEY (StudentId) REFERENCES Student(StudentId)
+);
