@@ -33,11 +33,6 @@
             this.dtpAte = new System.Windows.Forms.DateTimePicker();
             this.label1 = new System.Windows.Forms.Label();
             this.dtgMovimentacoes = new System.Windows.Forms.DataGridView();
-            this.IDMovimentation = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Rg = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CPF = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Ativo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnLimpar = new System.Windows.Forms.Button();
             this.btnPesquisar = new System.Windows.Forms.Button();
             this.rbSaida = new System.Windows.Forms.RadioButton();
@@ -48,6 +43,12 @@
             this.lblTotalSaida = new System.Windows.Forms.Label();
             this.lblResultado = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
+            this.IDMovimentation = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Rg = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TipoPagamento = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CPF = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Ativo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dtgMovimentacoes)).BeginInit();
             this.SuspendLayout();
             // 
@@ -101,47 +102,17 @@
             this.IDMovimentation,
             this.Nome,
             this.Rg,
+            this.TipoPagamento,
             this.CPF,
             this.Ativo});
             this.dtgMovimentacoes.Location = new System.Drawing.Point(86, 243);
             this.dtgMovimentacoes.Name = "dtgMovimentacoes";
             this.dtgMovimentacoes.ReadOnly = true;
             this.dtgMovimentacoes.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.dtgMovimentacoes.Size = new System.Drawing.Size(662, 330);
+            this.dtgMovimentacoes.Size = new System.Drawing.Size(761, 330);
             this.dtgMovimentacoes.TabIndex = 22;
+            this.dtgMovimentacoes.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgMovimentacoes_CellContentClick);
             this.dtgMovimentacoes.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DtgMovimentacoes_CellDoubleClick);
-            // 
-            // IDMovimentation
-            // 
-            this.IDMovimentation.HeaderText = "ID";
-            this.IDMovimentation.Name = "IDMovimentation";
-            this.IDMovimentation.ReadOnly = true;
-            this.IDMovimentation.Width = 40;
-            // 
-            // Nome
-            // 
-            this.Nome.HeaderText = "Origem";
-            this.Nome.Name = "Nome";
-            this.Nome.ReadOnly = true;
-            this.Nome.Width = 315;
-            // 
-            // Rg
-            // 
-            this.Rg.HeaderText = "Valor";
-            this.Rg.Name = "Rg";
-            this.Rg.ReadOnly = true;
-            // 
-            // CPF
-            // 
-            this.CPF.HeaderText = "Entrada/Saida";
-            this.CPF.Name = "CPF";
-            this.CPF.ReadOnly = true;
-            // 
-            // Ativo
-            // 
-            this.Ativo.HeaderText = "Data";
-            this.Ativo.Name = "Ativo";
-            this.Ativo.ReadOnly = true;
             // 
             // btnLimpar
             // 
@@ -258,6 +229,44 @@
             this.label8.TabIndex = 30;
             this.label8.Text = "Resultado:";
             // 
+            // IDMovimentation
+            // 
+            this.IDMovimentation.HeaderText = "ID";
+            this.IDMovimentation.Name = "IDMovimentation";
+            this.IDMovimentation.ReadOnly = true;
+            this.IDMovimentation.Width = 40;
+            // 
+            // Nome
+            // 
+            this.Nome.HeaderText = "Origem";
+            this.Nome.Name = "Nome";
+            this.Nome.ReadOnly = true;
+            this.Nome.Width = 315;
+            // 
+            // Rg
+            // 
+            this.Rg.HeaderText = "Valor";
+            this.Rg.Name = "Rg";
+            this.Rg.ReadOnly = true;
+            // 
+            // TipoPagamento
+            // 
+            this.TipoPagamento.HeaderText = "Tipo";
+            this.TipoPagamento.Name = "TipoPagamento";
+            this.TipoPagamento.ReadOnly = true;
+            // 
+            // CPF
+            // 
+            this.CPF.HeaderText = "Entrada/Saida";
+            this.CPF.Name = "CPF";
+            this.CPF.ReadOnly = true;
+            // 
+            // Ativo
+            // 
+            this.Ativo.HeaderText = "Data";
+            this.Ativo.Name = "Ativo";
+            this.Ativo.ReadOnly = true;
+            // 
             // PesquisaMovimentacao
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -307,6 +316,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn IDMovimentation;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nome;
         private System.Windows.Forms.DataGridViewTextBoxColumn Rg;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TipoPagamento;
         private System.Windows.Forms.DataGridViewTextBoxColumn CPF;
         private System.Windows.Forms.DataGridViewTextBoxColumn Ativo;
     }

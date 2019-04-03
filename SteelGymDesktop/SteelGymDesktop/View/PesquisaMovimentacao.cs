@@ -57,12 +57,23 @@ namespace SteelGymDesktop.View
 
                 foreach (var m in movimentations)
                 {
-                    dtgMovimentacoes.Rows.Add(m.MovimentationId, m.Origin, m.Value, (Convert.ToBoolean(m.FgEntrada) ? "Entrada" : "Saída"), m.DataMovimentacao);
+                    dtgMovimentacoes.Rows.Add(
+                        m.MovimentationId,
+                        m.Origin,
+                        m.Value,
+                        m.tipoPagamento,
+                        (Convert.ToBoolean(m.FgEntrada) ? "Entrada" : "Saída"),
+                        m.DataMovimentacao
+                    );
 
                     if (Convert.ToBoolean(m.FgEntrada))
+                    {
                         totalValueEnter += m.Value;
+                    }
                     else
+                    {
                         totalValueExit += m.Value;
+                    }
                 }
 
                 result = totalValueEnter - totalValueExit;
@@ -71,7 +82,9 @@ namespace SteelGymDesktop.View
                 lblResultado.Text = result.ToString();
             }
             else
+            {
                 Util.ShowMessageWarning("Não foram encontradas movimentações com esses parametros.");
+            }
         }
 
         private void btnLimpar_Click(object sender, EventArgs e)
@@ -103,6 +116,11 @@ namespace SteelGymDesktop.View
             p.ShowDialog();
 
             BtnPesquisar_Click(null, null);
+        }
+
+        private void dtgMovimentacoes_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }
