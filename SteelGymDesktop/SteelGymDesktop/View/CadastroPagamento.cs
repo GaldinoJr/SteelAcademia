@@ -48,6 +48,24 @@ namespace SteelGymDesktop.View
             {
                 LoadPayment(_pagamentoId);
             }
+            if(this._isCreate)
+            {
+                btnSalvar.Visible = true;
+                btnSalvar.Enabled = true;
+                btnSalvar2.Visible = false;
+                btnSalvar2.Enabled = false;
+                btnCancel.Visible = false;
+                btnCancel.Enabled = false;
+            } else
+            {
+
+                btnSalvar.Visible = false;
+                btnSalvar.Enabled = false;
+                btnSalvar2.Visible = true;
+                btnSalvar2.Enabled = true;
+                btnCancel.Visible = true;
+                btnCancel.Enabled = true;
+            }
         }
 
         private void LoadPayment(int pagamentoId)
@@ -218,6 +236,17 @@ namespace SteelGymDesktop.View
 
             if ((e.KeyChar == ',') && (((MaskedTextBox)sender).Text.IndexOf(',') > -1))
                 e.Handled = true;
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+
+            this.Close();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            BtnSalvar_Click(sender, e);
         }
     }
 }
