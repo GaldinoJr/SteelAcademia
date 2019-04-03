@@ -48,7 +48,7 @@ namespace SteelGymDesktop.View
             {
                 LoadPayment(_pagamentoId);
             }
-            if(this._isCreate)
+            if(_isCreate)
             {
                 btnSalvar.Visible = true;
                 btnSalvar.Enabled = true;

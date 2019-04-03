@@ -19,6 +19,34 @@ namespace SteelGymDesktop.View
             _userId = userId;
 
             InitializeComponent();
+
+            if (_isCreate)
+            {
+                btnSalvar.Visible = true;
+                btnSalvar.Enabled = true;
+                btnLimpar.Visible = true;
+                btnLimpar.Enabled = true;
+                btnSalvar2.Visible = false;
+                btnSalvar2.Enabled = false;
+                btnCancel.Visible = false;
+                btnCancel.Enabled = false;
+                btnLimpar2.Visible = false;
+                btnLimpar2.Enabled = false;
+            }
+            else
+            {
+
+                btnSalvar.Visible = false;
+                btnSalvar.Enabled = false;
+                btnLimpar.Visible = false;
+                btnLimpar.Enabled = false;
+                btnSalvar2.Visible = true;
+                btnSalvar2.Enabled = true;
+                btnCancel.Visible = true;
+                btnCancel.Enabled = true;
+                btnLimpar2.Visible = true;
+                btnLimpar2.Enabled = true;
+            }
         }
 
         private void CadastroUsuario_Load(object sender, EventArgs e)
@@ -225,6 +253,21 @@ namespace SteelGymDesktop.View
         private void BtnLimpar_Click(object sender, EventArgs e)
         {
             Limpar();
+        }
+
+        private void btnSalvar2_Click(object sender, EventArgs e)
+        {
+            BtnSalvar_Click(sender, e);
+        }
+
+        private void btnLimpar2_Click(object sender, EventArgs e)
+        {
+            BtnLimpar_Click(sender, e);
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

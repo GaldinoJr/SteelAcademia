@@ -117,6 +117,8 @@
             this.txtNumeroResp = new System.Windows.Forms.MaskedTextBox();
             this.btnCancel = new System.Windows.Forms.Button();
             this.btnSalvar = new System.Windows.Forms.Button();
+            this.btnLimpar2 = new System.Windows.Forms.Button();
+            this.btnSalvar2 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -784,7 +786,7 @@
             this.btnLimpar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLimpar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLimpar.ForeColor = System.Drawing.Color.White;
-            this.btnLimpar.Location = new System.Drawing.Point(548, 609);
+            this.btnLimpar.Location = new System.Drawing.Point(546, 609);
             this.btnLimpar.Name = "btnLimpar";
             this.btnLimpar.Size = new System.Drawing.Size(155, 30);
             this.btnLimpar.TabIndex = 0;
@@ -1186,13 +1188,43 @@
             this.btnSalvar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSalvar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSalvar.ForeColor = System.Drawing.Color.White;
-            this.btnSalvar.Location = new System.Drawing.Point(386, 609);
+            this.btnSalvar.Location = new System.Drawing.Point(709, 609);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(155, 30);
             this.btnSalvar.TabIndex = 130;
             this.btnSalvar.Text = "Salvar";
             this.btnSalvar.UseVisualStyleBackColor = false;
             this.btnSalvar.Click += new System.EventHandler(this.BtnSalvar_Click);
+            // 
+            // btnLimpar2
+            // 
+            this.btnLimpar2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(21)))), ((int)(((byte)(86)))));
+            this.btnLimpar2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLimpar2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLimpar2.ForeColor = System.Drawing.Color.White;
+            this.btnLimpar2.Location = new System.Drawing.Point(383, 609);
+            this.btnLimpar2.Name = "btnLimpar2";
+            this.btnLimpar2.Size = new System.Drawing.Size(155, 30);
+            this.btnLimpar2.TabIndex = 131;
+            this.btnLimpar2.Text = "Limpar";
+            this.btnLimpar2.UseVisualStyleBackColor = false;
+            this.btnLimpar2.Visible = false;
+            this.btnLimpar2.Click += new System.EventHandler(this.btnLimpar2_Click);
+            // 
+            // btnSalvar2
+            // 
+            this.btnSalvar2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(21)))), ((int)(((byte)(86)))));
+            this.btnSalvar2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSalvar2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSalvar2.ForeColor = System.Drawing.Color.White;
+            this.btnSalvar2.Location = new System.Drawing.Point(546, 609);
+            this.btnSalvar2.Name = "btnSalvar2";
+            this.btnSalvar2.Size = new System.Drawing.Size(155, 30);
+            this.btnSalvar2.TabIndex = 132;
+            this.btnSalvar2.Text = "Salvar";
+            this.btnSalvar2.UseVisualStyleBackColor = false;
+            this.btnSalvar2.Visible = false;
+            this.btnSalvar2.Click += new System.EventHandler(this.btnSalvar2_Click);
             // 
             // CadastroAluno
             // 
@@ -1201,6 +1233,8 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(37)))), ((int)(((byte)(72)))));
             this.ClientSize = new System.Drawing.Size(899, 651);
             this.Controls.Add(this.btnCancel);
+            this.Controls.Add(this.btnLimpar2);
+            this.Controls.Add(this.btnSalvar2);
             this.Controls.Add(this.gbMenor);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
@@ -1312,5 +1346,7 @@
         private System.Windows.Forms.DateTimePicker dtpAvaliacao;
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.Button btnSalvar;
+        private System.Windows.Forms.Button btnLimpar2;
+        private System.Windows.Forms.Button btnSalvar2;
     }
 }

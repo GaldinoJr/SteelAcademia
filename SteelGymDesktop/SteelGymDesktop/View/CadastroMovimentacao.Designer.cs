@@ -42,6 +42,8 @@
             this.btnSalvar = new System.Windows.Forms.Button();
             this.rbSaida = new System.Windows.Forms.RadioButton();
             this.rbEntrada = new System.Windows.Forms.RadioButton();
+            this.btnSalvar2 = new System.Windows.Forms.Button();
+            this.btnCancel = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -130,6 +132,8 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(43)))), ((int)(((byte)(80)))));
+            this.panel1.Controls.Add(this.btnCancel);
+            this.panel1.Controls.Add(this.btnSalvar2);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.btnSalvar);
             this.panel1.Controls.Add(this.rbSaida);
@@ -195,6 +199,37 @@
             this.rbEntrada.Text = "Entrada";
             this.rbEntrada.UseVisualStyleBackColor = true;
             // 
+            // btnSalvar2
+            // 
+            this.btnSalvar2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(21)))), ((int)(((byte)(86)))));
+            this.btnSalvar2.Enabled = false;
+            this.btnSalvar2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSalvar2.ForeColor = System.Drawing.Color.White;
+            this.btnSalvar2.Location = new System.Drawing.Point(177, 227);
+            this.btnSalvar2.Name = "btnSalvar2";
+            this.btnSalvar2.Size = new System.Drawing.Size(155, 30);
+            this.btnSalvar2.TabIndex = 23;
+            this.btnSalvar2.Text = "Salvar";
+            this.btnSalvar2.UseVisualStyleBackColor = false;
+            this.btnSalvar2.Visible = false;
+            this.btnSalvar2.Click += new System.EventHandler(this.btnSalvar2_Click);
+            // 
+            // btnCancel
+            // 
+            this.btnCancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(110)))), ((int)(((byte)(140)))));
+            this.btnCancel.Enabled = false;
+            this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancel.ForeColor = System.Drawing.Color.White;
+            this.btnCancel.Location = new System.Drawing.Point(338, 227);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(155, 30);
+            this.btnCancel.TabIndex = 136;
+            this.btnCancel.Text = "Cancelar";
+            this.btnCancel.UseVisualStyleBackColor = false;
+            this.btnCancel.Visible = false;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            // 
             // CadastroMovimentacao
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -227,5 +262,7 @@
         private System.Windows.Forms.RadioButton rbSaida;
         private System.Windows.Forms.RadioButton rbEntrada;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnSalvar2;
+        private System.Windows.Forms.Button btnCancel;
     }
 }

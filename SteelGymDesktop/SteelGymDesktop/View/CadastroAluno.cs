@@ -21,6 +21,35 @@ namespace SteelGymDesktop.View
             _studentId = studentId;
             _isCreate = isCreate;
             InitializeComponent();
+
+
+            if (_isCreate)
+            {
+                btnSalvar.Visible = true;
+                btnSalvar.Enabled = true;
+                btnLimpar.Visible = true;
+                btnLimpar.Enabled = true;
+                btnSalvar2.Visible = false;
+                btnSalvar2.Enabled = false;
+                btnCancel.Visible = false;
+                btnCancel.Enabled = false;
+                btnLimpar2.Visible = false;
+                btnLimpar2.Enabled = false;
+            }
+            else
+            {
+
+                btnSalvar.Visible = false;
+                btnSalvar.Enabled = false;
+                btnLimpar.Visible = false;
+                btnLimpar.Enabled = false;
+                btnSalvar2.Visible = true;
+                btnSalvar2.Enabled = true;
+                btnCancel.Visible = true;
+                btnCancel.Enabled = true;
+                btnLimpar2.Visible = true;
+                btnLimpar2.Enabled = true;
+            }
         }
 
         private void CadastrarAluno_Load(object sender, EventArgs e)
@@ -45,7 +74,7 @@ namespace SteelGymDesktop.View
 
         private void HabilityResponsibleData()
         {
-            if(Util.IsMinor(dtpNascimento.Value.Date))
+            if(dtpNascimento != null && dtpNascimento.Value != null && Util.IsMinor(dtpNascimento.Value.Date))
             {
                 isMenor = true;
             }
@@ -404,6 +433,16 @@ namespace SteelGymDesktop.View
 
             if ((e.KeyChar == ',') && (((MaskedTextBox)sender).Text.IndexOf(',') > -1))
                 e.Handled = true;
+        }
+
+        private void btnSalvar2_Click(object sender, EventArgs e)
+        {
+            BtnSalvar_Click(sender, e);
+        }
+
+        private void btnLimpar2_Click(object sender, EventArgs e)
+        {
+            BtnLimpar_Click(sender, e);
         }
 
         private void btnCancel_Click(object sender, EventArgs e)

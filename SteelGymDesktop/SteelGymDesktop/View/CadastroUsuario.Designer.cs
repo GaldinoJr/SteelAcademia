@@ -66,6 +66,9 @@
             this.txtNumero = new System.Windows.Forms.MaskedTextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.chkCanAccessFinancial = new System.Windows.Forms.CheckBox();
+            this.btnLimpar2 = new System.Windows.Forms.Button();
+            this.btnSalvar2 = new System.Windows.Forms.Button();
+            this.btnCancel = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -461,12 +464,62 @@
             this.chkCanAccessFinancial.UseVisualStyleBackColor = true;
             this.chkCanAccessFinancial.Visible = false;
             // 
+            // btnLimpar2
+            // 
+            this.btnLimpar2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(21)))), ((int)(((byte)(86)))));
+            this.btnLimpar2.Enabled = false;
+            this.btnLimpar2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLimpar2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLimpar2.ForeColor = System.Drawing.Color.White;
+            this.btnLimpar2.Location = new System.Drawing.Point(370, 473);
+            this.btnLimpar2.Name = "btnLimpar2";
+            this.btnLimpar2.Size = new System.Drawing.Size(155, 30);
+            this.btnLimpar2.TabIndex = 138;
+            this.btnLimpar2.Text = "Limpar";
+            this.btnLimpar2.UseVisualStyleBackColor = false;
+            this.btnLimpar2.Visible = false;
+            this.btnLimpar2.Click += new System.EventHandler(this.btnLimpar2_Click);
+            // 
+            // btnSalvar2
+            // 
+            this.btnSalvar2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(21)))), ((int)(((byte)(86)))));
+            this.btnSalvar2.Enabled = false;
+            this.btnSalvar2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSalvar2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSalvar2.ForeColor = System.Drawing.Color.White;
+            this.btnSalvar2.Location = new System.Drawing.Point(532, 473);
+            this.btnSalvar2.Name = "btnSalvar2";
+            this.btnSalvar2.Size = new System.Drawing.Size(155, 30);
+            this.btnSalvar2.TabIndex = 137;
+            this.btnSalvar2.Text = "Salvar";
+            this.btnSalvar2.UseVisualStyleBackColor = false;
+            this.btnSalvar2.Visible = false;
+            this.btnSalvar2.Click += new System.EventHandler(this.btnSalvar2_Click);
+            // 
+            // btnCancel
+            // 
+            this.btnCancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(110)))), ((int)(((byte)(140)))));
+            this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancel.ForeColor = System.Drawing.Color.White;
+            this.btnCancel.Location = new System.Drawing.Point(693, 473);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(155, 30);
+            this.btnCancel.TabIndex = 139;
+            this.btnCancel.Text = "Cancelar";
+            this.btnCancel.UseVisualStyleBackColor = false;
+            this.btnCancel.Visible = false;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            // 
             // CadastroUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(37)))), ((int)(((byte)(72)))));
             this.ClientSize = new System.Drawing.Size(865, 651);
+            this.Controls.Add(this.btnCancel);
+            this.Controls.Add(this.btnLimpar2);
+            this.Controls.Add(this.btnSalvar2);
             this.Controls.Add(this.txtNumero);
             this.Controls.Add(this.chkAtivo);
             this.Controls.Add(this.btnLimpar);
@@ -550,5 +603,8 @@
         private System.Windows.Forms.MaskedTextBox txtNumero;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.CheckBox chkCanAccessFinancial;
+        private System.Windows.Forms.Button btnLimpar2;
+        private System.Windows.Forms.Button btnSalvar2;
+        private System.Windows.Forms.Button btnCancel;
     }
 }
