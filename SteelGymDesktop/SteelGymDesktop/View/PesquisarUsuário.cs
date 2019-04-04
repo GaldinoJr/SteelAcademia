@@ -44,7 +44,7 @@ namespace SteelGymDesktop.View
                 }
                 else
                 {
-                    var users = _userApp.GetByFilter(chkAtivo.Checked, txtNome.Text, Util.RemoverCaracteres(txtRG.Text), Util.RemoverCaracteres(txtCPF.Text));
+                    var users = _userApp.GetByFilter(chkAtivo.Checked, txtNome.Text, txtRG.Text, txtCPF.Text);
 
                     if (!Program.SessionUser.Admin)
                         users = users.Where(x => !Convert.ToBoolean(x.IsAdmin));

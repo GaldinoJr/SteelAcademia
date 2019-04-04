@@ -38,15 +38,15 @@
             this.btnPesquisar = new System.Windows.Forms.Button();
             this.btnLimpar = new System.Windows.Forms.Button();
             this.dtgAlunos = new System.Windows.Forms.DataGridView();
-            this.IDAluno = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Rg = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CPF = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Ativo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DataPagamento = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtCPF = new System.Windows.Forms.MaskedTextBox();
             this.txtRG = new System.Windows.Forms.MaskedTextBox();
             this.chkAtivo = new System.Windows.Forms.CheckBox();
+            this.DataPagamento = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Ativo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CPF = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Rg = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.IDAluno = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dtgAlunos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -68,9 +68,9 @@
             this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(12, 126);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(138, 17);
+            this.label3.Size = new System.Drawing.Size(54, 17);
             this.label3.TabIndex = 2;
-            this.label3.Text = "Nome de Usuário:";
+            this.label3.Text = "Nome:";
             // 
             // label4
             // 
@@ -158,44 +158,6 @@
             this.dtgAlunos.TabIndex = 12;
             this.dtgAlunos.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DtgAlunos_CellDoubleClick);
             // 
-            // IDAluno
-            // 
-            this.IDAluno.HeaderText = "ID Aluno";
-            this.IDAluno.Name = "IDAluno";
-            this.IDAluno.ReadOnly = true;
-            // 
-            // Nome
-            // 
-            this.Nome.HeaderText = "Nome";
-            this.Nome.Name = "Nome";
-            this.Nome.ReadOnly = true;
-            this.Nome.Width = 315;
-            // 
-            // Rg
-            // 
-            this.Rg.HeaderText = "RG";
-            this.Rg.Name = "Rg";
-            this.Rg.ReadOnly = true;
-            // 
-            // CPF
-            // 
-            this.CPF.HeaderText = "CPF";
-            this.CPF.Name = "CPF";
-            this.CPF.ReadOnly = true;
-            // 
-            // Ativo
-            // 
-            this.Ativo.HeaderText = "Ativo";
-            this.Ativo.Name = "Ativo";
-            this.Ativo.ReadOnly = true;
-            this.Ativo.Width = 40;
-            // 
-            // DataPagamento
-            // 
-            this.DataPagamento.HeaderText = "Data de Pagamento";
-            this.DataPagamento.Name = "DataPagamento";
-            this.DataPagamento.ReadOnly = true;
-            // 
             // txtCPF
             // 
             this.txtCPF.Location = new System.Drawing.Point(156, 176);
@@ -217,12 +179,50 @@
             this.chkAtivo.AutoSize = true;
             this.chkAtivo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkAtivo.ForeColor = System.Drawing.Color.White;
-            this.chkAtivo.Location = new System.Drawing.Point(12, 73);
+            this.chkAtivo.Location = new System.Drawing.Point(12, 63);
             this.chkAtivo.Name = "chkAtivo";
             this.chkAtivo.Size = new System.Drawing.Size(63, 21);
             this.chkAtivo.TabIndex = 26;
             this.chkAtivo.Text = "Ativo";
             this.chkAtivo.UseVisualStyleBackColor = true;
+            // 
+            // DataPagamento
+            // 
+            this.DataPagamento.HeaderText = "Data de Pagamento";
+            this.DataPagamento.Name = "DataPagamento";
+            this.DataPagamento.ReadOnly = true;
+            // 
+            // Ativo
+            // 
+            this.Ativo.HeaderText = "Ativo";
+            this.Ativo.Name = "Ativo";
+            this.Ativo.ReadOnly = true;
+            this.Ativo.Width = 40;
+            // 
+            // CPF
+            // 
+            this.CPF.HeaderText = "CPF";
+            this.CPF.Name = "CPF";
+            this.CPF.ReadOnly = true;
+            // 
+            // Rg
+            // 
+            this.Rg.HeaderText = "RG";
+            this.Rg.Name = "Rg";
+            this.Rg.ReadOnly = true;
+            // 
+            // Nome
+            // 
+            this.Nome.HeaderText = "Nome";
+            this.Nome.Name = "Nome";
+            this.Nome.ReadOnly = true;
+            this.Nome.Width = 315;
+            // 
+            // IDAluno
+            // 
+            this.IDAluno.HeaderText = "ID Aluno";
+            this.IDAluno.Name = "IDAluno";
+            this.IDAluno.ReadOnly = true;
             // 
             // PesquisarAluno
             // 

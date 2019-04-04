@@ -14,15 +14,15 @@ namespace SteelGymDesktop.Infrastructure.Repository
         {
             name = name.ToLower();
             var query = Db.Students.Where(x => x.Active == active);
-            if(name != "")
+            if(Util.ValidaString(name))
             {
                 query = query.Where(x => x.Name.ToLower().Contains(name));
             }
-            if(rg.ToCharArray()[0] != ' ')
+            if(Util.ValidaRg(rg))
             {
                 query = query.Where(x => x.RG == rg);
             }
-            if (cpf.ToCharArray()[0] != ' ')
+            if (Util.ValidaCpf(cpf))
             {
                 query = query.Where(x => x.CPF == cpf);
             }

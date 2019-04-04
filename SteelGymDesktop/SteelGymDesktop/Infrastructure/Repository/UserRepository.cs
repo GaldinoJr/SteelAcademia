@@ -8,21 +8,28 @@ namespace SteelGymDesktop.Infrastructure.Repository
 {
     public class UserRepository : RepositoryBase<User>, IUserRepository
     {
-        public IEnumerable<User> GetByFilter(bool active, string userName, string rg, string cpf)
+        public IEnumerable<User> GetByFilter(bool active, string name, string rg, string cpf)
         {
             IQueryable<User> query = Db.Users;
 
-            userName = userName.ToLower();
+            name = name.ToLower();
 
             query.Where(x => Convert.ToBoolean(x.Active) == active);
 
-            if (Util.ValidaString(userName))
-                query = query.Where(x => x.UserName.ToLower().Contains(userName));
+            if (Util.ValidaString(name))
+            {
+                query = query.Where(
+                    x => (
+                        x.Name.ToLower().Contains(name) ||
+                        x.LastName.ToLower().Contains(name)
+                    )
+                );
+            }
 
-            if (Util.ValidaString(rg))
+            if (Util.ValidaRg(rg))
                 query = query.Where(x => x.RG == rg);
 
-            if (Util.ValidaString(cpf))
+            if (Util.ValidaCpf(cpf))
                 query = query.Where(x => x.CPF == cpf);
 
             return query;
