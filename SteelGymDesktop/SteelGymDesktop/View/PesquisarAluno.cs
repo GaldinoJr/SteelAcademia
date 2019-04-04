@@ -103,7 +103,7 @@ namespace SteelGymDesktop.View
 
         private void Filter(IEnumerable<Student> students)
         {
-            if (students != null)
+            if (students != null)   
             {
                 foreach (var student in students)
                 {

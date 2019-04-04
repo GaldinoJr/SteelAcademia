@@ -12,7 +12,21 @@ namespace SteelGymDesktop.Infrastructure.Repository
     {
         public IEnumerable<Student> GetByFilter(int active, string name, string rg, string cpf)
         {
-            return Db.Students.Where(x => x.Active == active || x.Name == name || x.RG == rg || x.CPF == cpf);
+            name = name.ToLower();
+            var query = Db.Students.Where(x => x.Active == active);
+            if(name != "")
+            {
+                query = query.Where(x => x.Name.ToLower().Contains(name));
+            }
+            if(rg.ToCharArray()[0] != ' ')
+            {
+                query = query.Where(x => x.RG == rg);
+            }
+            if (cpf.ToCharArray()[0] != ' ')
+            {
+                query = query.Where(x => x.CPF == cpf);
+            }
+            return query;
         }
 
         public IEnumerable<Student> GetAllActive()
