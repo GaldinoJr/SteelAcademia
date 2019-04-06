@@ -40,12 +40,12 @@
             this.txtMatricula = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.txtVencimento = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.txtPagamento = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.txtValor = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
+            this.txtVencimento = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -62,7 +62,6 @@
             // btnComprovante
             // 
             this.btnComprovante.BackColor = System.Drawing.Color.DodgerBlue;
-            this.btnComprovante.Enabled = false;
             this.btnComprovante.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnComprovante.ForeColor = System.Drawing.Color.MintCream;
             this.btnComprovante.Location = new System.Drawing.Point(583, 472);
@@ -70,15 +69,15 @@
             this.btnComprovante.Size = new System.Drawing.Size(155, 30);
             this.btnComprovante.TabIndex = 139;
             this.btnComprovante.Text = "Imprimir Comprovante";
+            this.btnComprovante.UseCompatibleTextRendering = true;
             this.btnComprovante.UseVisualStyleBackColor = false;
-            this.btnComprovante.Visible = false;
             this.btnComprovante.Click += new System.EventHandler(this.btnComprovante_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial", 15.75F);
-            this.label1.Location = new System.Drawing.Point(8, 408);
+            this.label1.Location = new System.Drawing.Point(8, 414);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(739, 24);
             this.label1.TabIndex = 140;
@@ -138,7 +137,7 @@
             // 
             this.txtMatricula.AutoSize = true;
             this.txtMatricula.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMatricula.Location = new System.Drawing.Point(231, 230);
+            this.txtMatricula.Location = new System.Drawing.Point(231, 232);
             this.txtMatricula.Name = "txtMatricula";
             this.txtMatricula.Size = new System.Drawing.Size(22, 22);
             this.txtMatricula.TabIndex = 147;
@@ -148,7 +147,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(8, 228);
+            this.label8.Location = new System.Drawing.Point(8, 230);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(224, 24);
             this.label8.TabIndex = 146;
@@ -166,22 +165,11 @@
             this.label9.Text = "_________________________________________________________________________________" +
     "___";
             // 
-            // txtVencimento
-            // 
-            this.txtVencimento.AutoSize = true;
-            this.txtVencimento.Enabled = false;
-            this.txtVencimento.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtVencimento.Location = new System.Drawing.Point(209, 310);
-            this.txtVencimento.Name = "txtVencimento";
-            this.txtVencimento.Size = new System.Drawing.Size(22, 22);
-            this.txtVencimento.TabIndex = 152;
-            this.txtVencimento.Text = "--";
-            // 
             // label11
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(6, 308);
+            this.label11.Location = new System.Drawing.Point(6, 314);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(204, 24);
             this.label11.TabIndex = 151;
@@ -191,7 +179,7 @@
             // 
             this.txtPagamento.AutoSize = true;
             this.txtPagamento.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPagamento.Location = new System.Drawing.Point(209, 270);
+            this.txtPagamento.Location = new System.Drawing.Point(209, 274);
             this.txtPagamento.Name = "txtPagamento";
             this.txtPagamento.Size = new System.Drawing.Size(22, 22);
             this.txtPagamento.TabIndex = 150;
@@ -201,7 +189,7 @@
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(8, 268);
+            this.label13.Location = new System.Drawing.Point(8, 272);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(202, 24);
             this.label13.TabIndex = 149;
@@ -211,7 +199,7 @@
             // 
             this.txtValor.AutoSize = true;
             this.txtValor.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtValor.Location = new System.Drawing.Point(224, 350);
+            this.txtValor.Location = new System.Drawing.Point(224, 358);
             this.txtValor.Name = "txtValor";
             this.txtValor.Size = new System.Drawing.Size(52, 22);
             this.txtValor.TabIndex = 154;
@@ -221,11 +209,21 @@
             // 
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(8, 348);
+            this.label15.Location = new System.Drawing.Point(8, 356);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(226, 24);
             this.label15.TabIndex = 153;
             this.label15.Text = "Valor do Pagamento: ";
+            // 
+            // txtVencimento
+            // 
+            this.txtVencimento.AutoSize = true;
+            this.txtVencimento.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtVencimento.Location = new System.Drawing.Point(209, 316);
+            this.txtVencimento.Name = "txtVencimento";
+            this.txtVencimento.Size = new System.Drawing.Size(22, 22);
+            this.txtVencimento.TabIndex = 155;
+            this.txtVencimento.Text = "--";
             // 
             // ImprimePagamento
             // 
@@ -233,9 +231,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(783, 514);
+            this.Controls.Add(this.txtVencimento);
             this.Controls.Add(this.txtValor);
             this.Controls.Add(this.label15);
-            this.Controls.Add(this.txtVencimento);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.txtPagamento);
             this.Controls.Add(this.label13);
@@ -272,11 +270,11 @@
         private System.Windows.Forms.Label txtMatricula;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label txtVencimento;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label txtPagamento;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label txtValor;
         private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label txtVencimento;
     }
 }

@@ -31,50 +31,11 @@ namespace SteelGymDesktop.View
             this._isCreate = isCreate;
             this._pagamentoId = pagamentoId;
             InitializeComponent();
-            
-            var students = _studentApp.GetAllActive();
-            cboAlunos.Items.Clear();
-            if (students != null)
-            {
-                foreach (var student in students)
-                {
-                    cboAlunos.Items.Add(new ComboItem(student.Name, student.StudentId));
-                }
-            }
         }
 
         private void ImprimePagamento_Load(object sender, EventArgs e)
         {
-            if (_pagamentoId != int.MinValue)
-            {
-                LoadPayment(_pagamentoId);
-            }
-            if(_isCreate)
-            {
-                btnSalvar.Visible = true;
-                btnSalvar.Enabled = true;
-                btnSalvar2.Visible = false;
-                btnSalvar2.Enabled = false;
-                btnCancel.Visible = false;
-                btnCancel.Enabled = false;
-            } else
-            {
-                btnSalvar.Visible = false;
-                btnSalvar.Enabled = false;
-                btnSalvar2.Visible = _payment.FgPago != 1;
-                btnSalvar2.Enabled = _payment.FgPago != 1;
-                btnCancel.Visible = true;
-                btnCancel.Enabled = true;
-
-                btnComprovante.Visible = _payment.FgPago == 1;
-                btnComprovante.Enabled = _payment.FgPago == 1;
-
-
-                cboAlunos.Enabled = false;
-                txtValor.Enabled = false;
-                dtpDataPagamento.Enabled = false;
-                rbNaoPago.Enabled = rbPago.Enabled = _payment.FgPago != 1;
-            }
+            LoadPayment(_pagamentoId);
         }
 
         private void LoadPayment(int pagamentoId)
@@ -84,16 +45,24 @@ namespace SteelGymDesktop.View
                 _payment = _paymentApp.GetById(pagamentoId);
                 var student = _studentApp.GetById(_payment.StudentId);
 
-                //txtValue = _payment.Value.ToString();
-                //dtpDataPagamento.Value = Convert.ToDateTime(_payment.DataPagamento);
-                //txtStudent = student.Name;
-                //txtMatricula = student.StudentId;
-                //while("".Length < 4)
-                //{
-                //    txtMatricula = "0" + txtMatricula;
-                //}
-                //txtPayDay = student.PayDay;
-            
+                txtValor.Text = _payment.Value.ToString("C2");
+
+                txtPagamento.Text = Convert.ToDateTime(
+                    _payment.DataPagamento
+                ).ToString("dd/MM/yyyy");
+
+
+                txtAluno.Text = student.Name;
+                txtMatricula.Text = student.StudentId.ToString();
+
+                txtVencimento.Text = "Dia " + student.PayDay.ToString();
+
+                while (txtMatricula.Text.Length < 4)
+                {
+                    txtMatricula.Text = "0" + txtMatricula.Text;
+                }
+
+                txtMatricula.Text = "#" + txtMatricula.Text;
             }
             catch (Exception ex)
             {

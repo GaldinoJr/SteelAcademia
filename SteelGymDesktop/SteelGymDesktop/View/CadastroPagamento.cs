@@ -167,8 +167,6 @@ namespace SteelGymDesktop.View
 
                     Util.EnabledCursor();
 
-                    CadastroPagamento p = new CadastroPagamento(_paymentApp, _studentApp, false, _payment.PaymentId);
-                    p.ShowDialog();
                 }
                 else
                 {
@@ -182,6 +180,9 @@ namespace SteelGymDesktop.View
 
                     this.Close();
                 }
+
+                CadastroPagamento p = new CadastroPagamento(_paymentApp, _studentApp, false, _payment.PaymentId);
+                p.ShowDialog();
             }
             catch (Exception ex)
             {
@@ -259,6 +260,12 @@ namespace SteelGymDesktop.View
         private void button1_Click(object sender, EventArgs e)
         {
             BtnSalvar_Click(sender, e);
+        }
+
+        private void btnComprovante_Click(object sender, EventArgs e)
+        {
+            ImprimePagamento p = new ImprimePagamento(_paymentApp, _studentApp, false, _payment.PaymentId);
+            p.ShowDialog();
         }
     }
 }

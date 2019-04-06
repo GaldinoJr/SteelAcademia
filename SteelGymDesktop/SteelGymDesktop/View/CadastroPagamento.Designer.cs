@@ -142,6 +142,7 @@
             this.btnComprovante.Text = "Comprovante";
             this.btnComprovante.UseVisualStyleBackColor = false;
             this.btnComprovante.Visible = false;
+            this.btnComprovante.Click += new System.EventHandler(this.btnComprovante_Click);
             // 
             // btnSalvar2
             // 
