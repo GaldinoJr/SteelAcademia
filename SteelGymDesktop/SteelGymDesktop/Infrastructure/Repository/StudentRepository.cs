@@ -84,11 +84,14 @@ namespace SteelGymDesktop.Infrastructure.Repository
 
         public IEnumerable<Student> LoadLateAvaliations()
         {
-            DateTime? currentDate = System.DateTime.Now;
-            return Db.Students.Where(x =>
-                DbFunctions.DiffDays(Convert.ToDateTime(x.EvaliationDate), currentDate) >= (x.EvaluationPeriodicity * 30) &&
-                x.Active == 1
-            );
+            DateTime today = System.DateTime.Now;
+            return Db.Students
+                .ToList()
+                .Where(
+                    x => today.Subtract(Convert.ToDateTime(x.EvaliationDate)).Days >= x.EvaluationPeriodicity * 30
+                    && x.Active == 1
+                )
+                .AsEnumerable();
         }
 
         public IEnumerable<Student> LoadLatePayments()
