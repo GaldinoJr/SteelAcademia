@@ -52,7 +52,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::SteelGymDesktop.Properties.Resources.índice;
-            this.pictureBox1.Location = new System.Drawing.Point(0, -1);
+            this.pictureBox1.Location = new System.Drawing.Point(10, 9);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(210, 91);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -87,7 +87,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Arial", 12F);
-            this.label2.Location = new System.Drawing.Point(216, 36);
+            this.label2.Location = new System.Drawing.Point(226, 36);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(201, 18);
             this.label2.TabIndex = 141;
@@ -97,7 +97,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Arial", 13F, System.Drawing.FontStyle.Bold);
-            this.label3.Location = new System.Drawing.Point(216, 9);
+            this.label3.Location = new System.Drawing.Point(226, 9);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(146, 21);
             this.label3.TabIndex = 142;
@@ -229,7 +229,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(783, 514);
             this.Controls.Add(this.txtVencimento);
             this.Controls.Add(this.txtValor);

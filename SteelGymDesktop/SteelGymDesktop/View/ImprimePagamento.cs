@@ -5,6 +5,8 @@ using SteelGymDesktop.Domain.Entities;
 using System.Collections.Generic;
 using SteelGymDesktop.Models;
 using System.Globalization;
+using System.Drawing.Printing;
+using System.Drawing;
 
 namespace SteelGymDesktop.View
 {
@@ -17,6 +19,8 @@ namespace SteelGymDesktop.View
         private Payment _payment;
         public IEnumerable<Student> students;
 
+        private PrintDocument printDocument1 = new PrintDocument();
+
         public ImprimePagamento(
             IPaymentAppService paymentApp,
             IStudentAppService studentApp,
@@ -27,7 +31,8 @@ namespace SteelGymDesktop.View
             _paymentApp = paymentApp;
             _studentApp = studentApp;
 
-           
+            printDocument1.PrintPage += new PrintPageEventHandler(printDocument1_PrintPage);
+
             this._isCreate = isCreate;
             this._pagamentoId = pagamentoId;
             InitializeComponent();
@@ -74,6 +79,35 @@ namespace SteelGymDesktop.View
         private void btnComprovante_Click(object sender, EventArgs e)
         {
 
+            CaptureScreen();
+            printDocument1.Print();
         }
+
+        Bitmap memoryImage;
+
+        private void CaptureScreen()
+        {
+
+            Graphics myGraphics = this.CreateGraphics();
+            Size s = this.Size;
+            s.Width = s.Width - 40;
+            s.Height = s.Height- 85;
+
+            float mmpi = 25.4f;
+            int dpi = 150;
+            memoryImage = new Bitmap((int)(342 / mmpi * dpi), (int)(210 / mmpi * dpi));
+            memoryImage.SetResolution(dpi, dpi);
+
+            Graphics memoryGraphics = Graphics.FromImage(memoryImage);
+            memoryGraphics.CopyFromScreen(this.Location.X + 8, this.Location.Y + 32, 0, 0, s);
+        }
+
+        private void printDocument1_PrintPage(System.Object sender,
+               System.Drawing.Printing.PrintPageEventArgs e)
+        {
+            e.Graphics.DrawImage(memoryImage, 0, 0);
+        }
+
+
     }
 }
