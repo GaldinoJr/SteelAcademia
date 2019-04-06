@@ -8,7 +8,7 @@ namespace SteelGymDesktop.Infrastructure.Repository
 {
     public class UserRepository : RepositoryBase<User>, IUserRepository
     {
-        public IEnumerable<User> GetByFilter(bool active, string name, string rg, string cpf)
+        public IEnumerable<User> GetByFilter(bool active, string name, string rg, string cpf, int? userId, bool noAdmin = false)
         {
             IQueryable<User> query = Db.Users;
 
@@ -31,6 +31,16 @@ namespace SteelGymDesktop.Infrastructure.Repository
 
             if (Util.ValidaCpf(cpf))
                 query = query.Where(x => x.CPF == cpf);
+
+            if(userId != null && userId.HasValue)
+            {
+                query = query.Where(x => x.UserId == userId);
+            }
+
+            if(noAdmin)
+            {
+                query = query.Where(x => x.IsAdmin != 1);
+            }
 
             return query;
         }

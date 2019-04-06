@@ -15,9 +15,9 @@ namespace SteelGymDesktop.Domain.Services
             _repository = repository;
         }
 
-        public IEnumerable<User> GetByFilter(bool active, string userName, string rg, string cpf)
+        public IEnumerable<User> GetByFilter(bool active, string userName, string rg, string cpf, int? userId, bool noAdmin = false)
         {
-            return _repository.GetByFilter(active, userName, rg, cpf);
+            return _repository.GetByFilter(active, userName, rg, cpf, userId, noAdmin);
         }
 
         public User GetByUserName(string userName)

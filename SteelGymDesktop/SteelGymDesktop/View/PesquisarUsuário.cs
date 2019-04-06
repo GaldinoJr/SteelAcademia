@@ -30,34 +30,25 @@ namespace SteelGymDesktop.View
             {
                 dtgUsuario.Rows.Clear();
 
+                int? userId = null;
+
                 if (Util.ValidaString(txtIDAluno.Text))
                 {
-                    var user = _userApp.GetById(Convert.ToInt32(txtIDAluno.Text));
+                    userId = Convert.ToInt32(txtIDAluno.Text);
+                }
 
-                    if (!Program.SessionUser.Admin && Convert.ToBoolean(user.IsAdmin))
-                        user = null;
+                var users = _userApp.GetByFilter(chkAtivo.Checked, txtNome.Text, txtRG.Text, txtCPF.Text, userId, !Program.SessionUser.Admin);
 
-                    if (user != null)
+                if (users != null)
+                {
+                    foreach (var user in users)
+                    {
                         dtgUsuario.Rows.Add(user.UserId, user.Name + " " + user.LastName, user.RG, user.CPF, (Convert.ToBoolean(user.Active) ? "Sim" : "Não"));
-                    else
-                        Util.ShowMessageWarning("Não foi encontrado usuário com este Id.");
+                    }
                 }
                 else
                 {
-                    var users = _userApp.GetByFilter(chkAtivo.Checked, txtNome.Text, txtRG.Text, txtCPF.Text);
-
-                    if (!Program.SessionUser.Admin)
-                        users = users.Where(x => !Convert.ToBoolean(x.IsAdmin));
-
-                    if (users != null)
-                    {
-                        foreach (var user in users)
-                        {
-                            dtgUsuario.Rows.Add(user.UserId, user.Name + " " + user.LastName, user.RG, user.CPF, (Convert.ToBoolean(user.Active) ? "Sim" : "Não"));
-                        }
-                    }
-                    else
-                        Util.ShowMessageWarning("Não foi encontrado usuários com esses parametros.");
+                    Util.ShowMessageWarning("Não foi encontrado usuários com esses parametros.");
                 }
             }
             catch (Exception ex)
