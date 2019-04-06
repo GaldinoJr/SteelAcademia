@@ -44,18 +44,18 @@ namespace SteelGymDesktop.View
             {
                 pagamentoToolStripMenuItem.Enabled = Program.SessionUser.CanAccessFinancial;
                 comprovantesToolStripMenuItem.Enabled = Program.SessionUser.CanAccessFinancial;
-                pagamentoToolStripMenuItem.Visible = Program.SessionUser.CanAccessFinancial;
-                comprovantesToolStripMenuItem.Visible = Program.SessionUser.CanAccessFinancial;
+                //pagamentoToolStripMenuItem.Visible = Program.SessionUser.CanAccessFinancial;
+                //comprovantesToolStripMenuItem.Visible = Program.SessionUser.CanAccessFinancial;
                 
                 movimentaçõesToolStripMenuItem.Enabled = false;
-                movimentaçõesToolStripMenuItem.Visible = false;
+                //movimentaçõesToolStripMenuItem.Visible = false;
             } else {
                 pagamentoToolStripMenuItem.Enabled = true;
                 comprovantesToolStripMenuItem.Enabled = true;
                 movimentaçõesToolStripMenuItem.Enabled = true;
-                pagamentoToolStripMenuItem.Visible = true;
-                comprovantesToolStripMenuItem.Visible = true;
-                movimentaçõesToolStripMenuItem.Visible = true;
+               // pagamentoToolStripMenuItem.Visible = true;
+                //comprovantesToolStripMenuItem.Visible = true;
+               // movimentaçõesToolStripMenuItem.Visible = true;
             }
         }
 
