@@ -11,7 +11,6 @@ namespace SteelGymDesktop.Models
         public const string DF_NOME_MODULO_HOME = "Home";
         public const string DF_NOME_MODULO_ALUNO = "Aluno";
         public const string DF_NOME_MODULO_PAGAMENTO = "Pagamento";
-        public const string DF_NOME_MODULO_COMPROVANTE = "Comprovante";
         public const string DF_NOME_MODULO_USUARIO = "Usuario";
         public const string DF_NOME_MODULO_MOVIMENTACOES = "Movimentações";
     }

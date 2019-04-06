@@ -4,6 +4,7 @@ using SteelGymDesktop.Applications.Interfaces;
 using SteelGymDesktop.Domain.Entities;
 using System.Collections.Generic;
 using SteelGymDesktop.Models;
+using System.Globalization;
 
 namespace SteelGymDesktop.View
 {
@@ -147,7 +148,7 @@ namespace SteelGymDesktop.View
                     _payment = new Payment();
                 }
 
-                _payment.Value = Convert.ToDecimal(txtValor.Text.ToString().Replace(",", ".").Replace(" ",""));
+                _payment.Value = Convert.ToDecimal(txtValor.Text.ToString().Replace(",", ".").Replace(" ",""), new CultureInfo("en-US"));
                 _payment.StudentId = (int) ((ComboItem)cboAlunos.SelectedItem).Value;
                 _payment.DataPagamento = dtpDataPagamento.Text;
 

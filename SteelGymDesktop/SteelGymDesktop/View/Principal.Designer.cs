@@ -37,8 +37,6 @@
             this.pagamentoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.incluirToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.pesquisarToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
-            this.comprovantesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.imprimirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cadastroDeUsuarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.incluirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pesquisarToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
@@ -57,8 +55,6 @@
             this.panel11 = new System.Windows.Forms.Panel();
             this.panelSelectedPayment = new System.Windows.Forms.Panel();
             this.panel15 = new System.Windows.Forms.Panel();
-            this.panelSelectedReceipt = new System.Windows.Forms.Panel();
-            this.panel17 = new System.Windows.Forms.Panel();
             this.panelSelectedUser = new System.Windows.Forms.Panel();
             this.panel19 = new System.Windows.Forms.Panel();
             this.panelSelectedMovimentation = new System.Windows.Forms.Panel();
@@ -69,7 +65,6 @@
             this.panelSelectedHome.SuspendLayout();
             this.panelSelectedStudent.SuspendLayout();
             this.panelSelectedPayment.SuspendLayout();
-            this.panelSelectedReceipt.SuspendLayout();
             this.panelSelectedUser.SuspendLayout();
             this.panelSelectedMovimentation.SuspendLayout();
             this.SuspendLayout();
@@ -85,7 +80,6 @@
             this.homeToolStripMenuItem,
             this.alunoToolStripMenuItem,
             this.pagamentoToolStripMenuItem,
-            this.comprovantesToolStripMenuItem,
             this.cadastroDeUsuarioToolStripMenuItem,
             this.movimentaçõesToolStripMenuItem,
             this.fecharToolStripMenuItem});
@@ -157,36 +151,16 @@
             // incluirToolStripMenuItem1
             // 
             this.incluirToolStripMenuItem1.Name = "incluirToolStripMenuItem1";
-            this.incluirToolStripMenuItem1.Size = new System.Drawing.Size(180, 24);
+            this.incluirToolStripMenuItem1.Size = new System.Drawing.Size(142, 24);
             this.incluirToolStripMenuItem1.Text = "Incluir";
             this.incluirToolStripMenuItem1.Click += new System.EventHandler(this.incluirToolStripMenuItem1_Click);
             // 
             // pesquisarToolStripMenuItem2
             // 
             this.pesquisarToolStripMenuItem2.Name = "pesquisarToolStripMenuItem2";
-            this.pesquisarToolStripMenuItem2.Size = new System.Drawing.Size(180, 24);
+            this.pesquisarToolStripMenuItem2.Size = new System.Drawing.Size(142, 24);
             this.pesquisarToolStripMenuItem2.Text = "Pesquisar";
             this.pesquisarToolStripMenuItem2.Click += new System.EventHandler(this.pesquisarToolStripMenuItem2_Click);
-            // 
-            // comprovantesToolStripMenuItem
-            // 
-            this.comprovantesToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(43)))), ((int)(((byte)(80)))));
-            this.comprovantesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.imprimirToolStripMenuItem});
-            this.comprovantesToolStripMenuItem.ForeColor = System.Drawing.Color.White;
-            this.comprovantesToolStripMenuItem.Image = global::SteelGymDesktop.Properties.Resources.ic_comprovante;
-            this.comprovantesToolStripMenuItem.Name = "comprovantesToolStripMenuItem";
-            this.comprovantesToolStripMenuItem.Padding = new System.Windows.Forms.Padding(4, 30, 4, 30);
-            this.comprovantesToolStripMenuItem.Size = new System.Drawing.Size(126, 83);
-            this.comprovantesToolStripMenuItem.Text = "Comprovantes";
-            this.comprovantesToolStripMenuItem.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.comprovantesToolStripMenuItem.Click += new System.EventHandler(this.ComprovantesToolStripMenuItem_Click);
-            // 
-            // imprimirToolStripMenuItem
-            // 
-            this.imprimirToolStripMenuItem.Name = "imprimirToolStripMenuItem";
-            this.imprimirToolStripMenuItem.Size = new System.Drawing.Size(137, 24);
-            this.imprimirToolStripMenuItem.Text = "Imprimir";
             // 
             // cadastroDeUsuarioToolStripMenuItem
             // 
@@ -207,21 +181,21 @@
             // incluirToolStripMenuItem
             // 
             this.incluirToolStripMenuItem.Name = "incluirToolStripMenuItem";
-            this.incluirToolStripMenuItem.Size = new System.Drawing.Size(165, 24);
+            this.incluirToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
             this.incluirToolStripMenuItem.Text = "Incluir";
             this.incluirToolStripMenuItem.Click += new System.EventHandler(this.IncluirToolStripMenuItem_Click);
             // 
             // pesquisarToolStripMenuItem1
             // 
             this.pesquisarToolStripMenuItem1.Name = "pesquisarToolStripMenuItem1";
-            this.pesquisarToolStripMenuItem1.Size = new System.Drawing.Size(165, 24);
+            this.pesquisarToolStripMenuItem1.Size = new System.Drawing.Size(180, 24);
             this.pesquisarToolStripMenuItem1.Text = "Pesquisar";
             this.pesquisarToolStripMenuItem1.Click += new System.EventHandler(this.PesquisarToolStripMenuItem1_Click);
             // 
             // trocarSenhaToolStripMenuItem
             // 
             this.trocarSenhaToolStripMenuItem.Name = "trocarSenhaToolStripMenuItem";
-            this.trocarSenhaToolStripMenuItem.Size = new System.Drawing.Size(165, 24);
+            this.trocarSenhaToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
             this.trocarSenhaToolStripMenuItem.Text = "Trocar Senha";
             this.trocarSenhaToolStripMenuItem.Click += new System.EventHandler(this.trocarSenhaToolStripMenuItem_Click);
             // 
@@ -362,29 +336,11 @@
             this.panel15.Size = new System.Drawing.Size(10, 83);
             this.panel15.TabIndex = 1;
             // 
-            // panelSelectedReceipt
-            // 
-            this.panelSelectedReceipt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(21)))), ((int)(((byte)(86)))));
-            this.panelSelectedReceipt.Controls.Add(this.panel17);
-            this.panelSelectedReceipt.Location = new System.Drawing.Point(0, 310);
-            this.panelSelectedReceipt.Name = "panelSelectedReceipt";
-            this.panelSelectedReceipt.Size = new System.Drawing.Size(10, 78);
-            this.panelSelectedReceipt.TabIndex = 5;
-            this.panelSelectedReceipt.Visible = false;
-            // 
-            // panel17
-            // 
-            this.panel17.BackColor = System.Drawing.Color.White;
-            this.panel17.Location = new System.Drawing.Point(0, 86);
-            this.panel17.Name = "panel17";
-            this.panel17.Size = new System.Drawing.Size(10, 83);
-            this.panel17.TabIndex = 1;
-            // 
             // panelSelectedUser
             // 
             this.panelSelectedUser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(21)))), ((int)(((byte)(86)))));
             this.panelSelectedUser.Controls.Add(this.panel19);
-            this.panelSelectedUser.Location = new System.Drawing.Point(0, 394);
+            this.panelSelectedUser.Location = new System.Drawing.Point(0, 310);
             this.panelSelectedUser.Name = "panelSelectedUser";
             this.panelSelectedUser.Size = new System.Drawing.Size(10, 78);
             this.panelSelectedUser.TabIndex = 5;
@@ -402,7 +358,7 @@
             // 
             this.panelSelectedMovimentation.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(21)))), ((int)(((byte)(86)))));
             this.panelSelectedMovimentation.Controls.Add(this.panel21);
-            this.panelSelectedMovimentation.Location = new System.Drawing.Point(0, 478);
+            this.panelSelectedMovimentation.Location = new System.Drawing.Point(0, 394);
             this.panelSelectedMovimentation.Name = "panelSelectedMovimentation";
             this.panelSelectedMovimentation.Size = new System.Drawing.Size(10, 78);
             this.panelSelectedMovimentation.TabIndex = 5;
@@ -424,7 +380,6 @@
             this.ClientSize = new System.Drawing.Size(1076, 699);
             this.Controls.Add(this.panelSelectedMovimentation);
             this.Controls.Add(this.panelSelectedUser);
-            this.Controls.Add(this.panelSelectedReceipt);
             this.Controls.Add(this.panelSelectedPayment);
             this.Controls.Add(this.panelSelectedStudent);
             this.Controls.Add(this.panelSelectedHome);
@@ -443,7 +398,6 @@
             this.panelSelectedHome.ResumeLayout(false);
             this.panelSelectedStudent.ResumeLayout(false);
             this.panelSelectedPayment.ResumeLayout(false);
-            this.panelSelectedReceipt.ResumeLayout(false);
             this.panelSelectedUser.ResumeLayout(false);
             this.panelSelectedMovimentation.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -459,7 +413,6 @@
         private System.Windows.Forms.ToolStripMenuItem pesquisarToolStripMenuItem;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.ToolStripMenuItem pagamentoToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem comprovantesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem movimentaçõesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cadastroDeUsuarioToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem fecharToolStripMenuItem;
@@ -474,21 +427,14 @@
         private System.Windows.Forms.Panel panel13;
         private System.Windows.Forms.Panel panelSelectedStudent;
         private System.Windows.Forms.Panel panel11;
-        private System.Windows.Forms.Panel panel12;
-        private System.Windows.Forms.Panel panel7;
-        private System.Windows.Forms.Panel panel8;
-        private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.ToolStripMenuItem trocarSenhaToolStripMenuItem;
         private System.Windows.Forms.Panel panelSelectedPayment;
         private System.Windows.Forms.Panel panel15;
-        private System.Windows.Forms.Panel panelSelectedReceipt;
-        private System.Windows.Forms.Panel panel17;
         private System.Windows.Forms.Panel panelSelectedUser;
         private System.Windows.Forms.Panel panel19;
         private System.Windows.Forms.Panel panelSelectedMovimentation;
         private System.Windows.Forms.Panel panel21;
         private System.Windows.Forms.ToolStripMenuItem incluirToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem pesquisarToolStripMenuItem2;
-        private System.Windows.Forms.ToolStripMenuItem imprimirToolStripMenuItem;
     }
 }

@@ -43,7 +43,6 @@ namespace SteelGymDesktop.View
             if(!Program.SessionUser.Admin)
             {
                 pagamentoToolStripMenuItem.Enabled = Program.SessionUser.CanAccessFinancial;
-                comprovantesToolStripMenuItem.Enabled = Program.SessionUser.CanAccessFinancial;
                 //pagamentoToolStripMenuItem.Visible = Program.SessionUser.CanAccessFinancial;
                 //comprovantesToolStripMenuItem.Visible = Program.SessionUser.CanAccessFinancial;
                 
@@ -51,7 +50,6 @@ namespace SteelGymDesktop.View
                 //movimentaçõesToolStripMenuItem.Visible = false;
             } else {
                 pagamentoToolStripMenuItem.Enabled = true;
-                comprovantesToolStripMenuItem.Enabled = true;
                 movimentaçõesToolStripMenuItem.Enabled = true;
                // pagamentoToolStripMenuItem.Visible = true;
                 //comprovantesToolStripMenuItem.Visible = true;
@@ -146,7 +144,6 @@ namespace SteelGymDesktop.View
             panelSelectedHome.Visible =
                 panelSelectedMovimentation.Visible =
                 panelSelectedPayment.Visible =
-                panelSelectedReceipt.Visible =
                 panelSelectedStudent.Visible =
                 panelSelectedUser.Visible = false;
             switch (nomeModulo)
@@ -159,9 +156,6 @@ namespace SteelGymDesktop.View
                     break;
                 case Models.Modulos.DF_NOME_MODULO_PAGAMENTO:
                     panelSelectedPayment.Visible = true;
-                    break;
-                case Models.Modulos.DF_NOME_MODULO_COMPROVANTE:
-                    panelSelectedReceipt.Visible = true;
                     break;
                 case Models.Modulos.DF_NOME_MODULO_USUARIO:
                     panelSelectedUser.Visible = true;

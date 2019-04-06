@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -107,7 +108,7 @@ namespace SteelGymDesktop.View
                 if (_isCreate)
                     _movimentation = new Movimentation();
                 _movimentation.Origin = txtDescricao.Text;
-                _movimentation.Value = Convert.ToDecimal(txtValor.Text.ToString().Replace(",", ".").Replace(" ",""));
+                _movimentation.Value = Convert.ToDecimal(txtValor.Text.ToString().Replace(",", ".").Replace(" ",""), new CultureInfo("en-US"));
                 _movimentation.tipoPagamento = cboTipoPagamento.Text;
                 _movimentation.DataMovimentacao = dtpDataMovimentacao.Text;
 

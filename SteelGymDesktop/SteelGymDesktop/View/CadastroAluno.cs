@@ -164,7 +164,7 @@ namespace SteelGymDesktop.View
                 _student.PayDay = Convert.ToInt32(cboDiaPagamento.Text);
                 if (Util.ValidaString(txtMensalidade.Text))
                 {
-                    _student.PaymentAmount = Convert.ToDecimal(txtMensalidade.Text.ToString().Replace(",","."));
+                    _student.PaymentAmount = Convert.ToDecimal(txtMensalidade.Text.ToString().Replace(",","."), new CultureInfo("en-US"));
                 }
                 _student.Email = txtEmail.Text;
                 _student.Sex = cboSexo.Text;
