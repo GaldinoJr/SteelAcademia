@@ -36,13 +36,14 @@
             this.cboAlunos = new System.Windows.Forms.ComboBox();
             this.dtpDataPagamento = new System.Windows.Forms.DateTimePicker();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnSalvar2 = new System.Windows.Forms.Button();
+            this.btnCancel = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.btnSalvar = new System.Windows.Forms.Button();
             this.rbNaoPago = new System.Windows.Forms.RadioButton();
             this.rbPago = new System.Windows.Forms.RadioButton();
             this.PaymentId = new System.Windows.Forms.MaskedTextBox();
-            this.btnCancel = new System.Windows.Forms.Button();
-            this.btnSalvar2 = new System.Windows.Forms.Button();
+            this.btnComprovante = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -110,6 +111,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(43)))), ((int)(((byte)(80)))));
+            this.panel1.Controls.Add(this.btnComprovante);
             this.panel1.Controls.Add(this.btnSalvar2);
             this.panel1.Controls.Add(this.btnCancel);
             this.panel1.Controls.Add(this.label1);
@@ -126,6 +128,34 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(545, 280);
             this.panel1.TabIndex = 19;
+            // 
+            // btnSalvar2
+            // 
+            this.btnSalvar2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(21)))), ((int)(((byte)(86)))));
+            this.btnSalvar2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSalvar2.ForeColor = System.Drawing.Color.White;
+            this.btnSalvar2.Location = new System.Drawing.Point(208, 226);
+            this.btnSalvar2.Name = "btnSalvar2";
+            this.btnSalvar2.Size = new System.Drawing.Size(155, 30);
+            this.btnSalvar2.TabIndex = 137;
+            this.btnSalvar2.Text = "Salvar";
+            this.btnSalvar2.UseVisualStyleBackColor = false;
+            this.btnSalvar2.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // btnCancel
+            // 
+            this.btnCancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(110)))), ((int)(((byte)(140)))));
+            this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancel.ForeColor = System.Drawing.Color.White;
+            this.btnCancel.Location = new System.Drawing.Point(369, 226);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(155, 30);
+            this.btnCancel.TabIndex = 136;
+            this.btnCancel.Text = "Cancelar";
+            this.btnCancel.UseVisualStyleBackColor = false;
+            this.btnCancel.Visible = false;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // label1
             // 
@@ -184,33 +214,19 @@
             this.PaymentId.TabIndex = 20;
             this.PaymentId.Visible = false;
             // 
-            // btnCancel
+            // btnComprovante
             // 
-            this.btnCancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(110)))), ((int)(((byte)(140)))));
-            this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancel.ForeColor = System.Drawing.Color.White;
-            this.btnCancel.Location = new System.Drawing.Point(369, 226);
-            this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(155, 30);
-            this.btnCancel.TabIndex = 136;
-            this.btnCancel.Text = "Cancelar";
-            this.btnCancel.UseVisualStyleBackColor = false;
-            this.btnCancel.Visible = false;
-            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
-            // 
-            // btnSalvar2
-            // 
-            this.btnSalvar2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(21)))), ((int)(((byte)(86)))));
-            this.btnSalvar2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSalvar2.ForeColor = System.Drawing.Color.White;
-            this.btnSalvar2.Location = new System.Drawing.Point(208, 226);
-            this.btnSalvar2.Name = "btnSalvar2";
-            this.btnSalvar2.Size = new System.Drawing.Size(155, 30);
-            this.btnSalvar2.TabIndex = 137;
-            this.btnSalvar2.Text = "Salvar";
-            this.btnSalvar2.UseVisualStyleBackColor = false;
-            this.btnSalvar2.Click += new System.EventHandler(this.button1_Click);
+            this.btnComprovante.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btnComprovante.Enabled = false;
+            this.btnComprovante.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnComprovante.ForeColor = System.Drawing.Color.MintCream;
+            this.btnComprovante.Location = new System.Drawing.Point(208, 226);
+            this.btnComprovante.Name = "btnComprovante";
+            this.btnComprovante.Size = new System.Drawing.Size(155, 30);
+            this.btnComprovante.TabIndex = 138;
+            this.btnComprovante.Text = "Imprimir o Comprovante";
+            this.btnComprovante.UseVisualStyleBackColor = false;
+            this.btnComprovante.Visible = false;
             // 
             // CadastroPagamento
             // 
@@ -246,5 +262,6 @@
         private System.Windows.Forms.MaskedTextBox PaymentId;
         private System.Windows.Forms.Button btnSalvar2;
         private System.Windows.Forms.Button btnCancel;
+        private System.Windows.Forms.Button btnComprovante;
     }
 }

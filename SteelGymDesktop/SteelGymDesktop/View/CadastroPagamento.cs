@@ -58,13 +58,21 @@ namespace SteelGymDesktop.View
                 btnCancel.Enabled = false;
             } else
             {
-
                 btnSalvar.Visible = false;
                 btnSalvar.Enabled = false;
-                btnSalvar2.Visible = true;
-                btnSalvar2.Enabled = true;
+                btnSalvar2.Visible = _payment.FgPago != 1;
+                btnSalvar2.Enabled = _payment.FgPago != 1;
                 btnCancel.Visible = true;
                 btnCancel.Enabled = true;
+
+                btnComprovante.Visible = _payment.FgPago == 1;
+                btnComprovante.Enabled = _payment.FgPago == 1;
+
+
+                cboAlunos.Enabled = false;
+                txtValor.Enabled = false;
+                dtpDataPagamento.Enabled = false;
+                rbNaoPago.Enabled = rbPago.Enabled = _payment.FgPago != 1;
             }
         }
 
@@ -157,6 +165,9 @@ namespace SteelGymDesktop.View
                     Limpar();
 
                     Util.EnabledCursor();
+
+                    CadastroPagamento p = new CadastroPagamento(_paymentApp, _studentApp, false, _payment.PaymentId);
+                    p.ShowDialog();
                 }
                 else
                 {

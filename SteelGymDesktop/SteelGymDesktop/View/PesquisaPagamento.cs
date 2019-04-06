@@ -29,6 +29,9 @@ namespace SteelGymDesktop.View
                     cboAlunos.Items.Add(new ComboItem(student.Name, student.StudentId));
                 }
             }
+
+            //var payments = _PaymentApp.GetByFilter(dtpDe.Value.Date, dtpAte.Value.Date, null, false, true);
+            //Filter(payments);
         }
 
         private void BtnPesquisar_Click(object sender, EventArgs e)
@@ -115,9 +118,9 @@ namespace SteelGymDesktop.View
             }
         }
 
-        private void showPagamento(int idMovimentation)
+        private void showPagamento(int idPayment)
         {
-            CadastroPagamento p = new CadastroPagamento(_PaymentApp, _studentApp, false, idMovimentation);
+            CadastroPagamento p = new CadastroPagamento(_PaymentApp, _studentApp, false, idPayment);
             p.ShowDialog();
             BtnPesquisar_Click(null, null);
         }
