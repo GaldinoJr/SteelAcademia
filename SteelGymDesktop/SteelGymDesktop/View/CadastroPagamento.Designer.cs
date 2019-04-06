@@ -36,6 +36,7 @@
             this.cboAlunos = new System.Windows.Forms.ComboBox();
             this.dtpDataPagamento = new System.Windows.Forms.DateTimePicker();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnComprovante = new System.Windows.Forms.Button();
             this.btnSalvar2 = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -43,7 +44,6 @@
             this.rbNaoPago = new System.Windows.Forms.RadioButton();
             this.rbPago = new System.Windows.Forms.RadioButton();
             this.PaymentId = new System.Windows.Forms.MaskedTextBox();
-            this.btnComprovante = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -129,6 +129,20 @@
             this.panel1.Size = new System.Drawing.Size(545, 280);
             this.panel1.TabIndex = 19;
             // 
+            // btnComprovante
+            // 
+            this.btnComprovante.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btnComprovante.Enabled = false;
+            this.btnComprovante.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnComprovante.ForeColor = System.Drawing.Color.MintCream;
+            this.btnComprovante.Location = new System.Drawing.Point(208, 226);
+            this.btnComprovante.Name = "btnComprovante";
+            this.btnComprovante.Size = new System.Drawing.Size(155, 30);
+            this.btnComprovante.TabIndex = 138;
+            this.btnComprovante.Text = "Comprovante";
+            this.btnComprovante.UseVisualStyleBackColor = false;
+            this.btnComprovante.Visible = false;
+            // 
             // btnSalvar2
             // 
             this.btnSalvar2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(21)))), ((int)(((byte)(86)))));
@@ -213,20 +227,6 @@
             this.PaymentId.Size = new System.Drawing.Size(98, 20);
             this.PaymentId.TabIndex = 20;
             this.PaymentId.Visible = false;
-            // 
-            // btnComprovante
-            // 
-            this.btnComprovante.BackColor = System.Drawing.Color.DodgerBlue;
-            this.btnComprovante.Enabled = false;
-            this.btnComprovante.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnComprovante.ForeColor = System.Drawing.Color.MintCream;
-            this.btnComprovante.Location = new System.Drawing.Point(208, 226);
-            this.btnComprovante.Name = "btnComprovante";
-            this.btnComprovante.Size = new System.Drawing.Size(155, 30);
-            this.btnComprovante.TabIndex = 138;
-            this.btnComprovante.Text = "Imprimir o Comprovante";
-            this.btnComprovante.UseVisualStyleBackColor = false;
-            this.btnComprovante.Visible = false;
             // 
             // CadastroPagamento
             // 
