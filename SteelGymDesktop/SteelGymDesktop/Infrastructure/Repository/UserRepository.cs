@@ -14,7 +14,7 @@ namespace SteelGymDesktop.Infrastructure.Repository
 
             name = name.ToLower();
 
-            query.Where(x => Convert.ToBoolean(x.Active) == active);
+            query = query.Where(x => x.Active == (active ? 1 : 0));
 
             if (Util.ValidaString(name))
             {
