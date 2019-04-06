@@ -39,7 +39,7 @@ namespace SteelGymDesktop.View
         {
             _studentApp = studentApp;
             InitializeComponent();
-            FilterSearch(fgActive, "", "", "");
+            FilterSearch(fgActive, "", "", "", null);
             this.fgActive = fgActive;
         }
 
@@ -79,19 +79,15 @@ namespace SteelGymDesktop.View
             {
                 dtgAlunos.Rows.Clear();
 
+                int? idAluno = null;
+
                 if (Util.ValidaString(txtIDAluno.Text))
                 {
-                    var student = _studentApp.GetById(Convert.ToInt32(txtIDAluno.Text));
+                    idAluno = Convert.ToInt32(txtIDAluno.Text);
+                }
 
-                    if (student != null)
-                        dtgAlunos.Rows.Add(student.StudentId, student.Name, student.RG, student.CPF, (Convert.ToBoolean(student.Active) ? "Sim" : "Não"), student.PayDay);
-                    else
-                        Util.ShowMessageWarning("Não foi encontrado Aluno com este Id.");
-                }
-                else
-                {
-                    FilterSearch(chkAtivo.Checked, txtNome.Text, txtRG.Text, txtCPF.Text);
-                }
+                FilterSearch(chkAtivo.Checked, txtNome.Text, txtRG.Text, txtCPF.Text, idAluno);
+                
             }
             catch (Exception ex)
             {
@@ -114,14 +110,14 @@ namespace SteelGymDesktop.View
                 Util.ShowMessageWarning("Não foi encontrado alunos com esses parametros.");
         }
 
-        private void FilterSearch(bool @checked, string nome, string rg, string cpf)
+        private void FilterSearch(bool @checked, string nome, string rg, string cpf, int? idAluno)
         {
             int nChecked = 0;
             if(@checked)
             {
                 nChecked = 1;
             }
-            var students = _studentApp.GetByFilter(nChecked, nome, rg, cpf);
+            var students = _studentApp.GetByFilter(nChecked, nome, rg, cpf, idAluno);
             Filter(students);
         }
 

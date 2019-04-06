@@ -10,7 +10,7 @@ namespace SteelGymDesktop.Infrastructure.Repository
 {
     public class StudentRepository : RepositoryBase<Student>, IStudentRepository
     {
-        public IEnumerable<Student> GetByFilter(int active, string name, string rg, string cpf)
+        public IEnumerable<Student> GetByFilter(int active, string name, string rg, string cpf, int? idAluno)
         {
             name = name.ToLower();
             var query = Db.Students.Where(x => x.Active == active);
@@ -26,6 +26,12 @@ namespace SteelGymDesktop.Infrastructure.Repository
             {
                 query = query.Where(x => x.CPF == cpf);
             }
+
+            if(idAluno != null && idAluno.HasValue)
+            {
+                query = query.Where(x => x.StudentId == idAluno.Value);
+            }
+
             return query;
         }
 

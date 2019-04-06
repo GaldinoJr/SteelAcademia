@@ -14,9 +14,9 @@ namespace SteelGymDesktop.Domain.Services
             _repository = repository;
         }
 
-        public IEnumerable<Student> GetByFilter(int active, string name, string rg, string cpf)
+        public IEnumerable<Student> GetByFilter(int active, string name, string rg, string cpf, int? idAluno)
         {
-            return _repository.GetByFilter(active, name, rg, cpf);
+            return _repository.GetByFilter(active, name, rg, cpf, idAluno);
         }
 
         public IEnumerable<Student> GetAllActive()
