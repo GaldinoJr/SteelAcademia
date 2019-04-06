@@ -45,15 +45,7 @@ namespace SteelGymDesktop.Infrastructure.Repository
             return Db.Students.Where(x => (x.Active == active)).Count();
         }
 
-        public int GetCountLateAvaliations()
-        {
-            // todo é preciso arrumar
-            return 0;
-            //return Db.Students.Where(x =>
-            //    (x.EvaliationDate != null && diffDate(x.EvaliationDate) >= (x.EvaluationPeriodicity * 30)) &&
-            //    x.Active == 1
-            //).Count();
-        }
+        public int CountLateAvaliations => this.LoadLateAvaliations().Count();
 
         public static int diffDate(String date)
         {

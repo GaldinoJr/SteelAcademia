@@ -11,6 +11,6 @@ namespace SteelGymDesktop.Domain.Interfaces
         IEnumerable<Student> LoadLatePayments();
         IEnumerable<Student> LoadLateAvaliations();
         int GetCountLatePayments();
-        int GetCountLateAvaliations();
+        int CountLateAvaliations { get; }
     }
 }

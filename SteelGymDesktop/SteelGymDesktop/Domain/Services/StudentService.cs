@@ -31,7 +31,7 @@ namespace SteelGymDesktop.Domain.Services
 
         public int GetCountLateAvaliations()
         {
-            return _repository.GetCountLateAvaliations();
+            return _repository.CountLateAvaliations;
         }
 
         public int GetCountLatePayments()
