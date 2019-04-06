@@ -36,7 +36,7 @@ namespace SteelGymDesktop.Domain.Services
 
         public int GetCountLatePayments()
         {
-            return _repository.GetCountLatePayments();
+            return _repository.GetCountLatePayments;
         }
 
         public IEnumerable<Student> LoadLateAvaliations()

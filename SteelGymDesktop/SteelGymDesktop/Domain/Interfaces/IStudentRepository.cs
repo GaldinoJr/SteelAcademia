@@ -10,7 +10,7 @@ namespace SteelGymDesktop.Domain.Interfaces
         int GetCount(int active);
         IEnumerable<Student> LoadLatePayments();
         IEnumerable<Student> LoadLateAvaliations();
-        int GetCountLatePayments();
+        int GetCountLatePayments { get; }
         int CountLateAvaliations { get; }
     }
 }

@@ -31,6 +31,7 @@ namespace SteelGymDesktop.View
                     FilterLateEvaluations();
                     break;
                 case DEF_SEARCH_LATE_PAYMENTS:
+                    FilterLoadLatePayments();
                     break;
             }
         }

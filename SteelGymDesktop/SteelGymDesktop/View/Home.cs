@@ -35,8 +35,8 @@ namespace SteelGymDesktop.View
 
         private void LoadLatePayments()
         {
-            //var qttLatePayments = _studentApp.GetCountLatePayments();
-            //txtQuatityLatePayments.Text = qttLatePayments.ToString();
+            var qttLatePayments = _studentApp.GetCountLatePayments();
+            txtQuatityLatePayments.Text = qttLatePayments.ToString();
         }
 
         private void LoadLateAvaliations()
@@ -110,8 +110,8 @@ namespace SteelGymDesktop.View
         private void OnClickQuatityLatePayments()
         {
             // TODO DESCOMENTAR
-            //PesquisarAluno p = new PesquisarAluno(_studentApp, PesquisarAluno.DEF_SEARCH_LATE_PAYMENTS);
-            //AbrirModulo(p, Models.Modulos.DF_NOME_MODULO_ALUNO);
+            PesquisarAluno p = new PesquisarAluno(_studentApp, PesquisarAluno.DEF_SEARCH_LATE_PAYMENTS);
+            AbrirModulo(p, Models.Modulos.DF_NOME_MODULO_ALUNO);
         }
 
         private void TxtQuantityLateAvaliations_Click(object sender, EventArgs e)

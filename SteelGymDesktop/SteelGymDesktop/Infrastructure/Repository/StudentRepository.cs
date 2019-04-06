@@ -68,11 +68,7 @@ namespace SteelGymDesktop.Infrastructure.Repository
             return dtResult;
         }
 
-
-        public int GetCountLatePayments()
-        {
-            throw new System.NotImplementedException();
-        }
+        public int GetCountLatePayments => this.LoadLatePayments().Count();
 
         public IEnumerable<Student> LoadLateAvaliations()
         {
@@ -88,8 +84,34 @@ namespace SteelGymDesktop.Infrastructure.Repository
 
         public IEnumerable<Student> LoadLatePayments()
         {
-            // TODO PRECISA DOS PAGAMENTOS PARA VERIFICAR
-            throw new System.NotImplementedException();
+            int month = System.DateTime.Now.Month;
+
+            var list = Db.Payments
+               .AsEnumerable()
+               .Join(
+                   Db.Students,
+                   payment => payment.StudentId,
+                   student => student.StudentId,
+                   (payment, student) => Tuple.Create<Payment, Student>(payment, student)
+               )
+               .ToList()
+               .Where(
+                x =>
+                    x.Item2.Active == 1 &&
+                    Convert.ToDateTime(x.Item1.DataPagamento).Month == month
+                ).ToList();
+
+            List<int> studentList = new List<int>();
+            foreach (var student in list)
+            {   
+                if(!studentList.Contains(student.Item2.StudentId))
+                {
+                    studentList.Add(student.Item2.StudentId);
+                }
+            }
+
+            var query = Db.Students.Where(x => !studentList.Contains(x.StudentId) && x.Active == 1);
+            return query;
         }
     }
 }
