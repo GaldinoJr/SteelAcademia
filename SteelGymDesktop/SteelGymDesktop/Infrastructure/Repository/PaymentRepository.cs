@@ -29,6 +29,12 @@ namespace SteelGymDesktop.Infrastructure.Repository
                     Convert.ToDateTime(x.Item1.DataPagamento) >= DataPagamento &&
                     Convert.ToDateTime(x.Item1.DataPagamento) <= DataAtePagamento
                 );
+
+            if(studentId != null && studentId.HasValue)
+            {
+                query = query.Where(x => x.Item1.StudentId == studentId.Value);
+            }
+
             if (!fgTodosStatus) {
                 query = query.Where(x => Convert.ToBoolean(x.Item1.FgPago) == fgPago );
             }
