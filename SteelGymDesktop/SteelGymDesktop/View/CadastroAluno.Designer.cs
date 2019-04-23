@@ -1032,7 +1032,10 @@
             "25",
             "26",
             "27",
-            "28"});
+            "28",
+            "29",
+            "30",
+            "31"});
             this.cboDiaPagamento.Location = new System.Drawing.Point(109, 150);
             this.cboDiaPagamento.Name = "cboDiaPagamento";
             this.cboDiaPagamento.Size = new System.Drawing.Size(50, 21);
