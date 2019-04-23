@@ -42,7 +42,7 @@ namespace SteelGymDesktop.View
 
             if(!Program.SessionUser.Admin)
             {
-                pagamentoToolStripMenuItem.Enabled = Program.SessionUser.CanAccessFinancial;
+                //pagamentoToolStripMenuItem.Enabled = Program.SessionUser.CanAccessFinancial;
                 //pagamentoToolStripMenuItem.Visible = Program.SessionUser.CanAccessFinancial;
                 //comprovantesToolStripMenuItem.Visible = Program.SessionUser.CanAccessFinancial;
                 
