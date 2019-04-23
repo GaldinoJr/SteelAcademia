@@ -33,6 +33,12 @@
             this.dtpAte = new System.Windows.Forms.DateTimePicker();
             this.label1 = new System.Windows.Forms.Label();
             this.dtgMovimentacoes = new System.Windows.Forms.DataGridView();
+            this.IDMovimentation = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Rg = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TipoPagamento = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CPF = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Ativo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnLimpar = new System.Windows.Forms.Button();
             this.btnPesquisar = new System.Windows.Forms.Button();
             this.rbSaida = new System.Windows.Forms.RadioButton();
@@ -43,12 +49,6 @@
             this.lblTotalSaida = new System.Windows.Forms.Label();
             this.lblResultado = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.IDMovimentation = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Rg = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TipoPagamento = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CPF = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Ativo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dtgMovimentacoes)).BeginInit();
             this.SuspendLayout();
             // 
@@ -96,7 +96,7 @@
             // 
             this.dtgMovimentacoes.AllowUserToAddRows = false;
             this.dtgMovimentacoes.AllowUserToDeleteRows = false;
-            this.dtgMovimentacoes.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(43)))), ((int)(((byte)(80)))));
+            this.dtgMovimentacoes.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(16)))), ((int)(((byte)(16)))));
             this.dtgMovimentacoes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgMovimentacoes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.IDMovimentation,
@@ -114,9 +114,47 @@
             this.dtgMovimentacoes.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgMovimentacoes_CellContentClick);
             this.dtgMovimentacoes.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DtgMovimentacoes_CellDoubleClick);
             // 
+            // IDMovimentation
+            // 
+            this.IDMovimentation.HeaderText = "ID";
+            this.IDMovimentation.Name = "IDMovimentation";
+            this.IDMovimentation.ReadOnly = true;
+            this.IDMovimentation.Width = 40;
+            // 
+            // Nome
+            // 
+            this.Nome.HeaderText = "Origem";
+            this.Nome.Name = "Nome";
+            this.Nome.ReadOnly = true;
+            this.Nome.Width = 315;
+            // 
+            // Rg
+            // 
+            this.Rg.HeaderText = "Valor";
+            this.Rg.Name = "Rg";
+            this.Rg.ReadOnly = true;
+            // 
+            // TipoPagamento
+            // 
+            this.TipoPagamento.HeaderText = "Tipo";
+            this.TipoPagamento.Name = "TipoPagamento";
+            this.TipoPagamento.ReadOnly = true;
+            // 
+            // CPF
+            // 
+            this.CPF.HeaderText = "Entrada/Saida";
+            this.CPF.Name = "CPF";
+            this.CPF.ReadOnly = true;
+            // 
+            // Ativo
+            // 
+            this.Ativo.HeaderText = "Data";
+            this.Ativo.Name = "Ativo";
+            this.Ativo.ReadOnly = true;
+            // 
             // btnLimpar
             // 
-            this.btnLimpar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(21)))), ((int)(((byte)(86)))));
+            this.btnLimpar.BackColor = System.Drawing.Color.Gray;
             this.btnLimpar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLimpar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLimpar.ForeColor = System.Drawing.Color.White;
@@ -130,7 +168,7 @@
             // 
             // btnPesquisar
             // 
-            this.btnPesquisar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(21)))), ((int)(((byte)(86)))));
+            this.btnPesquisar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnPesquisar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPesquisar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPesquisar.ForeColor = System.Drawing.Color.White;
@@ -229,49 +267,11 @@
             this.label8.TabIndex = 30;
             this.label8.Text = "Resultado:";
             // 
-            // IDMovimentation
-            // 
-            this.IDMovimentation.HeaderText = "ID";
-            this.IDMovimentation.Name = "IDMovimentation";
-            this.IDMovimentation.ReadOnly = true;
-            this.IDMovimentation.Width = 40;
-            // 
-            // Nome
-            // 
-            this.Nome.HeaderText = "Origem";
-            this.Nome.Name = "Nome";
-            this.Nome.ReadOnly = true;
-            this.Nome.Width = 315;
-            // 
-            // Rg
-            // 
-            this.Rg.HeaderText = "Valor";
-            this.Rg.Name = "Rg";
-            this.Rg.ReadOnly = true;
-            // 
-            // TipoPagamento
-            // 
-            this.TipoPagamento.HeaderText = "Tipo";
-            this.TipoPagamento.Name = "TipoPagamento";
-            this.TipoPagamento.ReadOnly = true;
-            // 
-            // CPF
-            // 
-            this.CPF.HeaderText = "Entrada/Saida";
-            this.CPF.Name = "CPF";
-            this.CPF.ReadOnly = true;
-            // 
-            // Ativo
-            // 
-            this.Ativo.HeaderText = "Data";
-            this.Ativo.Name = "Ativo";
-            this.Ativo.ReadOnly = true;
-            // 
             // PesquisaMovimentacao
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(37)))), ((int)(((byte)(72)))));
+            this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(899, 651);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.lblResultado);

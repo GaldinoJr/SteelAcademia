@@ -38,15 +38,15 @@
             this.btnPesquisar = new System.Windows.Forms.Button();
             this.btnLimpar = new System.Windows.Forms.Button();
             this.dtgAlunos = new System.Windows.Forms.DataGridView();
+            this.IDAluno = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Rg = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CPF = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Ativo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DataPagamento = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtCPF = new System.Windows.Forms.MaskedTextBox();
             this.txtRG = new System.Windows.Forms.MaskedTextBox();
             this.chkAtivo = new System.Windows.Forms.CheckBox();
-            this.DataPagamento = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Ativo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CPF = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Rg = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.IDAluno = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dtgAlunos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -111,7 +111,7 @@
             // 
             // btnPesquisar
             // 
-            this.btnPesquisar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(21)))), ((int)(((byte)(86)))));
+            this.btnPesquisar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnPesquisar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPesquisar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPesquisar.ForeColor = System.Drawing.Color.White;
@@ -125,7 +125,7 @@
             // 
             // btnLimpar
             // 
-            this.btnLimpar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(21)))), ((int)(((byte)(86)))));
+            this.btnLimpar.BackColor = System.Drawing.Color.Gray;
             this.btnLimpar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLimpar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLimpar.ForeColor = System.Drawing.Color.White;
@@ -141,7 +141,7 @@
             // 
             this.dtgAlunos.AllowUserToAddRows = false;
             this.dtgAlunos.AllowUserToDeleteRows = false;
-            this.dtgAlunos.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(43)))), ((int)(((byte)(80)))));
+            this.dtgAlunos.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(16)))), ((int)(((byte)(16)))));
             this.dtgAlunos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgAlunos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.IDAluno,
@@ -154,9 +154,47 @@
             this.dtgAlunos.Name = "dtgAlunos";
             this.dtgAlunos.ReadOnly = true;
             this.dtgAlunos.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.dtgAlunos.Size = new System.Drawing.Size(802, 330);
+            this.dtgAlunos.Size = new System.Drawing.Size(790, 330);
             this.dtgAlunos.TabIndex = 12;
             this.dtgAlunos.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DtgAlunos_CellDoubleClick);
+            // 
+            // IDAluno
+            // 
+            this.IDAluno.HeaderText = "ID Aluno";
+            this.IDAluno.Name = "IDAluno";
+            this.IDAluno.ReadOnly = true;
+            // 
+            // Nome
+            // 
+            this.Nome.HeaderText = "Nome";
+            this.Nome.Name = "Nome";
+            this.Nome.ReadOnly = true;
+            this.Nome.Width = 315;
+            // 
+            // Rg
+            // 
+            this.Rg.HeaderText = "RG";
+            this.Rg.Name = "Rg";
+            this.Rg.ReadOnly = true;
+            // 
+            // CPF
+            // 
+            this.CPF.HeaderText = "CPF";
+            this.CPF.Name = "CPF";
+            this.CPF.ReadOnly = true;
+            // 
+            // Ativo
+            // 
+            this.Ativo.HeaderText = "Ativo";
+            this.Ativo.Name = "Ativo";
+            this.Ativo.ReadOnly = true;
+            this.Ativo.Width = 40;
+            // 
+            // DataPagamento
+            // 
+            this.DataPagamento.HeaderText = "Data de Pagamento";
+            this.DataPagamento.Name = "DataPagamento";
+            this.DataPagamento.ReadOnly = true;
             // 
             // txtCPF
             // 
@@ -186,49 +224,11 @@
             this.chkAtivo.Text = "Ativo";
             this.chkAtivo.UseVisualStyleBackColor = true;
             // 
-            // DataPagamento
-            // 
-            this.DataPagamento.HeaderText = "Data de Pagamento";
-            this.DataPagamento.Name = "DataPagamento";
-            this.DataPagamento.ReadOnly = true;
-            // 
-            // Ativo
-            // 
-            this.Ativo.HeaderText = "Ativo";
-            this.Ativo.Name = "Ativo";
-            this.Ativo.ReadOnly = true;
-            this.Ativo.Width = 40;
-            // 
-            // CPF
-            // 
-            this.CPF.HeaderText = "CPF";
-            this.CPF.Name = "CPF";
-            this.CPF.ReadOnly = true;
-            // 
-            // Rg
-            // 
-            this.Rg.HeaderText = "RG";
-            this.Rg.Name = "Rg";
-            this.Rg.ReadOnly = true;
-            // 
-            // Nome
-            // 
-            this.Nome.HeaderText = "Nome";
-            this.Nome.Name = "Nome";
-            this.Nome.ReadOnly = true;
-            this.Nome.Width = 315;
-            // 
-            // IDAluno
-            // 
-            this.IDAluno.HeaderText = "ID Aluno";
-            this.IDAluno.Name = "IDAluno";
-            this.IDAluno.ReadOnly = true;
-            // 
             // PesquisarAluno
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(37)))), ((int)(((byte)(72)))));
+            this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(825, 651);
             this.Controls.Add(this.chkAtivo);
             this.Controls.Add(this.txtRG);

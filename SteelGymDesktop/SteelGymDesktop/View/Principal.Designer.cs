@@ -71,7 +71,7 @@
             // 
             // Menu
             // 
-            Menu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(43)))), ((int)(((byte)(80)))));
+            Menu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(16)))), ((int)(((byte)(16)))));
             Menu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             Menu.Dock = System.Windows.Forms.DockStyle.Left;
             Menu.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
@@ -92,7 +92,7 @@
             // 
             // homeToolStripMenuItem
             // 
-            this.homeToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(43)))), ((int)(((byte)(80)))));
+            this.homeToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(16)))), ((int)(((byte)(16)))));
             this.homeToolStripMenuItem.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.homeToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("homeToolStripMenuItem.Image")));
             this.homeToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -105,7 +105,7 @@
             // 
             // alunoToolStripMenuItem
             // 
-            this.alunoToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(43)))), ((int)(((byte)(80)))));
+            this.alunoToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(16)))), ((int)(((byte)(16)))));
             this.alunoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.cadastroToolStripMenuItem,
             this.pesquisarToolStripMenuItem});
@@ -121,20 +121,20 @@
             // cadastroToolStripMenuItem
             // 
             this.cadastroToolStripMenuItem.Name = "cadastroToolStripMenuItem";
-            this.cadastroToolStripMenuItem.Size = new System.Drawing.Size(142, 24);
+            this.cadastroToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
             this.cadastroToolStripMenuItem.Text = "Incluir";
             this.cadastroToolStripMenuItem.Click += new System.EventHandler(this.CadastroToolStripMenuItem_Click);
             // 
             // pesquisarToolStripMenuItem
             // 
             this.pesquisarToolStripMenuItem.Name = "pesquisarToolStripMenuItem";
-            this.pesquisarToolStripMenuItem.Size = new System.Drawing.Size(142, 24);
+            this.pesquisarToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
             this.pesquisarToolStripMenuItem.Text = "Pesquisar";
             this.pesquisarToolStripMenuItem.Click += new System.EventHandler(this.PesquisarToolStripMenuItem_Click);
             // 
             // pagamentoToolStripMenuItem
             // 
-            this.pagamentoToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(43)))), ((int)(((byte)(80)))));
+            this.pagamentoToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(16)))), ((int)(((byte)(16)))));
             this.pagamentoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.incluirToolStripMenuItem1,
             this.pesquisarToolStripMenuItem2});
@@ -151,20 +151,20 @@
             // incluirToolStripMenuItem1
             // 
             this.incluirToolStripMenuItem1.Name = "incluirToolStripMenuItem1";
-            this.incluirToolStripMenuItem1.Size = new System.Drawing.Size(142, 24);
+            this.incluirToolStripMenuItem1.Size = new System.Drawing.Size(180, 24);
             this.incluirToolStripMenuItem1.Text = "Incluir";
             this.incluirToolStripMenuItem1.Click += new System.EventHandler(this.incluirToolStripMenuItem1_Click);
             // 
             // pesquisarToolStripMenuItem2
             // 
             this.pesquisarToolStripMenuItem2.Name = "pesquisarToolStripMenuItem2";
-            this.pesquisarToolStripMenuItem2.Size = new System.Drawing.Size(142, 24);
+            this.pesquisarToolStripMenuItem2.Size = new System.Drawing.Size(180, 24);
             this.pesquisarToolStripMenuItem2.Text = "Pesquisar";
             this.pesquisarToolStripMenuItem2.Click += new System.EventHandler(this.pesquisarToolStripMenuItem2_Click);
             // 
             // cadastroDeUsuarioToolStripMenuItem
             // 
-            this.cadastroDeUsuarioToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(43)))), ((int)(((byte)(80)))));
+            this.cadastroDeUsuarioToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(16)))), ((int)(((byte)(16)))));
             this.cadastroDeUsuarioToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.incluirToolStripMenuItem,
             this.pesquisarToolStripMenuItem1,
@@ -201,7 +201,7 @@
             // 
             // movimentaçõesToolStripMenuItem
             // 
-            this.movimentaçõesToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(43)))), ((int)(((byte)(80)))));
+            this.movimentaçõesToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(16)))), ((int)(((byte)(16)))));
             this.movimentaçõesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.inclusãoToolStripMenuItem,
             this.pesquisaToolStripMenuItem});
@@ -217,20 +217,20 @@
             // inclusãoToolStripMenuItem
             // 
             this.inclusãoToolStripMenuItem.Name = "inclusãoToolStripMenuItem";
-            this.inclusãoToolStripMenuItem.Size = new System.Drawing.Size(136, 24);
+            this.inclusãoToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
             this.inclusãoToolStripMenuItem.Text = "Inclusão";
             this.inclusãoToolStripMenuItem.Click += new System.EventHandler(this.InclusãoToolStripMenuItem_Click);
             // 
             // pesquisaToolStripMenuItem
             // 
             this.pesquisaToolStripMenuItem.Name = "pesquisaToolStripMenuItem";
-            this.pesquisaToolStripMenuItem.Size = new System.Drawing.Size(136, 24);
+            this.pesquisaToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
             this.pesquisaToolStripMenuItem.Text = "Pesquisa";
             this.pesquisaToolStripMenuItem.Click += new System.EventHandler(this.PesquisaToolStripMenuItem_Click);
             // 
             // fecharToolStripMenuItem
             // 
-            this.fecharToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(43)))), ((int)(((byte)(80)))));
+            this.fecharToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(16)))), ((int)(((byte)(16)))));
             this.fecharToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.fecharToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("fecharToolStripMenuItem.Image")));
             this.fecharToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -243,7 +243,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(37)))), ((int)(((byte)(72)))));
+            this.panel1.BackColor = System.Drawing.Color.Black;
             this.panel1.Location = new System.Drawing.Point(144, 58);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(930, 695);
@@ -252,7 +252,7 @@
             // 
             // toolbar
             // 
-            this.toolbar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(26)))), ((int)(((byte)(70)))));
+            this.toolbar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(16)))), ((int)(((byte)(16)))));
             this.toolbar.Controls.Add(this.txtNomeModulo);
             this.toolbar.Controls.Add(this.label1);
             this.toolbar.Location = new System.Drawing.Point(0, 0);
@@ -376,7 +376,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(37)))), ((int)(((byte)(72)))));
+            this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(1076, 699);
             this.Controls.Add(this.panelSelectedMovimentation);
             this.Controls.Add(this.panelSelectedUser);

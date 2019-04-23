@@ -61,7 +61,7 @@
             // 
             // btnComprovante
             // 
-            this.btnComprovante.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btnComprovante.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnComprovante.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnComprovante.ForeColor = System.Drawing.Color.MintCream;
             this.btnComprovante.Location = new System.Drawing.Point(583, 472);
@@ -229,7 +229,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
+            this.BackColor = System.Drawing.Color.GhostWhite;
             this.ClientSize = new System.Drawing.Size(783, 514);
             this.Controls.Add(this.txtVencimento);
             this.Controls.Add(this.txtValor);

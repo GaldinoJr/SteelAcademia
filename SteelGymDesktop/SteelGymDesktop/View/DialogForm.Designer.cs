@@ -46,7 +46,7 @@
             // 
             // btnSim
             // 
-            this.btnSim.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(110)))), ((int)(((byte)(140)))));
+            this.btnSim.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnSim.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSim.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSim.ForeColor = System.Drawing.Color.White;
@@ -60,7 +60,7 @@
             // 
             // btnNao
             // 
-            this.btnNao.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(21)))), ((int)(((byte)(86)))));
+            this.btnNao.BackColor = System.Drawing.Color.Gray;
             this.btnNao.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNao.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNao.ForeColor = System.Drawing.Color.White;
@@ -76,7 +76,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(37)))), ((int)(((byte)(72)))));
+            this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(311, 142);
             this.Controls.Add(this.btnSim);
             this.Controls.Add(this.btnNao);

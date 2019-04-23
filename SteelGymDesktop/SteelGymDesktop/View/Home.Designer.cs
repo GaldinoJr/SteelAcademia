@@ -48,7 +48,7 @@
             // 
             // panel_active_student
             // 
-            this.panel_active_student.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(43)))), ((int)(((byte)(80)))));
+            this.panel_active_student.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(16)))), ((int)(((byte)(16)))));
             this.panel_active_student.Controls.Add(this.label1);
             this.panel_active_student.Controls.Add(this.txtQuantityActiveStudents);
             this.panel_active_student.Location = new System.Drawing.Point(25, 344);
@@ -82,7 +82,7 @@
             // 
             // panel_late_payment
             // 
-            this.panel_late_payment.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(43)))), ((int)(((byte)(80)))));
+            this.panel_late_payment.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(16)))), ((int)(((byte)(16)))));
             this.panel_late_payment.Controls.Add(this.label2);
             this.panel_late_payment.Controls.Add(this.txtQuatityLatePayments);
             this.panel_late_payment.Location = new System.Drawing.Point(25, 62);
@@ -116,7 +116,7 @@
             // 
             // panel_late_avaliation
             // 
-            this.panel_late_avaliation.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(43)))), ((int)(((byte)(80)))));
+            this.panel_late_avaliation.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(16)))), ((int)(((byte)(16)))));
             this.panel_late_avaliation.Controls.Add(this.label5);
             this.panel_late_avaliation.Controls.Add(this.txtQuantityLateAvaliations);
             this.panel_late_avaliation.Location = new System.Drawing.Point(481, 62);
@@ -150,7 +150,7 @@
             // 
             // panel_inative_student
             // 
-            this.panel_inative_student.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(43)))), ((int)(((byte)(80)))));
+            this.panel_inative_student.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(16)))), ((int)(((byte)(16)))));
             this.panel_inative_student.Controls.Add(this.label7);
             this.panel_inative_student.Controls.Add(this.txtQuantityInativeStudents);
             this.panel_inative_student.Location = new System.Drawing.Point(481, 344);
@@ -186,7 +186,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(37)))), ((int)(((byte)(72)))));
+            this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(936, 651);
             this.Controls.Add(this.panel_late_avaliation);
             this.Controls.Add(this.panel_inative_student);
