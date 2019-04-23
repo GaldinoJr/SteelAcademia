@@ -51,7 +51,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::SteelGymDesktop.Properties.Resources.índice;
+            this.pictureBox1.Image = global::SteelGymDesktop.Properties.Resources.indice_transparent;
             this.pictureBox1.Location = new System.Drawing.Point(10, 9);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(210, 91);
